@@ -1,0 +1,44 @@
+	<main class="forDashboard">
+		<article>
+			<form action="post" class="simpleForm">
+				<h2>Password</h2>
+				<fieldset>
+					<ul>
+						<li>
+							<ul class="errorlist">
+								<li>Your old password was entered incorrectly. Please enter it again.</li>
+							</ul>
+							<button class="showPassword hidePassword" title="Show Password">Show Password</button>
+							<input type="text" id="CurrentPassword" value="1mpregnab1eF0rtre55" required class="isValid">
+							<label for="CurrentPassword">Current password</label>
+						</li>
+						<li>
+							<ul class="errorlist">
+								<li>Your old password was entered incorrectly. Please enter it again.</li>
+								<li>Must contain at least 4 characters.</li>
+							</ul>
+							<button class="showPassword hidePassword" title="Hide Password">Hide Password</button>
+							<input type="text" id="NewPassword" value="1mpregnab1eF0rtre55" required class="isInvalid">
+							<label for="NewPassword" data-attribute-description="Should be different from the current">New password</label>
+						</li>
+						<li>
+							<button class="showPassword hidePassword" title="Hide Password">Hide Password</button>
+							<input type="text" id="ConfirmNewPassword" value="1mpregnab1eF0rtre555" required class="isInvalid">
+							<label for="ConfirmNewPassword" data-attribute-description="You confirmed your new password incorrectly">Confirm new password</label>
+						</li>
+						<li>
+							<button type="submit">Change password</button>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</article>
+		<aside>
+			<nav>
+				<ul class="tabs">
+					<li><a href="/dashboard/user/" class="hasIcon--user">User profile</a></li>
+					<li><a href="/dashboard/password/" class="hasIcon--lock currentItem">Password</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</main>

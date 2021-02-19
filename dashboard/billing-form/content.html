@@ -1,0 +1,203 @@
+<main class="forDashboard">
+	<article>
+		<div class="simpleForm">
+			<h2>Billing</h2>
+			<p class="C status-error uppercase pbXXS1">Your account is unactive</p>
+			<p class="C">Now that you’ve added all your students, it’s time to activate your account. Based on signing up 1 student(s), your monthly subscription will be $9.99. This charge will begin after your 30 Day Free Trial period ends. Click the I’M READY button to activate your account and access our entire library.</p>
+			<p class="C">* Required fields.</p>
+			<hr>
+			
+			<div class="cell example example3" id="example-3">
+				<form class="simpleForm" id="StripeAcquiring">
+					<ul>
+						<li>
+							<input id="example3-name" data-tid="elements_examples.form.name_label" class="field" type="text" placeholder="" required="" autocomplete="name">
+							<label for="example3-name">Name on card</label>
+						</li>
+						<li>
+							<div id="example3-card-number" class="field empty StripeElement">
+								<div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
+									<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame30115" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-33a1b7f17124871c0a3d899519e58507.html#locale=en&amp;wait=true&amp;rtl=false&amp;componentName=cardNumber&amp;keyMode=test&amp;apiKey=pk_test_6pRNASCoBOKtIshFeQd4XMUh&amp;controllerId=__privateStripeController3011" title="Secure card number input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; will-change: transform !important; height: 19.2px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
+								</div>
+							</div>
+							<label for="example3-card-number">Card number *</label>
+						</li>
+						<li class="colL">
+							<div id="example3-card-expiry" class="field empty third-width StripeElement">
+								<div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
+									<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame30116" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-33a1b7f17124871c0a3d899519e58507.html#locale=en&amp;wait=true&amp;rtl=false&amp;componentName=cardExpiry&amp;keyMode=test&amp;apiKey=pk_test_6pRNASCoBOKtIshFeQd4XMUh&amp;controllerId=__privateStripeController3011" title="Secure expiration date input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; will-change: transform !important; height: 19.2px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
+								</div>
+							</div>
+							<label for="example3-card-expiry">Card expires *</label>
+						</li>
+						<li class="colR">
+							<div id="example3-card-cvc" class="field empty third-width StripeElement">
+								<div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
+									<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame30117" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-33a1b7f17124871c0a3d899519e58507.html#locale=en&amp;wait=true&amp;rtl=false&amp;componentName=cardCvc&amp;keyMode=test&amp;apiKey=pk_test_6pRNASCoBOKtIshFeQd4XMUh&amp;controllerId=__privateStripeController3011" title="Secure CVC input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; will-change: transform !important; height: 19.2px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
+								</div>
+							</div>
+							<label for="example3-card-cvc">CVC *</label>
+						</li>
+						<!-- TODO -->
+						<!-- <li>
+							<input id="example3-coupon" data-tid="elements_examples.form.coupon_label" class="field" type="text" placeholder="">
+							<label for="example3-coupon">Do you have a coupon? You can add it here:</label>
+						</li> -->
+						<li class="C">
+							<ul class="errorlist">
+								<li>Credit card verification failed. Please, check your credit card information and try again.</li>
+							</ul>
+						</li>
+					</ul>
+					<button type="submit" data-tid="elements_examples.form.pay_button" class="w100">Save changes</button>
+					<p class="C mtXXS3">After the initial thirty day trial you will be charged $9.99 monthly.</p>
+					<h3 class="mtXS4 mbXXS2">Case 2: row of two buttons</h3>
+					<div class="buttonsSubmitAndCancel">
+						<button class="simpleButton ghostButton">Cancel</button>
+						<button type="submit" data-tid="elements_examples.form.pay_button">Change card number</button>
+					</div>
+					<h3 class="mtXS4 mbXXS2">Case 3: row of link and button</h3>
+					<div class="buttonsSubmitAndCancel">
+						<a href="{% url 'accounts_account_cancel_payment' %}" class="button simpleButton ghostButton">Cancel</a>
+						<button type="submit" data-tid="elements_examples.form.pay_button">Change card number</button>
+					</div>
+					<h3 class="mtXS4 mbXXS2">Case 4: column of two buttons</h3>
+					<button type="submit" data-tid="elements_examples.form.pay_button" class="w100">Change card number</button>
+					<button type="submit" data-tid="elements_examples.form.pay_button" class="w100 simpleButton ghostButton mtXXS4">Stop account</button>
+					<h3 class="mtXS4 mbXXS2">Case 5: column ofbutton and link</h3>
+					<button type="submit" data-tid="elements_examples.form.pay_button" class="w100">Change card number</button>
+					<a href="?a" data-tid="elements_examples.form.pay_button" class="w100 button simpleButton ghostButton mtXXS4">Stop account</a>
+				</form>
+			</div>
+		</div>
+	</article>
+	<aside>
+		<nav>
+			<ul class="tabs">
+				<li><a href="/dashboard/" class="simpleButton ghostButton hasIcon--chevron-left backButton">Back</a></li>
+				<li><a href="/dashboard/billing/" class="hasIcon--credit-card currentItem">Billing</a></li>
+				<li><a href="/dashboard/payment-history/" class="hasIcon--history">Payment history</a></li>
+			</ul>
+		</nav>
+	</aside>
+</main>
+
+<script src="https://js.stripe.com/v3/" type="application/javascript"></script>
+<script type="application/javascript">
+	'use strict';
+
+	var stripe = Stripe('pk_test_51Ht7qOLIaQmci5GR6xexkfhZxifrbhugvBHh6mxDcJ6L9P9KGGd9JQsK3OZvS8q3LAPmpaSS8kZYZCQ2KJ1kQ95N00yXtOoJVG');
+
+	(function() {
+	'use strict';
+
+	var elements = stripe.elements({
+		fonts: [
+			{
+				cssSrc: 'https://fonts.googleapis.com/css?family=Quicksand',
+			},
+		],
+		// Stripe's examples are localized to specific languages, but if
+		// you wish to have Elements automatically detect your user's locale,
+		// use `locale: 'auto'` instead.
+		locale: window.__exampleLocale,
+	});
+
+	var elementStyles = {
+		base: {
+			color: '#29200F',
+			fontWeight: 400,
+			fontFamily: 'Cabin, Roboto, Open Sans, Segoe UI, sans-serif',
+			fontSize: '24px',
+			fontSmoothing: 'antialiased',
+			lineHeight: '2.5em',
+
+			':focus': {
+				color: '#424770',
+			},
+
+			'::placeholder': {
+				color: '#8E8B87',
+			},
+
+			':focus::placeholder': {
+				color: '#CFD7DF',
+			},
+		},
+		invalid: {
+			color: '#DE3C4B',
+			':focus': {
+				color: '#D12335',
+			},
+			'::placeholder': {
+				color: '#e84655',
+			},
+		},
+	};
+
+	var elementClasses = {
+		focus: 'focus',
+		empty: 'empty',
+		invalid: 'invalid',
+	};
+
+	var cardNumber = elements.create('cardNumber', {
+		style: elementStyles,
+		classes: elementClasses,
+	});
+	cardNumber.mount('#example3-card-number');
+
+	var cardExpiry = elements.create('cardExpiry', {
+		style: elementStyles,
+		classes: elementClasses,
+	});
+	cardExpiry.mount('#example3-card-expiry');
+
+	var cardCvc = elements.create('cardCvc', {
+		style: elementStyles,
+		classes: elementClasses,
+	});
+	cardCvc.mount('#example3-card-cvc');
+
+	registerElements([cardNumber, cardExpiry, cardCvc], 'example3');
+})();
+	// (function($){
+	// 	$(function(){
+	// 		 $('.cancel_account').bind('click', function(e){
+	// 			if(window.confirm('Are you sure you want to cancel?')) {
+
+	//  			} else {
+	// 				e.preventDefault();
+	// 				return;
+	// 			}
+	// 		});
+
+	// 		$('.do_not_cancel').bind('click', function(e){
+	// 			if(window.confirm('Are you sure you want to resume billing?')) {
+
+	// 			} else {
+	// 				e.preventDefault();
+	// 				return;
+	// 			}
+	// 		});
+
+	// 		$('.make_changes').bind('click', function(e){
+	// 			$('#payment_screen').addClass('updating_card');
+	// 			$('#the_action').val('making_changes');
+	// 			focusName();
+	// 		});
+
+	// 		$('.sign_me_up').bind('click', function(e){
+	// 			$('#payment_screen').addClass('signing_up');
+	// 			focusName();
+	// 		});
+
+	// 		function focusName(){
+	// 			$('#name').focus();
+	// 		}
+
+	// 	});
+	// })(jQuery);
+
+</script>
+<link rel="stylesheet" href="/v2/css/stripe.css">

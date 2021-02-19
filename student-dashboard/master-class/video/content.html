@@ -1,0 +1,66 @@
+<main class="forDashboard">
+	<a href="/student-dahsboard/" class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
+	<article>
+		<div class="simpleForm">
+			<h2>Video Lesson</h2>
+			<div class="videoPlayer">
+				<iframe src="https://player.vimeo.com/video/267734721?title=0&byline=0&portrait=0&transparent=0&autoplay=0" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" title="0"></iframe>
+				<!-- <iframe src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0&transparent=0&autoplay=1" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" title="0"></iframe> -->
+				<div class="videoControlPanel">
+					<ul>
+						<li><button class="hasIcon--fast-back-filled withoutText"><span>Back</span></button></li>
+						<li><button class="hasIcon--play-filled withoutText"><span>Play</span></button></li>
+						<li><button class="hasIcon--fast-forward-filled withoutText"><span>Forward</span></button></li>
+						<li class="seeker">
+							<em><span>Love of feathers</span></em>
+							<div>
+								<progress id='progressbar' class="progressbar" min="0" max="100" value="80"></progress>
+								<input type="range" id="seekbar" value="80" class="seekbar">
+							</div>
+						</li>
+						<li><button class="hasIcon--maximize withoutText"><span>Fullscreen</span></button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="videoPlayer">
+				<video width="400" height="300" controls="controls" poster="/v2/img/welcome.jpg">
+					<source src="video/198.ogv" type='video/ogg; codecs="theora, vorbis"'>
+					<source src="video/198.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					<source src="video/198.webm" type='video/webm; codecs="vp8, vorbis"'>
+					The video element is not supported by your browser.
+					<a href="video/198.mp4">Download video</a>.
+				</video>
+				<div class="videoControlPanel">
+					<ul>
+						<li><button class="hasIcon--fast-back-filled withoutText"><span>Back</span></button></li>
+						<li><button class="hasIcon--play-filled withoutText"><span>Play</span></button></li>
+						<li><button class="hasIcon--fast-forward-filled withoutText"><span>Forward</span></button></li>
+						<li class="seeker">
+							<em><span>Love of feathers</span></em>
+							<div>
+								<progress id='progressbar' class="progressbar" min="0" max="100" value="20"></progress>
+								<input type="range" id="seekbar" value="20" class="seekbar">
+							</div>
+						</li>
+						<li><button class="hasIcon--maximize withoutText"><span>Fullscreen</span></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>
+	<aside>
+		<nav>
+			<div class="studentProgress">
+				<dl>
+					<dt>Master Class 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente est in iusto vero magnam asperiores molestias architecto blanditiis distinctio incidunt ratione, accusantium qui, illum dolorum, voluptas ipsa modi minima nam.</dt>
+					<dd><ins class="progressBar"><span class="progressBar--width5" style="max-width:5%"></span></ins><strong>5%</strong></dd>
+				</dl>
+			</div>
+			<ul class="tabs">
+				<li><a href="/student-dashboard/master-class/video/" class="currentItem" title="Now live">Master class 1<span class="isPlayed"></span></a></li>
+				<li><a href="/student-dashboard/master-class/video/?2" title="Now live">Master class 2</a></li>
+				<li><a href="/student-dashboard/master-class/video/?3" title="Now live">Master class 3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi quasi delectus expedita, reprehenderit, doloribus tempore magnam dolorum recusandae ullam unde tenetur dignissimos mollitia similique rem vel ipsa, quisquam consequatur sequi?<span class="isPlayed"></span></a></li>
+			</ul>
+		</nav>
+	</aside>	
+</main>

@@ -1,0 +1,80 @@
+	<main>
+		<article>
+			<form action="post" class="simpleForm">
+				<h3>Common components</h3>
+				<fieldset>
+					<ul>
+						<li>
+							<input type="email" id="CommonInput" value="Some text" required>
+							<label for="CommonInput">Regular input</label>
+						</li>
+						<li>
+							<button class="showPassword" id="pass1" attr="id_user-password1">Show Password</button>
+							<input type="password" id="id_user-password1" value="1mpregnab1eF0rtre55" required>
+							<label for="id_user-password1">Show Password</label>
+						</li>
+						<li>
+							<button class="showPassword hidePassword">Hide Password</button>
+							<input type="text" id="HidePassword" value="1mpregnab1eF0rtre55" required>
+							<label for="HidePassword">Hide Password</label>
+						</li>
+						<li>
+							<input type="email" id="ValidInput" value="johndoe@example.com" required class="isValid">
+							<label for="ValidInput">Valid input</label>
+						</li>
+						<li>
+							<input type="email" id="InvalidInput" value="johndoe.example.com" required class="isInvalid">
+							<label for="InvalidInput" data-attribute-description="An error description">Invalid input</label>
+						</li>
+						<li>
+							<button class="showPassword" title="Show Password">Show Password</button>
+							<input type="email" id="ValidPasswordInput" value="johndoe@example.com" required class="isValid">
+							<label for="ValidPasswordInput">Valid password input</label>
+						</li>
+						<li>
+							<button class="showPassword hidePassword" title="Hide Password">Hide Password</button>
+							<input type="email" id="InvalidPasswordInput" value="johndoe.example.com" required class="isInvalid">
+							<label for="InvalidPasswordInput" data-attribute-description="An error description">Invalid password input</label>
+						</li>
+						<li>
+							<input type="email" id="DisabledInput" value="Some text" disabled>
+							<label for="DisabledInput">Disabled input</label>
+						</li>
+						<li>
+							<textarea name="" id="Message1" cols="30" rows="3" required></textarea>
+							<label for="Message1" data-attribute-description="An error description">Message</label>
+						</li>
+						<li>
+							<textarea name="" id="Message2" cols="30" rows="3" required class="isValid"></textarea>
+							<label for="Message2" data-attribute-description="Everything is okay">Message</label>
+						</li>
+						<li>
+							<textarea name="" id="Message3" cols="30" rows="3" required class="isInvalid"></textarea>
+							<label for="Message3" data-attribute-description="An error description">Message</label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditions" required>
+							<label for="IAcceptTermsAndConditions">Checkbox  with <a href="?terms">some link</a></label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditionsWereFailed" required class="isInvalid">
+							<label for="IAcceptTermsAndConditionsWereFailed">Checkbox which needs to be checked</label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditionsLong" required>
+							<label for="IAcceptTermsAndConditionsLong">Checkbox  with <a href="?terms">some link</a> and long text. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad expedita cum, veniam aperiam doloribus recusandae dolore. Ullam at, magnam nemo iusto dolorem, nesciunt similique repellendus odio tempora quae earum nam!</label>
+						</li>
+						<li>
+							<button type="submit">Submit button</button>
+						</li>
+						<li>
+							<button type="submit" disabled>Disabled button</button>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</article>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/v2/js/common.min.js"></script>
+	<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/registration-validation.js"></script>

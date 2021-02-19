@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 9 | !IE]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+		<title>Blue Manor Academy</title>
+		<link rel="stylesheet" href="/v2/css/style.css"/>
+		<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="apple-touch-icon" href="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/img/apple-touch-icon.png">
+		<link rel="icon" href="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/img/favicon.png">
+
+		<script src="https://browser.sentry-cdn.com/5.22.3/bundle.tracing.min.js" integrity="sha384-HfEJlGrJtFM0B01Wt4sGzTbxWqLMcMeGAXCbyQyB+iK9BhnDmNAtIGovhekIQOa2" crossorigin="anonymous"></script>
+		<script type="application/javascript">
+			Sentry.init({ dsn: "https://2a652d42a541458b95ffe7e0286757e2@o155810.ingest.sentry.io/5413919" });
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/owl.carousel.min.js"></script>
+		<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/common.min.js"></script>
+
+		<!--[if lte IE 9]><!-->
+		<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/brochure/js/vendor/html5shiv.min.js"></script>
+		<!--<![endif]-->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-66196018-7"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-66196018-7');
+		</script>
+		<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/contact-us-validation.js"></script>
+</head>
+<body>
+	<header>
+		<a href="/" id="logo"><span>Blue Manor Academy</span></a>
+	</header>
+
+	<main>
+		<article>
+			<form method="post" class="simpleForm"><input type="hidden" name="csrfmiddlewaretoken" value="Jy6BPbzqz2irNQkdrSnqJisYKvHdp0yZ308rMNbJstp0qdpJq53w001xR6AgBg4A">
+				<h3>Register</h3>
+				<legend>All fields are required.</legend>
+				<fieldset>
+					<ul>
+						<li>
+							<input type="text" name="user-email" id="id_user-email" required>
+							<label for="id_user-email" data-attribute-description="Invalid email">Your email</label>
+						</li>
+						<li>
+							<input type="text" name="user-name" id="id_user-name" required>
+							<label for="id_user-name" data-attribute-description="Should contain atleast 2 symbols">Your name</label>
+						</li>
+						<li>
+							<button class="showPassword" id="pass1" attr="id_user-password1">Show Password</button>
+							<input type="password" name="user-password1" id="id_user-password1" required>
+							<label for="id_user-password1" data-attribute-description="Your password should contain atleast 4 symbols">Create password</label>
+						</li>
+						<li>
+							<button class="showPassword" id="pass2" attr="id_user-password2">Show Password</button>
+							<input type="password" name="user-password2" id="id_user-password2" required>
+							<label for="id_user-password2" data-attribute-description="Passwords did not matched">Confirm password</label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" name="account-terms" id="id_account-terms" required>
+							<label for="id_account-terms">I accept <a href="/accounts/terms/">Terms And Conditions</a></label>
+						</li>
+						<li>
+							<button type="submit" id="registration-btn" disabled>Register</button>
+						</li>
+						<li>
+							<a href="/accounts/login/">Log in</a>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</article>
+	</main>
+	<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/registration-validation.js"></script>
+
+<footer>
+	<div>
+		<p class="copyright">
+			<span>© <a href="/">Blue Manor Academy</a> 2020<span>.</span></span> <span>All rights reserved.</span>
+		</p>
+		<ul>
+			<li><a href="" class="simpleButton ghostButton">Contact us</a></li>
+			<li><a href="" class="facebook">Facebook</a></li>
+			<li><a href="" class="instagram">Instagram</a></li>
+		</ul>
+	</div>
+</footer>
+</body>
+</html>
