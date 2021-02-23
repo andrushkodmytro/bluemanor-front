@@ -2,7 +2,170 @@
 @import '../../css/scss/_extend';
 @import '../../css/scss/_fonts';
 @import '../../css/scss/_owl.carousel.scss';
+@import './typography.scss';
 // TODO: replace @import with direct links to font files
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
 
+// +Chapter-book
+.chapter-book-page {
+  .book-header {
+    margin-bottom: 20px;
+  }
+
+  .aspect-ratio-container {
+    padding-bottom: 600px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      padding-bottom: 800px;
+    }
+
+    @media (min-width: 1024px) {
+      padding-bottom: 75%;
+    }
+
+    .aspect-ratio-item {
+      position: absolute;
+    }
+  }
+
+  .chapter-book-content {
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    padding-right: 24px;
+
+    .chapter-book-img {
+      float: right;
+      width: 360px;
+      padding-left: 40px;
+      padding-bottom: 48px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .bookLesson-pagination {
+    padding-top: 40px;
+
+    @media (min-width: 1024px) {
+      padding-top: 0;
+    }
+  }
+}
+
+// -Chapter-book
+
+// + Quiz multiple
+.quiz-multiple-page {
+  .quiz-progress {
+    padding: 36px 0 60px;
+
+    .progressBar {
+      width: 100%;
+    }
+  }
+
+  .progress-top {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: var(--clr-brandBrick);
+
+      @for $i from 20 through 79 {
+        &.progressText--width#{$i} {
+          color: var(--clr-hover);
+        }
+      }
+      @for $i from 80 through 100 {
+        &.progressText--width#{$i} {
+          color: var(--clr-brandOK);
+        }
+      }
+    }
+  }
+
+  article {
+    max-width: 690px;
+  }
+
+  .quiz-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .quiz-header {
+      margin-bottom: 20px;
+    }
+
+    .img-container {
+      margin-bottom: 40px;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 100%;
+    margin: -10px;
+    margin-bottom: 30px;
+
+    .btn-item {
+      flex-basis: 50%;
+      padding: 10px;
+
+      label {
+        display: block;
+        border-radius: 16px;
+        padding: 24px;
+        background-color: white;
+        border: 2px solid white;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          right: 24px;
+          top: 24px;
+        }
+      }
+
+      input[type='radio'] {
+        display: none;
+      }
+
+      input:checked + label {
+        border: 2px solid #ffb800;
+      }
+    }
+  }
+
+  .btn-check {
+    padding-right: 88px;
+    padding-left: 88px;
+  }
+
+  .hint-pronunciation {
+    &::after {
+      content: '\e92e';
+      position: absolute;
+      background: var(--clr-brandGold);
+      font-size: calc(var(--size-XXS) * 2);
+      line-height: 2em;
+      width: 2em;
+      text-align: center;
+      border-radius: 100%;
+      font-family: icomoon;
+      font-weight: 400;
+    }
+  }
+}
+
+// - Quiz multiple
