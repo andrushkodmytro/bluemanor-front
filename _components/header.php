@@ -17,6 +17,7 @@
 	<title><?php echo $title ?><?php echo $sitename ?></title>
 	<!-- <link rel="stylesheet" href="/v2/css/style.<?php echo $CSS_ver ?>.css"> -->
 	<link rel="stylesheet" href="/v2/css/style.css">
+	<link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
 </head>
 <body <?php if ($modal != '') { echo 'class="'.$modal.'"'; }
 	if ($URI == "/landing/") {
@@ -31,7 +32,7 @@
 		}
 	?>>
 		<a href="/" id="logo"><span>Blue Manor Academy</span></a>
-		<?php 
+		<!-- <?php 
 			if ($header == 'hasDashboardMenu') { echo '<nav>
 				<ul>
 					<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText" title="Dashboard"><span>Dashboard</span></a></li>
@@ -84,5 +85,5 @@
 				<li><a href="/accounts/login/" class="simpleButton ghostButton hasIcon--log-in">Log in</a></li>
 			</ul>
 		</nav>'; }
-		?>
+		?> -->
 	</header>

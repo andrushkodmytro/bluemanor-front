@@ -101,6 +101,19 @@
 	}
 }
 
+#colorScheme--beigeText {
+	&,
+	&:link,
+	&:visited {
+		color: var(--clr-brandBeige);
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--clr-text);
+	}
+}
+
 #background--hoverBlue {
 	background: var(--clr-hover);
 }
@@ -181,6 +194,14 @@
 	@media (min-width: 1024px) {
 		width: calc((100vw - 610px) / 2 - 2em);
 		max-width: calc(var(--size-S) * 30);
+		@at-root {
+			.videoLesson & {
+				width: calc((100vw - var(--size-S) * 50) / 2 - 2em);
+				@media (max-width: 1439px) {
+					width: calc((100vw - var(--size-S) * 45) / 2 - 2em);
+				}
+			}
+		}
 	}
 }
 // -extends
