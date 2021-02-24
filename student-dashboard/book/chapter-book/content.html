@@ -2,13 +2,15 @@
 	<a href="/student-dashboard/"
 		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
 
+	
+
 	<article class="singlePage">
 		<section class="singlePage-content">
 			<h2>Animals</h2>
 			<div class="singlePage-descriptionList">
 				<div class="chapter-book-content">
 					<div class='aspect-ratio-container'>
-						<div class='aspect-ratio-item'>
+						<div class='aspect-ratio-item chapter-book-block'>
 							<div class="chapter-book-img">
 								<img src='/v2/img/Blue_Manor.jpg' alt='Book image' />
 							</div>
@@ -52,6 +54,26 @@
 			</ul>
 
 			<a href="?fullscreen" class="linkFullScreen hasIcon--maximize">Full screen</a>
+
+			<div class="videoPlayer">
+				<div class="videoControlPanel">
+					<ul>
+						<li><button class="hasIcon--fast-back-filled withoutText"><span>Back</span></button></li>
+						<li><button class="hasIcon--play-filled withoutText"><span>Play</span></button></li>
+						<li><button class="hasIcon--fast-forward-filled withoutText"><span>Forward</span></button></li>
+						<li class="seeker">
+							<em><span>Love of feathers</span></em>
+							<div>
+								<progress id='progressbar' class="progressbar" min="0" max="100" value="80"></progress>
+								<input type="range" id="seekbar" value="80" class="seekbar">
+							</div>
+						</li>
+						<li><button class="hasIcon--maximize withoutText"><span>Fullscreen</span></button></li>
+					</ul>
+				</div>
+	
+			</div>
+
 		</section>
 	</article>
 	<aside>
@@ -73,6 +95,8 @@
 				<li><a href="/student-dashboard/library/reading/?12">Part 3</a></li>
 			</ul>
 		</nav>
+
+		
 	</aside>
 </main>
 

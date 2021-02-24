@@ -34,19 +34,44 @@
     position: relative;
     z-index: 1;
     overflow-y: auto;
-    padding-right: 24px;
+    // padding-right: 24px;
 
     .chapter-book-img {
-      float: right;
-      width: 360px;
-      padding-left: 40px;
-      padding-bottom: 48px;
+      max-width: 600px;
+      width: 100%;
+      padding-bottom: 20px;
+
+      @media (min-width: 768px) {
+        padding-bottom: 40px;
+      }
+
+      @media (min-width: 1024px) {
+        float: right;
+        width: 360px;
+        padding-left: 40px;
+        padding-bottom: 48px;
+      }
 
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media (min-width: 1024px) {
+          
+        }
       }
+    }
+
+    .chapter-book-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (min-width: 1024px) {
+          display: block;
+      }
+
     }
   }
 
@@ -69,7 +94,7 @@
     .aspect-ratio-container {
       width: 100%;
       padding-bottom: 400px;
-      
+
       @media (min-width: 768px) {
         padding-bottom: 85%;
       }
@@ -93,14 +118,47 @@
     .button {
       margin-bottom: 20px;
       text-align: center;
-      min-width: 220px
+      min-width: 220px;
+    }
+  }
+
+  section.singlePage-content {
+    @media (min-width: 600px) and (max-width: 1023.9px) {
+      margin-bottom: 160px;
+    }
+  }
+
+  .videoPlayer {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    overflow: unset;
+    left: 0;
+    z-index: 22;
+    top: 0;
+    transform: translateY(-68px);
+
+    @media (max-width: 600px) {
+      .videoControlPanel {
+        border-radius: 0;
+        height: 68px;
+        padding: 8px;
+      }
     }
 
-    .simpleButton {
-      font-size: 24px;
-      line-height: 60px;
-       text-align: center;
-      min-width: 220px
+    @media (min-width: 600px) {
+      width: 550px;
+      z-index: 1;
+      top: unset;
+      bottom: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: 1024px) {
+      left: 20px;
+      bottom: 0;
+      transform: unset;
     }
   }
 }
