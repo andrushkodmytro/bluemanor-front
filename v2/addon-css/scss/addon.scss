@@ -58,7 +58,6 @@
         border-radius: 10px;
 
         @media (min-width: 1024px) {
-          
         }
       }
     }
@@ -69,9 +68,8 @@
       align-items: center;
 
       @media (min-width: 1024px) {
-          display: block;
+        display: block;
       }
-
     }
   }
 
@@ -234,10 +232,25 @@
         text-align: center;
         position: relative;
         cursor: pointer;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 
         &::after {
-          right: 24px;
+          right: 20px;
           top: 24px;
+        }
+
+        &::before {
+          left: 20px;
+          top: 24px;
+        }
+
+        &.disabled-label {
+          opacity: 0.6;
+        }
+
+        &.wrong-label {
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+          border: 2px solid var(--clr-brandErrorShad);
         }
       }
 
@@ -247,6 +260,7 @@
 
       input:checked + label {
         border: 2px solid #ffb800;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -254,6 +268,11 @@
   .btn-check {
     padding-right: 88px;
     padding-left: 88px;
+  }
+
+  .btn-continue {
+    padding-right: 72px;
+    padding-left: 72px;
   }
 
   .hint-pronunciation {
@@ -270,6 +289,20 @@
       font-weight: 400;
     }
   }
+}
+
+.wrong-cross-icon::before {
+  content: '\e90d';
+  position: absolute;
+  background: var(--clr-brandErrorShad);
+  font-size: calc(var(--size-XXS) * 2);
+  line-height: 2em;
+  width: 2em;
+  text-align: center;
+  border-radius: 100%;
+  font-family: icomoon;
+  font-weight: 400;
+  color: white;
 }
 
 // - Quiz multiple
