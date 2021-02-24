@@ -57,6 +57,52 @@
       padding-top: 0;
     }
   }
+
+  .end-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: unset;
+    padding: 0;
+
+    .aspect-ratio-container {
+      width: 100%;
+      padding-bottom: 400px;
+      
+      @media (min-width: 768px) {
+        padding-bottom: 85%;
+      }
+
+      .aspect-ratio-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .book-header {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .button {
+      margin-bottom: 20px;
+      text-align: center;
+      min-width: 220px
+    }
+
+    .simpleButton {
+      font-size: 24px;
+      line-height: 60px;
+       text-align: center;
+      min-width: 220px
+    }
+  }
 }
 
 // -Chapter-book
