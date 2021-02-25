@@ -125,40 +125,6 @@
       margin-bottom: 160px;
     }
   }
-
-  .videoPlayer {
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    overflow: unset;
-    left: 0;
-    z-index: 22;
-    top: 0;
-    transform: translateY(-68px);
-
-    @media (max-width: 600px) {
-      .videoControlPanel {
-        border-radius: 0;
-        height: 68px;
-        padding: 8px;
-      }
-    }
-
-    @media (min-width: 600px) {
-      width: 550px;
-      z-index: 1;
-      top: unset;
-      bottom: -140px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @media (min-width: 1024px) {
-      left: 20px;
-      bottom: 0;
-      transform: unset;
-    }
-  }
 }
 
 // -Chapter-book
@@ -347,3 +313,100 @@
 }
 
 // - Quiz multiple
+
+.video-player-container {
+  max-width: 1058px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (min-width: 1024px) {
+    padding-top: 20px;
+  }
+
+  .videoPlayer {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    transform: translateY(-124px);
+    height: auto;
+    margin-right: 20px;
+    padding: 0;
+    
+    @media (max-width: 480px){
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      transform: translateY(-169px);
+    }
+
+    @media (max-width: 1023.9px){
+      border-radius: 0;
+    }
+    
+    @media (min-width: 1024px) {
+      max-width: 550px;
+      position: static;
+      transform: unset;
+    }
+    
+    .videoControlPanel {
+      position: static;
+      display: flex;
+
+      ul {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        height: 100px;
+      }
+
+      @media (min-width: 1024px) {
+        height: auto;
+      }
+
+      @media (max-width: 1023.9px){
+        border-radius: 0;
+      }
+    }
+  }
+
+  .linkFullScreen {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+      position: static;
+      margin-right: 10px;
+    }
+  }
+}
+
+main.main-with-player.forDashboard {
+  padding-top: 80px;
+
+  @media (min-width: 768px)and (max-width: 1023.9px) {
+    padding-top: 120px;
+  }
+
+
+  @media (min-width: 1024px) {
+    padding-top: 0;
+  }
+}
+
+// Hide header for tablet and mobile
+.with-player{
+  header {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
