@@ -41,12 +41,12 @@
     &::-webkit-scrollbar {
       width: 10px;
       height: 10px;
-    };
+    }
 
     &::-webkit-scrollbar-thumb {
       background-color: var(--clr-brandBeige);
       border-radius: 10px;
-    };
+    }
 
     .chapter-book-img {
       max-width: 600px;
@@ -322,6 +322,47 @@
       font-weight: 400;
     }
   }
+
+  // Finish page
+
+  .quiz-finish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .quiz-percent-res {
+      font-family: Cormorant Infant;
+      font-weight: bold;
+      font-size: 288px;
+      line-height: 349px;
+      color: var(--clr-brandGold);
+    }
+
+    .quiz-status {
+      margin-bottom: 20px;
+    }
+
+    .quiz-finish-text {
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+
+      span {
+        color: var(--clr-hover);
+      }
+    }
+
+    a {
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .btn-container {
+      a:nth-of-type(2){
+        margin-left: 20px;
+      }
+    }
+  }
 }
 
 // - Quiz multiple
@@ -332,7 +373,7 @@
   justify-content: flex-end;
   margin-left: auto;
   margin-right: auto;
-  
+
   @media (min-width: 1024px) {
     padding-top: 20px;
   }
@@ -345,8 +386,8 @@
     height: auto;
     margin-right: 20px;
     padding: 0;
-    
-    @media (max-width: 480px){
+
+    @media (max-width: 480px) {
       margin-right: 0;
       margin-left: 0;
       width: 100%;
@@ -356,16 +397,16 @@
       transform: translateY(-169px);
     }
 
-    @media (max-width: 1023.9px){
+    @media (max-width: 1023.9px) {
       border-radius: 0;
     }
-    
+
     @media (min-width: 1024px) {
       max-width: 550px;
       position: static;
       transform: unset;
     }
-    
+
     .videoControlPanel {
       position: static;
       display: flex;
@@ -382,7 +423,7 @@
         height: auto;
       }
 
-      @media (max-width: 1023.9px){
+      @media (max-width: 1023.9px) {
         border-radius: 0;
       }
     }
@@ -402,10 +443,9 @@
 main.main-with-player.forDashboard {
   padding-top: 80px;
 
-  @media (min-width: 768px)and (max-width: 1023.9px) {
+  @media (min-width: 768px) and (max-width: 1023.9px) {
     padding-top: 120px;
   }
-
 
   @media (min-width: 1024px) {
     padding-top: 0;
@@ -413,12 +453,10 @@ main.main-with-player.forDashboard {
 }
 
 // Hide header for tablet and mobile
-.with-player{
-  header {
+.with-player:not(html) {
     display: none;
 
     @media (min-width: 1024px) {
       display: block;
     }
-  }
 }
