@@ -34,7 +34,19 @@
     position: relative;
     z-index: 1;
     overflow-y: auto;
-    // padding-right: 24px;
+    padding-right: 10px;
+    padding-left: 10px;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    };
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--clr-brandBeige);
+      border-radius: 10px;
+    };
 
     .chapter-book-img {
       max-width: 600px;
