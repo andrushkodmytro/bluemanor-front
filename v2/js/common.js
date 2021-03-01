@@ -136,6 +136,31 @@ $(function(){
 	   
 	//    });
 	//-Show/hide password
+	
 
+$('#blackboard-btn').click(()=>{
+const $dialog = $(this).find('dialog');
+$dialog.attr( "open",function(index, attr){
+	
+	return attr ? false : true;
+} )
+})
+
+$('#blackboard-close-btn').click(()=>{
+	const $dialog = $(this).find('dialog');
+	$dialog.attr( "open",function(index, attr){
+		return attr ? false : true;
+	} )
+	})
+
+	$('#maximize-btn').click(()=>{
+		const dialog = $(this).parents('dialog')
+		$('dialog').toggleClass("full-black-board")
+	});
+
+	$('#minimize-btn').click(()=>{
+		const dialog = $(this).parents('dialog')
+		$('dialog').toggleClass("full-black-board")
+	});
 
 });

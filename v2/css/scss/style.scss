@@ -1470,6 +1470,13 @@ header {
 .hasIcon--user::before {
 	content: '\e90b'; //icon user profile
 }
+.hasIcon--info::before {
+	content: '\e911'; //icon user profile
+}
+.hasIcon--award::before {
+	content: '\e90a'; //icon award
+}
+
 
 .noMargin {
 	margin: 0!important;

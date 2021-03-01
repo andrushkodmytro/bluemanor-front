@@ -1,4 +1,5 @@
-<main class="quiz-page quiz-multiple-page">
+<main class="quiz-page quiz-multiple-page ">
+
 	<a href="/student-dahsboard/"
 		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
 
@@ -12,38 +13,27 @@
 				<ins class="progressBar"><span class="progressBar--width22" style="max-width:60%"></span></ins>
 			</div>
 
-			<h2 class='heading-2 quiz-header hint-pronunciation'>
-				What animal is this?
+
+			<h2 class='heading-2 quiz-header quiz-type-header hint-pronunciation'>
+				3+4=?
 			</h2>
 
-			<div class="quiz-img-container">
-				<div class="quiz-image">
-					<img src='/v2/img/quiz-multiple.jpg' alt='quiz' />
+			<form action="/" method="POST" class="quiz-container quiz-type-answer">
+				<div class="quiz-input">
+					<label for="res">Type the answer</label>
+					<input type='text' id='res' />
 				</div>
-			</div>
 
-			<form action="/" method="POST" class="quiz-container">
-
-				<h4 class='heading-4 correct-answer-text'> Correct answer is:</h4>
-
-				<ul class='buttons-container '>
-					<li class="btn-item">
-						<input type="radio" id='result3' name="amount" value='Buffalo 3' disabled />
-						<label for="result3" class='hint-pronunciation heading-4 correct-check-icon'>Buffalo</label>
-					</li>
-				</ul>
-
-				<button class="btn-continue" type='submit'>
-					Continue
+				<button class="btn-check" type='submit'>
+					Check
 				</button>
-
 			</form>
 
 			<!-- Blackboard container -->
 			<div class='blackboard-container'>
-				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--edit  sizeM wAuto">Use blackboard</button>
+				<button id='blackboard-btn'class="simpleButton ghostButton hasIcon--edit  sizeM wAuto">Use blackboard</button>
 				<div class="blackboard">
-					<dialog class="modalContent" aria-modal="true" role="dialog">
+					<dialog  class="modalContent" aria-modal="true" role="dialog">
 						<div class="dialog-header">
 							<button id='maximize-btn' class='hasIcon--maximize' aria-label="Close modal dialogue"></button>
 							<button id='minimize-btn' class='hasIcon--minimize' aria-label="Close modal dialogue"></button>
@@ -55,6 +45,7 @@
 
 				</div>
 			</div>
+
 		</section>
 	</article>
 </main>
