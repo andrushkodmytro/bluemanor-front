@@ -405,13 +405,138 @@
 
     .dialog-content {
       overflow: auto;
-      
+
       padding: 0 60px;
       text-align: start;
     }
 
     .dialog-footer {
       padding: 44px 60px 64px;
+      text-align: end;
+    }
+  }
+
+  .scores-modal {
+    @extend #customScroll--gray;
+
+    display: flex;
+    flex-direction: column;
+    max-height: 630px;
+
+    .dialog-content {
+      flex-grow: 1;
+    }
+
+    .tabs-links {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid var(--clr-brandBeigeDark);
+
+      li {
+        padding-right: 4px;
+        padding-left: 4px;
+
+        a {
+          display: block;
+          padding: 7px 40px;
+          text-decoration: none;
+          color: var(--clr-text);
+          border: none;
+
+          &:hover {
+            background-color: var(--clr-brandBeigeLite);
+            border-radius: 6px 6px 0 0;
+          }
+        }
+      }
+
+      .ui-tabs-active a {
+        background-color: var(--clr-brandBeige);
+        border-radius: 6px 6px 0 0;
+      }
+    }
+
+    .table-container {
+      max-height: 320px;
+      position: relative;
+      overflow: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        th {
+          position: sticky;
+          top: 0;
+          background-color: #f8f8f8;
+          padding: 11px 20px;
+          text-transform: uppercase;
+          font-family: Cabin;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18px;
+          color: #8e8b87;
+        }
+
+        th:nth-of-type(1) {
+          width: 120px;
+          padding-left: 60px;
+        }
+
+        th:nth-of-type(2) {
+          width: 500px;
+          min-width: 250px;
+          text-align: start;
+        }
+
+        th:nth-of-type(3) {
+          width: 120px;
+          text-align: end;
+        }
+
+        th:nth-of-type(4) {
+          width: 120px;
+          padding-right: 60px;
+        }
+      }
+
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #f8f8f8;
+        }
+        td {
+          padding: 20px;
+          text-align: end;
+          font-family: Cabin;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px;
+        }
+
+        td:nth-of-type(1) {
+          padding-left: 60px;
+        }
+
+        td:nth-of-type(2) {
+          text-align: start;
+        }
+
+        td:nth-of-type(3) {
+        }
+
+        td:nth-of-type(4) {
+          padding-right: 60px;
+          color: var(--clr-brandOKShad);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .dialog-footer {
       text-align: end;
     }
   }

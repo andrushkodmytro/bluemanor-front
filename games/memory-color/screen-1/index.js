@@ -38,4 +38,8 @@ $( function() {
     console.log('Click')
 $(this).attr( "open", false)
   })
+
+  $('#game-scores')
+
+  $( "#tabs" ).tabs();
 } );
