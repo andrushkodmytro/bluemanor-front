@@ -391,4 +391,28 @@
   .ui-droppable-active {
     fill: red;
   }
+
+  .game-welcome-modal {
+    @extend #customScroll--gray;
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    h3 {
+      padding-top: 60px;
+    }
+
+    .dialog-content {
+      overflow: auto;
+      
+      padding: 0 60px;
+      text-align: start;
+    }
+
+    .dialog-footer {
+      padding: 44px 60px 64px;
+      text-align: end;
+    }
+  }
 }

@@ -25,4 +25,17 @@ $( function() {
       // console.log('Drag end')
     });
   });
+
+
+
+
+  $('#info-modal').attr( "open",function(index, attr){
+    return attr ? false : true;
+  } )
+
+  $('#info-modal').find('.closeButton').click(function(){
+
+    console.log('Click')
+$(this).attr( "open", false)
+  })
 } );

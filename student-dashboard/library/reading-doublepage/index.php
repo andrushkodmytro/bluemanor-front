@@ -1,5 +1,5 @@
 <?php 
-	$title = "Reading: single page";
+	$title = "Reading: double page";
 	$header = "hasStudentDashboardMenu";
 	include '../../../_components/header.php';
 	include 'content.html';

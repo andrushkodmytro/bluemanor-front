@@ -1,6 +1,6 @@
 <?php 
-	$title = "Reading: single page";
-	$header = "hasStudentDashboardMenu";
+	$title = "Reading ABC: double page";
+	$header = "hasStudentDashboardMenu hideOnSmall";
 	include '../../../_components/header.php';
 	include 'content.html';
 	include '../../../_components/footer.php'
