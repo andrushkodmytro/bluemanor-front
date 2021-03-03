@@ -1,4 +1,4 @@
-<main class="quiz-multiple-page">
+<main class="quiz-page quiz-multiple-page">
 	<a href="/student-dahsboard/"
 		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
 
@@ -13,27 +13,27 @@
 
 			</div>
 
-			<form action="/" method="POST" class="quiz-container">
-				<h2 class='heading-2 quiz-header hint-pronunciation'>
-					What animal is this?
-				</h2>
+			<h2 class='heading-2 quiz-header hint-pronunciation'>
+				What animal is this?
+			</h2>
 
-				<div class="img-container">
-					<img src='/v2/img/quiz-multiple.jpg' alt='quiz' />
+			<div class="quiz-img-container">
+				<div class="quiz-image">
+					<img src='/v2/img/quiz-multiple.jpg' alt='quiz'/>
 				</div>
+			</div>
 
 
+			<form action="/" method="POST" class="quiz-container">
 				<ul class='buttons-container'>
 					<li class="btn-item">
 						<input type="radio" id='result1' name="amount" value='Buffalo 1' />
 						<label for="result1" class='hint-pronunciation heading-4'>Buffalo</label>
 
-
 					</li>
 					<li class="btn-item">
 						<input type="radio" id='result2' name="amount" value='Buffalo 2' />
 						<label for="result2" class='hint-pronunciation heading-4'>Bear</label>
-
 
 					</li>
 					<li class="btn-item">
@@ -51,11 +51,29 @@
 				<button class="btn-check" type='submit'>
 					Check
 				</button>
-
-
-
 			</form>
 
+				<!-- Blackboard container -->
+				<div class='blackboard-container'>
+					<button id='blackboard-btn'class="simpleButton ghostButton hasIcon--edit  sizeM wAuto">Use blackboard</button>
+					<div class="blackboard">
+						<dialog  class="modalContent" aria-modal="true" role="dialog">
+							<div class="dialog-header">
+								<button id='maximize-btn' class='hasIcon--maximize' aria-label="Close modal dialogue"></button>
+								<button id='minimize-btn' class='hasIcon--minimize' aria-label="Close modal dialogue"></button>
+								<button id='blackboard-close-btn' class='hasIcon--close' aria-label="Close modal dialogue "></button>
+							</div>
+							<div class="dialog-body">
+							</div>
+						</dialog>
+	
+					</div>
+				</div>
 		</section>
 	</article>
 </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/v2/js/owl.carousel.min.js"></script>
+<script src="/v2/js/common.min.js"></script>
+<script src="/v2/js/common.js"></script>
