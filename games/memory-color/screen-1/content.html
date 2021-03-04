@@ -290,13 +290,13 @@
 
 			<!-- Blackboard container -->
 			<div class='blackboard-container'>
-				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--award  sizeM wAuto">High scores</button>
-				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--alert-circle sizeM wAuto">Info</button>
+				<button id='high-scores-btn' class="simpleButton ghostButton hasIcon--award  sizeM wAuto">High scores</button>
+				<button id='info-btn' class="simpleButton ghostButton hasIcon--alert-circle sizeM wAuto">Info</button>
 			</div>
 
 
-			<!-- <div class="modal">
-				<dialog  id='info-modal' class="modalContent game-welcome-modal" aria-modal="true" role="dialog">
+			<div class="modal" id='game-info-modal' style='display: none'>
+				<dialog  class="modalContent game-welcome-modal" aria-modal="true" role="dialog">
 				
 					<div class="dialog-header">
 						<h3>Welcome to Memory Colors!</h3>
@@ -318,73 +318,26 @@
 					<button class="closeButton" aria-label="Close modal dialogue"><span>×</span></button>
 					
 				</dialog>
-			</div> -->
+			</div>
 
-			<div class="modal">
-				<dialog open class="modalContent scores-modal" aria-modal="true" role="dialog">
+
+
+
+			<div class="modal" style='display: none' id='game-score-modal'>
+				<dialog class="modalContent game-scores-dialog" aria-modal="true" role="dialog">
 
 					<div class="dialog-header">
 						<h3 class='heading-3'>High scores</h3>
 					</div>
 
 					<div class="dialog-content">
-						<div id="tabs">
+						<div id="tabs" class='tabs-container'>
 							<ul class='tabs-links'>
 								<li><a href="#tabs-1">My scores</a></li>
 								<li><a href="#tabs-2">Global scores</a></li>
 							</ul>
 
-
 							<div id="tabs-1" class='table-container'>
-								<!-- <div class="header-data">Hello</div> -->
-								<!-- <ul class="body-data">
-									<li>
-										<div>1</div>
-										<div>
-											2
-										</div>
-										<div>3</div>
-										<div>
-											4
-										</div>
-									</li>
-									<li>
-										<div>1</div>
-										<div>
-											2
-										</div>
-										<div>3</div>
-										<div>
-											4
-										</div>
-									</li>
-									<li>
-										<div>1</div>
-										<div>
-											2
-										</div>
-										<div>3</div>
-										<div>
-											4
-										</div>
-									</li>
-									<li>
-										<div>1</div>
-										<div>
-											2
-										</div>
-										<div>3</div>
-										<div>
-											4
-										</div>
-									</li>
-									
-								</ul> -->
-
-
-
-
-
 								<table>
 									<thead>
 										<tr>
@@ -405,16 +358,16 @@
 									<tbody>
 										<tr>
 											<td>
-												1
+												12345678
 											</td>
 											<td>
-												Audrey
+												AudreyAudreyAudreyAudrey AudreyAudrey Audr eyA udr eyAudreyAudrey
 											</td>
 											<td>
 												21:25
 											</td>
 											<td>
-												90
+												123456
 											</td>
 										</tr>
 
@@ -590,9 +543,10 @@
 									</tbody>
 								</table>
 							</div>
+
 							<div id="tabs-2">
 
-								
+
 								<table>
 									<thead>
 										<tr>

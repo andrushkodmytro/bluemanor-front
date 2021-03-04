@@ -28,18 +28,36 @@ $( function() {
 
 
 
+  // Info modal
+  const $infoModal =  $('#game-info-modal');
 
-  $('#info-modal').attr( "open",function(index, attr){
-    return attr ? false : true;
-  } )
+  $('#info-btn').click(()=>{
+    $infoModal.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
 
-  $('#info-modal').find('.closeButton').click(function(){
-
-    console.log('Click')
-$(this).attr( "open", false)
+  $infoModal.find('.closeButton').click(()=>{
+    $infoModal.css('display', 'none').find('dialog').attr( "open", false)
   })
 
-  $('#game-scores')
 
+
+
+
+
+  //Score modal
+  const $scoreModal =  $('#game-score-modal');
+
+  $('#high-scores-btn').click(()=>{
+    $scoreModal.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
+
+  $scoreModal.find('.closeButton').click(()=>{
+    $scoreModal.css('display', 'none').find('dialog').attr( "open", false)
+  })
+
+
+  // Tabs init
   $( "#tabs" ).tabs();
 } );
