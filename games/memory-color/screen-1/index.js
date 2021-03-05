@@ -1,45 +1,87 @@
 $( function() {  
+  var draggedElement = null;
+
   $("#slots svg path" ).each(function() {
     console.log($(this))
     $(this).on('dragover',function(ev) {
       ev.originalEvent.preventDefault();
     }).on('drop',function(ev) {
-    
-      console.log('drop ======> 222 ')
-      // $(this).removeClass();
-      // $(this).addClass('color-fill-' + ev.originalEvent.dataTransfer.getData('text/plain'));
-    });
+        $(this).removeClass();
+        $(this).addClass('color-fill-' + ev.originalEvent.dataTransfer.getData('text/plain'));
+    })
+    .on('dragenter', function(ev){
+      // add hover class
+      console.log('Hover')
+      
+      $(this).addClass('color-fill-hover-' + $(draggedElement).data('color'));
+
+    }).on('dragleave',  function(ev){
+      console.log('End hover')
+      // Remove hover class
+      $(this).removeClass('color-fill-hover-' + $(draggedElement).data('color'));
+
+    })
   });
 
-  $( "#options > div > span" ).each(function() {
+  $( "#options  div > span" ).each(function() {
     $(this).on('dragstart',function(ev) {
-      const clone = $(this).find('svg')
-      // clone.css('transform', 'rotate(45deg)')
+      ev.originalEvent.dataTransfer.setData('text/plain',$(this).data('color'));
+      const svg = $(ev.currentTarget).find('svg')[0]
 
-      console.log(clone[0])
-      ev.originalEvent.dataTransfer.setDragImage(clone[0], 0, 0)
-      // $(this).animate({'opacity': 0.3});
-      // ev.originalEvent.dataTransfer.setData('text/plain',$(this).data('color'));
+      ev.originalEvent.dataTransfer.setDragImage(svg, 12, 100);
+      draggedElement = this
+
+    $(ev.currentTarget).addClass('draggedElem')
+    
+$('body').addClass('.drag')
+      
     }).on('dragend',function(ev) {
-      // $(this).animate({'opacity': 1});
-      // console.log('Drag end')
-    });
+      console.log('Drag end')
+      draggedElement= null
+    })
   });
 
 
 
+  // Info modal
+  const $infoModal =  $('#game-info-modal');
 
-  $('#info-modal').attr( "open",function(index, attr){
-    return attr ? false : true;
-  } )
+  $('#info-btn').click(()=>{
+    $infoModal.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
 
-  $('#info-modal').find('.closeButton').click(function(){
-
-    console.log('Click')
-$(this).attr( "open", false)
+  $infoModal.find('.closeButton').click(()=>{
+    $infoModal.css('display', 'none').find('dialog').attr( "open", false)
   })
 
-  $('#game-scores')
 
+
+
+
+
+  //Score modal
+  const $scoreModal =  $('#game-score-modal');
+
+  $('#high-scores-btn').click(()=>{
+    $scoreModal.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
+
+  $scoreModal.find('.closeButton').click(()=>{
+    $scoreModal.css('display', 'none').find('dialog').attr( "open", false)
+  })
+
+
+  // Tabs init
   $( "#tabs" ).tabs();
+
+  $('.btn-check').click(function(){
+    console.log('Click')
+    $(this).text('I’m ready')
+    $('.timer span').removeClass('timer-clock').text('8');
+    $('h3').text('Memorize the colors until the timer reaches zero.')
+  })
+
+
 } );
