@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
 
 .game-page {
-  padding-left: var(--size-L);
-  padding-right: var(--size-L);
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
   padding-top: 12px;
 
   @media (min-width: 1440px) {
@@ -98,7 +98,8 @@
     display: flex;
     position: absolute;
     top: 12px;
-    right: 24px;
+    right: var(--size-S);
+
     justify-content: flex-start;
     padding-top: 0;
 
@@ -144,6 +145,8 @@
     }
 
     @media (min-width: 768px) {
+      right: 24px;
+
       .simpleButton.ghostButton {
         height: auto;
       }

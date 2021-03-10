@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
 
 .game-page {
-  padding-left: var(--size-L);
-  padding-right: var(--size-L);
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
   padding-top: 12px;
 
   @media (min-width: 1440px) {
@@ -98,7 +98,7 @@
     display: flex;
     position: absolute;
     top: 12px;
-    right: 24px;
+    right: var(--size-S);
     justify-content: flex-start;
     padding-top: 0;
 
@@ -144,6 +144,8 @@
     }
 
     @media (min-width: 768px) {
+      right: 24px;
+
       .simpleButton.ghostButton {
         height: auto;
       }
@@ -390,7 +392,7 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 40px;
-    padding: 20px 0 0;
+    padding: 20px 12px;
     background-color: var(--clr-white);
     border-radius: 16px;
     align-items: center;
@@ -403,10 +405,10 @@
         flex-wrap: wrap;
         justify-content: center;
         margin: -6px auto -6px;
-        max-width: 600px;
+        max-width: 650px;
         margin-bottom: 14px;
-        padding-left: 10px;
-        padding-right: 10px;
+        // padding-left: 10px;
+        // padding-right: 10px;
 
         .slot-item-container {
           padding: 6px;
@@ -536,10 +538,10 @@
         flex-wrap: wrap;
         justify-content: center;
         border-radius: 16px;
-        padding: 10px;
+        // padding: 10px;
 
         @media (min-width: 480px) {
-          padding: 14px 20px;
+          // padding: 14px 20px;
         }
 
         .variant-item-container {
@@ -648,6 +650,10 @@
     }
 
     .slots-6 {
+      .slots-list {
+        max-width: 666px;
+      }
+
       .slot-item-container {
         width: 16.666%;
 
@@ -669,6 +675,10 @@
     }
 
     .slots-7 {
+      .slots-list {
+        max-width: 666px;
+      }
+
       .slot-item-container {
         width: 14.285%;
 

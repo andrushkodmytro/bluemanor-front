@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
 
 .game-page {
-  padding-left: var(--size-L);
-  padding-right: var(--size-L);
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
   padding-top: 12px;
 
   @media (min-width: 1440px) {
@@ -98,7 +98,8 @@
     display: flex;
     position: absolute;
     top: 12px;
-    right: 24px;
+    right:  var(--size-S);
+    
     justify-content: flex-start;
     padding-top: 0;
 
@@ -144,6 +145,8 @@
     }
 
     @media (min-width: 768px) {
+      right: 24px;
+
       .simpleButton.ghostButton {
         height: auto;
       }
@@ -388,10 +391,9 @@
   .game {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 20px 12px;
     background-color: var(--clr-white);
     border-radius: 16px;
     align-items: center;
@@ -443,6 +445,8 @@
             border-color: var(--clr-brandErrorShad);
           }
         }
+
+        
       }
     }
     //-Style for all cells
@@ -468,12 +472,32 @@
     .slots-36 {
       li {
         flex-basis: 16.66%;
+
+        span:before{
+          border-radius: 4px;
+        }
+
+        @media(min-width:480px){
+          span:before{
+            border-radius: 10px;
+          }
+        }
       }
     }
 
     .slots-49 {
       li {
         flex-basis: 14.28%;
+
+        span:before{
+          border-radius: 4px;
+        }
+
+        @media(min-width:480px){
+          span:before{
+            border-radius: 10px;
+          }
+        }
       }
     }
   }
