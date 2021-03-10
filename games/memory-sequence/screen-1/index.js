@@ -1,4 +1,18 @@
 $(function() {
+
+  // Info modal
+  const $infoModal =  $('#game-info-modal');
+
+  $('#info-btn').click(()=>{
+    $infoModal.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
+
+  $infoModal.find('.closeButton').click(()=>{
+    $infoModal.css('display', 'none').find('dialog').attr( "open", false)
+  })
+
+
   //Score modal
   const $scoreModal = $('#game-score-modal');
 

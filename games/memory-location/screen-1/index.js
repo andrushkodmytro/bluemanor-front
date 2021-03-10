@@ -48,7 +48,7 @@ $( function() {
   $('.btn-check').click(function(){
     $(this).text('I’m ready')
     $('.timer span').removeClass('timer-clock').text('8');
-    $('h3').text('Memorize the colors until the timer reaches zero.')
+    $('h3').text('Memorize which ones are darker until the timer reaches zero.')
 
     if(clickCount && sizeSlots < 8){
       const $slots = $('#slots ');
