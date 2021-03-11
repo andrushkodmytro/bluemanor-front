@@ -217,9 +217,11 @@
   .blackboard-container {
     position: absolute;
     top: 40px;
-    right: 24px;
+    right: 0;
 
     @media (min-width: 768px) {
+      right: 24px;
+
       .simpleButton.ghostButton {
         height: auto;
       }
@@ -234,24 +236,45 @@
 
   .blackboard {
     position: absolute;
-    top: 0px;
-    right: 0;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    @media (min-width: 768px) {
+      right: 20px;
+      top: 40px;
+      transform: unset;    
+    }
 
     dialog {
-      max-width: 335px;
-      max-height: 335px;
+      flex-direction: column;
       background-color: var(--clr-footer);
       border: 4px solid var(--clr-brandBlue);
       border-radius: 16px;
-      cursor: url('../../img/pencil.png') 0 40, none;
+      width: 94vw;
+      height: 98vh;
+
+      @media (min-width: 768px) {
+        max-width: 335px;
+        max-height: 335px;
+      
+      }
+
+      .dialog-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
 
       .hasIcon--minimize {
         display: none;
       }
 
       &.full-black-board {
-        max-width: 600px;
-        max-height: 600px;
+        @media (min-width: 768px) {
+          max-width: 600px;
+          max-height: 600px;
+        }
 
         .hasIcon--minimize {
           display: flex;
@@ -275,6 +298,15 @@
       box-shadow: none;
       background-color: transparent;
       color: var(--clr-white);
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        visibility: hidden;
+
+        @media (min-width: 768px) {
+          visibility: visible;
+        }
+      }
 
       &:hover {
         background-color: transparent;
@@ -300,6 +332,7 @@
   .dialog-body {
     height: 100%;
     border-top: 2px solid var(--clr-brandBlue);
+    cursor: url('../../img/pencil.png') 0 60, none;
   }
 
   .hint-pronunciation {

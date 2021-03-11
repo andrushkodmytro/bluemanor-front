@@ -98,8 +98,8 @@
     display: flex;
     position: absolute;
     top: 12px;
-    right: var(--size-S);
-
+    right:  var(--size-S);
+    
     justify-content: flex-start;
     padding-top: 0;
 
@@ -391,232 +391,120 @@
   .game {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 20px 12px;
     background-color: var(--clr-white);
     border-radius: 16px;
     align-items: center;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
+    // +Style for all cells
+    [class^="slots"] {
+      display: flex;
       flex-wrap: wrap;
-      padding: 40px;
-      align-items: flex-start;
+      width: 100%;
+      max-width: 256px;
+      margin: -4px;
+
+      li {
+        padding: 4px;
+
+        span {
+          display: block;
+          padding-bottom: 100%;
+          position: relative;
+          cursor: pointer;
+
+          &:hover:not(.answer):not(.wrong):before {
+            background-color: var(--clr-brandBrick);
+            border-color: var(--clr-brandBrick);
+            opacity: 0.3;
+          }
+
+          &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 10px;
+            border: 2px solid var(--clr-brandBeigeDark);
+          }
+        }
+
+        .answer {
+          &:before {
+            background-color: var(--clr-brandBrick);
+            border-color: var(--clr-brandBrick);
+          }
+        }
+
+        .wrong {
+          cursor: auto;
+          &:before {
+            background-color: #f9dcde;
+            border-color: var(--clr-brandErrorShad);
+          }
+        }
+
+        
+      }
+    }
+    //-Style for all cells
+
+    .slots-9 {
+      li {
+        flex-basis: 33.33%;
+      }
+    }
+
+    .slots-16 {
+      li {
+        flex-basis: 25%;
+      }
+    }
+
+    .slots-25 {
+      li {
+        flex-basis: 20%;
+      }
+    }
+
+    .slots-36 {
+      li {
+        flex-basis: 16.66%;
+
+        span:before{
+          border-radius: 4px;
+        }
+
+        @media(min-width:480px){
+          span:before{
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .slots-49 {
+      li {
+        flex-basis: 14.28%;
+
+        span:before{
+          border-radius: 4px;
+        }
+
+        @media(min-width:480px){
+          span:before{
+            border-radius: 10px;
+          }
+        }
+      }
     }
   }
 
   .btn-check {
     max-width: 240px;
     width: 100%;
-  }
-
-  .circle {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    max-width: 300px;
-
-    @media (min-width: 768px) {
-      margin-right: 40px;
-    }
-
-    svg {
-      width: 100%;
-      height: auto;
-    }
-
-    path {
-      fill: white;
-    }
-
-    .color-fill-yellow {
-      fill: var(--clr-brandGoldLite);
-      stroke: var(--clr-brandGoldLite);
-    }
-
-    .color-fill-orange {
-      fill: var(--clr-brandBrick);
-      stroke: var(--clr-brandBrick);
-    }
-
-    .color-fill-red {
-      fill: var(--clr-brandErrorShad);
-      stroke: var(--clr-brandErrorShad);
-    }
-
-    .color-fill-pink {
-      fill: #e02981;
-      stroke: #e02981;
-    }
-
-    .color-fill-green {
-      fill: var(--clr-brandOKShad);
-      stroke: var(--clr-brandOKShad);
-    }
-
-    .color-fill-turquoise {
-      fill: #00bdb2;
-      stroke: #00bdb2;
-    }
-
-    .color-fill-blue {
-      fill: var(--clr-hover);
-      stroke: var(--clr-hover);
-    }
-
-    .color-fill-violet {
-      fill: var(--clr-visited);
-      stroke: var(--clr-visited);
-    }
-
-    .color-fill-hover-yellow {
-      fill: var(--clr-brandGoldLite);
-      stroke: var(--clr-brandGoldLite);
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-orange {
-      fill: var(--clr-brandBrick);
-      stroke: var(--clr-brandBrick);
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-red {
-      fill: var(--clr-brandErrorShad);
-      stroke: var(--clr-brandErrorShad);
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-pink {
-      fill: #e02981;
-      stroke: #e02981;
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-green {
-      fill: var(--clr-brandOKShad);
-      stroke: var(--clr-brandOKShad);
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-turquoise {
-      fill: #00bdb2;
-      stroke: #00bdb2;
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-blue {
-      fill: var(--clr-hover);
-      stroke: var(--clr-hover);
-      opacity: 0.3;
-    }
-
-    .color-fill-hover-violet {
-      fill: var(--clr-visited);
-      stroke: var(--clr-visited);
-      opacity: 0.3;
-    }
-
-    .color-fill-error {
-      fill: #f9dcde;
-      stroke: var(--clr-brandErrorShad);
-    }
-
-    .color-fill-hover {
-      fill: #f9dcde;
-      stroke: var(--clr-brandErrorShad);
-      fill-opacity: 1;
-    }
-  }
-
-  .colors {
-    flex-grow: 1;
-    margin-top: 40px;
-
-    @media (min-width: 768px) {
-      max-width: 172px;
-      margin-top: 0;
-      margin-left: auto;
-    }
-
-    @media (min-width: 1024px) {
-      max-width: 136px;
-    }
-
-    .drag-item-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: center;
-      margin: 0 auto;
-      max-width: 220px;
-
-      @media (min-width: 480px) {
-        max-width: unset;
-        margin: -12px;
-      }
-
-      @media (min-width: 1024px) {
-        margin: -6px;
-      }
-    }
-
-    .drag-item {
-      padding: 12px;
-      transition: transform 0.15s ease-in 0s;
-
-      @media (min-width: 1024px) {
-        padding: 6px;
-      }
-
-      & > span {
-        display: block;
-      }
-
-      span[data-color='yellow'] svg g rect {
-        fill: var(--clr-brandGoldLite);
-      }
-
-      span[data-color='orange'] svg g rect {
-        fill: var(--clr-brandBrick);
-      }
-
-      span[data-color='red'] svg g rect {
-        fill: var(--clr-brandErrorShad);
-      }
-
-      span[data-color='pink'] svg g rect {
-        fill: #e02981;
-      }
-
-      span[data-color='green'] svg g rect {
-        fill: var(--clr-brandOKShad);
-      }
-
-      span[data-color='turquoise'] svg g rect {
-        fill: #00bdb2;
-      }
-
-      span[data-color='blue'] svg g rect {
-        fill: var(--clr-hover);
-      }
-
-      span[data-color='violet'] svg g rect {
-        fill: var(--clr-visited);
-      }
-
-      svg {
-        display: inline-block;
-        pointer-events: none;
-      }
-    }
-  }
-
-  .ui-droppable-active {
-    fill: red;
   }
 
   .game-welcome-modal {
@@ -803,11 +691,4 @@
       margin-top: auto;
     }
   }
-}
-
-[draggable=true] {
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
 }
