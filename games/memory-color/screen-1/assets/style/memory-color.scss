@@ -40,6 +40,11 @@
 
   article {
     max-width: 690px;
+    margin-bottom: 80px;
+
+    @media(min-width: 768px){
+      margin-bottom: 120px;
+    }
   }
 
   .game-progress {

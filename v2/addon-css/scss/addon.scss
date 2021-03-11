@@ -143,20 +143,20 @@
 
 // Quiz general
 .quiz-page {
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+  padding-top: 12px;
 
   article {
     max-width: 690px;
+    margin-bottom: 80px;
+
+    @media(min-width: 768px){
+      margin-bottom: 120px;
+    }
   }
 
-  @media (max-width: 1023px) {
-    & {
-      padding-left: var(--size-L);
-      padding-right: var(--size-L);
-      padding-top: 40px;
-    }
-
+  @media (max-width: 1440px) {
     .simpleButton.backButton.back2dashboardButton {
       position: static;
       display: inline-block;
@@ -171,17 +171,42 @@
     }
   }
 
+  @media (min-width: 1440px) {
+    padding-top: 20px;
+  }
+
   .quiz-progress {
-    padding: 36px 0 60px;
+    padding: 16px 0 0;
+    margin: 0;
+
+    @media (min-width: 480px) {
+      padding: 36px 0 0;
+      margin: 0 0 10px;
+    }
+
+    @media (min-width: 768px) {
+      margin: 0 0 60px;
+    }
 
     .progressBar {
-      width: 100%;
+      display: none;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+        width: 100%;
+      }
     }
   }
 
   .progress-top {
     display: flex;
     justify-content: space-between;
+
+    div,
+    span {
+      font-size: 24px;
+      line-height: 30px;
+    }
 
     span {
       color: var(--clr-brandBrick);
@@ -197,15 +222,39 @@
         }
       }
     }
+
+    @media (max-width: 479px) {
+      div,
+      span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
   }
 
   .quiz-header {
     margin-bottom: 20px;
+    text-align: center;
+    padding-right: 32px;
+
+    @media (max-width: 479.9px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @media (max-width: 359.9px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   .quiz-img-container {
     display: flex;
     justify-content: center;
+
+    .quiz-image {
+      max-width: 335px;
+    }
 
     img {
       display: block;
@@ -214,10 +263,44 @@
     }
   }
 
-  .blackboard-container {
+  .blackboard-btn-container {
     position: absolute;
-    top: 40px;
-    right: 0;
+    top: 12px;
+    right: var(--size-S);
+
+    button {
+      padding: 0;
+      width: 36px;
+      justify-content: center;
+
+      &:before {
+        padding: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: 480px) {
+      button {
+        width: auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
+        &:before {
+          padding-right: 10px;
+          font-size: 24px;
+          line-height: 44px;
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
 
     @media (min-width: 768px) {
       right: 24px;
@@ -225,6 +308,10 @@
       .simpleButton.ghostButton {
         height: auto;
       }
+    }
+
+    @media (min-width: 1440px) {
+      top: 40px;
     }
   }
 
@@ -243,7 +330,7 @@
     @media (min-width: 768px) {
       right: 20px;
       top: 40px;
-      transform: unset;    
+      transform: unset;
     }
 
     dialog {
@@ -257,7 +344,6 @@
       @media (min-width: 768px) {
         max-width: 335px;
         max-height: 335px;
-      
       }
 
       .dialog-container {
@@ -390,20 +476,23 @@
     margin-bottom: 30px;
 
     .btn-item {
-      flex-basis: 50%;
+      width: 100%;
+      max-width: 600px;
       padding: 10px;
 
       label {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
         border-radius: 16px;
-        padding: 24px;
+        padding: 24px 58px 24px 24px;
         background-color: var(--clr-white);
         border: 2px solid var(--clr-white);
-        text-align: center;
         position: relative;
         cursor: pointer;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        @extend #transition;
+        transition: box-shadow 0.15s ease-out 0s, border 0.15s ease-out 0s;
 
         &:hover {
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
@@ -411,7 +500,8 @@
 
         &::after {
           right: 20px;
-          top: 24px;
+          top: 50%;
+          transform: translateY(-50%);
           color: rgba(0, 0, 0, 1);
         }
 
@@ -476,6 +566,11 @@
       input:disabled + label {
         cursor: default;
       }
+
+      @media (min-width: 768px) {
+        width: 50%;
+        max-width: unset;
+      }
     }
   }
 
@@ -488,16 +583,22 @@
     .quiz-percent-res {
       font-family: Cormorant Infant;
       font-weight: bold;
-      font-size: 288px;
-      line-height: 349px;
+      font-size: 140px;
+      line-height: 200px;
       color: var(--clr-brandGold);
     }
 
     .quiz-status {
       margin-bottom: 20px;
+      font-size: 40px;
+      line-height: 50px;
     }
 
     .quiz-finish-text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+
       &:last-of-type {
         margin-bottom: 40px;
       }
@@ -508,13 +609,72 @@
     }
 
     a {
-      min-width: 300px;
+      max-width: 300px;
       text-align: center;
     }
 
     .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      
+
+      width: 100%;
+      a {
+        width: 100%;
+        display: block;
+      }
+
       a:nth-of-type(2) {
-        margin-left: 20px;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        a:nth-of-type(2) {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    @media (min-width: 480px) {
+      .quiz-percent-res {
+        font-size: 200px;
+        line-height: 300px;
+      }
+
+      .quiz-status {
+        font-size: 58px;
+        line-height: 68px;
+      }
+
+      .quiz-finish-text {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .quiz-percent-res {
+        font-size: 288px;
+        line-height: 349px;
+      }
+
+      .quiz-status {
+        font-size: 72px;
+        line-height: 87px;
+      }
+
+      .quiz-finish-text {
+        font-size: 24px;
+        line-height: 32px;
       }
     }
   }
