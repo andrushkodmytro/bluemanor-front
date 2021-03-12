@@ -151,7 +151,7 @@
     max-width: 690px;
     margin-bottom: 80px;
 
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
       margin-bottom: 120px;
     }
   }
@@ -620,8 +620,6 @@
       justify-content: center;
       align-items: center;
 
-      
-
       width: 100%;
       a {
         width: 100%;
@@ -805,5 +803,120 @@ main.main-with-player.forDashboard {
 
   @media (min-width: 1024px) {
     display: block;
+  }
+}
+
+.notification-list-page {
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .backButton.back2dashboardButton {
+      display: inline-flex;
+      margin-top: 40px;
+
+      &.simpleButton {
+        position: static;
+      }
+    }
+
+    // .backButton.back2dashboardButton {
+    //   position: static;
+    //   order: 1;
+    //   margin-top: 0;
+    //   align-self: center;
+    // }
+  }
+
+  h2 {
+    padding: 40px;
+
+    span {
+      color: var(--clr-brandOKShad);
+    }
+  }
+
+  .notification-container {
+    margin-bottom: 40px;
+  }
+
+  .notification-item {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid var(--clr-brandBeigeLite);
+
+    &:first-of-type {
+      border-top: 1px solid var(--clr-brandBeigeLite);
+    }
+
+    .notification-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .notification-date {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: #8e8b87;
+      margin-bottom: 12px;
+    }
+
+    .notification-text-container {
+      display: flex;
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        width: 300px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+    }
+
+    .delete-btn {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+    }
+
+    &.active {
+      background-color: #dcf9e8;
+      border: unset;
+      border-radius: 10px;
+
+      .notification-title {
+        color: var(--clr-brandOKShad);
+      }
+    }
+
+    .notification-item-with-img {
+    }
+
+    .img-container {
+      max-width: 68px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .btn-container {
+    a {
+      max-width: 220px;
+      display: block;
+      margin-left: auto;
+    }
   }
 }
