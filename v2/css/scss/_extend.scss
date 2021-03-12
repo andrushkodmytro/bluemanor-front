@@ -121,7 +121,43 @@
 	background: var(--clr-brandOK);
 }
 
+/// +gradients
+#gradientBeige4Page {
+	&::before {
+		background: linear-gradient(180deg, #f5ead4 0, rgba(245, 234, 212, 0) 100%);
+	}
+	&:after {
+		background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
+	}
+}
+/// -gradients
+
 /// +scrollbar
+#customScroll--brown {
+	&::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	&::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark); 
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background: var(--clr-brandBeige);
+		-webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
+	}
+	&::-webkit-scrollbar-thumb:window-inactive,
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: var(--clr-brandBeigeLite);
+	}
+}
+
 #customScroll--gray {
 	/* Let's get this party started */
 	color: var(--clr-white);

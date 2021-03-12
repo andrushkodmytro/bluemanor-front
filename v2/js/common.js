@@ -163,4 +163,23 @@ $('#blackboard-close-btn').click(()=>{
 		$('dialog').toggleClass("full-black-board")
 	});
 
+
+	//Delete notification
+	$('.delete-btn').click(function(){
+		$(this).closest('.notification-item').addClass('restore-block')
+	})
+
+	//Undo delete notification
+	$('.undo-btn').click(function(){
+		$(this).closest('.notification-item').removeClass('restore-block')
+	})
+
+	//View more
+	$('#view-more').click(function(e){
+		e.preventDefault();
+		
+		$('.notification-item').clone().appendTo($('.notification-container'))
+		$(this).css('display', 'none')
+	})
+
 });
