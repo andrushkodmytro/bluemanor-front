@@ -709,6 +709,16 @@
       }
     }
   }
+
+  .quiz-multi-short.buttons-container {
+    flex-direction: column;
+    align-items: center;
+
+    .btn-item {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
 }
 // - Quiz multiple
 
