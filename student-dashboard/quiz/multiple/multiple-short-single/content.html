@@ -4,6 +4,30 @@
 
 	<article>
 		<section>
+			<!-- Blackboard container -->
+			<div class='blackboard-btn-container'>
+				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--edit  sizeM wAuto"><span>Use
+						blackboard</span></button>
+			</div>
+
+			<div class="blackboard">
+				<dialog class="modalContent" aria-modal="true" role="dialog">
+					<div class="dialog-container">
+						<div class="dialog-header">
+							<button id='maximize-btn' class='hasIcon--maximize' aria-label="Close modal dialogue"></button>
+							<button id='minimize-btn' class='hasIcon--minimize' aria-label="Close modal dialogue"></button>
+							<button id='blackboard-close-btn' class='hasIcon--close' aria-label="Close modal dialogue "></button>
+						</div>
+						<div class="dialog-body">
+						</div>
+						<div class='dialog-footer'>
+							<button id='clear-btn' class='hasIcon--trash-2 withoutText' aria-label="Close modal dialogue"></button>
+						</div>
+					</div>
+				</dialog>
+
+			</div>
+
 			<div class="studentProgress quiz-progress">
 				<div class='progress-top'>
 					<div> <span class="progressText--width22">4</span>/10</div>
@@ -28,18 +52,27 @@
 				<ul class='buttons-container quiz-multi-short'>
 					<li class="btn-item">
 						<input type="radio" id='result1' name="amount" value='Buffalo 1' />
-						<label for="result1" class='hint-pronunciation heading-4'>Buffalo Buffalo Buffalofe fewf wef wef wef wef wef
-							ew fwe</label>
+						<label for="result1" class=' heading-4'>Buffalo Buffalo Buffalofe fewf wef wef wef wef wef
+							ew fwe
+
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
 
 					</li>
 					<li class="btn-item">
 						<input type="radio" id='result2' name="amount" value='Buffalo 2' />
-						<label for="result2" class='hint-pronunciation heading-4'>Bear</label>
+						<label for="result2" class=' heading-4'>Bear
+
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
 
 					</li>
 					<li class="btn-item">
 						<input type="radio" id='result3' name="amount" value='Buffalo 3' />
-						<label for="result3" class='hint-pronunciation heading-4'>Buffalo</label>
+						<label for="result3" class=' heading-4'>Buffalo
+
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
 
 					</li>
 
@@ -50,29 +83,7 @@
 				</button>
 			</form>
 
-			<!-- Blackboard container -->
-			<div class='blackboard-btn-container'>
-				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--edit  sizeM wAuto"><span>Use
-						blackboard</span></button>
-			</div>
 
-			<div class="blackboard">
-				<dialog class="modalContent" aria-modal="true" role="dialog">
-					<div class="dialog-container">
-						<div class="dialog-header">
-							<button id='maximize-btn' class='hasIcon--maximize' aria-label="Close modal dialogue"></button>
-							<button id='minimize-btn' class='hasIcon--minimize' aria-label="Close modal dialogue"></button>
-							<button id='blackboard-close-btn' class='hasIcon--close' aria-label="Close modal dialogue "></button>
-						</div>
-						<div class="dialog-body">
-						</div>
-						<div class='dialog-footer'>
-							<button id='clear-btn' class='hasIcon--trash-2 withoutText' aria-label="Close modal dialogue"></button>
-						</div>
-					</div>
-				</dialog>
-
-			</div>
 		</section>
 	</article>
 </main>
