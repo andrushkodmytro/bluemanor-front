@@ -1019,18 +1019,14 @@ main.main-with-player.forDashboard {
         overflow-wrap: break-word;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-      }
-    }
-
-    .notification-with-img {
-      p {
-        margin-right: 20px;
+        flex: 1 1 auto;
       }
 
       .img-container {
         max-width: 68px;
         height: 51px;
-        margin-left: auto;
+        margin-left: 20px;
+        flex: 1 0 auto;
 
         img {
           width: 100%;
@@ -1038,11 +1034,9 @@ main.main-with-player.forDashboard {
           object-fit: cover;
           border-radius: 4px;
         }
-      }
 
-      @media (min-width: 480px) {
-        p {
-          margin-right: 30px;
+        @media (min-width: 480px) {
+          margin-left: 30px;
         }
       }
     }
@@ -1154,6 +1148,177 @@ main.main-with-player.forDashboard {
     @media (min-width: 480px) {
       a {
         max-width: 220px;
+      }
+    }
+  }
+}
+
+.notification-nav-item {
+  position: static;
+
+  .active {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      border-left: 10px solid var(--clr-transparent);
+      border-right: 10px solid var(--clr-transparent);
+      border-bottom: 10px solid #fff;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 2px;
+      top: 20px;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .active {
+      &:after {
+        top: 26px;
+        right: 6px;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    position: relative;
+
+    .active {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdownMenuWrapper .notification-dropdown.dropdownMenu {
+  @extend #customScroll--gray;
+  width: 96vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 599.9px) {
+    right: 0 !important;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  @media (min-width: 480px) {
+    top: 50px;
+  }
+
+  @media (min-width: 600px) {
+    top: unset;
+    left: unset;
+    max-height: 361px;
+    max-width: 400px;
+    transform: unset;
+  }
+
+  .notification-dropdown-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+
+    .view-all-notification {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--clr-brandBlue);
+
+      &:hover,
+      &:focus {
+        color: var(--clr-hover);
+      }
+    }
+  }
+
+  .notification-dropdown-list {
+    overflow-y: auto;
+    padding: 0;
+
+    ul {
+      display: block;
+      overflow-y: auto;
+    }
+  }
+
+  .notification-dropdown-item {
+    border-bottom: 1px solid #d2d1ce;
+    padding: 0;
+
+    .notification-link {
+      padding: 20px 16px;
+
+      &:hover,
+      &:focus {
+        background-color: #f4f3f3;
+      }
+    }
+  }
+
+  .notification-dropdown-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+
+    .notification-dropdown-item-title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--clr-text);
+    }
+
+    .notification-dropdown-item-date {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: #8e8b87;
+      flex-shrink: 0;
+    }
+  }
+
+  .notification-dropdown-body {
+    display: flex;
+
+    .notification-dropdown-text {
+      flex: 1 1 auto;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--clr-text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      overflow-wrap: break-word;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: initial;
+    }
+
+    .notification-dropdown-img {
+      width: 50px;
+      height: 37px;
+      margin-left: 48px;
+      flex: 0 0 auto;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 4px;
       }
     }
   }
