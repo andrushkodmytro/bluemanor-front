@@ -189,6 +189,40 @@
   background: var(--clr-brandOK);
 }
 
+#gradientBeige4Page::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f5ead4), to(rgba(245, 234, 212, 0)));
+  background: linear-gradient(180deg, #f5ead4 0, rgba(245, 234, 212, 0) 100%);
+}
+
+#gradientBeige4Page:after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 234, 212, 0)), to(#f5ead4));
+  background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
+}
+
+#customScroll--brown::-webkit-scrollbar,
+#customScroll--brown ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#customScroll--brown::-webkit-scrollbar-track,
+#customScroll--brown ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
+  border-radius: 10px;
+}
+
+#customScroll--brown::-webkit-scrollbar-thumb,
+#customScroll--brown ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--clr-brandBeige);
+  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
+}
+
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--clr-brandBeigeLite);
+}
+
 #customScroll--gray {
   /* Let's get this party started */
   color: var(--clr-white);

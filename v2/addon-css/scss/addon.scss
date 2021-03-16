@@ -326,6 +326,7 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+    z-index: 10;
 
     @media (min-width: 768px) {
       right: 20px;
@@ -780,6 +781,86 @@
       flex-direction: column;
       margin-bottom: 40px;
       width: 100%;
+      position: relative;
+
+      &.is-valid,
+      &.is-invalid {
+        input {
+          padding-right: 60px;
+        }
+
+        label {
+          &:after {
+            font-family: icomoon;
+            font-size: var(--size-L);
+            position: absolute;
+            top: 28px;
+            right: 2px;
+            border-radius: 0 6px 6px 0;
+            text-align: center;
+            background: linear-gradient(to right, var(--clr-transparent), var(--clr-white));
+            width: calc(var(--size-XXL) * 1.25);
+            height: calc(var(--size-XXL) * 1.25);
+            line-height: calc(var(--size-XXL) * 1.25);
+
+            @media (max-width: 1023px) {
+              top: 25px;
+              width: calc(var(--size-M) * 2.5);
+              height: calc(var(--size-M) * 2.5);
+              line-height: calc(var(--size-M) * 2.5);
+            }
+          }
+        }
+      }
+
+      &.is-invalid {
+        input {
+          border-color: var(--clr-brandError);
+        }
+
+        label {
+          &:after {
+            content: '\e911';
+            color: var(--clr-brandError);
+          }
+        }
+      }
+
+      &.is-valid {
+        input {
+          border-color: var(--clr-brandOK);
+        }
+
+        label {
+          &:after {
+            content: '\e90c';
+            color: var(--clr-brandOK);
+          }
+        }
+      }
+    }
+
+    .correct-answer-block {
+      width: 100%;
+      margin-bottom: 40px;
+
+      .correct-answer-title,
+      .correct-answer-text {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        margin: 0;
+
+        @media (min-width: 480px) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      .correct-answer-text {
+        color: var(--clr-brandOK);
+      }
     }
   }
 
