@@ -1406,3 +1406,137 @@ main.main-with-player.forDashboard {
 }
 
 // - Notification list
+
+// + Notification page
+
+.notification-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+
+  @media (min-width: 360px) {
+    padding-left: var(--size-M);
+    padding-right: var(--size-M);
+  }
+
+  @media (min-width: 768px) {
+    padding-left: var(--size-L);
+    padding-right: var(--size-L);
+  }
+
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    .notification-page-top {
+      h2.heading-2.notification-page-heading {
+        padding: 0 !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .backButton.back2dashboardButton {
+      display: inline-flex;
+      margin-top: 40px;
+
+      &.simpleButton {
+        position: static;
+      }
+    }
+  }
+
+  .notification-page-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 40px 0 0;
+
+    .notification-page-heading {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 4px;
+    }
+
+    .notification-page-date {
+      font-weight: 600;
+
+      font-size: 16px;
+      line-height: 24px;
+      color: #cfa970;
+    }
+
+    @media (min-width: 480px) {
+      .notification-page-heading {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      .notification-page-date {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .notification-page-heading {
+        margin: 0;
+      }
+    }
+  }
+
+  .notification-page-text {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .notification-page-media-container {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .video-control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+
+      &::before {
+        font-size: 26px;
+        vertical-align: middle;
+      }
+
+      @media (min-width: 480px) {
+        width: 72px;
+        height: 72px;
+
+        &::before {
+          font-size: 36px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+// - Notification page
