@@ -94,7 +94,7 @@ textarea,
 a.button, a#logo, .simpleButton:not(.asLink), .tabs a,
 .tabs strong, .tabs a[class*="hasIcon--"]::before,
 .tabs strong[class*="hasIcon--"]::before, a.avatarVignette picture::after, .dropdownMenuWrapper .dropdownMenu, dialog.modalContent#ChooseAvatar .tabs-view label, dialog.modalContent#DisableOrEnableStudent .buttons button strong, dialog.modalContent#BookTableOfContents .bookContent dl,
-dialog.modalContent#BookTableOfContents .tvContent dl, .linkFullScreen, .mode-fullscreen header,
+dialog.modalContent#BookTableOfContents .tvContent dl, a.hint-pronunciation::after, .linkFullScreen, .mode-fullscreen header,
 .mode-fullscreen footer,
 .mode-fullscreen aside,
 .mode-fullscreen .backButton, #DoYouHaveSomeQuestions #ThankYouForLetter, #StudentDashboard--mainMenu a, #StudentDashboard--mainMenu a img, #StudentDashboard--mainMenu a span, #StudentDashboard--lessonsList > li, #StudentDashboard--lessonsList > li > .studentProgress, #StudentDashboard--lessonsList > li > .studentProgress::after, #StudentDashboard--lessonsList > li > .studentProgress dl, #StudentDashboard--lessonsList .studentCourse, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks ul, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks ul a,
@@ -233,6 +233,58 @@ textarea.isInvalid + label::before,
 
 #background--brandOK, .studentProgress ins span.progressBar--width80, .studentProgress ins span.progressBar--width81, .studentProgress ins span.progressBar--width82, .studentProgress ins span.progressBar--width83, .studentProgress ins span.progressBar--width84, .studentProgress ins span.progressBar--width85, .studentProgress ins span.progressBar--width86, .studentProgress ins span.progressBar--width87, .studentProgress ins span.progressBar--width88, .studentProgress ins span.progressBar--width89, .studentProgress ins span.progressBar--width90, .studentProgress ins span.progressBar--width91, .studentProgress ins span.progressBar--width92, .studentProgress ins span.progressBar--width93, .studentProgress ins span.progressBar--width94, .studentProgress ins span.progressBar--width95, .studentProgress ins span.progressBar--width96, .studentProgress ins span.progressBar--width97, .studentProgress ins span.progressBar--width98, .studentProgress ins span.progressBar--width99, .studentProgress ins span.progressBar--width100 {
   background: var(--clr-brandOK);
+}
+
+#gradientBeige4Page::before, article.singlePage div.doublePage-spread.canScroll > div > div::before,
+article.doublePage div.doublePage-spread.canScroll > div > div::before, #AboutTheAcademy li > div > div::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f5ead4), to(rgba(245, 234, 212, 0)));
+  background: linear-gradient(180deg, #f5ead4 0, rgba(245, 234, 212, 0) 100%);
+}
+
+#gradientBeige4Page:after, article.singlePage div.doublePage-spread.canScroll > div > div:after,
+article.doublePage div.doublePage-spread.canScroll > div > div:after, #AboutTheAcademy li > div > div:after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 234, 212, 0)), to(#f5ead4));
+  background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
+}
+
+#customScroll--brown::-webkit-scrollbar, article.singlePage div.doublePage-spread::-webkit-scrollbar,
+article.doublePage div.doublePage-spread::-webkit-scrollbar, #AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar,
+#customScroll--brown ::-webkit-scrollbar,
+article.singlePage div.doublePage-spread ::-webkit-scrollbar,
+article.doublePage div.doublePage-spread ::-webkit-scrollbar,
+#AboutTheAcademy li > div > div .cuttedText ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#customScroll--brown::-webkit-scrollbar-track, article.singlePage div.doublePage-spread::-webkit-scrollbar-track,
+article.doublePage div.doublePage-spread::-webkit-scrollbar-track, #AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-track,
+#customScroll--brown ::-webkit-scrollbar-track,
+article.singlePage div.doublePage-spread ::-webkit-scrollbar-track,
+article.doublePage div.doublePage-spread ::-webkit-scrollbar-track,
+#AboutTheAcademy li > div > div .cuttedText ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
+  border-radius: 10px;
+}
+
+#customScroll--brown::-webkit-scrollbar-thumb, article.singlePage div.doublePage-spread::-webkit-scrollbar-thumb,
+article.doublePage div.doublePage-spread::-webkit-scrollbar-thumb, #AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-thumb,
+#customScroll--brown ::-webkit-scrollbar-thumb,
+article.singlePage div.doublePage-spread ::-webkit-scrollbar-thumb,
+article.doublePage div.doublePage-spread ::-webkit-scrollbar-thumb,
+#AboutTheAcademy li > div > div .cuttedText ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--clr-brandBeige);
+  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
+}
+
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, article.singlePage div.doublePage-spread::-webkit-scrollbar-thumb:window-inactive,
+article.doublePage div.doublePage-spread::-webkit-scrollbar-thumb:window-inactive, #AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive,
+article.singlePage div.doublePage-spread ::-webkit-scrollbar-thumb:window-inactive,
+article.doublePage div.doublePage-spread ::-webkit-scrollbar-thumb:window-inactive,
+#AboutTheAcademy li > div > div .cuttedText ::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--clr-brandBeigeLite);
 }
 
 #customScroll--gray, nav.tabsAsSelectoOnSmallScreens, dialog.modalContent#ChooseAvatar, dialog.modalContent#BookTableOfContents {
@@ -2562,6 +2614,10 @@ header.hasStudentDashboardMenu nav li {
   content: '\e91b';
 }
 
+.hasIcon--rotate-ccw::before {
+  content: '\e933';
+}
+
 .hasIcon--settings::before {
   content: '\e909';
 }
@@ -2576,6 +2632,10 @@ header.hasStudentDashboardMenu nav li {
 
 .hasIcon--skip-forward-filled::before {
   content: '\e930';
+}
+
+.hasIcon--trash-2::before {
+  content: '\e932';
 }
 
 .hasIcon--user::before {
@@ -4184,6 +4244,22 @@ dialog.modalContent#BookTableOfContents .buttons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+dialog.modalContent#BookTableOfContents .buttons > *:first-child {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+dialog.modalContent#BookTableOfContents .buttons > *:nth-child(2) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 @media (min-width: 768px) {
@@ -4639,6 +4715,23 @@ dialog.modalContent#BookTableOfContents .buttons {
   margin-top: 1em;
 }
 
+.videoControlPanel li.seeker div::before, .videoControlPanel li.seeker div:after {
+  position: absolute;
+  top: -1.5em;
+  font-size: var(--size-XS);
+  line-height: 1;
+}
+
+.videoControlPanel li.seeker div::before {
+  content: attr(data-attribute-progress);
+  left: 0;
+}
+
+.videoControlPanel li.seeker div::after {
+  content: attr(data-attribute-duration);
+  right: 0;
+}
+
 .videoControlPanel li.seeker div progress {
   width: 100%;
   border-radius: 8px;
@@ -4649,23 +4742,6 @@ dialog.modalContent#BookTableOfContents .buttons {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.videoControlPanel li.seeker div progress::before, .videoControlPanel li.seeker div progress:after {
-  position: absolute;
-  top: -1.5em;
-  font-size: var(--size-XS);
-  line-height: 1;
-}
-
-.videoControlPanel li.seeker div progress::before {
-  content: attr(data-attribute-progress);
-  left: 0;
-}
-
-.videoControlPanel li.seeker div progress::after {
-  content: attr(data-attribute-duration);
-  right: 0;
 }
 
 .videoControlPanel li.seeker div progress + input[type=range] {
@@ -4934,7 +5010,6 @@ main.forDashboard.videoLesson article {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-bottom: 0;
 }
 
 main.forDashboard.bookLesson-single aside,
@@ -4966,6 +5041,13 @@ main.forDashboard.bookLesson-double h2 {
   display: none;
 }
 
+main.forDashboard.bookLesson-single article,
+main.forDashboard.bookLesson-double article {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 @media (max-width: 1023px) {
   main.forDashboard.bookLesson-single.hasPlayer,
   main.forDashboard.bookLesson-double.hasPlayer {
@@ -4976,6 +5058,10 @@ main.forDashboard.bookLesson-double h2 {
   main.forDashboard.bookLesson-single.hasPlayer .linkFullScreen,
   main.forDashboard.bookLesson-double.hasPlayer .linkFullScreen {
     display: none;
+  }
+  main.forDashboard.bookLesson-single article,
+  main.forDashboard.bookLesson-double article {
+    margin-bottom: 0;
   }
 }
 
@@ -5001,6 +5087,15 @@ article.doublePage .doublePage-content {
   article.doublePage .singlePage-content, .hasPlayer
   article.doublePage .doublePage-content {
     margin-top: var(--size-XXS);
+  }
+}
+
+@media (min-width: 1024px) {
+  main:not(.hasPlayer) article.singlePage .singlePage-content, main:not(.hasPlayer)
+  article.singlePage .doublePage-content, main:not(.hasPlayer)
+  article.doublePage .singlePage-content, main:not(.hasPlayer)
+  article.doublePage .doublePage-content {
+    margin-top: calc(var(--size-XXS) * 10 + var(--size-S));
   }
 }
 
@@ -5107,7 +5202,6 @@ article.doublePage .doublePage-content {
 @media (min-width: 1024px) {
   article.singlePage .doublePage-content,
   article.doublePage .doublePage-content {
-    margin-top: calc(var(--size-XXS) * 14);
     -webkit-transform: translateX(var(--size-XS));
             transform: translateX(var(--size-XS));
   }
@@ -5165,6 +5259,16 @@ article.doublePage .doublePage-content {
   }
 }
 
+article.singlePage div.doublePage-spread img,
+article.doublePage div.doublePage-spread img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  border-radius: var(--size-M);
+}
+
 article.singlePage dl,
 article.singlePage div.doublePage-spread > div,
 article.doublePage dl,
@@ -5193,14 +5297,62 @@ article.doublePage div.doublePage-spread > div {
   }
 }
 
+article.singlePage div.doublePage-spread.canScroll > div > div,
+article.doublePage div.doublePage-spread.canScroll > div > div {
+  overflow: auto;
+}
+
 @media (min-width: 1024px) {
+  article.singlePage div.doublePage-spread.canScroll,
+  article.doublePage div.doublePage-spread.canScroll {
+    overflow: auto;
+  }
+  article.singlePage div.doublePage-spread.canScroll > div > div,
+  article.doublePage div.doublePage-spread.canScroll > div > div {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  article.singlePage div.doublePage-spread.canScroll > div > div::before, article.singlePage div.doublePage-spread.canScroll > div > div::after,
+  article.doublePage div.doublePage-spread.canScroll > div > div::before,
+  article.doublePage div.doublePage-spread.canScroll > div > div::after {
+    content: '';
+    display: block;
+    height: 2em;
+    position: fixed;
+    width: calc(88% * .44 - var(--size-XS));
+    z-index: 1;
+  }
+  article.singlePage div.doublePage-spread.canScroll > div > div::before,
+  article.doublePage div.doublePage-spread.canScroll > div > div::before {
+    top: 8%;
+  }
+  article.singlePage div.doublePage-spread.canScroll > div > div::after,
+  article.doublePage div.doublePage-spread.canScroll > div > div::after {
+    bottom: calc(10% + var(--size-XXL) + var(--size-XS));
+  }
+  article.singlePage div.doublePage-spread.canScroll h3,
+  article.doublePage div.doublePage-spread.canScroll h3 {
+    padding-top: .33em;
+    padding-bottom: 0.5em;
+  }
+  article.singlePage div.doublePage-spread.canScroll p,
+  article.doublePage div.doublePage-spread.canScroll p {
+    padding: .5em 0;
+  }
+  article.singlePage div.doublePage-spread.canScroll .doublePage-right,
+  article.doublePage div.doublePage-spread.canScroll .doublePage-right {
+    padding-right: 0.5em;
+  }
   article.singlePage div.doublePage-spread > div,
   article.doublePage div.doublePage-spread > div {
     position: absolute;
-    top: 0;
-    bottom: 10%;
-    left: 0;
-    right: 0;
+    top: 8%;
+    bottom: calc(10% + var(--size-XXL) + var(--size-XS));
+    left: 6%;
+    right: 6%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -5296,13 +5448,49 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
   article.singlePage div.doublePage-right,
   article.doublePage div.doublePage-left,
   article.doublePage div.doublePage-right {
-    padding-left: 6%;
-    padding-right: 6%;
+    max-height: 100%;
+    width: 44%;
   }
 }
 
+.titlePage,
 .lastPage {
   text-align: center;
+}
+
+.titlePage a.button,
+.lastPage a.button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titlePage .doublePage-spread ul,
+.lastPage .doublePage-spread ul {
+  margin-bottom: 1.5em;
+}
+
+.titlePage .doublePage-spread li,
+.lastPage .doublePage-spread li {
+  margin-top: 1.5em;
+}
+
+.titlePage h1 {
+  font-size: var(--size-XL);
+}
+
+.titlePage h1 + strong {
+  font-size: var(--size-M);
+  display: block;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .titlePage h1 {
+    font-size: var(--size-XXL);
+  }
+  .titlePage h1 + strong {
+    font-size: var(--size-L);
+  }
 }
 
 .lastPage h1 {
@@ -5312,24 +5500,6 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
 .lastPage h3 {
   font-size: var(--size-XL);
   margin-bottom: .5em;
-}
-
-.lastPage img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: auto;
-  border-radius: var(--size-M);
-}
-
-.lastPage a.button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.lastPage li {
-  margin-top: 1.5em;
 }
 
 @media (min-width: 768px) {
@@ -5347,8 +5517,7 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
   }
   .lastPage h3 {
     font-size: var(--size-XXL);
-    margin-left: -16%;
-    margin-right: -16%;
+    line-height: 1.1;
     margin-bottom: .75em;
   }
   .lastPage ul {
@@ -5374,6 +5543,11 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
           align-items: center;
   font-size: var(--size-L);
   line-height: var(--size-L);
+  margin-top: 0;
+}
+
+.bookLesson-pagination li {
+  margin-top: 0;
 }
 
 @media (min-width: 1024px) {
@@ -5441,6 +5615,41 @@ a.hint-pronunciation::after {
   width: 2em;
   text-align: center;
   border-radius: 100%;
+  top: -.75em;
+  right: -.75em;
+}
+
+a.hint-pronunciation:hover::after, a.hint-pronunciation:focus::after {
+  background: var(--clr-brandGoldLite);
+}
+
+a.hint-pronunciation:active {
+  background: var(--clr-brandBeigeDark);
+}
+
+a.hint-pronunciation:active::after {
+  background: var(--clr-brandGoldDark);
+}
+
+.image-hint-pronunciation {
+  position: relative;
+}
+
+.image-hint-pronunciation a.hint-pronunciation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  background: 0;
+}
+
+.image-hint-pronunciation a.hint-pronunciation span {
+  display: none;
+}
+
+.image-hint-pronunciation a.hint-pronunciation::after {
+  position: static;
+  display: block;
 }
 
 .linkFullScreen {
@@ -5554,19 +5763,25 @@ a.hint-pronunciation::after {
   display: flex;
 }
 
-.decor-olive-branch-before,
-.decor-olive-branch-after {
-  text-align: center;
-}
-
+.decor-vignette-before::before,
 .decor-olive-branch-before::before,
 .decor-olive-branch-after::after {
   content: '';
   display: block;
-  font-size: .5em;
+  background: no-repeat 50% 50% / contain;
   height: 1em;
-  background: url(../img/student/decor-laurel.svg) 50% 50% no-repeat;
-  background-size: contain;
+}
+
+.decor-vignette-before::before {
+  background-image: url(../img/student/decor-vignette.svg);
+  font-size: 1.5em;
+  margin-bottom: .75em;
+}
+
+.decor-olive-branch-before::before,
+.decor-olive-branch-after::after {
+  font-size: .5em;
+  background-image: url(../img/student/decor-laurel.svg);
 }
 
 .decor-olive-branch-before::before {
@@ -5577,6 +5792,49 @@ a.hint-pronunciation::after {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
   margin-top: 1em;
+}
+
+#lego-icons {
+  margin-top: 1em;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+@media (min-width: 768px) {
+  #lego-icons {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  #lego-icons {
+    -webkit-columns: 3;
+            columns: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  #lego-icons {
+    -webkit-columns: 4;
+            columns: 4;
+  }
+}
+
+#lego-icons li {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  background: var(--clr-brandBeigePale);
+  border-radius: 1000px;
+  margin-bottom: .5em;
+  padding: .5em .5em .5em 1em;
+}
+
+#lego-icons li::before {
+  width: 1em;
+  text-align: center;
+  padding-right: 0;
+  margin-right: 0.5em;
 }
 
 #landing-page main {
@@ -5864,28 +6122,6 @@ a.hint-pronunciation::after {
 
 #AboutTheAcademy li > div > div .cuttedText {
   padding-right: .25em;
-  /* Let's get this party started */
-  /* Track */
-  /* Handle */
-}
-
-#AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar {
-  width: 12px;
-}
-
-#AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
-  border-radius: 10px;
-}
-
-#AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: var(--clr-brandBeige);
-  -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
-}
-
-#AboutTheAcademy li > div > div .cuttedText::-webkit-scrollbar-thumb:window-inactive {
-  background: var(--clr-brandBeigeLite);
 }
 
 @media (max-width: 767px) {
@@ -5929,13 +6165,9 @@ a.hint-pronunciation::after {
   }
   #AboutTheAcademy li > div > div::before {
     top: -1px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f5ead4), to(rgba(245, 234, 212, 0)));
-    background: linear-gradient(180deg, #f5ead4 0, rgba(245, 234, 212, 0) 100%);
   }
   #AboutTheAcademy li > div > div::after {
     bottom: -1px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 234, 212, 0)), to(#f5ead4));
-    background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
   }
   #AboutTheAcademy li > div > div .cuttedText {
     position: absolute;

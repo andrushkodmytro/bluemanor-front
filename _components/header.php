@@ -62,7 +62,15 @@
 					<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText" title="Dashboard"><span>Dashboard</span></a></li>
 					<li><a href="?b" class="simpleButton ghostButton sizeM hasIcon--book-open withoutText" title="Library"><span>Library</span></a></li>
 					<li><a href="?c" class="simpleButton ghostButton sizeM hasIcon--shopping-cart withoutText" title="Shop"><span>Shop</span></a></li>
-					<li><a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText" title="Notifications"><span>Notifications</span></a></li>
+					<li  class="dropdownMenuWrapper">
+						<a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText" title="Notifications" ><span>Notifications</span></a>
+							<ul class="dropdownMenu">
+								<li class="hasBorderBottom"><strong>honorificabilitudinitatibus@gmail.com</strong></li>
+								<li class=""><a href="?EditProfile" class="hasIcon--edit">Edit profile</a></li>
+								<li class=""><a href="?Billing" class="hasIcon--credit-card">Billing</a></li>
+								<li class="hasBorderTop"><a href="?Logout" class="hasIcon--log-out">Logout</a></li>
+							</ul>
+					</li>
 					<li class="dropdownMenuWrapper">
 						<a href="?e" class="simpleButton ghostButton sizeM hasIcon--user withoutText active" title="User"><span>User</span></a>
 						<ul class="dropdownMenu">
@@ -77,32 +85,139 @@
 			// if ($header == 'hasStudentDashboardMenu') { echo '<nav>
 			if (strpos($header, 'hasStudentDashboardMenu') !== false) { echo '<nav>
 				<ul>
-					<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--clock wAuto hasHalveIndents" title="Dashboard"><strong>30:00</strong></a></li>
-					<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText" title="Dashboard"><span>Dashboard</span></a></li>
-					<li class="dropdownMenuWrapper">
-						<a href="?c" class="simpleButton ghostButton sizeM hasIcon--file-text withoutText activeNO" title="Notes"><span>Notes</span></a>
-						<ul class="dropdownMenu">
-							<li class=""><a href="?add" class="hasIcon--plus-circle">Add new note</a></li>
-							<li class=""><a href="?notes" class="hasIcon--file">All notes</a></li>
-						</ul>
-					</li>
-					<li><a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText" title="Notifications"><span>Notifications</span></a></li>
-					<li class="dropdownMenuWrapper">
-						<a href="?e" class="simpleButton ghostButton sizeM userAvatar activeNO" title="Melinda">
-							<picture>
-								<source srcset="/v2/img/avatar/Illustrated/1x/001.avif,	/v2/img/avatar/Illustrated/2x/001.avif 2x,	/v2/img/avatar/Illustrated/3x/001.avif 3x" type="image/avif">
-								<source srcset="/v2/img/avatar/Illustrated/1x/001.webp,	/v2/img/avatar/Illustrated/2x/001.webp 2x,	/v2/img/avatar/Illustrated/3x/001.webp 3x" type="image/webp">
-								<source srcset="/v2/img/avatar/Illustrated/1x/001.jpg,	/v2/img/avatar/Illustrated/2x/001.jpg 2x,	/v2/img/avatar/Illustrated/3x/001.jpg 3x">
-								<img class="img" src="/v2/img/avatar/1x/001.jpg" alt="Melinda" title="Melinda">
-							</picture>
-						</a>
-						<ul class="dropdownMenu">
-							<li class="hasBorderBottom"><strong>Melinda</strong></li>
-							<li><a href="?EditProfile" class="hasIcon--edit">Edit profile</a></li>
-							<li><form><button class="asLink hasIcon--log-out">Go to parent</button></form></li>
-						</ul>
-					</li>
-				</ul>
+				<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--clock wAuto hasHalveIndents"
+						title="Dashboard"><strong>30:00</strong></a></li>
+				<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText"
+						title="Dashboard"><span>Dashboard</span></a></li>
+				<li class="dropdownMenuWrapper">
+					<a href="?c" class="simpleButton ghostButton sizeM hasIcon--file-text withoutText activeNO"
+						title="Notes"><span>Notes</span></a>
+					<ul class="dropdownMenu">
+						<li class=""><a href="?add" class="hasIcon--plus-circle">Add new note</a></li>
+						<li class=""><a href="?notes" class="hasIcon--file">All notes</a></li>
+					</ul>
+				</li>
+			
+				<li class="dropdownMenuWrapper notification-nav-item">
+					<a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText active"
+						title="Notifications"><span>Notifications</span></a>
+			
+					<ul class="dropdownMenu  notification-dropdown">
+						<li class="hasBorderBottom notification-dropdown-title"><strong>Your notifications</strong> <a href="#"
+								class="view-all-notification">View all</a></li>
+						<li class="notification-dropdown-list">
+							<ul>
+								<li class="notification-dropdown-item">
+									<a class="notification-link" href="#" title="Notification title">
+										<div class="notification-dropdown-item-header">
+											<div class="notification-dropdown-item-title">
+												30 Day Free Trial
+											</div>
+											<div class="notification-dropdown-item-date">
+												Sep 30, 2021
+											</div>
+										</div>
+										<div class="notification-dropdown-body">
+											<p class="notification-dropdown-text">
+												Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+												will receive email notification 3 days before your Free Trial ends.
+											</p>
+											<div class="notification-dropdown-img">
+												<img src="/v2/img/welcome.jpg" alt="Notification" />
+											</div>
+										</div>
+									</a>
+								</li>
+			
+								<li class="notification-dropdown-item">
+									<a class="notification-link"  href="#" title="Notification title">
+										<div class="notification-dropdown-item-header">
+											<div class="notification-dropdown-item-title">
+												30 Day Free Trial
+											</div>
+											<div class="notification-dropdown-item-date">
+												Sep 30, 2021
+											</div>
+										</div>
+										<div class="notification-dropdown-body">
+											<p class="notification-dropdown-text">
+												Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+												will receive email notification 3 days before your Free Trial ends.
+											</p>
+											<div class="notification-dropdown-img">
+												<img src="/v2/img/welcome.jpg" alt="Notification" />
+											</div>
+										</div>
+									</a>
+								</li>
+			
+								<li class="notification-dropdown-item">
+									<a class="notification-link"  href="#" title="Notification title">
+										<div class="notification-dropdown-item-header">
+											<div class="notification-dropdown-item-title">
+												30 Day Free Trial
+											</div>
+											<div class="notification-dropdown-item-date">
+												Sep 30, 2021
+											</div>
+										</div>
+										<div class="notification-dropdown-body">
+											<p class="notification-dropdown-text">
+												Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+												will receive email notification 3 days before your Free Trial ends.
+											</p>
+											<div class="notification-dropdown-img">
+												<img src="/v2/img/welcome.jpg" alt="Notification" />
+											</div>
+										</div>
+									</a>
+								</li>
+			
+								<li class="notification-dropdown-item">
+									<a class="notification-link"  href="#" title="Notification title">
+										<div class="notification-dropdown-item-header">
+											<div class="notification-dropdown-item-title">
+												30 Day Free Trial
+											</div>
+											<div class="notification-dropdown-item-date">
+												Sep 30, 2021
+											</div>
+										</div>
+										<div class="notification-dropdown-body">
+											<p class="notification-dropdown-text">
+												Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+												will receive email notification 3 days before your Free Trial ends.
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdownMenuWrapper">
+					<a href="?e" class="simpleButton ghostButton sizeM userAvatar activeNO" title="Melinda">
+						<picture>
+							<source
+								srcset="/v2/img/avatar/Illustrated/1x/001.avif,	/v2/img/avatar/Illustrated/2x/001.avif 2x,	/v2/img/avatar/Illustrated/3x/001.avif 3x"
+								type="image/avif">
+							<source
+								srcset="/v2/img/avatar/Illustrated/1x/001.webp,	/v2/img/avatar/Illustrated/2x/001.webp 2x,	/v2/img/avatar/Illustrated/3x/001.webp 3x"
+								type="image/webp">
+							<source
+								srcset="/v2/img/avatar/Illustrated/1x/001.jpg,	/v2/img/avatar/Illustrated/2x/001.jpg 2x,	/v2/img/avatar/Illustrated/3x/001.jpg 3x">
+							<img class="img" src="/v2/img/avatar/1x/001.jpg" alt="Melinda" title="Melinda">
+						</picture>
+					</a>
+					<ul class="dropdownMenu">
+						<li class="hasBorderBottom"><strong>Melinda</strong></li>
+						<li><a href="?EditProfile" class="hasIcon--edit">Edit profile</a></li>
+						<li>
+							<form><button class="asLink hasIcon--log-out">Go to parent</button></form>
+						</li>
+					</ul>
+				</li>
+			</ul>
 			</nav>'; }
 			if ($URI == "/landing/") { echo '<nav>
 				<ul>
@@ -111,4 +226,21 @@
 				</ul>
 			</nav>'; }
 		?>
+
+<!-- <ul>
+					<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText" title="Dashboard"><span>Dashboard</span></a></li>
+					<li><a href="?b" class="simpleButton ghostButton sizeM hasIcon--book-open withoutText" title="Library"><span>Library</span></a></li>
+					<li><a href="?c" class="simpleButton ghostButton sizeM hasIcon--shopping-cart withoutText" title="Shop"><span>Shop</span></a></li>
+					<li><a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText" title="Notifications"><span>Notifications</span></a></li>
+					<li class="dropdownMenuWrapper">
+						<a href="?e" class="simpleButton ghostButton sizeM hasIcon--user withoutText active" title="User"><span>User</span></a>
+						<ul class="dropdownMenu">
+							<li class="hasBorderBottom"><strong>honorificabilitudinitatibus@gmail.com</strong></li>
+							<li class=""><a href="?EditProfile" class="hasIcon--edit">Edit profile</a></li>
+							<li class=""><a href="?Billing" class="hasIcon--credit-card">Billing</a></li>
+							<li class="hasBorderTop"><a href="?Logout" class="hasIcon--log-out">Logout</a></li>
+						</ul>
+					</li>
+				</ul> -->
+			</nav>
 	</header>
