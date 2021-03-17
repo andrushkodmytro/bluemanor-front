@@ -225,30 +225,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -788,30 +788,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -3276,5 +3276,316 @@ main.main-with-player.forDashboard {
     font-size: 36px;
     vertical-align: middle;
   }
+}
+
+.note-list-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+}
+
+@media (min-width: 360px) {
+  .note-list-page {
+    padding-left: var(--size-M);
+    padding-right: var(--size-M);
+  }
+}
+
+@media (min-width: 768px) {
+  .note-list-page {
+    padding-left: var(--size-L);
+    padding-right: var(--size-L);
+  }
+}
+
+.note-list-page article {
+  max-width: 690px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .note-list-page article {
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .note-list-page .backButton.back2dashboardButton {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-top: 40px;
+  }
+  .note-list-page .backButton.back2dashboardButton.simpleButton {
+    position: static;
+  }
+}
+
+.note-list-page h2 {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+@media (min-width: 360px) {
+  .note-list-page h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media (min-width: 480px) {
+  .note-list-page h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .note-list-page h2 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+.note-list-page .note-container {
+  margin-bottom: 40px;
+}
+
+.note-list-page .note-item {
+  padding: 2px 0;
+  border-top: 1px solid var(--clr-brandBeigeLite);
+}
+
+.note-list-page .note-item:last-of-type {
+  border-bottom: 1px solid var(--clr-brandBeigeLite);
+}
+
+.note-list-page .note-item .note-content {
+  position: relative;
+  padding: 16px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .note-content {
+    padding: 20px;
+  }
+}
+
+.note-list-page .note-item .note-date {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 12px;
+  padding-right: 70px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .note-date {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.note-list-page .note-item .note-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.note-list-page .note-item .note-text-container p {
+  font-size: 18px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow-wrap: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.note-list-page .note-item .restore-content {
+  visibility: hidden;
+  display: none;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #f9dcde;
+  border-radius: 10px;
+}
+
+.note-list-page .note-item .restore-content p {
+  color: var(--clr-brandErrorShad);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.note-list-page .note-item .restore-content button {
+  padding: 0 20px 0;
+}
+
+.note-list-page .note-item .restore-content button:before {
+  line-height: 36px;
+  font-size: 16px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .restore-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .note-list-page .note-item .restore-content p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .note-list-page .note-item .restore-content button:before {
+    line-height: 44px;
+    font-size: 24px;
+  }
+}
+
+.note-list-page .note-item .edit-btn,
+.note-list-page .note-item .delete-btn {
+  position: absolute;
+  -webkit-transition: unset;
+  transition: unset;
+  top: 10px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .edit-btn,
+  .note-list-page .note-item .delete-btn {
+    top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.note-list-page .note-item .edit-btn {
+  right: 44px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .edit-btn {
+    right: 74px;
+  }
+}
+
+.note-list-page .note-item .delete-btn {
+  right: 4px;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .note-item .delete-btn {
+    right: 20px;
+  }
+}
+
+.note-list-page .restore-block {
+  border-color: transparent;
+}
+
+.note-list-page .restore-block:last-of-type {
+  border-color: transparent;
+}
+
+.note-list-page .restore-block > div,
+.note-list-page .restore-block > button {
+  visibility: hidden;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.note-list-page .restore-block .restore-content {
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.note-list-page .restore-block + .note-item {
+  border-top-color: transparent;
+}
+
+.note-list-page .btn-container a {
+  display: block;
+  margin-left: auto;
+}
+
+@media (min-width: 480px) {
+  .note-list-page .btn-container a {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 360px) {
+  .note-list-page .add-note-dialog {
+    height: auto;
+  }
+}
+
+.note-list-page .add-note-dialog[open='open'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.note-list-page .add-note-dialog .dialog-content {
+  overflow: auto;
+  padding: 0 24px;
+  text-align: start;
+}
+
+@media (max-width: 480px) {
+  .note-list-page .add-note-dialog .dialog-content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .note-list-page .add-note-dialog .dialog-content {
+    padding: 0 60px;
+  }
+}
+
+.note-list-page .add-note-dialog .dialog-footer {
+  text-align: end;
+  margin-top: auto;
+}
+
+.disabled-menu-item {
+  opacity: 0.3;
+  pointer-events: none;
 }
 /*# sourceMappingURL=addon.css.map */

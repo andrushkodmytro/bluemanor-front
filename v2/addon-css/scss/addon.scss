@@ -1540,3 +1540,270 @@ main.main-with-player.forDashboard {
 }
 
 // - Notification page
+
+// + Note list
+.note-list-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+
+  @media (min-width: 360px) {
+    padding-left: var(--size-M);
+    padding-right: var(--size-M);
+  }
+
+  @media (min-width: 768px) {
+    padding-left: var(--size-L);
+    padding-right: var(--size-L);
+  }
+
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .backButton.back2dashboardButton {
+      display: inline-flex;
+      margin-top: 40px;
+
+      &.simpleButton {
+        position: static;
+      }
+    }
+  }
+
+  h2 {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+
+    @media (min-width: 360px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @media (min-width: 480px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      line-height: 58px;
+    }
+  }
+
+  .note-container {
+    margin-bottom: 40px;
+  }
+
+  .note-item {
+    padding: 2px 0;
+    border-top: 1px solid var(--clr-brandBeigeLite);
+
+    &:last-of-type {
+      border-bottom: 1px solid var(--clr-brandBeigeLite);
+    }
+
+    .note-content {
+      position: relative;
+      padding: 16px;
+
+      @media (min-width: 480px) {
+        padding: 20px;
+      }
+    }
+
+    .note-date {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 12px;
+      padding-right: 70px;
+
+      @media (min-width: 480px) {
+        font-size: 18px;
+        line-height: 30px;
+        
+      }
+    }
+
+    .note-text-container {
+      display: flex;
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        overflow-wrap: break-word;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        flex: 1 1 auto;
+      }
+    }
+
+    .restore-content {
+      visibility: hidden;
+      display: none;
+      padding: 0 20px;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      align-items: center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #f9dcde;
+      border-radius: 10px;
+
+      p {
+        color: var(--clr-brandErrorShad);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 0 20px 0;
+
+        &:before {
+          line-height: 36px;
+          font-size: 16px;
+        }
+      }
+
+      @media (min-width: 480px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        button:before {
+          line-height: 44px;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .edit-btn,
+    .delete-btn {
+      position: absolute;
+      transition: unset;
+      top: 10px;
+
+      @media (min-width: 480px) {
+        top: 20px;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    .edit-btn {
+      right: 44px;
+
+      @media (min-width: 480px) {
+        right: 74px;
+      }
+    }
+
+    .delete-btn {
+      right: 4px;
+
+      @media (min-width: 480px) {
+        right: 20px;
+      }
+    }
+  }
+
+  .restore-block {
+    border-color: transparent;
+
+    &:last-of-type {
+      border-color: transparent;
+    }
+
+    & > div,
+    & > button {
+      visibility: hidden;
+      transition: none;
+    }
+
+    .restore-content {
+      visibility: visible;
+      display: flex;
+    }
+
+    & + .note-item {
+      border-top-color: transparent;
+    }
+  }
+
+  .btn-container {
+    a {
+      display: block;
+      margin-left: auto;
+    }
+
+    @media (min-width: 480px) {
+      a {
+        max-width: 220px;
+      }
+    }
+  }
+
+  .add-note-dialog {
+    @extend #customScroll--gray;
+
+    @media (min-width: 360px) {
+      height: auto;
+    }
+
+    &[open='open'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dialog-content {
+      @media (max-width: 480px) {
+        p {
+          font-size: 18px;
+        }
+      }
+
+      overflow: auto;
+
+      padding: 0 24px;
+      text-align: start;
+
+      @media (min-width: 768px) {
+        padding: 0 60px;
+      }
+    }
+
+    .dialog-footer {
+      text-align: end;
+      margin-top: auto;
+    }
+  }
+}
+
+.disabled-menu-item {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+// - Note list

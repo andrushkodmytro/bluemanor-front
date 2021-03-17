@@ -167,11 +167,14 @@ $('#blackboard-close-btn').click(()=>{
 	//Delete notification
 	$('.delete-btn').click(function(){
 		$(this).closest('.notification-item').addClass('restore-block')
+
+		$(this).closest('.note-item').addClass('restore-block')
 	})
 
 	//Undo delete notification
 	$('.undo-btn').click(function(){
 		$(this).closest('.notification-item').removeClass('restore-block')
+		$(this).closest('.note-item').removeClass('restore-block')
 	})
 
 	//View more
@@ -179,7 +182,45 @@ $('#blackboard-close-btn').click(()=>{
 		e.preventDefault();
 		
 		$('.notification-item').clone().appendTo($('.notification-container'))
+		$('.note-item').clone().appendTo($('.note-container'))
+		
 		$(this).css('display', 'none')
 	})
 
-});
+
+	  // Info modal
+		const $infoModal =  $('#add-note-modal');
+
+		$('.edit-btn').click(()=>{
+			$infoModal.css('display', 'flex').find('dialog').attr( "open", true)
+		});
+			
+	
+		$infoModal.find('.closeButton').click(()=>{
+			$infoModal.css('display', 'none').find('dialog').attr( "open", false)
+		})
+	
+	// 	ClassicEditor
+	// 	.create( document.querySelector( '#editor' ), {
+	// 		// toolbar: [ 'bold', 'italic', 'underline' ],
+	// 		// heading: {
+	// 		// 		options: [
+	// 		// 				{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+	// 		// 				{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+	// 		// 				{ model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+	// 		// 		]
+	// 		// }
+	// }  )
+	// 	.catch( error => {
+	// 			console.error( error );
+	// 	} );
+
+	CKEDITOR.replace( 'editor'
+	// , {
+	// 	toolbar: [
+	// 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ] }
+	// 	]
+	// } 
+	);
+}
+);
