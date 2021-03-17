@@ -372,86 +372,86 @@
         }
       }
     }
-  }
 
-  .dialog-header {
-    display: flex;
-    justify-content: space-between;
+    .dialog-header {
+      display: flex;
+      justify-content: space-between;
 
-    button {
-      transform: unset;
-      filter: none;
-      padding: 10px;
-      box-shadow: none;
-      background-color: transparent;
-      color: var(--clr-white);
+      button {
+        transform: unset;
+        filter: none;
+        padding: 10px;
+        box-shadow: none;
+        background-color: transparent;
+        color: var(--clr-white);
 
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        visibility: hidden;
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          visibility: hidden;
 
-        @media (min-width: 768px) {
-          visibility: visible;
+          @media (min-width: 768px) {
+            visibility: visible;
+          }
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:active {
+          background-color: var(--clr-brandBlue);
+          transform: unset;
+          filter: none;
+          box-shadow: none;
+        }
+
+        &:focus {
+          background-color: var(--clr-brandBlue);
+        }
+
+        &::before {
+          padding: 0;
         }
       }
-
-      &:hover {
-        background-color: transparent;
-      }
-
-      &:active {
-        background-color: var(--clr-brandBlue);
-        transform: unset;
-        filter: none;
-        box-shadow: none;
-      }
-
-      &:focus {
-        background-color: var(--clr-brandBlue);
-      }
-
-      &::before {
-        padding: 0;
-      }
     }
-  }
 
-  .dialog-body {
-    height: 100%;
-    border-top: 2px solid var(--clr-brandBlue);
-    cursor: url('../../img/pencil.png') 0 60, none;
-  }
+    .dialog-body {
+      height: 100%;
+      border-top: 2px solid var(--clr-brandBlue);
+      cursor: url('../../img/pencil.png') 0 60, none;
+    }
 
-  .dialog-footer {
-    button {
-      transform: unset;
-      filter: none;
-      padding: 10px;
-      box-shadow: none;
-      background-color: transparent;
-      color: var(--clr-white);
-      line-height: 24px;
-      font-size: 16px;
-      margin-left: auto;
-      display: block;
-
-      &:hover {
-        background-color: transparent;
-      }
-
-      &:active {
-        background-color: var(--clr-brandBlue);
+    .dialog-footer {
+      button {
         transform: unset;
         filter: none;
+        padding: 10px;
         box-shadow: none;
-      }
+        background-color: transparent;
+        color: var(--clr-white);
+        line-height: 24px;
+        font-size: 16px;
+        margin-left: auto;
+        display: block;
 
-      &:focus {
-        background-color: var(--clr-brandBlue);
-      }
+        &:hover {
+          background-color: transparent;
+        }
 
-      &::before {
-        padding: 0;
+        &:active {
+          background-color: var(--clr-brandBlue);
+          transform: unset;
+          filter: none;
+          box-shadow: none;
+        }
+
+        &:focus {
+          background-color: var(--clr-brandBlue);
+        }
+
+        &::before {
+          padding: 0;
+        }
       }
     }
   }
@@ -1629,7 +1629,6 @@ main.main-with-player.forDashboard {
       @media (min-width: 480px) {
         font-size: 18px;
         line-height: 30px;
-        
       }
     }
 
@@ -1807,3 +1806,194 @@ main.main-with-player.forDashboard {
 }
 
 // - Note list
+
+// + Quiz report
+dialog.quiz-report-dialog {
+  @extend #customScroll--gray;
+  max-height: 630px;
+  max-width: 1024px;
+
+  &[open='open'] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dialog-content {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .tabs-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container {
+    position: relative;
+    overflow: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    thead {
+      th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        padding: 12px;
+        text-transform: uppercase;
+        font-family: var(--font-gothic);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        color: #8e8b87;
+        text-align: end;
+        width: 16.66%;
+      }
+
+      th:nth-of-type(1) {
+        text-align: start;
+        width: 25%;
+        min-width: 200px;
+        padding-left: 30px;
+      }
+
+      th:nth-of-type(2) {
+        width: 14%;
+        min-width: 126px;
+      }
+
+      th:nth-of-type(3) {
+        width: 14%;
+        min-width: 90px;
+      }
+
+      th:nth-of-type(4) {
+        width: 14%;
+        min-width: 90px;
+      }
+
+      th:nth-of-type(5) {
+        width: 14%;
+        min-width: 90px;
+      }
+
+      th:nth-of-type(6) {
+        width: 19%;
+        min-width: 150px;
+        padding-right: 30px;
+      }
+    }
+
+    tbody {
+      tr:nth-of-type(even) {
+        background-color: #f8f8f8;
+      }
+      td {
+        padding: 12px;
+        text-align: end;
+        font-family: var(--font-gothic);
+        color: var(--clr-text);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        overflow-wrap: break-word;
+      }
+
+      td:nth-of-type(1) {
+        text-align: start;
+        padding-left: 30px;
+      }
+
+      td:nth-of-type(6) {
+        text-align: end;
+        padding-right: 30px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+
+        .action-link {
+          text-decoration: none;
+          border-bottom: none;
+          justify-content: flex-end;
+
+          &:before {
+            font-size: 16px;
+            padding-right: 8px;
+          }
+        }
+
+        .action-link-passed {
+          color: var(--clr-brandOKShad);
+        }
+      }
+
+      .incorrect-cell {
+        color: var(--clr-brandErrorShad);
+      }
+
+      .correct-cell {
+        color: var(--clr-brandOKShad);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      thead {
+        th:nth-of-type(1) {
+          padding-left: 60px;
+        }
+
+        th:nth-of-type(6) {
+          padding-right: 60px;
+        }
+      }
+
+      tbody {
+        td:nth-of-type(1) {
+          padding-left: 60px;
+        }
+
+        td:nth-of-type(6) {
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+
+  .dialog-footer {
+    text-align: end;
+    margin-top: auto;
+    border-top: 1px solid #d2d1ce;
+
+    &.buttons {
+      padding-right: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    button {
+      max-width: 180px;
+      width: 100%;
+    }
+
+    @media(min-width: 1024px){
+      &.buttons {
+        padding-right: 60px;
+        padding-top: 40px;
+        padding-bottom: 48px;
+      }
+
+      button {
+        max-width: 220px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// - Quiz report

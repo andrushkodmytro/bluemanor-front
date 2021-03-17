@@ -225,30 +225,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -306,8 +306,8 @@
 
 @font-face {
   font-family: icomoon;
-  src: url("../fonts/icomoon.eot?3p73j4Ta");
-  src: url("../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -788,30 +788,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -869,8 +869,8 @@
 
 @font-face {
   font-family: icomoon;
-  src: url("../fonts/icomoon.eot?3p73j4Ta");
-  src: url("../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1944,7 +1944,7 @@
   display: none;
 }
 
-.quiz-page .dialog-header {
+.quiz-page .blackboard .dialog-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1953,7 +1953,7 @@
           justify-content: space-between;
 }
 
-.quiz-page .dialog-header button {
+.quiz-page .blackboard .dialog-header button {
   -webkit-transform: unset;
           transform: unset;
   -webkit-filter: none;
@@ -1965,21 +1965,21 @@
   color: var(--clr-white);
 }
 
-.quiz-page .dialog-header button:nth-of-type(1), .quiz-page .dialog-header button:nth-of-type(2) {
+.quiz-page .blackboard .dialog-header button:nth-of-type(1), .quiz-page .blackboard .dialog-header button:nth-of-type(2) {
   visibility: hidden;
 }
 
 @media (min-width: 768px) {
-  .quiz-page .dialog-header button:nth-of-type(1), .quiz-page .dialog-header button:nth-of-type(2) {
+  .quiz-page .blackboard .dialog-header button:nth-of-type(1), .quiz-page .blackboard .dialog-header button:nth-of-type(2) {
     visibility: visible;
   }
 }
 
-.quiz-page .dialog-header button:hover {
+.quiz-page .blackboard .dialog-header button:hover {
   background-color: transparent;
 }
 
-.quiz-page .dialog-header button:active {
+.quiz-page .blackboard .dialog-header button:active {
   background-color: var(--clr-brandBlue);
   -webkit-transform: unset;
           transform: unset;
@@ -1989,21 +1989,21 @@
           box-shadow: none;
 }
 
-.quiz-page .dialog-header button:focus {
+.quiz-page .blackboard .dialog-header button:focus {
   background-color: var(--clr-brandBlue);
 }
 
-.quiz-page .dialog-header button::before {
+.quiz-page .blackboard .dialog-header button::before {
   padding: 0;
 }
 
-.quiz-page .dialog-body {
+.quiz-page .blackboard .dialog-body {
   height: 100%;
   border-top: 2px solid var(--clr-brandBlue);
   cursor: url("../../img/pencil.png") 0 60, none;
 }
 
-.quiz-page .dialog-footer button {
+.quiz-page .blackboard .dialog-footer button {
   -webkit-transform: unset;
           transform: unset;
   -webkit-filter: none;
@@ -2019,11 +2019,11 @@
   display: block;
 }
 
-.quiz-page .dialog-footer button:hover {
+.quiz-page .blackboard .dialog-footer button:hover {
   background-color: transparent;
 }
 
-.quiz-page .dialog-footer button:active {
+.quiz-page .blackboard .dialog-footer button:active {
   background-color: var(--clr-brandBlue);
   -webkit-transform: unset;
           transform: unset;
@@ -2033,11 +2033,11 @@
           box-shadow: none;
 }
 
-.quiz-page .dialog-footer button:focus {
+.quiz-page .blackboard .dialog-footer button:focus {
   background-color: var(--clr-brandBlue);
 }
 
-.quiz-page .dialog-footer button::before {
+.quiz-page .blackboard .dialog-footer button::before {
   padding: 0;
 }
 
@@ -3587,5 +3587,196 @@ main.main-with-player.forDashboard {
 .disabled-menu-item {
   opacity: 0.3;
   pointer-events: none;
+}
+
+dialog.quiz-report-dialog {
+  max-height: 630px;
+  max-width: 1024px;
+}
+
+dialog.quiz-report-dialog[open='open'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+dialog.quiz-report-dialog .dialog-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+}
+
+dialog.quiz-report-dialog .tabs-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+dialog.quiz-report-dialog .table-container {
+  position: relative;
+  overflow: auto;
+}
+
+dialog.quiz-report-dialog table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+dialog.quiz-report-dialog table thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  padding: 12px;
+  text-transform: uppercase;
+  font-family: var(--font-gothic);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  color: #8e8b87;
+  text-align: end;
+  width: 16.66%;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(1) {
+  text-align: start;
+  width: 25%;
+  min-width: 200px;
+  padding-left: 30px;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(2) {
+  width: 14%;
+  min-width: 126px;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(3) {
+  width: 14%;
+  min-width: 90px;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(4) {
+  width: 14%;
+  min-width: 90px;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(5) {
+  width: 14%;
+  min-width: 90px;
+}
+
+dialog.quiz-report-dialog table thead th:nth-of-type(6) {
+  width: 19%;
+  min-width: 150px;
+  padding-right: 30px;
+}
+
+dialog.quiz-report-dialog table tbody tr:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+dialog.quiz-report-dialog table tbody td {
+  padding: 12px;
+  text-align: end;
+  font-family: var(--font-gothic);
+  color: var(--clr-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  overflow-wrap: break-word;
+}
+
+dialog.quiz-report-dialog table tbody td:nth-of-type(1) {
+  text-align: start;
+  padding-left: 30px;
+}
+
+dialog.quiz-report-dialog table tbody td:nth-of-type(6) {
+  text-align: end;
+  padding-right: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+dialog.quiz-report-dialog table tbody td:nth-of-type(6) .action-link {
+  text-decoration: none;
+  border-bottom: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+dialog.quiz-report-dialog table tbody td:nth-of-type(6) .action-link:before {
+  font-size: 16px;
+  padding-right: 8px;
+}
+
+dialog.quiz-report-dialog table tbody td:nth-of-type(6) .action-link-passed {
+  color: var(--clr-brandOKShad);
+}
+
+dialog.quiz-report-dialog table tbody .incorrect-cell {
+  color: var(--clr-brandErrorShad);
+}
+
+dialog.quiz-report-dialog table tbody .correct-cell {
+  color: var(--clr-brandOKShad);
+}
+
+@media (min-width: 1024px) {
+  dialog.quiz-report-dialog table thead th:nth-of-type(1) {
+    padding-left: 60px;
+  }
+  dialog.quiz-report-dialog table thead th:nth-of-type(6) {
+    padding-right: 60px;
+  }
+  dialog.quiz-report-dialog table tbody td:nth-of-type(1) {
+    padding-left: 60px;
+  }
+  dialog.quiz-report-dialog table tbody td:nth-of-type(6) {
+    padding-right: 60px;
+  }
+}
+
+dialog.quiz-report-dialog .dialog-footer {
+  text-align: end;
+  margin-top: auto;
+  border-top: 1px solid #d2d1ce;
+}
+
+dialog.quiz-report-dialog .dialog-footer.buttons {
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+dialog.quiz-report-dialog .dialog-footer button {
+  max-width: 180px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  dialog.quiz-report-dialog .dialog-footer.buttons {
+    padding-right: 60px;
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  dialog.quiz-report-dialog .dialog-footer button {
+    max-width: 220px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=addon.css.map */

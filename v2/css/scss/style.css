@@ -368,8 +368,8 @@ article.doublePage div.doublePage-spread ::-webkit-scrollbar-thumb:window-inacti
 
 @font-face {
   font-family: icomoon;
-  src: url("../fonts/icomoon.eot?3p73j4Ta");
-  src: url("../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta");
+  src: url("../../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
