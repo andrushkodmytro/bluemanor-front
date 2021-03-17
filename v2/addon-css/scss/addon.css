@@ -3590,7 +3590,7 @@ main.main-with-player.forDashboard {
 }
 
 dialog.quiz-report-dialog {
-  max-height: 630px;
+  max-height: 600px;
   max-width: 1024px;
 }
 
@@ -3602,6 +3602,18 @@ dialog.quiz-report-dialog[open='open'] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+dialog.quiz-report-dialog .quiz-report-modal-title {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@media (min-width: 480px) {
+  dialog.quiz-report-dialog .quiz-report-modal-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 dialog.quiz-report-dialog .dialog-content {
@@ -3651,13 +3663,13 @@ dialog.quiz-report-dialog table thead th {
 
 dialog.quiz-report-dialog table thead th:nth-of-type(1) {
   text-align: start;
-  width: 25%;
+  width: 29%;
   min-width: 200px;
   padding-left: 30px;
 }
 
 dialog.quiz-report-dialog table thead th:nth-of-type(2) {
-  width: 14%;
+  width: 10%;
   min-width: 126px;
 }
 
@@ -3668,7 +3680,7 @@ dialog.quiz-report-dialog table thead th:nth-of-type(3) {
 
 dialog.quiz-report-dialog table thead th:nth-of-type(4) {
   width: 14%;
-  min-width: 90px;
+  min-width: 80px;
 }
 
 dialog.quiz-report-dialog table thead th:nth-of-type(5) {
@@ -3691,16 +3703,22 @@ dialog.quiz-report-dialog table tbody td {
   text-align: end;
   font-family: var(--font-gothic);
   color: var(--clr-text);
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 24px;
   overflow-wrap: break-word;
 }
 
 dialog.quiz-report-dialog table tbody td:nth-of-type(1) {
   text-align: start;
   padding-left: 30px;
+  width: 25%;
+  min-width: 200px;
+  max-width: 204px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 dialog.quiz-report-dialog table tbody td:nth-of-type(6) {
@@ -3739,9 +3757,15 @@ dialog.quiz-report-dialog table tbody .correct-cell {
 @media (min-width: 1024px) {
   dialog.quiz-report-dialog table thead th:nth-of-type(1) {
     padding-left: 60px;
+    max-width: 300px;
   }
   dialog.quiz-report-dialog table thead th:nth-of-type(6) {
     padding-right: 60px;
+  }
+  dialog.quiz-report-dialog table tbody td {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 30px;
   }
   dialog.quiz-report-dialog table tbody td:nth-of-type(1) {
     padding-left: 60px;
@@ -3764,8 +3788,13 @@ dialog.quiz-report-dialog .dialog-footer.buttons {
 }
 
 dialog.quiz-report-dialog .dialog-footer button {
-  max-width: 180px;
   width: 100%;
+}
+
+@media (min-width: 480px) {
+  dialog.quiz-report-dialog .dialog-footer button {
+    max-width: 180px;
+  }
 }
 
 @media (min-width: 1024px) {

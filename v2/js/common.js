@@ -238,7 +238,7 @@ $(function() {
     e.preventDefault();
 
     // Close books modal
-    $('#BookTableOfContents').attr('open', false).closest('.modal').css('display', 'none');
+    $('#BookTableOfContents').attr('open', false).closest('.modal').css('display', 'none').focus();
 
     //  Open quiz report modal
     $('#quiz-report-modal').css('display', 'flex').find('dialog').attr('open', true);
