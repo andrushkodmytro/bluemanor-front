@@ -1476,6 +1476,9 @@ header {
 .hasIcon--plus-circle::before {
 	content: '\e91b'; //icon plus circle add
 }
+.hasIcon--refresh-cw::before {
+	content: '\e934'; //icon refresh cw reload clockwise 
+}
 .hasIcon--rotate-ccw::before {
 	content: '\e933'; //icon rotate ccw undo counterclockwise 
 }
@@ -3869,6 +3872,9 @@ a.hint-pronunciation {
 			text-align: center;
 			padding-right: 0;
 			margin-right: 0.5em;
+		}
+		&:target {
+			background: var(--clr-brandBeigeDark);
 		}
 	}
 }
