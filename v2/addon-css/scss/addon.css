@@ -1775,6 +1775,18 @@
   }
 }
 
+.quiz-page .quiz-progress + .quiz-header.heading-2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .quiz-page .quiz-progress + .quiz-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .quiz-page .quiz-header {
   margin-bottom: 20px;
   text-align: center;
@@ -1793,6 +1805,11 @@
     font-size: 30px;
     line-height: 40px;
   }
+}
+
+.quiz-page .quiz-header.quiz-header-long {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .quiz-page .quiz-img-container {
@@ -2157,7 +2174,7 @@
           justify-content: center;
   height: 100%;
   border-radius: 16px;
-  padding: 24px 58px 24px 24px;
+  padding: 24px 60px 24px 60px;
   background-color: var(--clr-white);
   border: 2px solid var(--clr-white);
   position: relative;
@@ -2168,6 +2185,8 @@
   transition: border 0.15s ease-out 0s, -webkit-box-shadow 0.15s ease-out 0s;
   transition: box-shadow 0.15s ease-out 0s, border 0.15s ease-out 0s;
   transition: box-shadow 0.15s ease-out 0s, border 0.15s ease-out 0s, -webkit-box-shadow 0.15s ease-out 0s;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .quiz-page .buttons-container .btn-item label:hover {
@@ -2185,14 +2204,16 @@
 
 .quiz-page .buttons-container .btn-item label::before {
   left: 20px;
-  top: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .quiz-page .buttons-container .btn-item label.disabled-label {
   opacity: 0.6;
 }
 
-.quiz-page .buttons-container .btn-item label.wrong-label {
+.quiz-page .buttons-container .btn-item label.wrong-label.wrong-cross-icon {
   -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--clr-brandErrorShad);
@@ -2230,6 +2251,13 @@
   font-family: icomoon;
   font-weight: 400;
   color: var(--clr-brandOKShad);
+}
+
+@media (min-width: 480px) {
+  .quiz-page .buttons-container .btn-item label {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .quiz-page .buttons-container .btn-item input[type='radio'] {
@@ -2367,6 +2395,17 @@
     margin-left: 20px;
     margin-top: 0;
   }
+}
+
+.quiz-page .quiz-finish .btn-container.btn-container-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quiz-page .quiz-finish .btn-container.btn-container-column .button + .button {
+  margin: 20px 0 0;
 }
 
 @media (min-width: 480px) {
