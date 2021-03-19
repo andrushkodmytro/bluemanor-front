@@ -1775,6 +1775,18 @@
   }
 }
 
+.quiz-page .quiz-progress + .quiz-header.heading-2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .quiz-page .quiz-progress + .quiz-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .quiz-page .quiz-header {
   margin-bottom: 20px;
   text-align: center;
@@ -1793,6 +1805,11 @@
     font-size: 30px;
     line-height: 40px;
   }
+}
+
+.quiz-page .quiz-header.quiz-header-long {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .quiz-page .quiz-img-container {
@@ -2168,6 +2185,8 @@
   transition: border 0.15s ease-out 0s, -webkit-box-shadow 0.15s ease-out 0s;
   transition: box-shadow 0.15s ease-out 0s, border 0.15s ease-out 0s;
   transition: box-shadow 0.15s ease-out 0s, border 0.15s ease-out 0s, -webkit-box-shadow 0.15s ease-out 0s;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .quiz-page .buttons-container .btn-item label:hover {
@@ -2232,6 +2251,13 @@
   font-family: icomoon;
   font-weight: 400;
   color: var(--clr-brandOKShad);
+}
+
+@media (min-width: 480px) {
+  .quiz-page .buttons-container .btn-item label {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .quiz-page .buttons-container .btn-item input[type='radio'] {
