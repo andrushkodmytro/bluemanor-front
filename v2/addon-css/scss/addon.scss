@@ -620,7 +620,8 @@
           transform: translateY(-50%);
         }
 
-        &.disabled-label {
+        &.disabled-label:not(.correct-check-icon),
+        &.disabled-label:not(.wrong-label) {
           opacity: 0.6;
         }
 
@@ -643,9 +644,9 @@
           color: var(--clr-white);
         }
 
-        &.correct-check-icon {
+        &.correct-check-icon.heading-4 {
           background-color: var(--clr-brandOKShad);
-          border-color: var(--clr-brandOKShad);
+          border: 2px solid var(--clr-brandOKShad);
           color: var(--clr-white);
 
           &::before {
