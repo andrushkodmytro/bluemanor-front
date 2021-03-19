@@ -143,6 +143,21 @@
 
 // Quiz general
 .quiz-page {
+  button,
+  textarea,
+  input,
+  select,
+  label,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   padding-left: var(--size-S);
   padding-right: var(--size-S);
   padding-top: 12px;
@@ -237,7 +252,7 @@
       padding-left: 20px;
       padding-right: 20px;
     }
-    
+
     @media (min-width: 768px) {
       padding-left: 0;
       padding-right: 0;
@@ -249,7 +264,6 @@
     text-align: center;
     padding-right: 32px;
 
-    
     &.quiz-header-long {
       font-size: 30px;
       line-height: 40px;
@@ -488,7 +502,7 @@
 
     dialog:not([open]) {
       display: none;
-  }
+    }
   }
 
   .hint-pronunciation {
@@ -664,10 +678,9 @@
           }
         }
 
-        @media(min-width: 360px){
+        @media (min-width: 360px) {
           padding: 24px 60px 24px 60px;
         }
-
 
         @media (min-width: 480px) {
           font-size: 24px;
@@ -2082,7 +2095,6 @@ dialog.quiz-report-dialog {
 }
 
 // - Quiz report
-
 
 .hint-pronunciation-stop {
   &::after {
