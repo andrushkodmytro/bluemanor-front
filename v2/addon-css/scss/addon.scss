@@ -350,6 +350,7 @@
   }
 
   .blackboard {
+    display: flex;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -444,12 +445,14 @@
     }
 
     .dialog-body {
-      height: 100%;
+      flex-grow: 1;
       border-top: 2px solid var(--clr-brandBlue);
       cursor: url('../../img/pencil.png') 0 60, none;
     }
 
     .dialog-footer {
+      margin-top: auto;
+
       button {
         transform: unset;
         filter: none;
@@ -482,6 +485,10 @@
         }
       }
     }
+
+    dialog:not([open]) {
+      display: none;
+  }
   }
 
   .hint-pronunciation {

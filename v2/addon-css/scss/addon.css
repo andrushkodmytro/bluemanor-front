@@ -306,8 +306,8 @@
 
 @font-face {
   font-family: icomoon;
-  src: url("../../fonts/icomoon.eot?3p73j4Ta");
-  src: url("../../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?3p73j4Ta");
+  src: url("../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -869,8 +869,8 @@
 
 @font-face {
   font-family: icomoon;
-  src: url("../../fonts/icomoon.eot?3p73j4Ta");
-  src: url("../../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?3p73j4Ta");
+  src: url("../fonts/icomoon.eot?3p73j4Ta#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3p73j4Ta") format("truetype"), url("../fonts/icomoon.woff?3p73j4Ta") format("woff"), url("../fonts/icomoon.svg?3p73j4Ta#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1901,6 +1901,9 @@
 }
 
 .quiz-page .blackboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 50%;
   right: 50%;
@@ -2023,9 +2026,15 @@
 }
 
 .quiz-page .blackboard .dialog-body {
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-top: 2px solid var(--clr-brandBlue);
   cursor: url("../../img/pencil.png") 0 60, none;
+}
+
+.quiz-page .blackboard .dialog-footer {
+  margin-top: auto;
 }
 
 .quiz-page .blackboard .dialog-footer button {
@@ -2064,6 +2073,10 @@
 
 .quiz-page .blackboard .dialog-footer button::before {
   padding: 0;
+}
+
+.quiz-page .blackboard dialog:not([open]) {
+  display: none;
 }
 
 .quiz-page .hint-pronunciation::after {
