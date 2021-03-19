@@ -558,7 +558,7 @@
         justify-content: center;
         height: 100%;
         border-radius: 16px;
-        padding: 24px 58px 24px 24px;
+        padding: 24px 60px 24px 60px;
         background-color: var(--clr-white);
         border: 2px solid var(--clr-white);
         position: relative;
@@ -579,14 +579,15 @@
 
         &::before {
           left: 20px;
-          top: 24px;
+          top: 50%;
+          transform: translateY(-50%);
         }
 
         &.disabled-label {
           opacity: 0.6;
         }
 
-        &.wrong-label {
+        &.wrong-label.wrong-cross-icon {
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
           border: 2px solid var(--clr-brandErrorShad);
         }
@@ -729,6 +730,14 @@
         a:nth-of-type(2) {
           margin-left: 20px;
           margin-top: 0;
+        }
+      }
+
+      &.btn-container-column {
+        flex-direction: column;
+
+        .button + .button {
+          margin: 20px 0 0 ;
         }
       }
     }
@@ -2006,7 +2015,6 @@ dialog.quiz-report-dialog {
     @media (min-width: 480px) {
       button {
         max-width: 180px;
-       
       }
     }
 
