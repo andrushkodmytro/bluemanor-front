@@ -1244,6 +1244,21 @@
   color: var(--clr-brandOKShad);
 }
 
+dialog.modalContent#BookTableOfContents .bookContent dt span {
+  word-break: normal;
+}
+
+.modal {
+  max-height: 100vh;
+  max-height: -moz-available;
+  max-height: -webkit-fill-available;
+  max-height: fill-available;
+}
+
+dialog.modalContent {
+  height: 98%;
+}
+
 .chapter-book-page .book-header {
   margin-bottom: 20px;
 }
@@ -3928,5 +3943,87 @@ dialog.quiz-report-dialog .dialog-footer button {
     max-width: 220px;
     width: 100%;
   }
+}
+
+.schedule-page {
+  /* Weekdays (Mon-Sun) */
+  /* Days (1-31) */
+}
+
+.schedule-page h2 {
+  text-align: center;
+}
+
+.schedule-page .calendar-container {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedule-page .weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.schedule-page .weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #cfa970;
+  text-align: center;
+}
+
+.schedule-page .days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.schedule-page .days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.schedule-page .days li div {
+  border: 2px solid #efdec6;
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+}
+
+.schedule-page .days li .day {
+  background-color: #efdec6;
+}
+
+.schedule-page .day-container {
+  position: relative;
+}
+
+.schedule-page .day-container .day {
+  height: 40px;
+  width: 40px;
+  border-radius: 0 0 4px 0;
+}
+
+.schedule-page .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.schedule-page .btn-container .button {
+  max-width: 512px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
 }
 /*# sourceMappingURL=addon.css.map */
