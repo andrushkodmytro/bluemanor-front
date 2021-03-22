@@ -7,6 +7,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
 
+// +Global
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hint-pronunciation-stop {
+  &::after {
+    content: '\e92a' !important;
+  }
+}
+
+.menu-badge {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  min-width: 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: var(--clr-brandOKShad);
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--clr-white);
+  padding: 0 6px;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+    height: 26px;
+    min-width: 26px;
+  }
+}
+
+.dropdownMenuWrapper .notification-dropdown.dropdownMenu .notification-dropdown-item.new-item .notification-link {
+  background-color: #dcf9e8;
+
+  &:hover {
+    background-color: darken(#dcf9e8, 3%);
+  }
+
+  .notification-dropdown-item-title {
+    color: var(--clr-brandOKShad);
+  }
+}
+
+// -Global
+
 // +Chapter-book
 .chapter-book-page {
   .book-header {
@@ -143,21 +194,6 @@
 
 // Quiz general
 .quiz-page {
-  button,
-  textarea,
-  input,
-  select,
-  label,
-  a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
   padding-left: var(--size-S);
   padding-right: var(--size-S);
   padding-top: 12px;
@@ -634,8 +670,7 @@
           transform: translateY(-50%);
         }
 
-        &.disabled-label:not(.correct-check-icon),
-        &.disabled-label:not(.wrong-label) {
+        &.disabled-label:not(.wrong-label):not(.correct-check-icon) {
           opacity: 0.6;
         }
 
@@ -1474,11 +1509,9 @@ main.main-with-player.forDashboard {
     }
   }
 }
-
 // - Notification list
 
 // + Notification page
-
 .notification-page {
   padding-left: var(--size-S);
   padding-right: var(--size-S);
@@ -1608,7 +1641,6 @@ main.main-with-player.forDashboard {
     }
   }
 }
-
 // - Notification page
 
 // + Note list
@@ -2093,11 +2125,4 @@ dialog.quiz-report-dialog {
     }
   }
 }
-
 // - Quiz report
-
-.hint-pronunciation-stop {
-  &::after {
-    content: '\e92a' !important;
-  }
-}

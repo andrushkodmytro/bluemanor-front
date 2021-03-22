@@ -100,14 +100,14 @@
 			
 				<li class="dropdownMenuWrapper notification-nav-item">
 					<a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText active"
-						title="Notifications"><span>Notifications</span></a>
+						title="Notifications"><span>Notifications</span><span class="menu-badge">1</span></a>
 			
 					<ul class="dropdownMenu  notification-dropdown">
 						<li class="hasBorderBottom notification-dropdown-title"><strong>Your notifications</strong> <a href="#"
 								class="view-all-notification">View all</a></li>
 						<li class="notification-dropdown-list">
 							<ul>
-								<li class="notification-dropdown-item">
+								<li class="notification-dropdown-item new-item">
 									<a class="notification-link" href="#" title="Notification title">
 										<div class="notification-dropdown-item-header">
 											<div class="notification-dropdown-item-title">
