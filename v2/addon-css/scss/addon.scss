@@ -56,6 +56,21 @@
   }
 }
 
+dialog.modalContent#BookTableOfContents .bookContent dt span {
+  word-break: normal;
+}
+
+// Fix vh height in mobile
+.modal {
+  max-height: 100vh;
+  max-height: -moz-available;
+  max-height: -webkit-fill-available;
+  max-height: fill-available;
+}
+
+dialog.modalContent {
+  height: 98%;
+}
 // -Global
 
 // +Chapter-book
@@ -2126,3 +2141,82 @@ dialog.quiz-report-dialog {
   }
 }
 // - Quiz report
+
+// +Schedule page
+
+.schedule-page {
+  h2 {
+    text-align: center;
+  }
+
+  .calendar-container {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Weekdays (Mon-Sun) */
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #cfa970;
+    text-align: center;
+  }
+
+  /* Days (1-31) */
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+
+    div {
+      border: 2px solid #efdec6;
+      border-radius: 8px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .day {
+      background-color: #efdec6;
+    }
+  }
+
+  .day-container {
+    position: relative;
+
+    .day {
+      height: 40px;
+      width: 40px;
+      border-radius: 0 0 4px 0;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      max-width: 512px;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+}
+
+// -Schedule page

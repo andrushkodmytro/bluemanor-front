@@ -99,7 +99,7 @@
 				</li>
 			
 				<li class="dropdownMenuWrapper notification-nav-item">
-					<a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText active"
+					<a href="?d" class="simpleButton ghostButton sizeM hasIcon--mail withoutText"
 						title="Notifications"><span>Notifications</span></a>
 			
 					<ul class="dropdownMenu  notification-dropdown">
