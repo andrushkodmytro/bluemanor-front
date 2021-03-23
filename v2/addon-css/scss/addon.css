@@ -2807,6 +2807,7 @@ dialog.modalContent {
 
 .quiz-page.quiz-audio .btn-pronunciation {
   left: 20px;
+  right: auto;
 }
 
 .video-player-container {
