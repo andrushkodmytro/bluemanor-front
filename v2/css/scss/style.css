@@ -94,7 +94,7 @@ textarea,
 a.button, a#logo, .simpleButton:not(.asLink), .tabs a,
 .tabs strong, .tabs a[class*="hasIcon--"]::before,
 .tabs strong[class*="hasIcon--"]::before, a.avatarVignette picture::after, .dropdownMenuWrapper .dropdownMenu, dialog.modalContent#ChooseAvatar .tabs-view label, dialog.modalContent#DisableOrEnableStudent .buttons button strong, dialog.modalContent#BookTableOfContents .bookContent dl,
-dialog.modalContent#BookTableOfContents .tvContent dl, a.hint-pronunciation::after, .linkFullScreen, .mode-fullscreen header,
+dialog.modalContent#BookTableOfContents .tvContent dl, .hint-pronunciation__template, a.hint-pronunciation span:last-of-type::after, .image-hint-pronunciation a.hint-pronunciation::after, a.hint-pronunciation span, .linkFullScreen, .mode-fullscreen header,
 .mode-fullscreen footer,
 .mode-fullscreen aside,
 .mode-fullscreen .backButton, #DoYouHaveSomeQuestions #ThankYouForLetter, #StudentDashboard--mainMenu a, #StudentDashboard--mainMenu a img, #StudentDashboard--mainMenu a span, #StudentDashboard--lessonsList > li, #StudentDashboard--lessonsList > li > .studentProgress, #StudentDashboard--lessonsList > li > .studentProgress::after, #StudentDashboard--lessonsList > li > .studentProgress dl, #StudentDashboard--lessonsList .studentCourse, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks ul, #StudentDashboard--lessonsList .studentCourse .manageStudentBooks ul a,
@@ -114,7 +114,7 @@ textarea.isValid + label::before,
 textarea.isInvalid + label::before,
 .StripeElement.isValid + label::before,
 .StripeElement.isInvalid + label::before,
-input[type='checkbox'] + label::before, button.closeButton:not(.asLink):not([class*="hasIcon--"])::before, .simpleForm li button.showPassword::before, [class*="hasIcon--"]::before, a.avatarVignette picture::after, a.hint-pronunciation::after, #WhatParentsTellAboutUs .owl-prev::before, #WhatParentsTellAboutUs .owl-prev::after,
+input[type='checkbox'] + label::before, button.closeButton:not(.asLink):not([class*="hasIcon--"])::before, .simpleForm li button.showPassword::before, [class*="hasIcon--"]::before, a.avatarVignette picture::after, .hint-pronunciation__template, a.hint-pronunciation span:last-of-type::after, .image-hint-pronunciation a.hint-pronunciation::after, #WhatParentsTellAboutUs .owl-prev::before, #WhatParentsTellAboutUs .owl-prev::after,
 #WhatParentsTellAboutUs .owl-next::before,
 #WhatParentsTellAboutUs .owl-next::after, #StudentDashboard--lessonsList > li > .studentProgress::after, #StudentDashboard--lessonsList .studentCourse .studentProgress dd.bookCover::after, #StudentDashboard--lessonsList .studentCourse .studentProgress dd.tvCover::after, #StudentDashboard--lessonsList .studentCourse .owl-nav button::before {
   font-family: icomoon;
@@ -690,6 +690,17 @@ body {
   font-size: var(--size-M);
   line-height: 1.33333;
   font-family: var(--font-gothic);
+}
+
+a,
+input,
+textarea,
+label,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a {
@@ -2864,7 +2875,7 @@ nav.tabsAsSelectoOnSmallScreens div.studentProgress {
     position: absolute;
     right: 0;
     padding: 0;
-    z-index: 1;
+    z-index: 2;
     max-width: 360px;
     max-height: calc(100vh - var(--size-XXS) * 10 - var(--size-S) * ((10/3) + 2));
     overflow: auto;
@@ -4815,6 +4826,31 @@ dialog.modalContent#BookTableOfContents .buttons > *:nth-child(2) {
   cursor: grabbing;
 }
 
+@supports (-ms-ime-align: auto) {
+  .videoControlPanel li.seeker div input[type=range] {
+    height: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: none;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    border-radius: 0;
+  }
+  .videoControlPanel li.seeker div input[type=range]::-ms-track {
+    height: 8px;
+  }
+  .videoControlPanel li.seeker div input[type=range]::-ms-thumb {
+    appearance: none;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background-color: #8E8B87;
+    border: 0;
+    cursor: grab;
+  }
+}
+
 @media (max-width: 767px) {
   .videoControlPanel li.fast-back,
   .videoControlPanel li.fast-forward {
@@ -5075,6 +5111,14 @@ article.doublePage {
   max-width: none;
 }
 
+article.singlePage img,
+article.doublePage img {
+  width: 100%;
+  max-width: calc(var(--size-XXL) * 10);
+  height: auto;
+  border-radius: var(--size-M);
+}
+
 article.singlePage .singlePage-content,
 article.singlePage .doublePage-content,
 article.doublePage .singlePage-content,
@@ -5083,6 +5127,77 @@ article.doublePage .doublePage-content {
   max-width: 1058px;
   margin-left: auto;
   margin-right: auto;
+}
+
+article.singlePage .singlePage-content > div strong,
+article.singlePage .doublePage-content > div strong,
+article.doublePage .singlePage-content > div strong,
+article.doublePage .doublePage-content > div strong {
+  font-weight: 700;
+}
+
+article.singlePage .singlePage-content > div em,
+article.singlePage .doublePage-content > div em,
+article.doublePage .singlePage-content > div em,
+article.doublePage .doublePage-content > div em {
+  font-style: italic;
+}
+
+article.singlePage .singlePage-content > div u,
+article.singlePage .doublePage-content > div u,
+article.doublePage .singlePage-content > div u,
+article.doublePage .doublePage-content > div u {
+  text-decoration: underline;
+}
+
+article.singlePage .singlePage-content > div h4, article.singlePage .singlePage-content > div h5, article.singlePage .singlePage-content > div h6,
+article.singlePage .doublePage-content > div h4,
+article.singlePage .doublePage-content > div h5,
+article.singlePage .doublePage-content > div h6,
+article.doublePage .singlePage-content > div h4,
+article.doublePage .singlePage-content > div h5,
+article.doublePage .singlePage-content > div h6,
+article.doublePage .doublePage-content > div h4,
+article.doublePage .doublePage-content > div h5,
+article.doublePage .doublePage-content > div h6 {
+  padding-top: .5em;
+  padding-bottom: .25em;
+}
+
+article.singlePage .singlePage-content > div ol, article.singlePage .singlePage-content > div ul,
+article.singlePage .doublePage-content > div ol,
+article.singlePage .doublePage-content > div ul,
+article.doublePage .singlePage-content > div ol,
+article.doublePage .singlePage-content > div ul,
+article.doublePage .doublePage-content > div ol,
+article.doublePage .doublePage-content > div ul {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1.1em;
+}
+
+article.singlePage .singlePage-content > div ol li:not(:first-child), article.singlePage .singlePage-content > div ul li:not(:first-child),
+article.singlePage .doublePage-content > div ol li:not(:first-child),
+article.singlePage .doublePage-content > div ul li:not(:first-child),
+article.doublePage .singlePage-content > div ol li:not(:first-child),
+article.doublePage .singlePage-content > div ul li:not(:first-child),
+article.doublePage .doublePage-content > div ol li:not(:first-child),
+article.doublePage .doublePage-content > div ul li:not(:first-child) {
+  padding-top: .25em;
+}
+
+article.singlePage .singlePage-content > div ul,
+article.singlePage .doublePage-content > div ul,
+article.doublePage .singlePage-content > div ul,
+article.doublePage .doublePage-content > div ul {
+  list-style-type: disc;
+}
+
+article.singlePage .singlePage-content > div ol,
+article.singlePage .doublePage-content > div ol,
+article.doublePage .singlePage-content > div ol,
+article.doublePage .doublePage-content > div ol {
+  list-style-type: decimal;
 }
 
 @media (max-width: 1023px) {
@@ -5263,16 +5378,6 @@ article.doublePage .doublePage-content {
   }
 }
 
-article.singlePage div.doublePage-spread img,
-article.doublePage div.doublePage-spread img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: auto;
-  border-radius: var(--size-M);
-}
-
 article.singlePage dl,
 article.singlePage div.doublePage-spread > div,
 article.doublePage dl,
@@ -5282,11 +5387,11 @@ article.doublePage div.doublePage-spread > div {
   display: flex;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  position: relative;
-  z-index: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 1023px) {
@@ -5294,6 +5399,9 @@ article.doublePage div.doublePage-spread > div {
   article.singlePage div.doublePage-spread > div,
   article.doublePage dl,
   article.doublePage div.doublePage-spread > div {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -5301,9 +5409,15 @@ article.doublePage div.doublePage-spread > div {
   }
 }
 
-article.singlePage div.doublePage-spread.canScroll > div > div,
-article.doublePage div.doublePage-spread.canScroll > div > div {
-  overflow: auto;
+article.singlePage div.doublePage-spread.canScroll > div > div h3,
+article.doublePage div.doublePage-spread.canScroll > div > div h3 {
+  padding-top: .33em;
+  padding-bottom: 0.5em;
+}
+
+article.singlePage div.doublePage-spread.canScroll > div > div p,
+article.doublePage div.doublePage-spread.canScroll > div > div p {
+  padding: .5em 0;
 }
 
 @media (min-width: 1024px) {
@@ -5313,6 +5427,8 @@ article.doublePage div.doublePage-spread.canScroll > div > div {
   }
   article.singlePage div.doublePage-spread.canScroll > div > div,
   article.doublePage div.doublePage-spread.canScroll > div > div {
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-top: 2em;
     padding-bottom: 2em;
   }
@@ -5333,15 +5449,6 @@ article.doublePage div.doublePage-spread.canScroll > div > div {
   article.singlePage div.doublePage-spread.canScroll > div > div::after,
   article.doublePage div.doublePage-spread.canScroll > div > div::after {
     bottom: calc(10% + var(--size-XXL) + var(--size-XS));
-  }
-  article.singlePage div.doublePage-spread.canScroll h3,
-  article.doublePage div.doublePage-spread.canScroll h3 {
-    padding-top: .33em;
-    padding-bottom: 0.5em;
-  }
-  article.singlePage div.doublePage-spread.canScroll p,
-  article.doublePage div.doublePage-spread.canScroll p {
-    padding: .5em 0;
   }
   article.singlePage div.doublePage-spread.canScroll .doublePage-right,
   article.doublePage div.doublePage-spread.canScroll .doublePage-right {
@@ -5409,14 +5516,13 @@ article.doublePage div.doublePage-right {
   }
 }
 
-article.singlePage dt.singlePage-descriptionTerm img,
-article.singlePage dt.doublePage-descriptionTerm img,
-article.doublePage dt.singlePage-descriptionTerm img,
-article.doublePage dt.doublePage-descriptionTerm img {
-  width: 100%;
-  max-width: calc(var(--size-XXL) * 10);
-  height: auto;
-  border-radius: var(--size-M);
+article.singlePage dt.singlePage-descriptionTerm,
+article.singlePage dt.doublePage-descriptionTerm,
+article.singlePage div.doublePage-left,
+article.doublePage dt.singlePage-descriptionTerm,
+article.doublePage dt.doublePage-descriptionTerm,
+article.doublePage div.doublePage-left {
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -5471,11 +5577,14 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
 .titlePage .doublePage-spread ul,
 .lastPage .doublePage-spread ul {
   margin-bottom: 1.5em;
+  padding: 0 !important;
+  list-style-type: none !important;
 }
 
 .titlePage .doublePage-spread li,
 .lastPage .doublePage-spread li {
   margin-top: 1.5em;
+  padding: 0 !important;
 }
 
 .titlePage h1 {
@@ -5600,43 +5709,83 @@ article.doublePage dd.doublePage-descriptionDetails h3 {
   color: #8E8B87;
 }
 
-a.hint-pronunciation {
-  border: 0;
-  background: var(--clr-brandBeige);
-  color: var(--clr-text);
-  border-radius: 1000px;
-  padding-left: .5em;
-  padding-right: .5em;
-  position: relative;
-}
-
-a.hint-pronunciation::after {
+.hint-pronunciation__template, a.hint-pronunciation span:last-of-type::after, .image-hint-pronunciation a.hint-pronunciation::after {
   content: '\e92e';
-  position: absolute;
   background: var(--clr-brandGold);
   font-size: calc(var(--size-XXS) * 2);
-  line-height: 2em;
+  line-height: 2;
+  height: 2em;
   width: 2em;
   text-align: center;
   border-radius: 100%;
-  top: -.75em;
-  right: -.75em;
+  margin-right: -.75em;
+  bottom: 0;
 }
 
-a.hint-pronunciation:hover::after, a.hint-pronunciation:focus::after {
+a.hint-pronunciation {
+  border: 0;
+  color: var(--clr-text);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+a.hint-pronunciation span {
+  white-space: nowrap;
+  padding: 0 .125em .125em;
+  background: var(--clr-brandBeige);
+  margin-bottom: .25em;
+}
+
+a.hint-pronunciation span + span {
+  margin-left: -1px;
+}
+
+a.hint-pronunciation span:first-of-type {
+  padding-left: .5em;
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
+a.hint-pronunciation span:last-of-type {
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  position: relative;
+  padding-right: .5em;
+}
+
+a.hint-pronunciation span:last-of-type::after {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
+}
+
+a.hint-pronunciation:hover::after,
+a.hint-pronunciation:hover span:last-of-type::after, a.hint-pronunciation:focus::after,
+a.hint-pronunciation:focus span:last-of-type::after {
   background: var(--clr-brandGoldLite);
 }
 
-a.hint-pronunciation:active {
+a.hint-pronunciation:active span {
   background: var(--clr-brandBeigeDark);
 }
 
-a.hint-pronunciation:active::after {
+a.hint-pronunciation:active::after,
+a.hint-pronunciation:active span:last-of-type::after {
   background: var(--clr-brandGoldDark);
 }
 
 .image-hint-pronunciation {
   position: relative;
+  display: inline-block;
 }
 
 .image-hint-pronunciation a.hint-pronunciation {
@@ -5652,8 +5801,8 @@ a.hint-pronunciation:active::after {
 }
 
 .image-hint-pronunciation a.hint-pronunciation::after {
-  position: static;
   display: block;
+  margin-right: 0;
 }
 
 .linkFullScreen {

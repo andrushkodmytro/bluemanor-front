@@ -1,11 +1,11 @@
-@import '../../css/scss/_variables';
-@import '../../css/scss/_extend';
-@import '../../css/scss/_fonts';
-@import '../../css/scss/_owl.carousel.scss';
-@import './typography.scss';
+@import "../../css/scss/_variables";
+@import "../../css/scss/_extend";
+@import "../../css/scss/_fonts";
+@import "../../css/scss/_owl.carousel.scss";
+@import "./typography.scss";
 // TODO: replace @import with direct links to font files
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
 
 // +Global
 * {
@@ -15,7 +15,7 @@
 
 .hint-pronunciation-stop {
   &::after {
-    content: '\e92a' !important;
+    content: "\e92a" !important;
   }
 }
 
@@ -44,7 +44,10 @@
   }
 }
 
-.dropdownMenuWrapper .notification-dropdown.dropdownMenu .notification-dropdown-item.new-item .notification-link {
+.dropdownMenuWrapper
+  .notification-dropdown.dropdownMenu
+  .notification-dropdown-item.new-item
+  .notification-link {
   background-color: #dcf9e8;
 
   &:hover {
@@ -201,6 +204,130 @@ dialog.modalContent {
   section.singlePage-content {
     @media (min-width: 600px) and (max-width: 1023.9px) {
       margin-bottom: 160px;
+    }
+  }
+}
+
+.chapter-book-page.chapter-book-end-page {
+  & .end-page-container .aspect-ratio-container .aspect-ratio-item {
+    @media (min-width: 1024px) {
+      justify-content: flex-start;
+    }
+  }
+
+  .img-outer {
+    max-width: 280px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      max-width: 385px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .img-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 74.8%;
+
+    img {
+      width: 100%;
+
+      height: 100%;
+      object-fit: cover;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 385px;
+      max-height: 288px;
+    }
+  }
+
+  .book-header {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 20px;
+
+    &:before,
+    &::after {
+      content: "";
+      display: block;
+      background: no-repeat 50% 50% / contain;
+      height: 1em;
+    }
+
+    &:before {
+      font-size: 0.5em;
+      background-image: url(../../img/student/decor-laurel.svg);
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      font-size: 0.5em;
+      background-image: url(../../img/student/decor-laurel.svg);
+      transform: rotate(180deg);
+      margin-top: 8px;
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        margin-bottom: 20px;
+      }
+      &:after {
+        margin-top: 20px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 50px;
+      line-height: 68px;
+
+      &:before,
+      &::after {
+        height: 1.5em;
+      }
+      &::before {
+        margin-bottom: 30px;
+      }
+      &:after {
+        margin-top: 30px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 72px;
+      line-height: 88px;
+
+      &:before,
+      &::after {
+        height: 1.5em;
+      }
+
+      &::before {
+        margin-bottom: 40px;
+      }
+      &:after {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .button {
+    order: 3;
+
+    & + .book-header::after {
+      display: none;
+    }
+
+    @media (max-width: 1199.9px) {
+      font-size: var(--size-M);
+      box-shadow: 0 6px 0 var(--clr-brandBrick);
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
     }
   }
 }
@@ -512,7 +639,7 @@ dialog.modalContent {
     .dialog-body {
       flex-grow: 1;
       border-top: 2px solid var(--clr-brandBlue);
-      cursor: url('../../img/pencil.png') 0 60, none;
+      cursor: url("../../img/pencil.png") 0 60, none;
     }
 
     .dialog-footer {
@@ -558,7 +685,7 @@ dialog.modalContent {
 
   .hint-pronunciation {
     &::after {
-      content: '\e92e';
+      content: "\e92e";
       position: absolute;
       background: var(--clr-brandGold);
       font-size: calc(var(--size-XXS) * 2);
@@ -572,7 +699,7 @@ dialog.modalContent {
   }
 
   .btn-pronunciation {
-    content: '\e92e';
+    content: "\e92e";
     position: absolute;
     right: 20px;
     top: 50%;
@@ -589,7 +716,7 @@ dialog.modalContent {
     }
 
     &:after {
-      content: '\e92e';
+      content: "\e92e";
       display: inline-block;
       text-align: center;
       border-radius: 100%;
@@ -603,7 +730,7 @@ dialog.modalContent {
 
     &.pause {
       &:after {
-        content: '\e92a';
+        content: "\e92a";
       }
     }
   }
@@ -695,7 +822,7 @@ dialog.modalContent {
         }
 
         &.wrong-cross-icon::before {
-          content: '\e90d';
+          content: "\e90d";
           position: absolute;
           background: var(--clr-brandErrorShad);
           font-size: calc(var(--size-XXS) * 2);
@@ -714,7 +841,7 @@ dialog.modalContent {
           color: var(--clr-white);
 
           &::before {
-            content: '\e922';
+            content: "\e922";
             position: absolute;
             background: var(--clr-white);
             font-size: calc(var(--size-XXS) * 2);
@@ -738,7 +865,7 @@ dialog.modalContent {
         }
       }
 
-      input[type='radio'] {
+      input[type="radio"] {
         height: 0;
         width: 0;
         opacity: 0;
@@ -918,7 +1045,11 @@ dialog.modalContent {
             right: 2px;
             border-radius: 0 6px 6px 0;
             text-align: center;
-            background: linear-gradient(to right, var(--clr-transparent), var(--clr-white));
+            background: linear-gradient(
+              to right,
+              var(--clr-transparent),
+              var(--clr-white)
+            );
             width: calc(var(--size-XXL) * 1.25);
             height: calc(var(--size-XXL) * 1.25);
             line-height: calc(var(--size-XXL) * 1.25);
@@ -940,7 +1071,7 @@ dialog.modalContent {
 
         label {
           &:after {
-            content: '\e911';
+            content: "\e911";
             color: var(--clr-brandError);
           }
         }
@@ -953,7 +1084,7 @@ dialog.modalContent {
 
         label {
           &:after {
-            content: '\e90c';
+            content: "\e90c";
             color: var(--clr-brandOK);
           }
         }
@@ -1361,7 +1492,7 @@ main.main-with-player.forDashboard {
     position: relative;
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       border-left: 10px solid var(--clr-transparent);
       border-right: 10px solid var(--clr-transparent);
@@ -1888,7 +2019,7 @@ main.main-with-player.forDashboard {
       height: auto;
     }
 
-    &[open='open'] {
+    &[open="open"] {
       display: flex;
       flex-direction: column;
     }
@@ -1930,7 +2061,7 @@ dialog.quiz-report-dialog {
   max-height: 600px;
   max-width: 1024px;
 
-  &[open='open'] {
+  &[open="open"] {
     display: flex;
     flex-direction: column;
   }
