@@ -1,0 +1,96 @@
+<main class="quiz-page quiz-multiple-page quiz-audio">
+	<a href="/student-dahsboard/"
+		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
+
+	<article>
+		<section>
+			<!-- Blackboard container -->
+			<div class='blackboard-btn-container'>
+				<button id='blackboard-btn' class="simpleButton ghostButton hasIcon--edit  sizeM wAuto"><span>Use
+						blackboard</span></button>
+			</div>
+
+			<div class="blackboard">
+				<dialog class="modalContent" aria-modal="true" role="dialog">
+					<div class="dialog-container">
+						<div class="dialog-header">
+							<button id='maximize-btn' class='hasIcon--maximize' aria-label="Maximize modal dialogue"></button>
+							<button id='minimize-btn' class='hasIcon--minimize' aria-label="Minimize modal dialogue"></button>
+							<button id='blackboard-close-btn' class='hasIcon--close' aria-label="Close modal dialogue "></button>
+						</div>
+						<div class="dialog-body">
+						</div>
+						<div class='dialog-footer'>
+							<button id='clear-btn' class='hasIcon--trash-2 withoutText' aria-label="Close modal dialogue"></button>
+						</div>
+					</div>
+				</dialog>
+			</div>
+
+
+			<div class="studentProgress quiz-progress">
+				<div class='progress-top'>
+					<div> <span class="progressText--width22">4</span>/10</div>
+					<div>10:25</div>
+				</div>
+				<ins class="progressBar"><span class="progressBar--width22" style="max-width:60%"></span></ins>
+
+			</div>
+
+			<h2 class='heading-2 quiz-header  hint-pronunciation'>
+				It is the ______ of this series of histories to present a clear,
+			</h2>
+
+			<div class="quiz-img-container">
+				<div class="quiz-image">
+					<img src='/v2/img/quiz-multiple.jpg' alt='quiz' />
+				</div>
+			</div>
+
+
+			<form action="/" method="POST" class="quiz-container">
+				<ul class='buttons-container '>
+					<li class="btn-item">
+						<input type="radio" id='result1' name="amount" value='Buffalo 1' />
+						<label for="result1" class='heading-4'>Audio 1
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
+
+					</li>
+					<li class="btn-item">
+						<input type="radio" id='result2' name="amount" value='Buffalo 2'  />
+						<label for="result2" class='heading-4 correct-check-icon'>Audio 2
+
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
+
+					</li>
+					<li class="btn-item">
+						<input type="radio" id='result3' name="amount" value='Buffalo 3'  />
+						<label for="result3" class='heading-4'>Audio 3
+
+							<a class='btn-pronunciation' tabindex='0'></a>
+						</label>
+
+					</li>
+					<li class="btn-item">
+						<input type="radio" id='result4' name="amount" value='Buffalo 4'  />
+						<label for="result4" class='heading-4'>Audio 4 <a class='btn-pronunciation pause' tabindex='0'></a></label>
+
+					</li>
+				</ul>
+
+				<button class="btn-check" type='submit'>
+					Check
+				</button>
+			</form>
+
+
+		</section>
+	</article>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/v2/js/owl.carousel.min.js"></script>
+<script src="/v2/js/common.min.js"></script>
+<script src="/v2/js/common.js"></script>
