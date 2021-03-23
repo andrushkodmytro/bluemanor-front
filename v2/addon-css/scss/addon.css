@@ -1267,6 +1267,12 @@ dialog.modalContent {
   height: 98%;
 }
 
+.modalOn {
+  position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
 .chapter-book-page .book-header {
   margin-bottom: 20px;
 }

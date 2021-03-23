@@ -74,6 +74,12 @@ dialog.modalContent#BookTableOfContents .bookContent dt span {
 dialog.modalContent {
   height: 98%;
 }
+
+.modalOn {
+  position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
+}
 // -Global
 
 // +Chapter-book
@@ -1138,17 +1144,16 @@ dialog.modalContent {
     }
   }
 
-
   // Multiple audio quiz
   &.quiz-audio {
     .buttons-container .btn-item {
       max-width: 400px;
-      
+
       label {
         justify-content: flex-start;
         padding-left: 80px;
 
-        .btn-pronunciation::after{
+        .btn-pronunciation::after {
           font-size: 24px;
         }
 
