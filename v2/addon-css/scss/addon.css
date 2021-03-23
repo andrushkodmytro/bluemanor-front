@@ -1203,7 +1203,7 @@
 }
 
 .hint-pronunciation-stop::after {
-  content: "\e92a" !important;
+  content: "\e935" !important;
 }
 
 .menu-badge {
@@ -2324,18 +2324,6 @@ dialog.modalContent {
 
 .quiz-page .btn-pronunciation.pause:after {
   content: "\e935";
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 24px;
 }
 
 .quiz-page .quiz-container {
@@ -2806,6 +2794,11 @@ dialog.modalContent {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-left: 80px;
+}
+
+.quiz-page.quiz-audio .buttons-container .btn-item label .btn-pronunciation::after {
+  font-size: 24px;
 }
 
 .quiz-page.quiz-audio .buttons-container .btn-item label:before {

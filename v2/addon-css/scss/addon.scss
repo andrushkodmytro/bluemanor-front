@@ -15,7 +15,7 @@
 
 .hint-pronunciation-stop {
   &::after {
-    content: "\e92a" !important;
+    content: "\e935" !important;
   }
 }
 
@@ -720,12 +720,12 @@ dialog.modalContent {
     &.pause {
       &:after {
         content: "\e935";
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
+        // width: 32px;
+        // height: 32px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // font-size: 24px;
       }
     }
   }
@@ -1146,6 +1146,11 @@ dialog.modalContent {
       
       label {
         justify-content: flex-start;
+        padding-left: 80px;
+
+        .btn-pronunciation::after{
+          font-size: 24px;
+        }
 
         &:before {
           display: none;
