@@ -1203,7 +1203,7 @@
 }
 
 .hint-pronunciation-stop::after {
-  content: "\e92a" !important;
+  content: "\e935" !important;
 }
 
 .menu-badge {
@@ -2323,7 +2323,7 @@ dialog.modalContent {
 }
 
 .quiz-page .btn-pronunciation.pause:after {
-  content: "\e92a";
+  content: "\e935";
 }
 
 .quiz-page .quiz-container {
@@ -2794,6 +2794,15 @@ dialog.modalContent {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-left: 80px;
+}
+
+.quiz-page.quiz-audio .buttons-container .btn-item label .btn-pronunciation::after {
+  font-size: 24px;
+}
+
+.quiz-page.quiz-audio .buttons-container .btn-item label:before {
+  display: none;
 }
 
 .quiz-page.quiz-audio .btn-pronunciation {
