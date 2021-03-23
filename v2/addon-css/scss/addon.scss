@@ -719,7 +719,13 @@ dialog.modalContent {
 
     &.pause {
       &:after {
-        content: "\e92a";
+        content: "\e935";
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
       }
     }
   }
@@ -1132,12 +1138,18 @@ dialog.modalContent {
     }
   }
 
+
+  // Multiple audio quiz
   &.quiz-audio {
     .buttons-container .btn-item {
       max-width: 400px;
       
       label {
         justify-content: flex-start;
+
+        &:before {
+          display: none;
+        }
       }
     }
 

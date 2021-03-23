@@ -1510,6 +1510,9 @@ header {
 .hasIcon--skip-forward-filled::before {
 	content: '\e930'; //icon skip-forward next
 }
+.hasIcon--stop-filled::before {
+	content: '\e935'; //icon stop
+}
 .hasIcon--trash-2::before {
 	content: '\e932'; //icon trash-2
 }
