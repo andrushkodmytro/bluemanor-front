@@ -201,27 +201,31 @@
   background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
 }
 
-#customScroll--brown::-webkit-scrollbar,
-#customScroll--brown ::-webkit-scrollbar {
+#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar,
+#customScroll--brown ::-webkit-scrollbar,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--brown::-webkit-scrollbar-track,
-#customScroll--brown ::-webkit-scrollbar-track {
+#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track,
+#customScroll--brown ::-webkit-scrollbar-track,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
   border-radius: 10px;
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb,
-#customScroll--brown ::-webkit-scrollbar-thumb {
+#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb,
+#customScroll--brown ::-webkit-scrollbar-thumb,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--clr-brandBeige);
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb:window-inactive,
-#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive {
   background: var(--clr-brandBeigeLite);
 }
 
@@ -764,27 +768,31 @@
   background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
 }
 
-#customScroll--brown::-webkit-scrollbar,
-#customScroll--brown ::-webkit-scrollbar {
+#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar,
+#customScroll--brown ::-webkit-scrollbar,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--brown::-webkit-scrollbar-track,
-#customScroll--brown ::-webkit-scrollbar-track {
+#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track,
+#customScroll--brown ::-webkit-scrollbar-track,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
   border-radius: 10px;
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb,
-#customScroll--brown ::-webkit-scrollbar-thumb {
+#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb,
+#customScroll--brown ::-webkit-scrollbar-thumb,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--clr-brandBeige);
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb:window-inactive,
-#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown ::-webkit-scrollbar-thumb:window-inactive,
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive {
   background: var(--clr-brandBeigeLite);
 }
 
@@ -1288,19 +1296,7 @@ dialog.modalContent {
   position: relative;
   z-index: 1;
   overflow-y: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  scrollbar-width: thin;
-}
-
-.chapter-book-page .chapter-book-content::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb {
-  background-color: var(--clr-brandBeige);
-  border-radius: 10px;
+  padding-right: 0.5em;
 }
 
 .chapter-book-page .chapter-book-content .chapter-book-img {
