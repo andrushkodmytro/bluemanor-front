@@ -2684,6 +2684,7 @@ dialog.modalContent {
 
 .quiz-page .quiz-type-answer .quiz-input.is-valid input, .quiz-page .quiz-type-answer .quiz-input.is-invalid input {
   padding-right: 60px;
+  opacity: 1;
 }
 
 .quiz-page .quiz-type-answer .quiz-input.is-valid label:after, .quiz-page .quiz-type-answer .quiz-input.is-invalid label:after {
@@ -2783,6 +2784,20 @@ dialog.modalContent {
 .quiz-page .quiz-multi-short.buttons-container .btn-item {
   width: 100%;
   max-width: 500px;
+}
+
+.quiz-page.quiz-audio .buttons-container .btn-item {
+  max-width: 400px;
+}
+
+.quiz-page.quiz-audio .buttons-container .btn-item label {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.quiz-page.quiz-audio .btn-pronunciation {
+  left: 20px;
 }
 
 .video-player-container {

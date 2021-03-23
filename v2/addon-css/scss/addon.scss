@@ -1023,6 +1023,7 @@ dialog.modalContent {
       &.is-invalid {
         input {
           padding-right: 60px;
+          opacity: 1;
         }
 
         label {
@@ -1128,6 +1129,20 @@ dialog.modalContent {
     .btn-item {
       width: 100%;
       max-width: 500px;
+    }
+  }
+
+  &.quiz-audio {
+    .buttons-container .btn-item {
+      max-width: 400px;
+      
+      label {
+        justify-content: flex-start;
+      }
+    }
+
+    .btn-pronunciation {
+      left: 20px;
     }
   }
 }
@@ -2263,7 +2278,6 @@ dialog.quiz-report-dialog {
 // - Quiz report
 
 // +Schedule page
-
 .schedule-page {
   h2 {
     text-align: center;
