@@ -2294,28 +2294,68 @@ dialog.quiz-report-dialog {
 .schedule-page {
   h2 {
     text-align: center;
+    margin-bottom: 40px;
   }
 
   .calendar-container {
     max-width: 820px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
   }
 
-  /* Weekdays (Mon-Sun) */
-  .weekdays {
-    margin: 0;
-    padding: 10px 0;
+  .calendar-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+
+    .prev-month,
+    .next-month {
+      cursor: pointer;
+
+      &:before {
+        @extend #transition;
+        display: flex;
+        justify-content: center;
+        width: 24px;
+        padding: 0;
+        border-radius: 50%;
+      }
+
+      &:focus:before,
+      &:hover:before {
+        background-color: var(--clr-brandBeige);
+        box-shadow: 0px 0px 0px 4px var(--clr-brandBeige);
+      }
+    }
+
+    .month-container {
+      padding: 0 20px;
+      min-width: 214px;
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .month-name {
+      margin-right: 4px;
+    }
   }
 
-  .weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #cfa970;
-    text-align: center;
+  .week-days {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 20px;
+
+    .week-days-name {
+      width: 14.28%;
+      padding: 0 10px;
+      color: #cfa970;
+    }
   }
 
-  /* Days (1-31) */
   .days {
     display: flex;
     flex-wrap: wrap;
@@ -2324,6 +2364,26 @@ dialog.quiz-report-dialog {
     li {
       width: 14.28%;
       text-align: center;
+      padding: 10px;
+
+      .dropdownMenu {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    li:nth-of-type(6),
+    li:nth-of-type(7),
+    li:nth-of-type(13),
+    li:nth-of-type(14),
+    li:nth-of-type(20),
+    li:nth-of-type(21),
+    li:nth-of-type(27),
+    li:nth-of-type(28) {
+      .dropdownMenu {
+        right: 0;
+        left: auto;
+      }
     }
   }
 
@@ -2339,17 +2399,42 @@ dialog.quiz-report-dialog {
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      cursor: pointer;
 
       &:focus {
         background-color: #eee;
       }
+
+      &.active::before {
+        content: "";
+        display: block;
+        border-left: 10px solid var(--clr-transparent);
+        border-right: 10px solid var(--clr-transparent);
+        border-bottom: 10px solid #fff;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        right: 22px;
+        z-index: 30;
+      }
+
+      &.active + .dropdownMenu::before {
+        display: none;
+      }
     }
 
     .day-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 40px;
       width: 40px;
       border-radius: 0 0 4px 0;
       background-color: #efdec6;
+      font-size: 18px;
+      line-height: 30px;
     }
 
     .choose-time-text {
@@ -2357,6 +2442,7 @@ dialog.quiz-report-dialog {
       font-weight: 600;
       font-size: 14px;
       line-height: 20px;
+      color: var(--clr-footer);
     }
 
     .time {
@@ -2364,28 +2450,83 @@ dialog.quiz-report-dialog {
       font-size: 18px;
       line-height: 30px;
       margin-bottom: 14px;
+      color: var(--clr-footer);
     }
+  }
+
+  .dropdownMenuWrapper {
+    z-index: auto;
   }
 
   .dropdownMenu {
     width: 100vw;
     max-width: 300px;
+    padding: 20px;
+    z-index: 10;
+    top: 50%;
+
+    label {
+      display: block;
+      text-align: start;
+    }
+
+    .time-input-container {
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    .hours-input,
+    .minutes-input {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        top: 22px;
+        right: 16px;
+        font-size: 24px;
+        line-height: 32px;
+        color: #b0aeaa;
+      }
+    }
 
     .hours-input {
-      max-width: 78px;
+      margin-right: 12px;
+
+      input {
+        max-width: 78px;
+      }
+
+      &:after {
+        content: "h";
+      }
     }
 
     .minutes-input {
-      max-width: 132px;
+      input {
+        max-width: 132px;
+      }
+
+      &:after {
+        content: "min";
+      }
+    }
+
+    .all-week-container {
+      margin-bottom: 20px;
     }
 
     .menu-btn-container {
-      .btn {
+      display: flex;
+
+      .save-btn {
         font-size: var(--size-M);
         box-shadow: 0 6px 0 var(--clr-brandBrick);
         filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+        max-width: 138px;
+        width: 100%;
       }
-      .ghostButton {
+      .cancel-btn {
+        margin-right: 14px;
         font-size: var(--size-M);
       }
     }
@@ -2405,6 +2546,6 @@ dialog.quiz-report-dialog {
 
 // -Schedule page
 
-// *:focus {
-//   outline: 2px solid red !important;
-// }
+*:focus {
+  // outline: 2px solid red !important;
+}
