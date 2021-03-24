@@ -2649,6 +2649,10 @@ header.hasStudentDashboardMenu nav li {
   content: '\e930';
 }
 
+.hasIcon--stop-filled::before {
+  content: '\e935';
+}
+
 .hasIcon--trash-2::before {
   content: '\e932';
 }
