@@ -74,12 +74,6 @@ dialog.modalContent#BookTableOfContents .bookContent dt span {
 dialog.modalContent {
   height: 98%;
 }
-
-.modalOn {
-  position: relative;
-  touch-action: none;
-  -ms-touch-action: none;
-}
 // -Global
 
 // +Chapter-book
@@ -1047,11 +1041,7 @@ dialog.modalContent {
             right: 2px;
             border-radius: 0 6px 6px 0;
             text-align: center;
-            background: linear-gradient(
-              to right,
-              var(--clr-transparent),
-              var(--clr-white)
-            );
+            background-color: transparent;
             width: calc(var(--size-XXL) * 1.25);
             height: calc(var(--size-XXL) * 1.25);
             line-height: calc(var(--size-XXL) * 1.25);
@@ -2316,7 +2306,6 @@ dialog.quiz-report-dialog {
   .weekdays {
     margin: 0;
     padding: 10px 0;
-    background-color: #ddd;
   }
 
   .weekdays li {
@@ -2328,39 +2317,77 @@ dialog.quiz-report-dialog {
 
   /* Days (1-31) */
   .days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
 
-  .days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 12px;
-    color: #777;
-
-    div {
-      border: 2px solid #efdec6;
-      border-radius: 8px;
-      width: 100px;
-      height: 100px;
-    }
-
-    .day {
-      background-color: #efdec6;
+    li {
+      width: 14.28%;
+      text-align: center;
     }
   }
 
   .day-container {
-    position: relative;
+    border: 2px solid #efdec6;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--clr-white);
 
     .day {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      &:focus {
+        background-color: #eee;
+      }
+    }
+
+    .day-number {
       height: 40px;
       width: 40px;
       border-radius: 0 0 4px 0;
+      background-color: #efdec6;
+    }
+
+    .choose-time-text {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .time {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .dropdownMenu {
+    width: 100vw;
+    max-width: 300px;
+
+    .hours-input {
+      max-width: 78px;
+    }
+
+    .minutes-input {
+      max-width: 132px;
+    }
+
+    .menu-btn-container {
+      .btn {
+        font-size: var(--size-M);
+        box-shadow: 0 6px 0 var(--clr-brandBrick);
+        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+      }
+      .ghostButton {
+        font-size: var(--size-M);
+      }
     }
   }
 
@@ -2377,3 +2404,7 @@ dialog.quiz-report-dialog {
 }
 
 // -Schedule page
+
+// *:focus {
+//   outline: 2px solid red !important;
+// }

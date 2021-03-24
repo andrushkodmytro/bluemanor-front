@@ -1267,12 +1267,6 @@ dialog.modalContent {
   height: 98%;
 }
 
-.modalOn {
-  position: relative;
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
 .chapter-book-page .book-header {
   margin-bottom: 20px;
 }
@@ -2701,8 +2695,7 @@ dialog.modalContent {
   right: 2px;
   border-radius: 0 6px 6px 0;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(var(--clr-transparent)), to(var(--clr-white)));
-  background: linear-gradient(to right, var(--clr-transparent), var(--clr-white));
+  background-color: transparent;
   width: calc(var(--size-XXL) * 1.25);
   height: calc(var(--size-XXL) * 1.25);
   line-height: calc(var(--size-XXL) * 1.25);
@@ -4122,7 +4115,6 @@ dialog.quiz-report-dialog .dialog-footer button {
 .schedule-page .weekdays {
   margin: 0;
   padding: 10px 0;
-  background-color: #ddd;
 }
 
 .schedule-page .weekdays li {
@@ -4133,40 +4125,89 @@ dialog.quiz-report-dialog .dialog-footer button {
 }
 
 .schedule-page .days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -10px;
 }
 
 .schedule-page .days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
+  width: 14.28%;
   text-align: center;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: #777;
 }
 
-.schedule-page .days li div {
+.schedule-page .day-container {
   border: 2px solid #efdec6;
   border-radius: 8px;
   width: 100px;
   height: 100px;
-}
-
-.schedule-page .days li .day {
-  background-color: #efdec6;
-}
-
-.schedule-page .day-container {
-  position: relative;
+  background-color: var(--clr-white);
 }
 
 .schedule-page .day-container .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.schedule-page .day-container .day:focus {
+  background-color: #eee;
+}
+
+.schedule-page .day-container .day-number {
   height: 40px;
   width: 40px;
   border-radius: 0 0 4px 0;
+  background-color: #efdec6;
+}
+
+.schedule-page .day-container .choose-time-text {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.schedule-page .day-container .time {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 14px;
+}
+
+.schedule-page .dropdownMenu {
+  width: 100vw;
+  max-width: 300px;
+}
+
+.schedule-page .dropdownMenu .hours-input {
+  max-width: 78px;
+}
+
+.schedule-page .dropdownMenu .minutes-input {
+  max-width: 132px;
+}
+
+.schedule-page .dropdownMenu .menu-btn-container .btn {
+  font-size: var(--size-M);
+  -webkit-box-shadow: 0 6px 0 var(--clr-brandBrick);
+          box-shadow: 0 6px 0 var(--clr-brandBrick);
+  -webkit-filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+.schedule-page .dropdownMenu .menu-btn-container .ghostButton {
+  font-size: var(--size-M);
 }
 
 .schedule-page .btn-container {
