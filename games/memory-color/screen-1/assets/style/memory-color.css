@@ -957,6 +957,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 690px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+  padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+  .game-container {
+    padding-bottom: 120px;
+  }
 }
 
 .game-container h3 {

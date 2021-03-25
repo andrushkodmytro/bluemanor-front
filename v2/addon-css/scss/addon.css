@@ -4676,6 +4676,10 @@ dialog.quiz-report-dialog .dialog-footer button {
   padding-top: 12px;
 }
 
+.game-page > article {
+  margin-bottom: 0 !important;
+}
+
 @media (min-width: 1440px) {
   .game-page {
     padding-left: 300px;
