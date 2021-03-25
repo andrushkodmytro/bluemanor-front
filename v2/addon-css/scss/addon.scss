@@ -2808,6 +2808,10 @@ dialog.quiz-report-dialog {
   padding-right: var(--size-S);
   padding-top: 12px;
 
+  & > article {
+    margin-bottom: 0 !important;
+  }
+
   @media (min-width: 1440px) {
     padding-left: 300px;
     padding-right: 300px;

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/v2/css/style.css">
+  <link rel="stylesheet" href="/games/memory-color/screen-1/assets/style/memory-color.css">
+  <link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+  <script src="/games/memory-color/screen-1/assets/drag-drop-polyfill.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class='result-item-block'>
+        <div class="correct-item hasIcon--check">0</div>
+        <div class="incorrect-item hasIcon--close">0</div>
+
+      </div>
+
+      <!-- Timer -->
+      <!-- <div class="timer heading-4"> <span>8</span></div> -->
+
+      <!-- Timer icon -->
+      <div class="timer heading-4"> <span class='timer-clock'></span></div>
+
+      <div class="lives">
+        <span class='heart-empty'></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="game">
+      <h3 class="body-18">Let’s start the game!</h3>
+
+
+      <div class="circle" id='slots'>
+        <svg width="300" height="300" viewBox="0 0 300 300" fill="#044B94" xmlns="http://www.w3.org/2000/svg">
+          <path class='color-fill-red'
+            d="M299 149.954C299 172.158 294.144 193.224 285.437 212.153C283.355 216.678 277.775 218.272 273.38 215.734L238.569 195.636C234.407 193.233 232.868 187.934 234.68 183.341C238.759 173.003 241 161.739 241 149.954C241 104.266 207.331 66.4436 163.452 59.9415C158.57 59.2182 154.75 55.236 154.75 50.4322V10.2484C154.75 5.17279 158.931 1.13429 163.896 1.59341C239.671 8.60087 299 72.3495 299 149.954Z"
+            stroke="#DEBD8D" stroke-width="2" />
+          <path
+            d="M1 149.954C1 72.3495 60.3293 8.60087 136.104 1.59341C141.069 1.13429 145.25 5.17279 145.25 10.2484V50.4322C145.25 55.236 141.43 59.2182 136.548 59.9415C92.6686 66.4436 59 104.266 59 149.954C59 161.763 61.25 173.05 65.3456 183.406C67.1623 187.999 65.6238 193.304 61.4594 195.708L26.6524 215.804C22.2589 218.34 16.6806 216.749 14.597 212.226C5.86865 193.279 1 172.187 1 149.954Z"
+            stroke="#DEBD8D" stroke-width="2" />
+          <path class='color-fill-error'
+            d="M150.001 298.954C99.8803 298.954 55.5391 274.208 28.5291 236.262C25.6346 232.195 27.0397 226.551 31.4429 224.008L66.2584 203.908C70.4106 201.51 75.7574 202.815 78.8284 206.664C95.5005 227.561 121.187 240.954 150.001 240.954C178.862 240.954 204.586 227.517 221.256 206.562C224.328 202.699 229.69 201.39 233.848 203.799L268.622 223.94C273.016 226.485 274.417 232.121 271.529 236.184C244.524 274.174 200.157 298.954 150.001 298.954Z"
+            stroke="#DEBD8D" stroke-width="2" />
+        </svg>
+      </div>
+
+      <div id='options' class="colors">
+        <div class='drag-item-container'>
+          <div class='drag-item'>
+            <span draggable="true" data-color='yellow'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='orange'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='red'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='pink'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='green'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='turquoise'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='blue'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='violet'>
+              <svg width="25" height="108" viewBox="0 0 25 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="0" y="17" width="25" height="65" fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M25.8711 112H39.15L37.2807 116.747C36.508 118.71 34.6135 120 32.5043 120C30.3908 120 28.4934 118.705 27.7236 116.736L25.8711 112Z"
+                    fill="#F17C10" />
+                  <path style="transform: translate(-20px, -12px)" d="M20 97H45L39.9 110H25.1L20 97Z" fill="#8E8B87" />
+                  <path style="transform: translate(-20px, -12px)"
+                    d="M20 17C20 14.2386 22.2386 12 25 12H40C42.7614 12 45 14.2386 45 17V26H20V17Z" fill="#8E8B87" />
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="0" y="0" width="65" height="148" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-check">
+      Start
+    </button>
+  </div>
+
+  <script src="/games/memory-color/screen-1/index.js"></script>
+</body>
+
+</html>
