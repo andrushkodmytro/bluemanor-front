@@ -2714,6 +2714,359 @@ dialog.quiz-report-dialog {
 
 // -Schedule page
 
+
+// +Game general
+.game-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+  padding-top: 12px;
+
+  @media (min-width: 1440px) {
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 20px;
+  }
+
+  @media (max-width: 1440px) {
+    .simpleButton.backButton.back2dashboardButton {
+      position: static;
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    .backButton.back2dashboardButton {
+      position: static;
+      order: 1;
+      margin-top: 0;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    a.simpleButton.back2dashboardButton:not(.asLink) {
+      top: 40px;
+    }
+  }
+
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    @media(min-width: 768px){
+      margin-bottom: 120px;
+    }
+  }
+
+  .game-progress {
+    padding: 16px 0 0;
+    margin-bottom: 30px;
+    margin-top: 0;
+
+    @media (min-width: 480px) {
+      padding: 36px 0 0;
+    }
+
+    .progressBar {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .progress-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+    span {
+      color: var(--clr-brandBrick);
+
+      @for $i from 20 through 79 {
+        &.progressText--width#{$i} {
+          color: var(--clr-hover);
+        }
+      }
+      @for $i from 80 through 100 {
+        &.progressText--width#{$i} {
+          color: var(--clr-brandOK);
+        }
+      }
+    }
+
+    @media (max-width: 479px) {
+      div,
+      span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      h2 {
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .modal-btn-container {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: var(--size-S);
+
+    justify-content: flex-start;
+    padding-top: 0;
+
+    button {
+      width: 36px;
+      justify-content: center;
+      padding: 0;
+
+      &:before {
+        padding-right: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:last-of-type {
+        margin-left: 12px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: 480px) {
+      button {
+        width: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        &:before {
+          padding-right: 10px;
+          font-size: var(--size-L);
+        }
+
+        &:last-of-type {
+          margin-left: 20px;
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      right: 24px;
+
+      .simpleButton.ghostButton {
+        height: auto;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      top: 40px;
+    }
+  }
+
+  .game-welcome-modal {
+    @extend #customScroll--gray;
+
+    @media (min-width: 360px) {
+      height: auto;
+    }
+
+    &[open='open'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dialog-content {
+      @media (max-width: 480px) {
+        p {
+          font-size: 18px;
+        }
+      }
+
+      overflow: auto;
+
+      padding: 0 24px;
+      text-align: start;
+
+      @media (min-width: 768px) {
+        padding: 0 60px;
+      }
+    }
+
+    .dialog-footer {
+      text-align: end;
+      margin-top: auto;
+    }
+  }
+
+  .game-scores-dialog {
+    @extend #customScroll--gray;
+    max-height: 630px;
+
+    &[open='open'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dialog-content {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .tabs-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tabs-links {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid var(--clr-brandBeigeDark);
+
+      li {
+        padding-right: 4px;
+        padding-left: 4px;
+
+        a {
+          display: block;
+          padding: 7px 40px;
+          text-decoration: none;
+          color: var(--clr-text);
+          border: none;
+
+          &:hover {
+            background-color: var(--clr-brandBeigeLite);
+            border-radius: 6px 6px 0 0;
+          }
+        }
+      }
+
+      .ui-tabs-active a {
+        background-color: var(--clr-brandBeige);
+        border-radius: 6px 6px 0 0;
+      }
+    }
+
+    .table-container {
+      position: relative;
+      overflow: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        th {
+          position: sticky;
+          top: 0;
+          background-color: #f8f8f8;
+          padding: 12px;
+          text-transform: uppercase;
+          font-family: var(--font-gothic);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18px;
+          color: #8e8b87;
+        }
+
+        th:nth-of-type(1) {
+          width: 120px;
+          text-align: end;
+          padding-left: 20px;
+        }
+
+        th:nth-of-type(2) {
+          width: 500px;
+          min-width: 250px;
+          text-align: start;
+        }
+
+        th:nth-of-type(3) {
+          width: 120px;
+          text-align: end;
+        }
+
+        th:nth-of-type(4) {
+          width: 120px;
+          text-align: end;
+          padding-right: 12px;
+        }
+
+        @media (min-width: 768px) {
+          th {
+            padding: 12px 20px;
+          }
+
+          th:nth-of-type(1) {
+            padding-left: 60px;
+          }
+
+          th:nth-of-type(4) {
+            padding-right: 20px;
+          }
+        }
+      }
+
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #f8f8f8;
+        }
+        td {
+          padding: 12px;
+          text-align: end;
+          font-family: var(--font-gothic);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px;
+          overflow-wrap: break-word;
+        }
+
+        td:nth-of-type(2) {
+          text-align: start;
+          max-width: 500px;
+        }
+
+        td:nth-of-type(4) {
+          color: var(--clr-brandOKShad);
+          font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+          td {
+            padding: 20px;
+          }
+        }
+      }
+    }
+
+    .dialog-footer {
+      text-align: end;
+      margin-top: auto;
+    }
+  }
+}
+
+
+// -Game general
+
+
+
+
+
+
+
 *:focus {
   // outline: 2px solid red !important;
 }
