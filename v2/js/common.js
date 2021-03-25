@@ -253,7 +253,8 @@ $(function () {
 
   $(".day").click(function (e) {
     $(".day").removeClass("active");
-    $(this).addClass("active");
+    $('.schedule-page .modal').css('display', 'flex')
+    $(this).toggleClass("active");
   });
 
 
@@ -284,6 +285,23 @@ $(function () {
     let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
     $('.month-name').text(newCurrentMonth);
    })
+
+
+
+  
+   $('div[role="button"]').on('keydown', function(e) {
+    const keyD = e.key !== undefined ? e.key : e.keyCode;
+    // e.key && e.keycode have mixed support - keycode is deprecated but support is greater than e.key
+    // I tested within IE11, Firefox, Chrome, Edge (latest) & all had good support for e.key
+  
+      if ( (keyD === 'Enter' || keyD === 13) || (['Spacebar', ' '].indexOf(keyD) >= 0 || keyD === 32)) {
+      // In IE11 and lower, e.key will equal "Spacebar" instead of ' '
+  
+      // Default behavior is prevented to prevent the page to scroll when "space" is pressed
+      e.preventDefault();
+      this.click();
+    }
+  });
 
    
 });

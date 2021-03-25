@@ -4143,6 +4143,10 @@ dialog.quiz-report-dialog .dialog-footer button {
   background-color: var(--clr-white);
   padding: 20px 16px;
   border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 768px) {
@@ -4289,7 +4293,7 @@ dialog.quiz-report-dialog .dialog-footer button {
     width: 14.28%;
     padding: 0 10px;
     color: #cfa970;
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -4310,19 +4314,132 @@ dialog.quiz-report-dialog .dialog-footer button {
 
 .schedule-page .days li .dropdownMenu {
   right: auto;
-  left: 0;
+  width: 100vw;
+  max-width: 300px;
+  padding: 20px;
+  z-index: 110;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
 }
 
-.schedule-page .days li:nth-of-type(6) .dropdownMenu,
-.schedule-page .days li:nth-of-type(7) .dropdownMenu,
-.schedule-page .days li:nth-of-type(13) .dropdownMenu,
-.schedule-page .days li:nth-of-type(14) .dropdownMenu,
-.schedule-page .days li:nth-of-type(20) .dropdownMenu,
-.schedule-page .days li:nth-of-type(21) .dropdownMenu,
-.schedule-page .days li:nth-of-type(27) .dropdownMenu,
-.schedule-page .days li:nth-of-type(28) .dropdownMenu {
-  right: 0;
-  left: auto;
+.schedule-page .days li .dropdownMenu label {
+  display: block;
+  text-align: start;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.schedule-page .days li .dropdownMenu .time-input-container {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.schedule-page .days li .dropdownMenu .hours-input,
+.schedule-page .days li .dropdownMenu .minutes-input {
+  position: relative;
+}
+
+.schedule-page .days li .dropdownMenu .hours-input:after,
+.schedule-page .days li .dropdownMenu .minutes-input:after {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #b0aeaa;
+}
+
+.schedule-page .days li .dropdownMenu .hours-input {
+  margin-right: 12px;
+}
+
+.schedule-page .days li .dropdownMenu .hours-input input {
+  max-width: 90px;
+  font-size: var(--size-L);
+}
+
+.schedule-page .days li .dropdownMenu .hours-input:after {
+  content: "h";
+}
+
+.schedule-page .days li .dropdownMenu .minutes-input input {
+  max-width: 132px;
+  font-size: var(--size-L);
+}
+
+.schedule-page .days li .dropdownMenu .minutes-input:after {
+  content: "min";
+}
+
+.schedule-page .days li .dropdownMenu .all-week-container {
+  margin-bottom: 20px;
+}
+
+.schedule-page .days li .dropdownMenu .menu-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.schedule-page .days li .dropdownMenu .menu-btn-container .save-btn {
+  font-size: var(--size-M);
+  -webkit-box-shadow: 0 6px 0 var(--clr-brandBrick);
+          box-shadow: 0 6px 0 var(--clr-brandBrick);
+  -webkit-filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  max-width: 138px;
+  width: 100%;
+}
+
+.schedule-page .days li .dropdownMenu .menu-btn-container .cancel-btn {
+  min-width: 110px;
+  margin-right: 14px;
+  font-size: var(--size-M);
+}
+
+@media (min-width: 768px) {
+  .schedule-page .days li .dropdownMenu {
+    position: absolute;
+    -webkit-transform: unset;
+            transform: unset;
+    left: -2px;
+  }
+}
+
+.schedule-page .days li:nth-of-type(1) .day-container, .schedule-page .days li:nth-of-type(8) .day-container, .schedule-page .days li:nth-of-type(15) .day-container, .schedule-page .days li:nth-of-type(22) .day-container, .schedule-page .days li:nth-of-type(29) .day-container {
+  cursor: not-allowed;
+}
+
+.schedule-page .days li:nth-of-type(1) .day-container .day, .schedule-page .days li:nth-of-type(8) .day-container .day, .schedule-page .days li:nth-of-type(15) .day-container .day, .schedule-page .days li:nth-of-type(22) .day-container .day, .schedule-page .days li:nth-of-type(29) .day-container .day {
+  pointer-events: none;
+}
+
+.schedule-page .days li:nth-of-type(1) .day-container .day .choose-time-text,
+.schedule-page .days li:nth-of-type(1) .day-container .day .time, .schedule-page .days li:nth-of-type(8) .day-container .day .choose-time-text,
+.schedule-page .days li:nth-of-type(8) .day-container .day .time, .schedule-page .days li:nth-of-type(15) .day-container .day .choose-time-text,
+.schedule-page .days li:nth-of-type(15) .day-container .day .time, .schedule-page .days li:nth-of-type(22) .day-container .day .choose-time-text,
+.schedule-page .days li:nth-of-type(22) .day-container .day .time, .schedule-page .days li:nth-of-type(29) .day-container .day .choose-time-text,
+.schedule-page .days li:nth-of-type(29) .day-container .day .time {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .schedule-page .days li:nth-of-type(6) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(7) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(13) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(14) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(20) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(21) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(27) .dropdownMenu,
+  .schedule-page .days li:nth-of-type(28) .dropdownMenu {
+    right: -2px;
+    left: auto;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -4336,6 +4453,19 @@ dialog.quiz-report-dialog .dialog-footer button {
 
 .schedule-page .day-container {
   background-color: var(--clr-white);
+}
+
+.schedule-page .day-container.disabled-day {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.schedule-page .day-container.disabled-day .day {
+  pointer-events: none;
+}
+
+.schedule-page .day-container.next-month-day {
+  opacity: 0.6;
 }
 
 .schedule-page .day-container .day {
@@ -4357,9 +4487,14 @@ dialog.quiz-report-dialog .dialog-footer button {
   background-color: #eee;
 }
 
+.schedule-page .day-container .day.active {
+  background-color: #f4f3f3;
+  border-radius: 4px;
+}
+
 .schedule-page .day-container .day.active::before {
   content: "";
-  display: block;
+  display: none;
   border-left: 10px solid var(--clr-transparent);
   border-right: 10px solid var(--clr-transparent);
   border-bottom: 10px solid #fff;
@@ -4370,7 +4505,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 22px;
-  z-index: 30;
+  z-index: 130;
 }
 
 .schedule-page .day-container .day.active + .dropdownMenu::before {
@@ -4393,15 +4528,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-}
-
-.schedule-page .day-container .day-number:after {
-  content: "";
-  display: inline-block;
-  height: 4px;
-  width: 4px;
-  background-color: red;
-  border-radius: 50%;
+  text-align: center;
 }
 
 .schedule-page .day-container .choose-time-text {
@@ -4411,15 +4538,6 @@ dialog.quiz-report-dialog .dialog-footer button {
           order: 2;
 }
 
-.schedule-page .day-container .choose-time-text:after {
-  content: "";
-  display: inline-block;
-  height: 4px;
-  width: 4px;
-  background-color: red;
-  border-radius: 50%;
-}
-
 .schedule-page .day-container .time {
   display: none;
   -webkit-box-ordinal-group: 3;
@@ -4427,10 +4545,39 @@ dialog.quiz-report-dialog .dialog-footer button {
           order: 2;
 }
 
+.schedule-page .day-container .time + .day-number {
+  position: relative;
+}
+
+.schedule-page .day-container .time + .day-number:after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  background-color: var(--clr-brandBrick);
+  border-radius: 50%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 360px) {
+  .schedule-page .day-container .time + .day-number:after {
+    top: 85%;
+  }
+}
+
 @media (min-width: 480px) {
   .schedule-page .day-container .day-number {
     font-size: 16px;
     line-height: 24px;
+  }
+  .schedule-page .day-container .time + .day-number:after {
+    top: 75%;
+    height: 6px;
+    width: 6px;
   }
 }
 
@@ -4438,6 +4585,9 @@ dialog.quiz-report-dialog .dialog-footer button {
   .schedule-page .day-container {
     border: 2px solid #efdec6;
     border-radius: 8px;
+  }
+  .schedule-page .day-container .day.active::before {
+    display: block;
   }
   .schedule-page .day-container .day-number {
     height: 40px;
@@ -4462,6 +4612,9 @@ dialog.quiz-report-dialog .dialog-footer button {
     line-height: 20px;
     margin-bottom: 20px;
     color: var(--clr-footer);
+  }
+  .schedule-page .day-container .time + .day-number:after {
+    display: none;
   }
 }
 
@@ -4490,86 +4643,6 @@ dialog.quiz-report-dialog .dialog-footer button {
   z-index: auto;
 }
 
-.schedule-page .dropdownMenu {
-  width: 100vw;
-  max-width: 300px;
-  padding: 20px;
-  z-index: 10;
-  top: 50%;
-}
-
-.schedule-page .dropdownMenu label {
-  display: block;
-  text-align: start;
-}
-
-.schedule-page .dropdownMenu .time-input-container {
-  margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.schedule-page .dropdownMenu .hours-input,
-.schedule-page .dropdownMenu .minutes-input {
-  position: relative;
-}
-
-.schedule-page .dropdownMenu .hours-input:after,
-.schedule-page .dropdownMenu .minutes-input:after {
-  position: absolute;
-  top: 22px;
-  right: 16px;
-  font-size: 24px;
-  line-height: 32px;
-  color: #b0aeaa;
-}
-
-.schedule-page .dropdownMenu .hours-input {
-  margin-right: 12px;
-}
-
-.schedule-page .dropdownMenu .hours-input input {
-  max-width: 78px;
-}
-
-.schedule-page .dropdownMenu .hours-input:after {
-  content: "h";
-}
-
-.schedule-page .dropdownMenu .minutes-input input {
-  max-width: 132px;
-}
-
-.schedule-page .dropdownMenu .minutes-input:after {
-  content: "min";
-}
-
-.schedule-page .dropdownMenu .all-week-container {
-  margin-bottom: 20px;
-}
-
-.schedule-page .dropdownMenu .menu-btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.schedule-page .dropdownMenu .menu-btn-container .save-btn {
-  font-size: var(--size-M);
-  -webkit-box-shadow: 0 6px 0 var(--clr-brandBrick);
-          box-shadow: 0 6px 0 var(--clr-brandBrick);
-  -webkit-filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-  max-width: 138px;
-  width: 100%;
-}
-
-.schedule-page .dropdownMenu .menu-btn-container .cancel-btn {
-  margin-right: 14px;
-  font-size: var(--size-M);
-}
-
 .schedule-page .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4585,6 +4658,16 @@ dialog.quiz-report-dialog .dialog-footer button {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
+}
+
+.schedule-page .modal {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .schedule-page .modal {
+    display: none !important;
+  }
 }
 
 .game-page {
@@ -5082,7 +5165,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   }
 }
 
-.game-page .game-welcome-modal[open='open'] {
+.game-page .game-welcome-modal[open="open"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5119,7 +5202,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   max-height: 630px;
 }
 
-.game-page .game-scores-dialog[open='open'] {
+.game-page .game-scores-dialog[open="open"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
