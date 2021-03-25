@@ -7,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
 
+$clr-light-95: #f4f3f3;
+
 // +Global
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1612,7 +1614,7 @@ main.main-with-player.forDashboard {
 
       &:hover,
       &:focus {
-        background-color: #f4f3f3;
+        background-color: $clr-light-95;
       }
     }
   }
@@ -2293,7 +2295,7 @@ dialog.quiz-report-dialog {
 // +Schedule page
 .schedule-page {
   padding-left: 14px;
-    padding-right: 14px;
+  padding-right: 14px;
 
   @media (min-width: 360px) {
     padding-left: 20px;
@@ -2328,6 +2330,7 @@ dialog.quiz-report-dialog {
     background-color: var(--clr-white);
     padding: 20px 16px;
     border-radius: 4px;
+    user-select: none;
 
     @media (min-width: 768px) {
       background-color: unset;
@@ -2445,7 +2448,7 @@ dialog.quiz-report-dialog {
         width: 14.28%;
         padding: 0 10px;
         color: #cfa970;
-        text-align: center;
+        text-align: start;
       }
     }
   }
@@ -2462,21 +2465,126 @@ dialog.quiz-report-dialog {
 
       .dropdownMenu {
         right: auto;
-        left: 0;
+        width: 100vw;
+        max-width: 300px;
+        padding: 20px;
+        z-index: 110;
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+        label {
+          display: block;
+          text-align: start;
+          font-size: 18px;
+          line-height: 30px;
+        }
+
+        .time-input-container {
+          margin-bottom: 20px;
+          display: flex;
+        }
+
+        .hours-input,
+        .minutes-input {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            top: 18px;
+            right: 16px;
+            font-size: 24px;
+            line-height: 32px;
+            color: #b0aeaa;
+          }
+        }
+
+        .hours-input {
+          margin-right: 12px;
+
+          input {
+            max-width: 90px;
+            font-size: var(--size-L);
+          }
+
+          &:after {
+            content: "h";
+          }
+        }
+
+        .minutes-input {
+          input {
+            max-width: 132px;
+            font-size: var(--size-L);
+          }
+
+          &:after {
+            content: "min";
+          }
+        }
+
+        .all-week-container {
+          margin-bottom: 20px;
+        }
+
+        .menu-btn-container {
+          display: flex;
+
+          .save-btn {
+            font-size: var(--size-M);
+            box-shadow: 0 6px 0 var(--clr-brandBrick);
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+            max-width: 138px;
+            width: 100%;
+          }
+          .cancel-btn {
+            min-width: 110px;
+            margin-right: 14px;
+            font-size: var(--size-M);
+          }
+        }
+
+        @media (min-width: 768px) {
+          position: absolute;
+          transform: unset;
+          left: -2px;
+        }
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(8),
+      &:nth-of-type(15),
+      &:nth-of-type(22),
+      &:nth-of-type(29) {
+        .day-container {
+          cursor: not-allowed;
+
+          .day {
+            pointer-events: none;
+
+            .choose-time-text,
+            .time {
+              display: none;
+            }
+          }
+        }
       }
     }
 
-    li:nth-of-type(6),
-    li:nth-of-type(7),
-    li:nth-of-type(13),
-    li:nth-of-type(14),
-    li:nth-of-type(20),
-    li:nth-of-type(21),
-    li:nth-of-type(27),
-    li:nth-of-type(28) {
-      .dropdownMenu {
-        right: 0;
-        left: auto;
+    @media (min-width: 768px) {
+      li:nth-of-type(6),
+      li:nth-of-type(7),
+      li:nth-of-type(13),
+      li:nth-of-type(14),
+      li:nth-of-type(20),
+      li:nth-of-type(21),
+      li:nth-of-type(27),
+      li:nth-of-type(28) {
+        .dropdownMenu {
+          right: -2px;
+          left: auto;
+        }
       }
     }
 
@@ -2492,6 +2600,19 @@ dialog.quiz-report-dialog {
   .day-container {
     background-color: var(--clr-white);
 
+    &.disabled-day {
+      opacity: 0.6;
+      cursor: not-allowed;
+
+      .day {
+        pointer-events: none;
+      }
+    }
+
+    &.next-month-day {
+      opacity: 0.6;
+    }
+
     .day {
       display: flex;
       flex-direction: column;
@@ -2503,19 +2624,24 @@ dialog.quiz-report-dialog {
         background-color: #eee;
       }
 
-      &.active::before {
-        content: "";
-        display: block;
-        border-left: 10px solid var(--clr-transparent);
-        border-right: 10px solid var(--clr-transparent);
-        border-bottom: 10px solid #fff;
-        width: 0;
-        height: 0;
-        position: absolute;
-        top: 48%;
-        transform: translateY(-50%);
-        right: 22px;
-        z-index: 30;
+      &.active {
+        background-color: $clr-light-95;
+        border-radius: 4px;
+
+        &::before {
+          content: "";
+          display: none;
+          border-left: 10px solid var(--clr-transparent);
+          border-right: 10px solid var(--clr-transparent);
+          border-bottom: 10px solid #fff;
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 48%;
+          transform: translateY(-50%);
+          right: 22px;
+          z-index: 130;
+        }
       }
 
       &.active + .dropdownMenu::before {
@@ -2531,34 +2657,44 @@ dialog.quiz-report-dialog {
       font-size: 14px;
       line-height: 20px;
       order: 1;
-
-      &:after{
-        content: "";
-        display: inline-block;
-        height: 4px;
-        width: 4px;
-        background-color: red;
-        border-radius: 50%;
-      }
+      text-align: center;
     }
 
     .choose-time-text {
       display: none;
       order: 2;
-
-      &:after{
-        content: "";
-        display: inline-block;
-        height: 4px;
-        width: 4px;
-        background-color: red;
-        border-radius: 50%;
-      }
     }
 
     .time {
       display: none;
       order: 2;
+
+      & + .day-number {
+        position: relative;
+
+        &:after {
+          content: "";
+          display: inline-block;
+          height: 4px;
+          width: 4px;
+          background-color: var(--clr-brandBrick);
+          border-radius: 50%;
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    @media (min-width: 360px) {
+      .time {
+        & + .day-number {
+          &:after {
+            top: 85%;
+          }
+        }
+      }
     }
 
     @media (min-width: 480px) {
@@ -2566,11 +2702,25 @@ dialog.quiz-report-dialog {
         font-size: 16px;
         line-height: 24px;
       }
+
+      .time {
+        & + .day-number {
+          &:after {
+            top: 75%;
+            height: 6px;
+            width: 6px;
+          }
+        }
+      }
     }
 
     @media (min-width: 768px) {
       border: 2px solid #efdec6;
       border-radius: 8px;
+
+      .day.active::before {
+        display: block;
+      }
 
       .day-number {
         height: 40px;
@@ -2597,6 +2747,10 @@ dialog.quiz-report-dialog {
         line-height: 20px;
         margin-bottom: 20px;
         color: var(--clr-footer);
+
+        & + .day-number:after {
+          display: none;
+        }
       }
     }
 
@@ -2626,80 +2780,6 @@ dialog.quiz-report-dialog {
     z-index: auto;
   }
 
-  .dropdownMenu {
-    width: 100vw;
-    max-width: 300px;
-    padding: 20px;
-    z-index: 10;
-    top: 50%;
-
-    label {
-      display: block;
-      text-align: start;
-    }
-
-    .time-input-container {
-      margin-bottom: 20px;
-      display: flex;
-    }
-
-    .hours-input,
-    .minutes-input {
-      position: relative;
-
-      &:after {
-        position: absolute;
-        top: 22px;
-        right: 16px;
-        font-size: 24px;
-        line-height: 32px;
-        color: #b0aeaa;
-      }
-    }
-
-    .hours-input {
-      margin-right: 12px;
-
-      input {
-        max-width: 78px;
-      }
-
-      &:after {
-        content: "h";
-      }
-    }
-
-    .minutes-input {
-      input {
-        max-width: 132px;
-      }
-
-      &:after {
-        content: "min";
-      }
-    }
-
-    .all-week-container {
-      margin-bottom: 20px;
-    }
-
-    .menu-btn-container {
-      display: flex;
-
-      .save-btn {
-        font-size: var(--size-M);
-        box-shadow: 0 6px 0 var(--clr-brandBrick);
-        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-        max-width: 138px;
-        width: 100%;
-      }
-      .cancel-btn {
-        margin-right: 14px;
-        font-size: var(--size-M);
-      }
-    }
-  }
-
   .btn-container {
     display: flex;
     justify-content: center;
@@ -2710,10 +2790,17 @@ dialog.quiz-report-dialog {
       text-align: center;
     }
   }
+
+  .modal {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+  }
 }
 
 // -Schedule page
-
 
 // +Game general
 .game-page {
@@ -2752,7 +2839,7 @@ dialog.quiz-report-dialog {
     max-width: 690px;
     margin-bottom: 80px;
 
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
       margin-bottom: 120px;
     }
   }
@@ -2879,7 +2966,7 @@ dialog.quiz-report-dialog {
       height: auto;
     }
 
-    &[open='open'] {
+    &[open="open"] {
       display: flex;
       flex-direction: column;
     }
@@ -2911,7 +2998,7 @@ dialog.quiz-report-dialog {
     @extend #customScroll--gray;
     max-height: 630px;
 
-    &[open='open'] {
+    &[open="open"] {
       display: flex;
       flex-direction: column;
     }
@@ -3058,14 +3145,7 @@ dialog.quiz-report-dialog {
   }
 }
 
-
 // -Game general
-
-
-
-
-
-
 
 *:focus {
   // outline: 2px solid red !important;
