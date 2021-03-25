@@ -2292,9 +2292,32 @@ dialog.quiz-report-dialog {
 
 // +Schedule page
 .schedule-page {
+  padding-left: 14px;
+    padding-right: 14px;
+
+  @media (min-width: 360px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 40px;
+    padding-top: 40px;
+
+    @media (min-width: 480px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @media (min-width: 768px) {
+      background-color: unset;
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 40px;
+    }
   }
 
   .calendar-container {
@@ -2302,16 +2325,36 @@ dialog.quiz-report-dialog {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+    background-color: var(--clr-white);
+    padding: 20px 16px;
+    border-radius: 4px;
+
+    @media (min-width: 768px) {
+      background-color: unset;
+      padding: 0;
+    }
   }
 
   .calendar-top {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-bottom: 28px;
+    color: var(--clr-brandBrick);
 
     .prev-month,
     .next-month {
       cursor: pointer;
+      background-color: unset;
+      box-shadow: unset;
+      filter: unset;
+      padding: 0;
+      color: var(--clr-brandBrick);
+
+      &:active {
+        box-shadow: unset;
+        transform: unset;
+        filter: unset;
+      }
 
       &:before {
         @extend #transition;
@@ -2331,40 +2374,91 @@ dialog.quiz-report-dialog {
 
     .month-container {
       padding: 0 20px;
-      min-width: 214px;
+      min-width: 170px;
       display: flex;
       justify-content: center;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 18px;
       line-height: 29px;
     }
 
     .month-name {
       margin-right: 4px;
     }
+
+    @media (min-width: 480px) {
+      .month-container {
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+      color: var(--clr-text);
+      justify-content: flex-end;
+      min-width: 214px;
+
+      .month-container {
+        font-size: 24px;
+      }
+
+      .prev-month,
+      .next-month {
+        color: var(--clr-text);
+      }
+    }
   }
 
   .week-days {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px 20px;
+    margin: 0 -5px 20px;
 
     .week-days-name {
+      display: none;
+    }
+
+    .week-days-name-mob {
       width: 14.28%;
-      padding: 0 10px;
-      color: #cfa970;
+      padding: 0 5px;
+      color: var(--clr-brandBrick);
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @media (min-width: 480px) {
+      .week-days-name-mob {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin: 0 -10px 20px;
+
+      .week-days-name-mob {
+        display: none;
+      }
+      .week-days-name {
+        display: block;
+        width: 14.28%;
+        padding: 0 10px;
+        color: #cfa970;
+        text-align: center;
+      }
     }
   }
 
   .days {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px;
+    margin: -5px;
 
     li {
       width: 14.28%;
       text-align: center;
-      padding: 10px;
+      padding: 5px;
 
       .dropdownMenu {
         right: auto;
@@ -2385,13 +2479,17 @@ dialog.quiz-report-dialog {
         left: auto;
       }
     }
+
+    @media (min-width: 1024px) {
+      margin: -10px;
+
+      li {
+        padding: 10px;
+      }
+    }
   }
 
   .day-container {
-    border: 2px solid #efdec6;
-    border-radius: 8px;
-    width: 100px;
-    height: 100px;
     background-color: var(--clr-white);
 
     .day {
@@ -2426,31 +2524,101 @@ dialog.quiz-report-dialog {
     }
 
     .day-number {
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 40px;
-      width: 40px;
-      border-radius: 0 0 4px 0;
-      background-color: #efdec6;
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 14px;
+      line-height: 20px;
+      order: 1;
+
+      &:after{
+        content: "";
+        display: inline-block;
+        height: 4px;
+        width: 4px;
+        background-color: red;
+        border-radius: 50%;
+      }
     }
 
     .choose-time-text {
-      margin-bottom: 20px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-      color: var(--clr-footer);
+      display: none;
+      order: 2;
+
+      &:after{
+        content: "";
+        display: inline-block;
+        height: 4px;
+        width: 4px;
+        background-color: red;
+        border-radius: 50%;
+      }
     }
 
     .time {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 30px;
-      margin-bottom: 14px;
-      color: var(--clr-footer);
+      display: none;
+      order: 2;
+    }
+
+    @media (min-width: 480px) {
+      .day-number {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      border: 2px solid #efdec6;
+      border-radius: 8px;
+
+      .day-number {
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 0 0 4px 0;
+        background-color: #efdec6;
+      }
+
+      .choose-time-text {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--clr-footer);
+      }
+
+      .time {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        color: var(--clr-footer);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .day .time {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .aspect-ratio-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+
+    .aspect-ratio-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
