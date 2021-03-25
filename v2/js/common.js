@@ -1,37 +1,37 @@
-$(function() {
+$(function () {
   //+Owl Carousel
-  if ($('.owl-carousel.owl-papers').length) {
-    $('.owl-carousel.owl-papers').owlCarousel({
+  if ($(".owl-carousel.owl-papers").length) {
+    $(".owl-carousel.owl-papers").owlCarousel({
       autoplay: false,
       autoplayHoverPause: true,
       items: 1,
-      animateOut: 'fadeOut',
+      animateOut: "fadeOut",
       nav: false,
-      navText: [ , ],
+      navText: [,],
       loop: true,
     });
   }
-  if ($('.owl-carousel.owl-letters').length) {
-    $('.owl-carousel.owl-letters').owlCarousel({
+  if ($(".owl-carousel.owl-letters").length) {
+    $(".owl-carousel.owl-letters").owlCarousel({
       autoplay: false,
       autoplayHoverPause: true,
       items: 1,
-      animateOut: 'fadeOut',
+      animateOut: "fadeOut",
       dots: false,
       nav: true,
-      navText: [ , ],
+      navText: [,],
       loop: true,
     });
   }
-  if ($('.owl-carousel.owl-studentCourse').length) {
-    $('.owl-carousel.owl-studentCourse').owlCarousel({
+  if ($(".owl-carousel.owl-studentCourse").length) {
+    $(".owl-carousel.owl-studentCourse").owlCarousel({
       autoplay: false,
       autoplayHoverPause: true,
       // autoWidth: true,
-      animateOut: 'fadeOut',
+      animateOut: "fadeOut",
       dots: false,
       nav: true,
-      navText: [ , ],
+      navText: [,],
       loop: false,
       items: 6,
       slideBy: 6,
@@ -82,11 +82,11 @@ $(function() {
   }
   //-Owl Carousel
 
-  $("a[href^='#']").click(function(e) {
+  $("a[href^='#']").click(function (e) {
     e.preventDefault();
-    var dest = $(this).attr('href');
+    var dest = $(this).attr("href");
     // console.log(dest);
-    $('html,body').animate({ scrollTop: $(dest).offset().top }, 'slow');
+    $("html,body").animate({ scrollTop: $(dest).offset().top }, "slow");
   });
   // $("a[href^='#']").click(function(e) {
   // 	e.preventDefault();
@@ -96,8 +96,8 @@ $(function() {
   // });
 
   //+Show/hide password
-  $('button.showPassword').click(function() {
-    $(this).toggleClass('hidePassword');
+  $("button.showPassword").click(function () {
+    $(this).toggleClass("hidePassword");
     return false;
     // $(this).next()
 
@@ -137,62 +137,62 @@ $(function() {
   //    });
   //-Show/hide password
 
-  $('#blackboard-btn').click(() => {
-    const $dialog = $(this).find('dialog');
-    $dialog.attr('open', function(index, attr) {
+  $("#blackboard-btn").click(() => {
+    const $dialog = $(this).find("dialog");
+    $dialog.attr("open", function (index, attr) {
       return attr ? false : true;
     });
   });
 
-  $('#blackboard-close-btn').click(() => {
-    const $dialog = $(this).find('dialog');
-    $dialog.attr('open', function(index, attr) {
+  $("#blackboard-close-btn").click(() => {
+    const $dialog = $(this).find("dialog");
+    $dialog.attr("open", function (index, attr) {
       return attr ? false : true;
     });
   });
 
-  $('#maximize-btn').click(() => {
-    const dialog = $(this).parents('dialog');
-    $('dialog').toggleClass('full-black-board');
+  $("#maximize-btn").click(() => {
+    const dialog = $(this).parents("dialog");
+    $("dialog").toggleClass("full-black-board");
   });
 
-  $('#minimize-btn').click(() => {
-    const dialog = $(this).parents('dialog');
-    $('dialog').toggleClass('full-black-board');
+  $("#minimize-btn").click(() => {
+    const dialog = $(this).parents("dialog");
+    $("dialog").toggleClass("full-black-board");
   });
 
   //Delete notification
-  $('.delete-btn').click(function() {
-    $(this).closest('.notification-item').addClass('restore-block');
+  $(".delete-btn").click(function () {
+    $(this).closest(".notification-item").addClass("restore-block");
 
-    $(this).closest('.note-item').addClass('restore-block');
+    $(this).closest(".note-item").addClass("restore-block");
   });
 
   //Undo delete notification
-  $('.undo-btn').click(function() {
-    $(this).closest('.notification-item').removeClass('restore-block');
-    $(this).closest('.note-item').removeClass('restore-block');
+  $(".undo-btn").click(function () {
+    $(this).closest(".notification-item").removeClass("restore-block");
+    $(this).closest(".note-item").removeClass("restore-block");
   });
 
   //View more
-  $('#view-more').click(function(e) {
+  $("#view-more").click(function (e) {
     e.preventDefault();
 
-    $('.notification-item').clone().appendTo($('.notification-container'));
-    $('.note-item').clone().appendTo($('.note-container'));
+    $(".notification-item").clone().appendTo($(".notification-container"));
+    $(".note-item").clone().appendTo($(".note-container"));
 
-    $(this).css('display', 'none');
+    $(this).css("display", "none");
   });
 
   // Info modal
-  const $infoModal = $('#add-note-modal');
+  const $infoModal = $("#add-note-modal");
 
-  $('.edit-btn').click(() => {
-    $infoModal.css('display', 'flex').find('dialog').attr('open', true);
+  $(".edit-btn").click(() => {
+    $infoModal.css("display", "flex").find("dialog").attr("open", true);
   });
 
-  $infoModal.find('.closeButton').click(() => {
-    $infoModal.css('display', 'none').find('dialog').attr('open', false);
+  $infoModal.find(".closeButton").click(() => {
+    $infoModal.css("display", "none").find("dialog").attr("open", false);
   });
 
   // 	ClassicEditor
@@ -218,29 +218,72 @@ $(function() {
   // }
   // );
 
-  const $scoreModal = $('#quiz-report-modal');
-  $scoreModal.find('.closeButton').click(() => {
-    $scoreModal.css('display', 'none').find('dialog').attr('open', false);
+  const $scoreModal = $("#quiz-report-modal");
+  $scoreModal.find(".closeButton").click(() => {
+    $scoreModal.css("display", "none").find("dialog").attr("open", false);
   });
 
-  $scoreModal.css('display', 'flex').find('dialog').attr('open', true);
-  $('#high-scores-btn').click(() => {
-    $scoreModal.css('display', 'flex').find('dialog').attr('open', true);
+  $scoreModal.css("display", "flex").find("dialog").attr("open", true);
+  $("#high-scores-btn").click(() => {
+    $scoreModal.css("display", "flex").find("dialog").attr("open", true);
   });
 
-  $scoreModal.find('.closeButton').click(() => {
-    $scoreModal.css('display', 'none').find('dialog').attr('open', false);
+  $scoreModal.find(".closeButton").click(() => {
+    $scoreModal.css("display", "none").find("dialog").attr("open", false);
   });
 
   // Quiz report open
 
-  $('#quiz-report-btn').click(function(e) {
+  $("#quiz-report-btn").click(function (e) {
     e.preventDefault();
 
     // Close books modal
-    $('#BookTableOfContents').attr('open', false).closest('.modal').css('display', 'none').focus();
+    $("#BookTableOfContents")
+      .attr("open", false)
+      .closest(".modal")
+      .css("display", "none")
+      .focus();
 
     //  Open quiz report modal
-    $('#quiz-report-modal').css('display', 'flex').find('dialog').attr('open', true);
+    $("#quiz-report-modal")
+      .css("display", "flex")
+      .find("dialog")
+      .attr("open", true);
   });
+
+  $(".day").click(function (e) {
+    $(".day").removeClass("active");
+    $(this).addClass("active");
+  });
+
+
+  const date = new Date;
+  let month = date.getMonth();
+  let currentMonth = date.toLocaleString('default', { month: 'long' });
+  const currentYear= date.getFullYear();
+  
+
+
+  $('.month-name').text(currentMonth);
+  $('.year').text(currentYear);
+
+  $('.prev-month').click(function(){
+   const dateNew = new Date();
+   month -= 1;
+   dateNew.setMonth(month);
+
+   let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
+   $('.month-name').text(newCurrentMonth);
+  })
+
+  $('.next-month').click(function(){
+    const dateNew = new Date();
+    month += 1;
+    dateNew.setMonth(month);
+ console.log(month)
+    let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
+    $('.month-name').text(newCurrentMonth);
+   })
+
+   
 });

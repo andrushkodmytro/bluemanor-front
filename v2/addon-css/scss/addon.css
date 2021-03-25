@@ -88,7 +88,8 @@
   letter-spacing: 0.05em;
 }
 
-#transition {
+#transition, .schedule-page .calendar-top .prev-month:before,
+.schedule-page .calendar-top .next-month:before {
   -webkit-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
 }
@@ -229,30 +230,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog, .game-page .game-welcome-modal, .game-page .game-scores-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar, .game-page .game-welcome-modal ::-webkit-scrollbar, .game-page .game-scores-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track, .game-page .game-welcome-modal ::-webkit-scrollbar-track, .game-page .game-scores-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb, .game-page .game-welcome-modal ::-webkit-scrollbar-thumb, .game-page .game-scores-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive, .game-page .game-welcome-modal ::-webkit-scrollbar-thumb:window-inactive, .game-page .game-scores-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -655,7 +656,8 @@
   letter-spacing: 0.05em;
 }
 
-#transition {
+#transition, .schedule-page .calendar-top .prev-month:before,
+.schedule-page .calendar-top .next-month:before {
   -webkit-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
 }
@@ -796,30 +798,30 @@
   background: var(--clr-brandBeigeLite);
 }
 
-#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog {
+#customScroll--gray, .dropdownMenuWrapper .notification-dropdown.dropdownMenu, .note-list-page .add-note-dialog, dialog.quiz-report-dialog, .game-page .game-welcome-modal, .game-page .game-scores-dialog {
   /* Let's get this party started */
   color: var(--clr-white);
   /* Track */
   /* Handle */
 }
 
-#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar {
+#customScroll--gray ::-webkit-scrollbar, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar, .note-list-page .add-note-dialog ::-webkit-scrollbar, dialog.quiz-report-dialog ::-webkit-scrollbar, .game-page .game-welcome-modal ::-webkit-scrollbar, .game-page .game-scores-dialog ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track {
+#customScroll--gray ::-webkit-scrollbar-track, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-track, .note-list-page .add-note-dialog ::-webkit-scrollbar-track, dialog.quiz-report-dialog ::-webkit-scrollbar-track, .game-page .game-welcome-modal ::-webkit-scrollbar-track, .game-page .game-scores-dialog ::-webkit-scrollbar-track {
   border-radius: 100rem;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb {
+#customScroll--gray ::-webkit-scrollbar-thumb, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb, .game-page .game-welcome-modal ::-webkit-scrollbar-thumb, .game-page .game-scores-dialog ::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background: #D2D1CE;
   -webkit-box-shadow: inset 0 0 0 4px currentColor;
           box-shadow: inset 0 0 0 4px currentColor;
 }
 
-#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive {
+#customScroll--gray ::-webkit-scrollbar-thumb:window-inactive, .dropdownMenuWrapper .notification-dropdown.dropdownMenu ::-webkit-scrollbar-thumb:window-inactive, .note-list-page .add-note-dialog ::-webkit-scrollbar-thumb:window-inactive, dialog.quiz-report-dialog ::-webkit-scrollbar-thumb:window-inactive, .game-page .game-welcome-modal ::-webkit-scrollbar-thumb:window-inactive, .game-page .game-scores-dialog ::-webkit-scrollbar-thumb:window-inactive {
   background: #eaeae9;
 }
 
@@ -4098,30 +4100,197 @@ dialog.quiz-report-dialog .dialog-footer button {
 }
 
 .schedule-page {
-  /* Weekdays (Mon-Sun) */
-  /* Days (1-31) */
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+@media (min-width: 360px) {
+  .schedule-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .schedule-page h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 40px;
+  padding-top: 40px;
+}
+
+@media (min-width: 480px) {
+  .schedule-page h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .schedule-page h2 {
+    background-color: unset;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 40px;
+  }
 }
 
 .schedule-page .calendar-container {
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  background-color: var(--clr-white);
+  padding: 20px 16px;
+  border-radius: 4px;
 }
 
-.schedule-page .weekdays {
-  margin: 0;
-  padding: 10px 0;
+@media (min-width: 768px) {
+  .schedule-page .calendar-container {
+    background-color: unset;
+    padding: 0;
+  }
 }
 
-.schedule-page .weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #cfa970;
+.schedule-page .calendar-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 28px;
+  color: var(--clr-brandBrick);
+}
+
+.schedule-page .calendar-top .prev-month,
+.schedule-page .calendar-top .next-month {
+  cursor: pointer;
+  background-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-filter: unset;
+          filter: unset;
+  padding: 0;
+  color: var(--clr-brandBrick);
+}
+
+.schedule-page .calendar-top .prev-month:active,
+.schedule-page .calendar-top .next-month:active {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-transform: unset;
+          transform: unset;
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+.schedule-page .calendar-top .prev-month:before,
+.schedule-page .calendar-top .next-month:before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.schedule-page .calendar-top .prev-month:focus:before, .schedule-page .calendar-top .prev-month:hover:before,
+.schedule-page .calendar-top .next-month:focus:before,
+.schedule-page .calendar-top .next-month:hover:before {
+  background-color: var(--clr-brandBeige);
+  -webkit-box-shadow: 0px 0px 0px 4px var(--clr-brandBeige);
+          box-shadow: 0px 0px 0px 4px var(--clr-brandBeige);
+}
+
+.schedule-page .calendar-top .month-container {
+  padding: 0 20px;
+  min-width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.schedule-page .calendar-top .month-name {
+  margin-right: 4px;
+}
+
+@media (min-width: 480px) {
+  .schedule-page .calendar-top .month-container {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .schedule-page .calendar-top {
+    margin-bottom: 40px;
+    color: var(--clr-text);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    min-width: 214px;
+  }
+  .schedule-page .calendar-top .month-container {
+    font-size: 24px;
+  }
+  .schedule-page .calendar-top .prev-month,
+  .schedule-page .calendar-top .next-month {
+    color: var(--clr-text);
+  }
+}
+
+.schedule-page .week-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -5px 20px;
+}
+
+.schedule-page .week-days .week-days-name {
+  display: none;
+}
+
+.schedule-page .week-days .week-days-name-mob {
+  width: 14.28%;
+  padding: 0 5px;
+  color: var(--clr-brandBrick);
   text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 480px) {
+  .schedule-page .week-days .week-days-name-mob {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .schedule-page .week-days {
+    margin: 0 -10px 20px;
+  }
+  .schedule-page .week-days .week-days-name-mob {
+    display: none;
+  }
+  .schedule-page .week-days .week-days-name {
+    display: block;
+    width: 14.28%;
+    padding: 0 10px;
+    color: #cfa970;
+    text-align: center;
+  }
 }
 
 .schedule-page .days {
@@ -4130,19 +4299,42 @@ dialog.quiz-report-dialog .dialog-footer button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -10px;
+  margin: -5px;
 }
 
 .schedule-page .days li {
   width: 14.28%;
   text-align: center;
+  padding: 5px;
+}
+
+.schedule-page .days li .dropdownMenu {
+  right: auto;
+  left: 0;
+}
+
+.schedule-page .days li:nth-of-type(6) .dropdownMenu,
+.schedule-page .days li:nth-of-type(7) .dropdownMenu,
+.schedule-page .days li:nth-of-type(13) .dropdownMenu,
+.schedule-page .days li:nth-of-type(14) .dropdownMenu,
+.schedule-page .days li:nth-of-type(20) .dropdownMenu,
+.schedule-page .days li:nth-of-type(21) .dropdownMenu,
+.schedule-page .days li:nth-of-type(27) .dropdownMenu,
+.schedule-page .days li:nth-of-type(28) .dropdownMenu {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 1024px) {
+  .schedule-page .days {
+    margin: -10px;
+  }
+  .schedule-page .days li {
+    padding: 10px;
+  }
 }
 
 .schedule-page .day-container {
-  border: 2px solid #efdec6;
-  border-radius: 8px;
-  width: 100px;
-  height: 100px;
   background-color: var(--clr-white);
 }
 
@@ -4158,55 +4350,223 @@ dialog.quiz-report-dialog .dialog-footer button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  cursor: pointer;
 }
 
 .schedule-page .day-container .day:focus {
   background-color: #eee;
 }
 
+.schedule-page .day-container .day.active::before {
+  content: "";
+  display: block;
+  border-left: 10px solid var(--clr-transparent);
+  border-right: 10px solid var(--clr-transparent);
+  border-bottom: 10px solid #fff;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 48%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 22px;
+  z-index: 30;
+}
+
+.schedule-page .day-container .day.active + .dropdownMenu::before {
+  display: none;
+}
+
 .schedule-page .day-container .day-number {
-  height: 40px;
-  width: 40px;
-  border-radius: 0 0 4px 0;
-  background-color: #efdec6;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.schedule-page .day-container .day-number:after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  background-color: red;
+  border-radius: 50%;
 }
 
 .schedule-page .day-container .choose-time-text {
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  display: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.schedule-page .day-container .choose-time-text:after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  background-color: red;
+  border-radius: 50%;
 }
 
 .schedule-page .day-container .time {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 14px;
+  display: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (min-width: 480px) {
+  .schedule-page .day-container .day-number {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .schedule-page .day-container {
+    border: 2px solid #efdec6;
+    border-radius: 8px;
+  }
+  .schedule-page .day-container .day-number {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 0 0 4px 0;
+    background-color: #efdec6;
+  }
+  .schedule-page .day-container .choose-time-text {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--clr-footer);
+  }
+  .schedule-page .day-container .time {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: var(--clr-footer);
+  }
+}
+
+@media (min-width: 1024px) {
+  .schedule-page .day-container .day .time {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.schedule-page .aspect-ratio-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.schedule-page .aspect-ratio-container .aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.schedule-page .dropdownMenuWrapper {
+  z-index: auto;
 }
 
 .schedule-page .dropdownMenu {
   width: 100vw;
   max-width: 300px;
+  padding: 20px;
+  z-index: 10;
+  top: 50%;
+}
+
+.schedule-page .dropdownMenu label {
+  display: block;
+  text-align: start;
+}
+
+.schedule-page .dropdownMenu .time-input-container {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.schedule-page .dropdownMenu .hours-input,
+.schedule-page .dropdownMenu .minutes-input {
+  position: relative;
+}
+
+.schedule-page .dropdownMenu .hours-input:after,
+.schedule-page .dropdownMenu .minutes-input:after {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #b0aeaa;
 }
 
 .schedule-page .dropdownMenu .hours-input {
+  margin-right: 12px;
+}
+
+.schedule-page .dropdownMenu .hours-input input {
   max-width: 78px;
 }
 
-.schedule-page .dropdownMenu .minutes-input {
+.schedule-page .dropdownMenu .hours-input:after {
+  content: "h";
+}
+
+.schedule-page .dropdownMenu .minutes-input input {
   max-width: 132px;
 }
 
-.schedule-page .dropdownMenu .menu-btn-container .btn {
+.schedule-page .dropdownMenu .minutes-input:after {
+  content: "min";
+}
+
+.schedule-page .dropdownMenu .all-week-container {
+  margin-bottom: 20px;
+}
+
+.schedule-page .dropdownMenu .menu-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.schedule-page .dropdownMenu .menu-btn-container .save-btn {
   font-size: var(--size-M);
   -webkit-box-shadow: 0 6px 0 var(--clr-brandBrick);
           box-shadow: 0 6px 0 var(--clr-brandBrick);
   -webkit-filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  max-width: 138px;
+  width: 100%;
 }
 
-.schedule-page .dropdownMenu .menu-btn-container .ghostButton {
+.schedule-page .dropdownMenu .menu-btn-container .cancel-btn {
+  margin-right: 14px;
   font-size: var(--size-M);
 }
 
@@ -4225,5 +4585,694 @@ dialog.quiz-report-dialog .dialog-footer button {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
+}
+
+.game-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+  padding-top: 12px;
+}
+
+@media (min-width: 1440px) {
+  .game-page {
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .game-page .simpleButton.backButton.back2dashboardButton {
+    position: static;
+    display: inline-block;
+    margin-top: 0;
+  }
+  .game-page .backButton.back2dashboardButton {
+    position: static;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-page a.simpleButton.back2dashboardButton:not(.asLink) {
+    top: 40px;
+  }
+}
+
+.game-page article {
+  max-width: 690px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .game-page article {
+    margin-bottom: 120px;
+  }
+}
+
+.game-page .game-progress {
+  padding: 16px 0 0;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .game-page .game-progress {
+    padding: 36px 0 0;
+  }
+}
+
+.game-page .game-progress .progressBar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .game-page .game-progress .progressBar {
+    display: inline-block;
+  }
+}
+
+.game-page .progress-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.game-page .progress-top span {
+  color: var(--clr-brandBrick);
+}
+
+.game-page .progress-top span.progressText--width20 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width21 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width22 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width23 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width24 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width25 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width26 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width27 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width28 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width29 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width30 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width31 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width32 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width33 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width34 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width35 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width36 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width37 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width38 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width39 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width40 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width41 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width42 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width43 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width44 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width45 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width46 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width47 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width48 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width49 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width50 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width51 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width52 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width53 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width54 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width55 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width56 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width57 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width58 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width59 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width60 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width61 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width62 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width63 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width64 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width65 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width66 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width67 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width68 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width69 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width70 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width71 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width72 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width73 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width74 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width75 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width76 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width77 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width78 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width79 {
+  color: var(--clr-hover);
+}
+
+.game-page .progress-top span.progressText--width80 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width81 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width82 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width83 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width84 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width85 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width86 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width87 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width88 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width89 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width90 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width91 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width92 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width93 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width94 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width95 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width96 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width97 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width98 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width99 {
+  color: var(--clr-brandOK);
+}
+
+.game-page .progress-top span.progressText--width100 {
+  color: var(--clr-brandOK);
+}
+
+@media (max-width: 479px) {
+  .game-page .progress-top div,
+  .game-page .progress-top span {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .game-page .progress-top h2 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.game-page .modal-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: var(--size-S);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 0;
+}
+
+.game-page .modal-btn-container button {
+  width: 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.game-page .modal-btn-container button:before {
+  padding-right: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.game-page .modal-btn-container button:last-of-type {
+  margin-left: 12px;
+}
+
+.game-page .modal-btn-container button span {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .game-page .modal-btn-container button {
+    width: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .game-page .modal-btn-container button:before {
+    padding-right: 10px;
+    font-size: var(--size-L);
+  }
+  .game-page .modal-btn-container button:last-of-type {
+    margin-left: 20px;
+  }
+  .game-page .modal-btn-container button span {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .game-page .modal-btn-container {
+    right: 24px;
+  }
+  .game-page .modal-btn-container .simpleButton.ghostButton {
+    height: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .game-page .modal-btn-container {
+    top: 40px;
+  }
+}
+
+@media (min-width: 360px) {
+  .game-page .game-welcome-modal {
+    height: auto;
+  }
+}
+
+.game-page .game-welcome-modal[open='open'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-page .game-welcome-modal .dialog-content {
+  overflow: auto;
+  padding: 0 24px;
+  text-align: start;
+}
+
+@media (max-width: 480px) {
+  .game-page .game-welcome-modal .dialog-content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .game-page .game-welcome-modal .dialog-content {
+    padding: 0 60px;
+  }
+}
+
+.game-page .game-welcome-modal .dialog-footer {
+  text-align: end;
+  margin-top: auto;
+}
+
+.game-page .game-scores-dialog {
+  max-height: 630px;
+}
+
+.game-page .game-scores-dialog[open='open'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-page .game-scores-dialog .dialog-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+}
+
+.game-page .game-scores-dialog .tabs-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-page .game-scores-dialog .tabs-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid var(--clr-brandBeigeDark);
+}
+
+.game-page .game-scores-dialog .tabs-links li {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.game-page .game-scores-dialog .tabs-links li a {
+  display: block;
+  padding: 7px 40px;
+  text-decoration: none;
+  color: var(--clr-text);
+  border: none;
+}
+
+.game-page .game-scores-dialog .tabs-links li a:hover {
+  background-color: var(--clr-brandBeigeLite);
+  border-radius: 6px 6px 0 0;
+}
+
+.game-page .game-scores-dialog .tabs-links .ui-tabs-active a {
+  background-color: var(--clr-brandBeige);
+  border-radius: 6px 6px 0 0;
+}
+
+.game-page .game-scores-dialog .table-container {
+  position: relative;
+  overflow: auto;
+}
+
+.game-page .game-scores-dialog table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.game-page .game-scores-dialog table thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  padding: 12px;
+  text-transform: uppercase;
+  font-family: var(--font-gothic);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  color: #8e8b87;
+}
+
+.game-page .game-scores-dialog table thead th:nth-of-type(1) {
+  width: 120px;
+  text-align: end;
+  padding-left: 20px;
+}
+
+.game-page .game-scores-dialog table thead th:nth-of-type(2) {
+  width: 500px;
+  min-width: 250px;
+  text-align: start;
+}
+
+.game-page .game-scores-dialog table thead th:nth-of-type(3) {
+  width: 120px;
+  text-align: end;
+}
+
+.game-page .game-scores-dialog table thead th:nth-of-type(4) {
+  width: 120px;
+  text-align: end;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .game-page .game-scores-dialog table thead th {
+    padding: 12px 20px;
+  }
+  .game-page .game-scores-dialog table thead th:nth-of-type(1) {
+    padding-left: 60px;
+  }
+  .game-page .game-scores-dialog table thead th:nth-of-type(4) {
+    padding-right: 20px;
+  }
+}
+
+.game-page .game-scores-dialog table tbody tr:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+.game-page .game-scores-dialog table tbody td {
+  padding: 12px;
+  text-align: end;
+  font-family: var(--font-gothic);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  overflow-wrap: break-word;
+}
+
+.game-page .game-scores-dialog table tbody td:nth-of-type(2) {
+  text-align: start;
+  max-width: 500px;
+}
+
+.game-page .game-scores-dialog table tbody td:nth-of-type(4) {
+  color: var(--clr-brandOKShad);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .game-page .game-scores-dialog table tbody td {
+    padding: 20px;
+  }
+}
+
+.game-page .game-scores-dialog .dialog-footer {
+  text-align: end;
+  margin-top: auto;
 }
 /*# sourceMappingURL=addon.css.map */
