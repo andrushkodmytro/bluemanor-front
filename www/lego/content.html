@@ -1,0 +1,124 @@
+	<main>
+		<article>
+			<form action="post" class="simpleForm">
+				<h3>Common components</h3>
+				<fieldset>
+					<ul>
+						<li>
+							<input type="email" id="CommonInput" value="Some text" required>
+							<label for="CommonInput">Regular input</label>
+						</li>
+						<li>
+							<button class="showPassword" id="pass1" attr="id_user-password1">Show Password</button>
+							<input type="password" id="id_user-password1" value="1mpregnab1eF0rtre55" required>
+							<label for="id_user-password1">Show Password</label>
+						</li>
+						<li>
+							<button class="showPassword hidePassword">Hide Password</button>
+							<input type="text" id="HidePassword" value="1mpregnab1eF0rtre55" required>
+							<label for="HidePassword">Hide Password</label>
+						</li>
+						<li>
+							<input type="email" id="ValidInput" value="johndoe@example.com" required class="isValid">
+							<label for="ValidInput">Valid input</label>
+						</li>
+						<li>
+							<input type="email" id="InvalidInput" value="johndoe.example.com" required class="isInvalid">
+							<label for="InvalidInput" data-attribute-description="An error description">Invalid input</label>
+						</li>
+						<li>
+							<button class="showPassword" title="Show Password">Show Password</button>
+							<input type="email" id="ValidPasswordInput" value="johndoe@example.com" required class="isValid">
+							<label for="ValidPasswordInput">Valid password input</label>
+						</li>
+						<li>
+							<button class="showPassword hidePassword" title="Hide Password">Hide Password</button>
+							<input type="email" id="InvalidPasswordInput" value="johndoe.example.com" required class="isInvalid">
+							<label for="InvalidPasswordInput" data-attribute-description="An error description">Invalid password input</label>
+						</li>
+						<li>
+							<input type="email" id="DisabledInput" value="Some text" disabled>
+							<label for="DisabledInput">Disabled input</label>
+						</li>
+						<li>
+							<textarea name="" id="Message1" cols="30" rows="3" required></textarea>
+							<label for="Message1" data-attribute-description="An error description">Message</label>
+						</li>
+						<li>
+							<textarea name="" id="Message2" cols="30" rows="3" required class="isValid"></textarea>
+							<label for="Message2" data-attribute-description="Everything is okay">Message</label>
+						</li>
+						<li>
+							<textarea name="" id="Message3" cols="30" rows="3" required class="isInvalid"></textarea>
+							<label for="Message3" data-attribute-description="An error description">Message</label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditions" required>
+							<label for="IAcceptTermsAndConditions">Checkbox  with <a href="?terms">some link</a></label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditionsWereFailed" required class="isInvalid">
+							<label for="IAcceptTermsAndConditionsWereFailed">Checkbox which needs to be checked</label>
+						</li>
+						<li class="atom-dib">
+							<input type="checkbox" id="IAcceptTermsAndConditionsLong" required>
+							<label for="IAcceptTermsAndConditionsLong">Checkbox  with <a href="?terms">some link</a> and long text. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad expedita cum, veniam aperiam doloribus recusandae dolore. Ullam at, magnam nemo iusto dolorem, nesciunt similique repellendus odio tempora quae earum nam!</label>
+						</li>
+						<li>
+							<button type="submit">Submit button</button>
+						</li>
+						<li>
+							<button type="submit" disabled>Disabled button</button>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+			<h2 id="icons">Icon font</h2>
+			<ul id="lego-icons">
+				<li class="hasIcon--award" id="hasIcon--award">hasIcon--award</li>
+				<li class="hasIcon--alert-circle" id="hasIcon--alert-circle">hasIcon--alert-circle</li>
+				<li class="hasIcon--book-open" id="hasIcon--book-open">hasIcon--book-open</li>
+				<li class="hasIcon--book-restrict" id="hasIcon--book-restrict">hasIcon--book-restrict</li>
+				<li class="hasIcon--check" id="hasIcon--check">hasIcon--check</li>
+				<li class="hasIcon--check-circle" id="hasIcon--check-circle">hasIcon--check-circle</li>
+				<li class="hasIcon--clock" id="hasIcon--clock">hasIcon--clock</li>
+				<li class="hasIcon--chevron-left" id="hasIcon--chevron-left">hasIcon--chevron-left</li>
+				<li class="hasIcon--chevron-right" id="hasIcon--chevron-right">hasIcon--chevron-right</li>
+				<li class="hasIcon--credit-card" id="hasIcon--credit-card">hasIcon--credit-card</li>
+				<li class="hasIcon--dashboard" id="hasIcon--dashboard">hasIcon--dashboard</li>
+				<li class="hasIcon--disable" id="hasIcon--disable">hasIcon--disable</li>
+				<li class="hasIcon--edit" id="hasIcon--edit">hasIcon--edit</li>
+				<li class="hasIcon--enable" id="hasIcon--enable">hasIcon--enable</li>
+				<li class="hasIcon--fast-back-filled" id="hasIcon--fast-back-filled">hasIcon--fast-back-filled</li>
+				<li class="hasIcon--fast-forward-filled" id="hasIcon--fast-forward-filled">hasIcon--fast-forward-filled</li>
+				<li class="hasIcon--file" id="hasIcon--file">hasIcon--file</li>
+				<li class="hasIcon--file-text" id="hasIcon--file-text">hasIcon--file-text</li>
+				<li class="hasIcon--grid" id="hasIcon--grid">hasIcon--grid</li>
+				<li class="hasIcon--help-circle" id="hasIcon--help-circle">hasIcon--help-circle</li>
+				<li class="hasIcon--history" id="hasIcon--history">hasIcon--history</li>
+				<li class="hasIcon--list" id="hasIcon--list">hasIcon--list</li>
+				<li class="hasIcon--lock" id="hasIcon--lock">hasIcon--lock</li>
+				<li class="hasIcon--log-in" id="hasIcon--log-in">hasIcon--log-in</li>
+				<li class="hasIcon--log-out" id="hasIcon--log-out">hasIcon--log-out</li>
+				<li class="hasIcon--mail" id="hasIcon--mail">hasIcon--mail</li>
+				<li class="hasIcon--maximize" id="hasIcon--maximize">hasIcon--maximize</li>
+				<li class="hasIcon--minimize" id="hasIcon--minimize">hasIcon--minimize</li>
+				<li class="hasIcon--pause-filled" id="hasIcon--pause-filled">hasIcon--pause-filled</li>
+				<li class="hasIcon--play" id="hasIcon--play">hasIcon--play</li>
+				<li class="hasIcon--play-filled" id="hasIcon--play-filled">hasIcon--play-filled</li>
+				<li class="hasIcon--plus-circle" id="hasIcon--plus-circle">hasIcon--plus-circle</li>
+				<li class="hasIcon--settings" id="hasIcon--settings">hasIcon--settings</li>
+				<li class="hasIcon--refresh-cw" id="hasIcon--refresh-cw">hasIcon--reload-cw</li>
+				<li class="hasIcon--rotate-ccw" id="hasIcon--rotate-ccw">hasIcon--rotate-ccw</li>
+				<li class="hasIcon--shopping-cart" id="hasIcon--shopping-cart">hasIcon--shopping-cart</li>
+				<li class="hasIcon--skip-back-filled" id="hasIcon--skip-back-filled">hasIcon--skip-back-filled</li>
+				<li class="hasIcon--skip-forward-filled" id="hasIcon--skip-forward-filled">hasIcon--skip-forward-filled</li>
+				<li class="hasIcon--stop-filled" id="hasIcon--stop-filled">hasIcon--stop-filled</li>
+				<li class="hasIcon--trash-2" id="hasIcon--trash-2">hasIcon--trash-2</li>
+				<li class="hasIcon--user" id="hasIcon--user">hasIcon--user</li>
+			</ul>
+		</article>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/v2/js/common.min.js"></script>
+	<script src="https://qa-blue-manor-education-4968036.us-east-2.elb.amazonaws.com/v2/js/registration-validation.js"></script>

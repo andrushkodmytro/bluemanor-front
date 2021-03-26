@@ -1,0 +1,19 @@
+<div class="bookPlayer">
+	<div class="videoControlPanel">
+		<ul>
+			<li><a href="?prev" class="hasIcon--skip-back-filled withoutText button" data-target="control-button-rew"><span>Prev</span></a></li>
+			<li class="fast-back"><button class="hasIcon--fast-back-filled withoutText" data-target="control-button-rew"><span>Back</span></button></li>
+			<li><button class="hasIcon--pause-filled withoutText" data-target="control-button-play"><span>Play</span></button></li>
+			<li class="fast-forward"><button class="hasIcon--fast-forward-filled withoutText" data-target="control-button-fwd"><span>Forward</span></button></li>
+			<li><a href="?next" class="hasIcon--skip-forward-filled withoutText button" data-target="control-button-rew"><span>Next</span></a></li>
+			<li class="seeker">
+				<em><span>first task</span></em>
+				<div data-attribute-progress="2:30" data-attribute-duration="10:00">
+					<progress id='progressbar' class="progressbar" min="0" max="100" value="25"></progress>
+					<input type="range" id="seekbar" value="25" class="seekbar">
+				</div>
+			</li>
+			<li class="max-min"><a href="?fullscreen" class="hasIcon--maximize withoutText" data-target="control-button-fullscreen"><span>Fullscreen</span></a></li>
+		</ul>
+	</div>
+</div>
