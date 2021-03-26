@@ -966,6 +966,13 @@
   padding-bottom: 80px;
 }
 
+@media (min-width: 768px) {
+  .game-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .game-container {
     padding-bottom: 120px;
@@ -1235,7 +1242,7 @@
           flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 20px 12px;
   background-color: var(--clr-white);
   border-radius: 16px;
   -webkit-box-align: center;
@@ -1243,18 +1250,99 @@
           align-items: center;
 }
 
-@media (min-width: 768px) {
-  .game {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 40px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+.game [class^="slots"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 256px;
+  margin: -4px;
+}
+
+.game [class^="slots"] li {
+  padding: 4px;
+}
+
+.game [class^="slots"] li span {
+  display: block;
+  padding-bottom: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.game [class^="slots"] li span:hover:not(.answer):not(.wrong):before {
+  background-color: var(--clr-brandBrick);
+  border-color: var(--clr-brandBrick);
+  opacity: 0.3;
+}
+
+.game [class^="slots"] li span:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid var(--clr-brandBeigeDark);
+}
+
+.game [class^="slots"] li .answer:before {
+  background-color: var(--clr-brandBrick);
+  border-color: var(--clr-brandBrick);
+}
+
+.game [class^="slots"] li .wrong {
+  cursor: auto;
+}
+
+.game [class^="slots"] li .wrong:before {
+  background-color: #f9dcde;
+  border-color: var(--clr-brandErrorShad);
+}
+
+.game .slots-9 li {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+.game .slots-16 li {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.game .slots-25 li {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.game .slots-36 li {
+  -ms-flex-preferred-size: 16.66%;
+      flex-basis: 16.66%;
+}
+
+.game .slots-36 li span:before {
+  border-radius: 4px;
+}
+
+@media (min-width: 480px) {
+  .game .slots-36 li span:before {
+    border-radius: 10px;
+  }
+}
+
+.game .slots-49 li {
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
+}
+
+.game .slots-49 li span:before {
+  border-radius: 4px;
+}
+
+@media (min-width: 480px) {
+  .game .slots-49 li span:before {
+    border-radius: 10px;
   }
 }
 
@@ -1262,248 +1350,4 @@
   max-width: 240px;
   width: 100%;
 }
-
-.circle {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  max-width: 300px;
-}
-
-@media (min-width: 768px) {
-  .circle {
-    margin-right: 40px;
-  }
-}
-
-.circle svg {
-  width: 100%;
-  height: auto;
-}
-
-.circle path {
-  fill: white;
-}
-
-.circle .color-fill-yellow {
-  fill: var(--clr-brandGoldLite);
-  stroke: var(--clr-brandGoldLite);
-}
-
-.circle .color-fill-orange {
-  fill: var(--clr-brandBrick);
-  stroke: var(--clr-brandBrick);
-}
-
-.circle .color-fill-red {
-  fill: var(--clr-brandErrorShad);
-  stroke: var(--clr-brandErrorShad);
-}
-
-.circle .color-fill-pink {
-  fill: #e02981;
-  stroke: #e02981;
-}
-
-.circle .color-fill-green {
-  fill: var(--clr-brandOKShad);
-  stroke: var(--clr-brandOKShad);
-}
-
-.circle .color-fill-turquoise {
-  fill: #00bdb2;
-  stroke: #00bdb2;
-}
-
-.circle .color-fill-blue {
-  fill: var(--clr-hover);
-  stroke: var(--clr-hover);
-}
-
-.circle .color-fill-violet {
-  fill: var(--clr-visited);
-  stroke: var(--clr-visited);
-}
-
-.circle .color-fill-hover-yellow {
-  fill: var(--clr-brandGoldLite);
-  stroke: var(--clr-brandGoldLite);
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-orange {
-  fill: var(--clr-brandBrick);
-  stroke: var(--clr-brandBrick);
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-red {
-  fill: var(--clr-brandErrorShad);
-  stroke: var(--clr-brandErrorShad);
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-pink {
-  fill: #e02981;
-  stroke: #e02981;
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-green {
-  fill: var(--clr-brandOKShad);
-  stroke: var(--clr-brandOKShad);
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-turquoise {
-  fill: #00bdb2;
-  stroke: #00bdb2;
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-blue {
-  fill: var(--clr-hover);
-  stroke: var(--clr-hover);
-  opacity: 0.3;
-}
-
-.circle .color-fill-hover-violet {
-  fill: var(--clr-visited);
-  stroke: var(--clr-visited);
-  opacity: 0.3;
-}
-
-.circle .color-fill-error {
-  fill: #f9dcde;
-  stroke: var(--clr-brandErrorShad);
-}
-
-.circle .color-fill-hover {
-  fill: #f9dcde;
-  stroke: var(--clr-brandErrorShad);
-  fill-opacity: 1;
-}
-
-.colors {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-top: 40px;
-}
-
-@media (min-width: 768px) {
-  .colors {
-    max-width: 172px;
-    margin-top: 0;
-    margin-left: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .colors {
-    max-width: 136px;
-  }
-}
-
-.colors .drag-item-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  max-width: 220px;
-}
-
-@media (min-width: 480px) {
-  .colors .drag-item-container {
-    max-width: unset;
-    margin: -12px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .colors .drag-item-container {
-    margin: -6px;
-  }
-}
-
-.colors .drag-item {
-  padding: 12px;
-  -webkit-transition: -webkit-transform 0.15s ease-in 0s;
-  transition: -webkit-transform 0.15s ease-in 0s;
-  transition: transform 0.15s ease-in 0s;
-  transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
-}
-
-@media (min-width: 1024px) {
-  .colors .drag-item {
-    padding: 6px;
-  }
-}
-
-.colors .drag-item > span {
-  display: block;
-}
-
-.colors .drag-item span[data-color="yellow"] svg g rect {
-  fill: var(--clr-brandGoldLite);
-}
-
-.colors .drag-item span[data-color="orange"] svg g rect {
-  fill: var(--clr-brandBrick);
-}
-
-.colors .drag-item span[data-color="red"] svg g rect {
-  fill: var(--clr-brandErrorShad);
-}
-
-.colors .drag-item span[data-color="pink"] svg g rect {
-  fill: #e02981;
-}
-
-.colors .drag-item span[data-color="green"] svg g rect {
-  fill: var(--clr-brandOKShad);
-}
-
-.colors .drag-item span[data-color="turquoise"] svg g rect {
-  fill: #00bdb2;
-}
-
-.colors .drag-item span[data-color="blue"] svg g rect {
-  fill: var(--clr-hover);
-}
-
-.colors .drag-item span[data-color="violet"] svg g rect {
-  fill: var(--clr-visited);
-}
-
-.colors .drag-item svg {
-  display: inline-block;
-  pointer-events: none;
-}
-
-.ui-droppable-active {
-  fill: red;
-}
-
-[draggable="true"] {
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-}
-/*# sourceMappingURL=memory-color.css.map */
+/*# sourceMappingURL=memory-location.css.map */

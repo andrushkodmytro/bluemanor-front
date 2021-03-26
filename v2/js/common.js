@@ -303,5 +303,34 @@ $(function () {
     }
   });
 
+
+
+  // game
+
+  // Info modal
+  const $infoModal2 =  $('#game-info-modal');
+
+  $('#info-btn').click(()=>{
+    $infoModal2.css('display', 'flex').find('dialog').attr( "open", true)
+  });
+    
+
+  $infoModal2.find('.closeButton').click(()=>{
+    $infoModal2.css('display', 'none').find('dialog').attr( "open", false)
+  })
+
+  //Score modal
+  const $scoreModal2 = $('#game-score-modal');
+
+  $('#high-scores-btn').click(() => {
+    $scoreModal2.css('display', 'flex').find('dialog').attr('open', true);
+  });
+
+  $scoreModal2.find('.closeButton').click(() => {
+    $scoreModal2.css('display', 'none').find('dialog').attr('open', false);
+  });
+
+  // Tabs init
+  $('#tabs').tabs();
    
 });
