@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/v2/css/style.css">
+  <link rel="stylesheet" href="/games/memory-sequence/assets/style/memory-sequence.css">
+  <link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class='result-item-block'>
+        <div class="correct-item hasIcon--check">0</div>
+        <div class="incorrect-item hasIcon--close">0</div>
+      </div>
+
+      <!-- Timer -->
+      <!-- <div class="timer heading-4"> <span>8</span></div> -->
+
+      <!-- Timer icon -->
+      <div class="timer heading-4"> <span class='timer-clock'></span></div>
+
+      <div class="lives">
+        <span class='heart-empty'></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="game pending-state">
+      <h3 class="body-18">Let’s start the game!</h3>
+
+      <!-- <div class="slots slots-4" id='slots'>
+        <ul class='slots-list'>
+          <li class="slot-item-container ">
+            <div class="slot-item" data-choice='star'><span></span> </div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='circle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='triangle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='square'><span></span></div>
+          </li>
+        </ul>
+
+        <ul class="variant">
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='star'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/star.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='circle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/circle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='triangle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/triangle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='square'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/square.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="slots slots-5" id='slots'>
+
+        <ul class='slots-list'>
+          <li class="slot-item-container ">
+            <div class="slot-item" data-choice='star'><span></span> </div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='circle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='triangle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='square'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='hexagon'><span></span></div>
+          </li>
+        </ul>
+
+        <ul class="variant">
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='star'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/star.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='circle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/circle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='triangle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/triangle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='square'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/square.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='hexagon'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/hexagon.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="slots slots-6" id='slots'>
+
+        <ul class='slots-list'>
+          <li class="slot-item-container ">
+            <div class="slot-item" data-choice='star'><span></span> </div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='circle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='triangle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='square'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='hexagon'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='octagon'><span></span></div>
+          </li>
+        </ul>
+
+        <ul class="variant">
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='star'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/star.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='circle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/circle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='triangle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/triangle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='square'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/square.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='hexagon'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/hexagon.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='octagon'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/octagon.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div> -->
+
+
+      <div class="slots slots-7" id='slots'>
+        <ul class='slots-list'>
+          <li class="slot-item-container ">
+            <div class="slot-item" data-choice='star'><span></span> </div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='circle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='triangle'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='square'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='hexagon'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='octagon'><span></span></div>
+          </li>
+          <li class="slot-item-container">
+            <div class="slot-item" data-choice='diamond'><span></span></div>
+          </li>
+        </ul>
+
+        <ul class="variant">
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='star'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/star.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='circle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/circle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='triangle'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/triangle.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='square'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/square.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='hexagon'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/hexagon.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='octagon'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/octagon.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+          <li class='variant-item-container'>
+            <div class='variant-item aspect-ratio-container' data-choice='diamond'>
+              <div class='aspect-ratio-item'>
+                <div class="img-container">
+                  <img src='/games/memory-sequence/assets/img/diamond.svg' alt='star' />
+                </div>
+                <p>
+                  Star
+                </p>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn-check">
+      Check
+    </button>
+  </div>
+
+  <script src="/games/memory-sequence/iframe/index.js"></script>
+</body>
+
+</html>

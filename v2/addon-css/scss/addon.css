@@ -4742,6 +4742,7 @@ dialog.quiz-report-dialog .dialog-footer button {
 @media (min-width: 768px) {
   .game-page .game-progress .progressBar {
     display: inline-block;
+    width: 100%;
   }
 }
 
