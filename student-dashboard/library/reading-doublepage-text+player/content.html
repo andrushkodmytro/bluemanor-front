@@ -1,23 +1,40 @@
-<main class="forDashboard bookLesson-double">
+<main class="forDashboard bookLesson-double hasPlayer">
 	<a href="/student-dashboard/" class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
 	<article class="doublePage">
+		<?php include '../../../_components/bookplayer.html' ?>
 		<section class="doublePage-content">
-			<h2>Animals</h2>
-			<div class="doublePage-descriptionList">
-				<dl>
-					<dt class="doublePage-descriptionTerm">
+			<div class="doublePage-spread canScroll">
+				<div>
+					<div class="doublePage-left">
 						<div class="image-hint-pronunciation">
 							<img src="/v2/img/temp/redfox.jpg" alt="Red fox" title="Red fox">
 							<a href="?" class="hint-pronunciation" title="Listen image description">
 								<span>Listen</span>
 							</a>
 						</div>
-					</dt>
-					<dd class="doublePage-descriptionDetails">
+					</div>
+					<div class="doublePage-right">
+						<h3><a href="?" class="hint-pronunciation" style=""><span>Poisonous</span> <span>and</span> <span>Venomous</span></a></h3>
 						<h3><a href="?" class="hint-pronunciation"><span>Red</span> <span>fox</span></a></h3>
 						<!-- <h3><a href="?" class="hint-pronunciation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt cum, et, quod suscipit neque voluptate minima accusantium, voluptates nesciunt earum quam. Provident, facere! Quisquam pariatur aliquam deleniti est aspernatur.</a></h3> -->
+						<p><strong>BOLD</strong> <em>ITALIC</em> <u>UNDERSTRIKE</u></p>
 						<p>This fox is clever and quick. He has a red coat.</p>
-						<!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod aspernatur consequuntur itaque? Nesciunt numquam aperiam rerum adipisci neque maxime obcaecati reiciendis. Accusantium iusto aliquid, voluptatem ipsum fuga quas non?</p>
+						<p></p><p>&nbsp;</p>
+						<p>Some plants and animals can cause harm because they are poisonous or venomous to other animals, including people.</p>
+						<h4>(h4)Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eveniet sit id possimus maxime nobis ex a. Labore aliquam quisquam, nostrum quasi corrupti veritatis magni veniam incidunt in distinctio totam?</h4>
+						<h5>(h5)Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eveniet sit id possimus maxime nobis ex a. Labore aliquam quisquam, nostrum quasi corrupti veritatis magni veniam incidunt in distinctio totam?</h5>
+						<h6>(h6)Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eveniet sit id possimus maxime nobis ex a. Labore aliquam quisquam, nostrum quasi corrupti veritatis magni veniam incidunt in distinctio totam?</h6>
+						<ul>
+							<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+							<li>Dignissimos eveniet sit id possimus maxime nobis ex a.</li>
+							<li>Labore aliquam quisquam, nostrum quasi corrupti veritatis magni veniam incidunt in distinctio totam</li>
+						</ul>
+						<ol>
+							<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+							<li>Dignissimos eveniet sit id possimus maxime nobis ex a.</li>
+							<li>Labore aliquam quisquam, nostrum quasi corrupti veritatis magni veniam incidunt in distinctio totam</li>
+						</ol>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod aspernatur consequuntur itaque? Nesciunt numquam aperiam rerum adipisci neque maxime obcaecati reiciendis. Accusantium iusto aliquid, voluptatem ipsum fuga quas non?</p>
 						<p>Quos minima illum est officia exercitationem reiciendis assumenda praesentium ipsam aperiam tenetur ut numquam deleniti, modi maiores ullam molestias quasi nostrum accusantium. Temporibus ad reiciendis et voluptate consequatur unde incidunt.</p>
 						<p>Quasi rem ullam eligendi, rerum quis dolorem assumenda voluptatem delectus tenetur dolore inventore culpa asperiores unde facere. Iste alias ipsa asperiores porro repellat et totam, eligendi, ipsam, omnis ab aliquam?</p>
 						<p>Deleniti doloribus nam ratione accusantium laudantium quia neque fugit vero saepe voluptas cumque, reiciendis rerum iste ipsam, autem dolorum. Quas deserunt possimus enim labore vel, voluptatibus dolorem animi a commodi.</p>
@@ -26,9 +43,9 @@
 						<p>Eius ipsam deleniti sapiente enim dignissimos porro, aperiam maxime error veritatis pariatur illo! Soluta tenetur non consequuntur, saepe id nesciunt esse consectetur aperiam, consequatur praesentium tempore nobis vel ipsam aliquam!</p>
 						<p>Odio dolores nulla facilis quas tempore totam, maxime sed quidem consequatur officiis laboriosam, doloribus impedit quo accusamus recusandae ullam beatae corrupti amet adipisci odit reprehenderit eveniet mollitia cupiditate quia? Veniam.</p>
 						<p>Vel totam ratione, incidunt id pariatur unde odio atque consectetur cumque tempora doloremque quam soluta commodi eveniet ex? Labore corporis voluptatibus tenetur voluptates dolore, illo architecto deleniti sunt earum. Porro!</p>
-						<p>Quisquam cumque dolores modi a natus officia commodi, repellendus repellat excepturi ipsum impedit deleniti amet rerum inventore? Suscipit odio vitae nulla sit animi porro molestiae, ab doloribus, quibusdam itaque sed.</p> -->
-					</dd>
-				</dl>
+						<p>Quisquam cumque dolores modi a natus officia commodi, repellendus repellat excepturi ipsum impedit deleniti amet rerum inventore? Suscipit odio vitae nulla sit animi porro molestiae, ab doloribus, quibusdam itaque sed.</p>
+					</div>
+				</div>
 			</div>
 			<ul class="bookLesson-pagination">
 				<li><a href="?prev" class="hasIcon--chevron-left simpleButton ghostButton filledButton pl1em1 pr1em1 withoutText sizeM wAuto disabled"><span>Previous page</span></a></li>
