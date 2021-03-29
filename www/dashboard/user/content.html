@@ -1,0 +1,33 @@
+	<main class="forDashboard">
+		<article>
+			<form action="post" class="simpleForm">
+				<h2>User profile</h2>
+				<fieldset>
+					<ul>
+						<li>
+							<a href="?avatar" class="avatarVignette"><span><em>Choose avatar</em></span></a>
+						</li>
+						<li>
+							<input type="text" id="Username" value="Tanya Bas" required>
+							<label for="Username">Username</label>
+						</li>
+						<li>
+							<input type="email" id="YourEmail" value="tetyana.bas@lasoft.org" required>
+							<label for="YourEmail">Email</label>
+						</li>
+						<li>
+							<button type="submit">Save changes</button>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</article>
+		<aside>
+			<nav>
+				<ul class="tabs">
+					<li><a href="/dashboard/user/" class="hasIcon--user currentItem">User profile</a></li>
+					<li><a href="/dashboard/password/" class="hasIcon--lock">Password</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</main>

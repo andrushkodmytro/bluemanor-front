@@ -2807,6 +2807,7 @@ dialog.quiz-report-dialog {
   padding-left: var(--size-S);
   padding-right: var(--size-S);
   padding-top: 12px;
+  flex-grow: 0;
 
   & > article {
     margin-bottom: 0 !important;
@@ -2859,7 +2860,6 @@ dialog.quiz-report-dialog {
 
     .progressBar {
       display: none;
-
 
       @media (min-width: 768px) {
         display: inline-block;
@@ -3123,6 +3123,7 @@ dialog.quiz-report-dialog {
           font-style: normal;
           font-weight: 400;
           line-height: 30px;
+          color: var(--clr-text);
           overflow-wrap: break-word;
         }
 
@@ -3153,6 +3154,91 @@ dialog.quiz-report-dialog {
 
 // -Game general
 
+// + Progress Report
+.progress-report-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+
+  @media (min-width: 360px) {
+    padding-left: var(--size-M);
+    padding-right: var(--size-M);
+  }
+
+  @media (min-width: 768px) {
+    padding-left: var(--size-L);
+    padding-right: var(--size-L);
+  }
+
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .backButton.back2dashboardButton {
+      display: inline-flex;
+      margin-top: 40px;
+
+      &.simpleButton {
+        position: static;
+      }
+    }
+  }
+
+  h2 {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+
+    @media (min-width: 360px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @media (min-width: 480px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      line-height: 58px;
+    }
+  }
+}
+// - Progress Report
+
 *:focus {
   // outline: 2px solid red !important;
 }
+
+// #use {
+//   fill:url(/v2/img/welcome.jpg)
+// }
+
+// +Picture book
+.picture-book-page {
+  .doublePage-content {
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .book-container {
+    position: relative;
+    padding-bottom: 50%;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+// -Picture book
