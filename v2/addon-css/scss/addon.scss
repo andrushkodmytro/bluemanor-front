@@ -3214,3 +3214,29 @@ dialog.quiz-report-dialog {
 *:focus {
   // outline: 2px solid red !important;
 }
+
+// #use {
+//   fill:url(/v2/img/welcome.jpg)
+// }
+
+// +Picture book
+.picture-book-page {
+  .doublePage-content {
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .book-container {
+    position: relative;
+    padding-bottom: 50%;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+// -Picture book

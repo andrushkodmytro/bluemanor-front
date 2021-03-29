@@ -5433,4 +5433,19 @@ dialog.quiz-report-dialog .dialog-footer button {
     line-height: 58px;
   }
 }
+
+.picture-book-page .doublePage-content:after, .picture-book-page .doublePage-content:before {
+  display: none;
+}
+
+.picture-book-page .book-container {
+  position: relative;
+  padding-bottom: 50%;
+}
+
+.picture-book-page .book-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /*# sourceMappingURL=addon.css.map */
