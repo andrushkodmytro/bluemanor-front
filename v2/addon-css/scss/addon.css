@@ -89,7 +89,8 @@
 }
 
 #transition, .schedule-page .calendar-top .prev-month:before,
-.schedule-page .calendar-top .next-month:before {
+.schedule-page .calendar-top .next-month:before, .progress-report-page .progress-period .prev-month:before,
+.progress-report-page .progress-period .next-month:before {
   -webkit-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
 }
@@ -657,7 +658,8 @@
 }
 
 #transition, .schedule-page .calendar-top .prev-month:before,
-.schedule-page .calendar-top .next-month:before {
+.schedule-page .calendar-top .next-month:before, .progress-report-page .progress-period .prev-month:before,
+.progress-report-page .progress-period .next-month:before {
   -webkit-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
 }
@@ -1197,6 +1199,12 @@
   line-height: 34px;
   letter-spacing: 0em;
   color: var(--clr-text);
+}
+
+:root {
+  --clr-light-80: #d2d1ce;
+  --clr-light-95: #f4f3f3;
+  --clr-gray-50: #8e8b87;
 }
 
 * {
@@ -3050,7 +3058,7 @@ main.main-with-player.forDashboard {
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
-  color: #8e8b87;
+  color: var(--clr-gray-50);
   margin-bottom: 12px;
 }
 
@@ -3348,7 +3356,7 @@ main.main-with-player.forDashboard {
 }
 
 .dropdownMenuWrapper .notification-dropdown.dropdownMenu .notification-dropdown-item .notification-link:hover, .dropdownMenuWrapper .notification-dropdown.dropdownMenu .notification-dropdown-item .notification-link:focus {
-  background-color: #f4f3f3;
+  background-color: var(--clr-light-95);
 }
 
 .dropdownMenuWrapper .notification-dropdown.dropdownMenu .notification-dropdown-item-header {
@@ -3375,7 +3383,7 @@ main.main-with-player.forDashboard {
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
-  color: #8e8b87;
+  color: var(--clr-gray-50);
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -3946,7 +3954,7 @@ dialog.quiz-report-dialog table thead th {
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
-  color: #8e8b87;
+  color: var(--clr-gray-50);
   text-align: end;
   width: 16.66%;
 }
@@ -4488,7 +4496,7 @@ dialog.quiz-report-dialog .dialog-footer button {
 }
 
 .schedule-page .day-container .day.active {
-  background-color: #f4f3f3;
+  background-color: var(--clr-light-95);
   border-radius: 4px;
 }
 
@@ -5293,7 +5301,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
-  color: #8e8b87;
+  color: var(--clr-gray-50);
 }
 
 .game-page .game-scores-dialog table thead th:nth-of-type(1) {
@@ -5388,13 +5396,13 @@ dialog.quiz-report-dialog .dialog-footer button {
 }
 
 .progress-report-page article {
-  max-width: 690px;
+  max-width: 868px;
   margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
   .progress-report-page article {
-    margin-bottom: 120px;
+    margin-bottom: calc(120px + 64px);
   }
 }
 
@@ -5436,6 +5444,4098 @@ dialog.quiz-report-dialog .dialog-footer button {
     font-size: 48px;
     line-height: 58px;
   }
+}
+
+.progress-report-page .tabs-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--clr-brandBeigeDark);
+}
+
+.progress-report-page .tabs-links li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  text-align: center;
+}
+
+.progress-report-page .tabs-links li.ui-state-active {
+  background-color: var(--clr-brandBeigeLite);
+  border-radius: 8px 8px 0 0;
+}
+
+.progress-report-page .tabs-links li .tab-btn {
+  display: block;
+  padding: 8px 20px;
+  border: none;
+  color: var(--clr-text);
+}
+
+.progress-report-page .tabs-links li .tab-btn:focus, .progress-report-page .tabs-links li .tab-btn:hover {
+  color: var(--clr-text);
+}
+
+.progress-report-page .tab-item {
+  padding: 20px 40px 0;
+}
+
+@media (min-width: 1024px) {
+  .progress-report-page .tab-item {
+    padding: 20px 0 0;
+  }
+}
+
+.progress-report-page .progress-period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 28px;
+}
+
+.progress-report-page .progress-period .prev-month,
+.progress-report-page .progress-period .next-month {
+  cursor: pointer;
+  background-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-filter: unset;
+          filter: unset;
+  padding: 0;
+}
+
+.progress-report-page .progress-period .prev-month:active,
+.progress-report-page .progress-period .next-month:active {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-transform: unset;
+          transform: unset;
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+.progress-report-page .progress-period .prev-month:before,
+.progress-report-page .progress-period .next-month:before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.progress-report-page .progress-period .prev-month:focus:before, .progress-report-page .progress-period .prev-month:hover:before,
+.progress-report-page .progress-period .next-month:focus:before,
+.progress-report-page .progress-period .next-month:hover:before {
+  background-color: var(--clr-brandBeige);
+  -webkit-box-shadow: 0px 0px 0px 4px var(--clr-brandBeige);
+          box-shadow: 0px 0px 0px 4px var(--clr-brandBeige);
+}
+
+.progress-report-page .progress-period .month-container {
+  padding: 0 20px;
+  min-width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.progress-report-page .progress-period .period-name {
+  margin-right: 4px;
+}
+
+@media (min-width: 480px) {
+  .progress-report-page .progress-period .month-container {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .progress-report-page .progress-period {
+    margin-bottom: 40px;
+    color: var(--clr-text);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    min-width: 214px;
+  }
+  .progress-report-page .progress-period .month-container {
+    font-size: 24px;
+  }
+  .progress-report-page .progress-period .prev-month,
+  .progress-report-page .progress-period .next-month {
+    color: var(--clr-text);
+  }
+}
+
+.progress-report-page .goals-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 35px;
+}
+
+.progress-report-page .goals-container .goal-item {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.progress-report-page .goals-container .goal-item + .goal-item {
+  margin-left: 20px;
+}
+
+.progress-report-page .goals-container .goal-item:first-of-type span {
+  color: var(--clr-brandError);
+}
+
+.progress-report-page .goals-container .goal-item:last-of-type span {
+  color: var(--clr-brandOKDark);
+}
+
+.progress-report-page .chart-container {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid var(--clr-light-80);
+  padding-right: 23px;
+}
+
+.progress-report-page .chart-container .percentage {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.progress-report-page .chart-container .percentage .percentage-block {
+  position: relative;
+}
+
+.progress-report-page .chart-container .text {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.progress-report-page .chart-container .percentage-block {
+  width: 100%;
+  position: relative;
+}
+
+.progress-report-page .chart-container .percentage-block .percentage-chart {
+  width: 100%;
+}
+
+.progress-report-page .chart-container .percentage-1 {
+  height: 1%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-1 .percentage-chart {
+  height: 1%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-1 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-1:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 1%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-2 {
+  height: 2%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-2 .percentage-chart {
+  height: 2%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-2 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-2:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 2%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-3 {
+  height: 3%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-3 .percentage-chart {
+  height: 3%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-3 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-3:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 3%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-4 {
+  height: 4%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-4 .percentage-chart {
+  height: 4%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-4 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-4:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 4%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-5 {
+  height: 5%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-5 .percentage-chart {
+  height: 5%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-5 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-5:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-6 {
+  height: 6%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-6 .percentage-chart {
+  height: 6%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-6 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-6:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 6%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-7 {
+  height: 7%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-7 .percentage-chart {
+  height: 7%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-7 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-7:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 7%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-8 {
+  height: 8%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-8 .percentage-chart {
+  height: 8%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-8 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-8:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 8%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-9 {
+  height: 9%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-9 .percentage-chart {
+  height: 9%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-9 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-9:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 9%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-10 {
+  height: 10%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-10 .percentage-chart {
+  height: 10%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-10 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-10:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-11 {
+  height: 11%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-11 .percentage-chart {
+  height: 11%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-11 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-11:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 11%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-12 {
+  height: 12%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-12 .percentage-chart {
+  height: 12%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-12 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-12:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 12%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-13 {
+  height: 13%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-13 .percentage-chart {
+  height: 13%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-13 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-13:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 13%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-14 {
+  height: 14%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-14 .percentage-chart {
+  height: 14%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-14 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-14:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 14%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-15 {
+  height: 15%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-15 .percentage-chart {
+  height: 15%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-15 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-15:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-16 {
+  height: 16%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-16 .percentage-chart {
+  height: 16%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-16 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-16:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 16%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-17 {
+  height: 17%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-17 .percentage-chart {
+  height: 17%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-17 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-17:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 17%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-18 {
+  height: 18%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-18 .percentage-chart {
+  height: 18%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-18 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-18:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 18%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-19 {
+  height: 19%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-19 .percentage-chart {
+  height: 19%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-19 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-19:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 19%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-20 {
+  height: 20%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-20 .percentage-chart {
+  height: 20%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-20 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-20:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-21 {
+  height: 21%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-21 .percentage-chart {
+  height: 21%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-21 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-21:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 21%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-22 {
+  height: 22%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-22 .percentage-chart {
+  height: 22%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-22 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-22:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 22%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-23 {
+  height: 23%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-23 .percentage-chart {
+  height: 23%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-23 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-23:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 23%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-24 {
+  height: 24%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-24 .percentage-chart {
+  height: 24%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-24 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-24:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 24%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-25 {
+  height: 25%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-25 .percentage-chart {
+  height: 25%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-25 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-25:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 25%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-26 {
+  height: 26%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-26 .percentage-chart {
+  height: 26%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-26 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-26:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 26%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-27 {
+  height: 27%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-27 .percentage-chart {
+  height: 27%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-27 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-27:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 27%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-28 {
+  height: 28%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-28 .percentage-chart {
+  height: 28%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-28 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-28:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 28%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-29 {
+  height: 29%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-29 .percentage-chart {
+  height: 29%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-29 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-29:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 29%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-30 {
+  height: 30%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-30 .percentage-chart {
+  height: 30%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-30 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-30:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-31 {
+  height: 31%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-31 .percentage-chart {
+  height: 31%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-31 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-31:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 31%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-32 {
+  height: 32%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-32 .percentage-chart {
+  height: 32%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-32 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-32:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 32%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-33 {
+  height: 33%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-33 .percentage-chart {
+  height: 33%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-33 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-33:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 33%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-34 {
+  height: 34%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-34 .percentage-chart {
+  height: 34%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-34 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-34:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 34%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-35 {
+  height: 35%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-35 .percentage-chart {
+  height: 35%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-35 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-35:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 35%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-36 {
+  height: 36%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-36 .percentage-chart {
+  height: 36%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-36 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-36:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 36%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-37 {
+  height: 37%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-37 .percentage-chart {
+  height: 37%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-37 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-37:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 37%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-38 {
+  height: 38%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-38 .percentage-chart {
+  height: 38%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-38 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-38:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 38%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-39 {
+  height: 39%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-39 .percentage-chart {
+  height: 39%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-39 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-39:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 39%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-40 {
+  height: 40%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-40 .percentage-chart {
+  height: 40%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-40 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-40:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 40%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-41 {
+  height: 41%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-41 .percentage-chart {
+  height: 41%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-41 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-41:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 41%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-42 {
+  height: 42%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-42 .percentage-chart {
+  height: 42%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-42 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-42:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-43 {
+  height: 43%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-43 .percentage-chart {
+  height: 43%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-43 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-43:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 43%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-44 {
+  height: 44%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-44 .percentage-chart {
+  height: 44%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-44 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-44:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 44%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-45 {
+  height: 45%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-45 .percentage-chart {
+  height: 45%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-45 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-45:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 45%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-46 {
+  height: 46%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-46 .percentage-chart {
+  height: 46%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-46 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-46:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 46%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-47 {
+  height: 47%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-47 .percentage-chart {
+  height: 47%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-47 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-47:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 47%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-48 {
+  height: 48%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-48 .percentage-chart {
+  height: 48%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-48 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-48:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 48%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-49 {
+  height: 49%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-49 .percentage-chart {
+  height: 49%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-49 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-49:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 49%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-50 {
+  height: 50%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-50 .percentage-chart {
+  height: 50%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-50 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-50:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-51 {
+  height: 51%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-51 .percentage-chart {
+  height: 51%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-51 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-51:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 51%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-52 {
+  height: 52%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-52 .percentage-chart {
+  height: 52%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-52 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-52:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 52%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-53 {
+  height: 53%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-53 .percentage-chart {
+  height: 53%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-53 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-53:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 53%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-54 {
+  height: 54%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-54 .percentage-chart {
+  height: 54%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-54 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-54:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 54%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-55 {
+  height: 55%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-55 .percentage-chart {
+  height: 55%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-55 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-55:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 55%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-56 {
+  height: 56%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-56 .percentage-chart {
+  height: 56%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-56 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-56:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 56%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-57 {
+  height: 57%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-57 .percentage-chart {
+  height: 57%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-57 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-57:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 57%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-58 {
+  height: 58%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-58 .percentage-chart {
+  height: 58%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-58 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-58:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 58%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-59 {
+  height: 59%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-59 .percentage-chart {
+  height: 59%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-59 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-59:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 59%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-60 {
+  height: 60%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-60 .percentage-chart {
+  height: 60%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-60 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-60:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 60%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-61 {
+  height: 61%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-61 .percentage-chart {
+  height: 61%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-61 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-61:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 61%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-62 {
+  height: 62%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-62 .percentage-chart {
+  height: 62%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-62 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-62:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 62%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-63 {
+  height: 63%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-63 .percentage-chart {
+  height: 63%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-63 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-63:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 63%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-64 {
+  height: 64%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-64 .percentage-chart {
+  height: 64%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-64 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-64:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 64%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-65 {
+  height: 65%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-65 .percentage-chart {
+  height: 65%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-65 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-65:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 65%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-66 {
+  height: 66%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-66 .percentage-chart {
+  height: 66%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-66 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-66:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 66%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-67 {
+  height: 67%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-67 .percentage-chart {
+  height: 67%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-67 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-67:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 67%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-68 {
+  height: 68%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-68 .percentage-chart {
+  height: 68%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-68 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-68:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 68%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-69 {
+  height: 69%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-69 .percentage-chart {
+  height: 69%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-69 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-69:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 69%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-70 {
+  height: 70%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-70 .percentage-chart {
+  height: 70%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-70 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-70:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 70%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-71 {
+  height: 71%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-71 .percentage-chart {
+  height: 71%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-71 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-71:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 71%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-72 {
+  height: 72%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-72 .percentage-chart {
+  height: 72%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-72 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-72:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 72%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-73 {
+  height: 73%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-73 .percentage-chart {
+  height: 73%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-73 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-73:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 73%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-74 {
+  height: 74%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-74 .percentage-chart {
+  height: 74%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-74 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-74:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 74%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-75 {
+  height: 75%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-75 .percentage-chart {
+  height: 75%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-75 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-75:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 75%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-76 {
+  height: 76%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-76 .percentage-chart {
+  height: 76%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-76 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-76:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 76%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-77 {
+  height: 77%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-77 .percentage-chart {
+  height: 77%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-77 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-77:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 77%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-78 {
+  height: 78%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-78 .percentage-chart {
+  height: 78%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-78 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-78:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 78%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-79 {
+  height: 79%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-79 .percentage-chart {
+  height: 79%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-79 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-79:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 79%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-80 {
+  height: 80%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-80 .percentage-chart {
+  height: 80%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-80 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-80:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 80%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-81 {
+  height: 81%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-81 .percentage-chart {
+  height: 81%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-81 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-81:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 81%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-82 {
+  height: 82%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-82 .percentage-chart {
+  height: 82%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-82 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-82:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 82%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-83 {
+  height: 83%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-83 .percentage-chart {
+  height: 83%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-83 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-83:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 83%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-84 {
+  height: 84%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-84 .percentage-chart {
+  height: 84%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-84 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-84:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 84%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-85 {
+  height: 85%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-85 .percentage-chart {
+  height: 85%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-85 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-85:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 85%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-86 {
+  height: 86%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-86 .percentage-chart {
+  height: 86%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-86 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-86:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 86%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-87 {
+  height: 87%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-87 .percentage-chart {
+  height: 87%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-87 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-87:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 87%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-88 {
+  height: 88%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-88 .percentage-chart {
+  height: 88%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-88 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-88:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 88%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-89 {
+  height: 89%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-89 .percentage-chart {
+  height: 89%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-89 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-89:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 89%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-90 {
+  height: 90%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-90 .percentage-chart {
+  height: 90%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-90 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-90:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 90%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-91 {
+  height: 91%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-91 .percentage-chart {
+  height: 91%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-91 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-91:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 91%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-92 {
+  height: 92%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-92 .percentage-chart {
+  height: 92%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-92 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-92:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 92%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-93 {
+  height: 93%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-93 .percentage-chart {
+  height: 93%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-93 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-93:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 93%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-94 {
+  height: 94%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-94 .percentage-chart {
+  height: 94%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-94 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-94:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 94%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-95 {
+  height: 95%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-95 .percentage-chart {
+  height: 95%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-95 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-95:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 95%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-96 {
+  height: 96%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-96 .percentage-chart {
+  height: 96%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-96 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-96:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 96%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-97 {
+  height: 97%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-97 .percentage-chart {
+  height: 97%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-97 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-97:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 97%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-98 {
+  height: 98%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-98 .percentage-chart {
+  height: 98%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-98 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-98:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 98%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-99 {
+  height: 99%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-99 .percentage-chart {
+  height: 99%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-99 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-99:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 99%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .percentage-100 {
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.progress-report-page .chart-container .percentage-100 .percentage-chart {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-100 .percentage-chart:focus ~ .text {
+  color: var(--clr-brandOKShad);
+}
+
+.progress-report-page .chart-container .percentage-plane-100:after {
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 3px;
+  background-color: var(--clr-brandError);
+  border-radius: 8px;
+}
+
+.progress-report-page .chart-container .y-axe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.progress-report-page .chart-container .y-axe-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  border-top: 1px dashed var(--clr-light-80);
+  position: relative;
+}
+
+.progress-report-page .chart-container .y-axe-item:after {
+  content: "";
+  display: block;
+  border-top: 1px dashed var(--clr-light-80);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.progress-report-page .chart-container .y-axe-name {
+  position: absolute;
+  top: -40px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  left: -45px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--clr-gray-50);
+}
+
+.progress-report-page .chart-container .y-axe-item-value {
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+.progress-report-page .chart-container .x-axe-name {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--clr-gray-50);
+  padding: 24px 0;
+}
+
+.progress-report-page .tab-days .percentage-block {
+  padding: 0 5px;
+}
+
+.progress-report-page .tab-days .text {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.progress-report-page .tab-weeks .percentage-block {
+  padding: 0 2px;
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
+}
+
+.progress-report-page .tab-weeks .percentage-block:after {
+  width: calc(100% - 1px);
+}
+
+.progress-report-page .tab-weeks .percentage-block .percentage-chart:focus ~ .text {
+  color: var(--clr-text);
+}
+
+.progress-report-page .tab-year .percentage-block {
+  padding: 0 2px;
+}
+
+.progress-report-page .tab-year .percentage-block:after {
+  width: calc(100% - 1px);
+}
+
+.progress-report-page .tab-year .text {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.progress-report-page .dropdownMenu {
+  width: 238px;
+  padding: 20px 16px;
+  top: 20px;
+  right: -18px;
+  z-index: 40;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: var(--size-M);
+  position: absolute;
+  margin-top: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.12);
+  border-radius: calc(var(--size-L) / 1.5);
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.progress-report-page .dropdownMenu.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.progress-report-page .dropdownMenu::before {
+  content: "";
+  display: block;
+  border-left: 10px solid var(--clr-transparent);
+  border-right: 10px solid var(--clr-transparent);
+  border-bottom: 10px solid #fff;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -8px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  z-index: 130;
+}
+
+.progress-report-page .dropdownMenu .menu-date {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--clr-gray-50);
+  text-transform: uppercase;
+}
+
+.progress-report-page .dropdownMenu .menu-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.progress-report-page .dropdownMenu .menu-row-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin-top: 12px;
+}
+
+.progress-report-page .dropdownMenu .menu-row-item-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.progress-report-page .dropdownMenu .menu-row-item-value {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.progress-report-page .dropdownMenu .goal-item {
+  color: var(--clr-brandErrorShad);
+}
+
+.progress-report-page .dropdownMenu .completed-item {
+  color: var(--clr-brandOKShad);
+}
+
+*:focus {
+  outline: 2px solid red !important;
 }
 
 .picture-book-page .doublePage-content:after, .picture-book-page .doublePage-content:before {

@@ -253,84 +253,154 @@ $(function () {
 
   $(".day").click(function (e) {
     $(".day").removeClass("active");
-    $('.schedule-page .modal').css('display', 'flex')
+    $(".schedule-page .modal").css("display", "flex");
     $(this).toggleClass("active");
   });
 
-
-  const date = new Date;
+  const date = new Date();
   let month = date.getMonth();
-  let currentMonth = date.toLocaleString('default', { month: 'long' });
-  const currentYear= date.getFullYear();
-  
+  let currentMonth = date.toLocaleString("default", { month: "long" });
+  const currentYear = date.getFullYear();
 
+  $(".month-name").text(currentMonth);
+  $(".year").text(currentYear);
 
-  $('.month-name').text(currentMonth);
-  $('.year').text(currentYear);
+  $(".prev-month").click(function () {
+    const dateNew = new Date();
+    month -= 1;
+    dateNew.setMonth(month);
 
-  $('.prev-month').click(function(){
-   const dateNew = new Date();
-   month -= 1;
-   dateNew.setMonth(month);
+    let newCurrentMonth = dateNew.toLocaleString("default", { month: "long" });
+    $(".month-name").text(newCurrentMonth);
+  });
 
-   let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
-   $('.month-name').text(newCurrentMonth);
-  })
-
-  $('.next-month').click(function(){
+  $(".next-month").click(function () {
     const dateNew = new Date();
     month += 1;
     dateNew.setMonth(month);
- console.log(month)
-    let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
-    $('.month-name').text(newCurrentMonth);
-   })
-
-
-
-  
-   $('div[role="button"]').on('keydown', function(e) {
-    const keyD = e.key !== undefined ? e.key : e.keyCode;
-    // e.key && e.keycode have mixed support - keycode is deprecated but support is greater than e.key
-    // I tested within IE11, Firefox, Chrome, Edge (latest) & all had good support for e.key
-  
-      if ( (keyD === 'Enter' || keyD === 13) || (['Spacebar', ' '].indexOf(keyD) >= 0 || keyD === 32)) {
-      // In IE11 and lower, e.key will equal "Spacebar" instead of ' '
-  
-      // Default behavior is prevented to prevent the page to scroll when "space" is pressed
-      e.preventDefault();
-      this.click();
-    }
+    console.log(month);
+    let newCurrentMonth = dateNew.toLocaleString("default", { month: "long" });
+    $(".month-name").text(newCurrentMonth);
   });
-
-
 
   // game
 
   // Info modal
-  const $infoModal2 =  $('#game-info-modal');
+  const $infoModal2 = $("#game-info-modal");
 
-  $('#info-btn').click(()=>{
-    $infoModal2.css('display', 'flex').find('dialog').attr( "open", true)
+  $("#info-btn").click(() => {
+    $infoModal2.css("display", "flex").find("dialog").attr("open", true);
   });
-    
 
-  $infoModal2.find('.closeButton').click(()=>{
-    $infoModal2.css('display', 'none').find('dialog').attr( "open", false)
-  })
+  $infoModal2.find(".closeButton").click(() => {
+    $infoModal2.css("display", "none").find("dialog").attr("open", false);
+  });
 
   //Score modal
-  const $scoreModal2 = $('#game-score-modal');
+  const $scoreModal2 = $("#game-score-modal");
 
-  $('#high-scores-btn').click(() => {
-    $scoreModal2.css('display', 'flex').find('dialog').attr('open', true);
+  $("#high-scores-btn").click(() => {
+    $scoreModal2.css("display", "flex").find("dialog").attr("open", true);
   });
 
-  $scoreModal2.find('.closeButton').click(() => {
-    $scoreModal2.css('display', 'none').find('dialog').attr('open', false);
+  $scoreModal2.find(".closeButton").click(() => {
+    $scoreModal2.css("display", "none").find("dialog").attr("open", false);
   });
 
   // Tabs init
-  $('#tabs').tabs();
-   
+  $("#tabs").tabs();
+
+  // Progress page day modal
+  const $menu = $("#menu");
+  const $progressItems = $(".percentage-chart");
+  let $currentProgressItem = null;
+
+  function setPopupCoordinates() {
+    if ($currentProgressItem) {
+      const offset = $currentProgressItem.offset();
+      const halfWidth = $currentProgressItem.width() / 2;
+
+      $menu.css({ top: offset.top + 20, left: offset.left + halfWidth });
+    }
+  }
+
+  $progressItems
+    .click(function (e) {
+      e.preventDefault();
+
+      $currentProgressItem = $(this);
+
+      const data = $(this).data();
+
+      for (let key in data) {
+        if (data.hasOwnProperty(key)) {
+          $(`#${key}`).text(data[key]);
+        }
+      }
+
+      setPopupCoordinates();
+
+      $menu.removeClass("active").addClass("active");
+    })
+    .blur(function (e) {
+      console.log("Blur");
+      $menu.removeClass("active");
+      $currentProgressItem = null;
+    });
+
+  // Prevent focusout when click on popup
+  $menu.on("mousedown", function (event) {
+    event.preventDefault();
+  });
+
+  let resizeTimer;
+
+  $(window).on("resize", function (e) {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      setPopupCoordinates();
+    }, 250);
+  });
+
+  //  Line chart
+
+  // Value in percents
+  const data = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
+  const $chartContainer = $(".tab-all-time .chart-container");
+  const $initContainer = $(".chart-container");
+
+  function createCoordinates(data) {
+    const heightContainer = $initContainer.height();
+    const widthContainer = $initContainer.width();
+    // const monthWidth = widthContainer / 11;
+    const monthWidth = 100;
+
+    return data.map(function (item, i) {
+      const heightXY = (item / 100) * heightContainer;
+      const widthXY = i * monthWidth;
+
+      return [widthXY, heightXY];
+    });
+  }
+
+  console.log(createCoordinates(data));
+
+  const monthGoal = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
+  const monthCompleted = [45, 50, 20, 40, 25, 60, 40, 70, 35, 24, 34, 42];
+
+  let prevItem = null;
+
+  createCoordinates(monthGoal).forEach(function (item, i) {
+    if (i === 0) {
+      prevItem = item;
+    } else {
+      $chartContainer.line(prevItem[0], prevItem[1], item[0], item[1], {
+        color: "red",
+        stroke: 3,
+      });
+      prevItem = item;
+    }
+  });
+
+
 });
