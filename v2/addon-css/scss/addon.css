@@ -203,31 +203,35 @@
   background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
 }
 
-#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar,
+#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar, .progress-report-page .chart-content::-webkit-scrollbar,
 #customScroll--brown ::-webkit-scrollbar,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar,
+.progress-report-page .chart-content ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track,
+#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track, .progress-report-page .chart-content::-webkit-scrollbar-track,
 #customScroll--brown ::-webkit-scrollbar-track,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track,
+.progress-report-page .chart-content ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
   border-radius: 10px;
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb,
+#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb, .progress-report-page .chart-content::-webkit-scrollbar-thumb,
 #customScroll--brown ::-webkit-scrollbar-thumb,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb,
+.progress-report-page .chart-content ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--clr-brandBeige);
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive, .progress-report-page .chart-content::-webkit-scrollbar-thumb:window-inactive,
 #customScroll--brown ::-webkit-scrollbar-thumb:window-inactive,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive,
+.progress-report-page .chart-content ::-webkit-scrollbar-thumb:window-inactive {
   background: var(--clr-brandBeigeLite);
 }
 
@@ -772,31 +776,35 @@
   background: linear-gradient(180deg, rgba(245, 234, 212, 0) 0%, #f5ead4 100%);
 }
 
-#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar,
+#customScroll--brown::-webkit-scrollbar, .chapter-book-page .chapter-book-content::-webkit-scrollbar, .progress-report-page .chart-content::-webkit-scrollbar,
 #customScroll--brown ::-webkit-scrollbar,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar,
+.progress-report-page .chart-content ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
-#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track,
+#customScroll--brown::-webkit-scrollbar-track, .chapter-book-page .chapter-book-content::-webkit-scrollbar-track, .progress-report-page .chart-content::-webkit-scrollbar-track,
 #customScroll--brown ::-webkit-scrollbar-track,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-track,
+.progress-report-page .chart-content ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
   border-radius: 10px;
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb,
+#customScroll--brown::-webkit-scrollbar-thumb, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb, .progress-report-page .chart-content::-webkit-scrollbar-thumb,
 #customScroll--brown ::-webkit-scrollbar-thumb,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb,
+.progress-report-page .chart-content ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--clr-brandBeige);
   -webkit-box-shadow: inset 0 0 6px var(--clr-brandBeigeDark);
 }
 
-#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive,
+#customScroll--brown::-webkit-scrollbar-thumb:window-inactive, .chapter-book-page .chapter-book-content::-webkit-scrollbar-thumb:window-inactive, .progress-report-page .chart-content::-webkit-scrollbar-thumb:window-inactive,
 #customScroll--brown ::-webkit-scrollbar-thumb:window-inactive,
-.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive {
+.chapter-book-page .chapter-book-content ::-webkit-scrollbar-thumb:window-inactive,
+.progress-report-page .chart-content ::-webkit-scrollbar-thumb:window-inactive {
   background: var(--clr-brandBeigeLite);
 }
 
@@ -5395,17 +5403,6 @@ dialog.quiz-report-dialog .dialog-footer button {
   }
 }
 
-.progress-report-page article {
-  max-width: 868px;
-  margin-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-  .progress-report-page article {
-    margin-bottom: calc(120px + 64px);
-  }
-}
-
 @media (max-width: 1024px) {
   .progress-report-page .backButton.back2dashboardButton {
     display: -webkit-inline-box;
@@ -5418,8 +5415,20 @@ dialog.quiz-report-dialog .dialog-footer button {
   }
 }
 
+.progress-report-page article {
+  max-width: 868px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .progress-report-page article {
+    margin-bottom: calc(120px + 64px);
+  }
+}
+
 .progress-report-page h2 {
-  padding: 40px 0;
+  padding: 40px 0 0;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 30px;
   line-height: 40px;
@@ -5436,6 +5445,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   .progress-report-page h2 {
     font-size: 40px;
     line-height: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -5467,23 +5477,33 @@ dialog.quiz-report-dialog .dialog-footer button {
 
 .progress-report-page .tabs-links li .tab-btn {
   display: block;
-  padding: 8px 20px;
+  padding: 8px 10px;
   border: none;
   color: var(--clr-text);
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .progress-report-page .tabs-links li .tab-btn:focus, .progress-report-page .tabs-links li .tab-btn:hover {
   color: var(--clr-text);
 }
 
-.progress-report-page .tab-item {
-  padding: 20px 40px 0;
+@media (min-width: 480px) {
+  .progress-report-page .tabs-links li .tab-btn {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 8px 20px;
+  }
 }
 
-@media (min-width: 1024px) {
-  .progress-report-page .tab-item {
-    padding: 20px 0 0;
-  }
+.progress-report-page .tab-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .progress-report-page .progress-period {
@@ -5493,7 +5513,9 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  height: 30px;
 }
 
 .progress-report-page .progress-period .prev-month,
@@ -5547,9 +5569,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 29px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .progress-report-page .progress-period .period-name {
@@ -5557,6 +5582,10 @@ dialog.quiz-report-dialog .dialog-footer button {
 }
 
 @media (min-width: 480px) {
+  .progress-report-page .progress-period {
+    margin-bottom: 28px;
+    margin-top: 20px;
+  }
   .progress-report-page .progress-period .month-container {
     font-size: 20px;
   }
@@ -5584,40 +5613,95 @@ dialog.quiz-report-dialog .dialog-footer button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 35px;
 }
 
+.progress-report-page .goals-container .goal-item-title,
+.progress-report-page .goals-container .goal-item-value {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.progress-report-page .goals-container .goal-item-title {
+  display: none;
+}
+
+.progress-report-page .goals-container .goal-item-value {
+  padding: 0 24px;
+}
+
 .progress-report-page .goals-container .goal-item {
-  font-size: 18px;
-  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.progress-report-page .goals-container .goal-item + .goal-item {
-  margin-left: 20px;
-}
-
-.progress-report-page .goals-container .goal-item:first-of-type span {
+.progress-report-page .goals-container .goal-item:first-of-type .goal-item-value {
   color: var(--clr-brandError);
 }
 
-.progress-report-page .goals-container .goal-item:last-of-type span {
+.progress-report-page .goals-container .goal-item:last-of-type .goal-item-value {
   color: var(--clr-brandOKDark);
 }
 
-.progress-report-page .chart-container {
-  height: 400px;
+@media (min-width: 480px) {
+  .progress-report-page .goals-container {
+    margin-bottom: 35px;
+  }
+  .progress-report-page .goals-container .goal-item-title {
+    display: inline;
+    padding-right: 4px;
+  }
+  .progress-report-page .goals-container .goal-item-value {
+    padding: 0;
+  }
+  .progress-report-page .goals-container .goal-item + .goal-item {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .progress-report-page .goals-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .progress-report-page .goals-container .goal-item-title,
+  .progress-report-page .goals-container .goal-item-value {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.progress-report-page .chart-wrapper {
+  padding: 20px 0 0 30px;
+}
+
+@media (min-width: 480px) {
+  .progress-report-page .chart-wrapper {
+    padding: 20px 0 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .progress-report-page .chart-wrapper {
+    padding: 20px 0 0;
+  }
+}
+
+.progress-report-page .chart-content {
+  height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  border-bottom: 1px solid var(--clr-light-80);
   padding-right: 23px;
 }
 
-.progress-report-page .chart-container .percentage {
+.progress-report-page .chart-content .percentage {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -5627,11 +5711,11 @@ dialog.quiz-report-dialog .dialog-footer button {
   position: relative;
 }
 
-.progress-report-page .chart-container .percentage .percentage-block {
+.progress-report-page .chart-content .percentage .percentage-block {
   position: relative;
 }
 
-.progress-report-page .chart-container .text {
+.progress-report-page .chart-content .text {
   position: absolute;
   bottom: -50px;
   left: 0;
@@ -5640,16 +5724,16 @@ dialog.quiz-report-dialog .dialog-footer button {
   line-height: 30px;
 }
 
-.progress-report-page .chart-container .percentage-block {
+.progress-report-page .chart-content .percentage-block {
   width: 100%;
   position: relative;
 }
 
-.progress-report-page .chart-container .percentage-block .percentage-chart {
+.progress-report-page .chart-content .percentage-block .percentage-chart {
   width: 100%;
 }
 
-.progress-report-page .chart-container .percentage-1 {
+.progress-report-page .chart-content .percentage-1 {
   height: 1%;
   width: 100%;
   height: 100%;
@@ -5661,18 +5745,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-1 .percentage-chart {
+.progress-report-page .chart-content .percentage-1 .percentage-chart {
   height: 1%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-1 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-1 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-1:after {
+.progress-report-page .chart-content .percentage-plane-1:after {
   content: "";
   display: block;
   left: 50%;
@@ -5680,13 +5765,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-2 {
+.progress-report-page .chart-content .percentage-2 {
   height: 2%;
   width: 100%;
   height: 100%;
@@ -5698,18 +5782,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-2 .percentage-chart {
+.progress-report-page .chart-content .percentage-2 .percentage-chart {
   height: 2%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-2 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-2 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-2:after {
+.progress-report-page .chart-content .percentage-plane-2:after {
   content: "";
   display: block;
   left: 50%;
@@ -5717,13 +5802,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-3 {
+.progress-report-page .chart-content .percentage-3 {
   height: 3%;
   width: 100%;
   height: 100%;
@@ -5735,18 +5819,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-3 .percentage-chart {
+.progress-report-page .chart-content .percentage-3 .percentage-chart {
   height: 3%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-3 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-3 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-3:after {
+.progress-report-page .chart-content .percentage-plane-3:after {
   content: "";
   display: block;
   left: 50%;
@@ -5754,13 +5839,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-4 {
+.progress-report-page .chart-content .percentage-4 {
   height: 4%;
   width: 100%;
   height: 100%;
@@ -5772,18 +5856,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-4 .percentage-chart {
+.progress-report-page .chart-content .percentage-4 .percentage-chart {
   height: 4%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-4 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-4 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-4:after {
+.progress-report-page .chart-content .percentage-plane-4:after {
   content: "";
   display: block;
   left: 50%;
@@ -5791,13 +5876,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-5 {
+.progress-report-page .chart-content .percentage-5 {
   height: 5%;
   width: 100%;
   height: 100%;
@@ -5809,18 +5893,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-5 .percentage-chart {
+.progress-report-page .chart-content .percentage-5 .percentage-chart {
   height: 5%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-5 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-5 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-5:after {
+.progress-report-page .chart-content .percentage-plane-5:after {
   content: "";
   display: block;
   left: 50%;
@@ -5828,13 +5913,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-6 {
+.progress-report-page .chart-content .percentage-6 {
   height: 6%;
   width: 100%;
   height: 100%;
@@ -5846,18 +5930,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-6 .percentage-chart {
+.progress-report-page .chart-content .percentage-6 .percentage-chart {
   height: 6%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-6 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-6 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-6:after {
+.progress-report-page .chart-content .percentage-plane-6:after {
   content: "";
   display: block;
   left: 50%;
@@ -5865,13 +5950,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-7 {
+.progress-report-page .chart-content .percentage-7 {
   height: 7%;
   width: 100%;
   height: 100%;
@@ -5883,18 +5967,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-7 .percentage-chart {
+.progress-report-page .chart-content .percentage-7 .percentage-chart {
   height: 7%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-7 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-7 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-7:after {
+.progress-report-page .chart-content .percentage-plane-7:after {
   content: "";
   display: block;
   left: 50%;
@@ -5902,13 +5987,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-8 {
+.progress-report-page .chart-content .percentage-8 {
   height: 8%;
   width: 100%;
   height: 100%;
@@ -5920,18 +6004,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-8 .percentage-chart {
+.progress-report-page .chart-content .percentage-8 .percentage-chart {
   height: 8%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-8 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-8 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-8:after {
+.progress-report-page .chart-content .percentage-plane-8:after {
   content: "";
   display: block;
   left: 50%;
@@ -5939,13 +6024,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-9 {
+.progress-report-page .chart-content .percentage-9 {
   height: 9%;
   width: 100%;
   height: 100%;
@@ -5957,18 +6041,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-9 .percentage-chart {
+.progress-report-page .chart-content .percentage-9 .percentage-chart {
   height: 9%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-9 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-9 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-9:after {
+.progress-report-page .chart-content .percentage-plane-9:after {
   content: "";
   display: block;
   left: 50%;
@@ -5976,13 +6061,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-10 {
+.progress-report-page .chart-content .percentage-10 {
   height: 10%;
   width: 100%;
   height: 100%;
@@ -5994,18 +6078,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-10 .percentage-chart {
+.progress-report-page .chart-content .percentage-10 .percentage-chart {
   height: 10%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-10 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-10 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-10:after {
+.progress-report-page .chart-content .percentage-plane-10:after {
   content: "";
   display: block;
   left: 50%;
@@ -6013,13 +6098,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-11 {
+.progress-report-page .chart-content .percentage-11 {
   height: 11%;
   width: 100%;
   height: 100%;
@@ -6031,18 +6115,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-11 .percentage-chart {
+.progress-report-page .chart-content .percentage-11 .percentage-chart {
   height: 11%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-11 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-11 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-11:after {
+.progress-report-page .chart-content .percentage-plane-11:after {
   content: "";
   display: block;
   left: 50%;
@@ -6050,13 +6135,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-12 {
+.progress-report-page .chart-content .percentage-12 {
   height: 12%;
   width: 100%;
   height: 100%;
@@ -6068,18 +6152,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-12 .percentage-chart {
+.progress-report-page .chart-content .percentage-12 .percentage-chart {
   height: 12%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-12 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-12 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-12:after {
+.progress-report-page .chart-content .percentage-plane-12:after {
   content: "";
   display: block;
   left: 50%;
@@ -6087,13 +6172,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-13 {
+.progress-report-page .chart-content .percentage-13 {
   height: 13%;
   width: 100%;
   height: 100%;
@@ -6105,18 +6189,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-13 .percentage-chart {
+.progress-report-page .chart-content .percentage-13 .percentage-chart {
   height: 13%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-13 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-13 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-13:after {
+.progress-report-page .chart-content .percentage-plane-13:after {
   content: "";
   display: block;
   left: 50%;
@@ -6124,13 +6209,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-14 {
+.progress-report-page .chart-content .percentage-14 {
   height: 14%;
   width: 100%;
   height: 100%;
@@ -6142,18 +6226,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-14 .percentage-chart {
+.progress-report-page .chart-content .percentage-14 .percentage-chart {
   height: 14%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-14 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-14 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-14:after {
+.progress-report-page .chart-content .percentage-plane-14:after {
   content: "";
   display: block;
   left: 50%;
@@ -6161,13 +6246,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-15 {
+.progress-report-page .chart-content .percentage-15 {
   height: 15%;
   width: 100%;
   height: 100%;
@@ -6179,18 +6263,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-15 .percentage-chart {
+.progress-report-page .chart-content .percentage-15 .percentage-chart {
   height: 15%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-15 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-15 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-15:after {
+.progress-report-page .chart-content .percentage-plane-15:after {
   content: "";
   display: block;
   left: 50%;
@@ -6198,13 +6283,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-16 {
+.progress-report-page .chart-content .percentage-16 {
   height: 16%;
   width: 100%;
   height: 100%;
@@ -6216,18 +6300,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-16 .percentage-chart {
+.progress-report-page .chart-content .percentage-16 .percentage-chart {
   height: 16%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-16 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-16 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-16:after {
+.progress-report-page .chart-content .percentage-plane-16:after {
   content: "";
   display: block;
   left: 50%;
@@ -6235,13 +6320,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-17 {
+.progress-report-page .chart-content .percentage-17 {
   height: 17%;
   width: 100%;
   height: 100%;
@@ -6253,18 +6337,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-17 .percentage-chart {
+.progress-report-page .chart-content .percentage-17 .percentage-chart {
   height: 17%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-17 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-17 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-17:after {
+.progress-report-page .chart-content .percentage-plane-17:after {
   content: "";
   display: block;
   left: 50%;
@@ -6272,13 +6357,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-18 {
+.progress-report-page .chart-content .percentage-18 {
   height: 18%;
   width: 100%;
   height: 100%;
@@ -6290,18 +6374,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-18 .percentage-chart {
+.progress-report-page .chart-content .percentage-18 .percentage-chart {
   height: 18%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-18 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-18 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-18:after {
+.progress-report-page .chart-content .percentage-plane-18:after {
   content: "";
   display: block;
   left: 50%;
@@ -6309,13 +6394,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-19 {
+.progress-report-page .chart-content .percentage-19 {
   height: 19%;
   width: 100%;
   height: 100%;
@@ -6327,18 +6411,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-19 .percentage-chart {
+.progress-report-page .chart-content .percentage-19 .percentage-chart {
   height: 19%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-19 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-19 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-19:after {
+.progress-report-page .chart-content .percentage-plane-19:after {
   content: "";
   display: block;
   left: 50%;
@@ -6346,13 +6431,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-20 {
+.progress-report-page .chart-content .percentage-20 {
   height: 20%;
   width: 100%;
   height: 100%;
@@ -6364,18 +6448,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-20 .percentage-chart {
+.progress-report-page .chart-content .percentage-20 .percentage-chart {
   height: 20%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-20 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-20 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-20:after {
+.progress-report-page .chart-content .percentage-plane-20:after {
   content: "";
   display: block;
   left: 50%;
@@ -6383,13 +6468,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-21 {
+.progress-report-page .chart-content .percentage-21 {
   height: 21%;
   width: 100%;
   height: 100%;
@@ -6401,18 +6485,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-21 .percentage-chart {
+.progress-report-page .chart-content .percentage-21 .percentage-chart {
   height: 21%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-21 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-21 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-21:after {
+.progress-report-page .chart-content .percentage-plane-21:after {
   content: "";
   display: block;
   left: 50%;
@@ -6420,13 +6505,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-22 {
+.progress-report-page .chart-content .percentage-22 {
   height: 22%;
   width: 100%;
   height: 100%;
@@ -6438,18 +6522,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-22 .percentage-chart {
+.progress-report-page .chart-content .percentage-22 .percentage-chart {
   height: 22%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-22 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-22 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-22:after {
+.progress-report-page .chart-content .percentage-plane-22:after {
   content: "";
   display: block;
   left: 50%;
@@ -6457,13 +6542,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-23 {
+.progress-report-page .chart-content .percentage-23 {
   height: 23%;
   width: 100%;
   height: 100%;
@@ -6475,18 +6559,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-23 .percentage-chart {
+.progress-report-page .chart-content .percentage-23 .percentage-chart {
   height: 23%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-23 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-23 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-23:after {
+.progress-report-page .chart-content .percentage-plane-23:after {
   content: "";
   display: block;
   left: 50%;
@@ -6494,13 +6579,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-24 {
+.progress-report-page .chart-content .percentage-24 {
   height: 24%;
   width: 100%;
   height: 100%;
@@ -6512,18 +6596,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-24 .percentage-chart {
+.progress-report-page .chart-content .percentage-24 .percentage-chart {
   height: 24%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-24 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-24 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-24:after {
+.progress-report-page .chart-content .percentage-plane-24:after {
   content: "";
   display: block;
   left: 50%;
@@ -6531,13 +6616,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-25 {
+.progress-report-page .chart-content .percentage-25 {
   height: 25%;
   width: 100%;
   height: 100%;
@@ -6549,18 +6633,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-25 .percentage-chart {
+.progress-report-page .chart-content .percentage-25 .percentage-chart {
   height: 25%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-25 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-25 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-25:after {
+.progress-report-page .chart-content .percentage-plane-25:after {
   content: "";
   display: block;
   left: 50%;
@@ -6568,13 +6653,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-26 {
+.progress-report-page .chart-content .percentage-26 {
   height: 26%;
   width: 100%;
   height: 100%;
@@ -6586,18 +6670,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-26 .percentage-chart {
+.progress-report-page .chart-content .percentage-26 .percentage-chart {
   height: 26%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-26 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-26 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-26:after {
+.progress-report-page .chart-content .percentage-plane-26:after {
   content: "";
   display: block;
   left: 50%;
@@ -6605,13 +6690,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-27 {
+.progress-report-page .chart-content .percentage-27 {
   height: 27%;
   width: 100%;
   height: 100%;
@@ -6623,18 +6707,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-27 .percentage-chart {
+.progress-report-page .chart-content .percentage-27 .percentage-chart {
   height: 27%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-27 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-27 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-27:after {
+.progress-report-page .chart-content .percentage-plane-27:after {
   content: "";
   display: block;
   left: 50%;
@@ -6642,13 +6727,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-28 {
+.progress-report-page .chart-content .percentage-28 {
   height: 28%;
   width: 100%;
   height: 100%;
@@ -6660,18 +6744,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-28 .percentage-chart {
+.progress-report-page .chart-content .percentage-28 .percentage-chart {
   height: 28%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-28 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-28 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-28:after {
+.progress-report-page .chart-content .percentage-plane-28:after {
   content: "";
   display: block;
   left: 50%;
@@ -6679,13 +6764,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-29 {
+.progress-report-page .chart-content .percentage-29 {
   height: 29%;
   width: 100%;
   height: 100%;
@@ -6697,18 +6781,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-29 .percentage-chart {
+.progress-report-page .chart-content .percentage-29 .percentage-chart {
   height: 29%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-29 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-29 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-29:after {
+.progress-report-page .chart-content .percentage-plane-29:after {
   content: "";
   display: block;
   left: 50%;
@@ -6716,13 +6801,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-30 {
+.progress-report-page .chart-content .percentage-30 {
   height: 30%;
   width: 100%;
   height: 100%;
@@ -6734,18 +6818,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-30 .percentage-chart {
+.progress-report-page .chart-content .percentage-30 .percentage-chart {
   height: 30%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-30 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-30 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-30:after {
+.progress-report-page .chart-content .percentage-plane-30:after {
   content: "";
   display: block;
   left: 50%;
@@ -6753,13 +6838,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-31 {
+.progress-report-page .chart-content .percentage-31 {
   height: 31%;
   width: 100%;
   height: 100%;
@@ -6771,18 +6855,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-31 .percentage-chart {
+.progress-report-page .chart-content .percentage-31 .percentage-chart {
   height: 31%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-31 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-31 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-31:after {
+.progress-report-page .chart-content .percentage-plane-31:after {
   content: "";
   display: block;
   left: 50%;
@@ -6790,13 +6875,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-32 {
+.progress-report-page .chart-content .percentage-32 {
   height: 32%;
   width: 100%;
   height: 100%;
@@ -6808,18 +6892,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-32 .percentage-chart {
+.progress-report-page .chart-content .percentage-32 .percentage-chart {
   height: 32%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-32 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-32 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-32:after {
+.progress-report-page .chart-content .percentage-plane-32:after {
   content: "";
   display: block;
   left: 50%;
@@ -6827,13 +6912,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-33 {
+.progress-report-page .chart-content .percentage-33 {
   height: 33%;
   width: 100%;
   height: 100%;
@@ -6845,18 +6929,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-33 .percentage-chart {
+.progress-report-page .chart-content .percentage-33 .percentage-chart {
   height: 33%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-33 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-33 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-33:after {
+.progress-report-page .chart-content .percentage-plane-33:after {
   content: "";
   display: block;
   left: 50%;
@@ -6864,13 +6949,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-34 {
+.progress-report-page .chart-content .percentage-34 {
   height: 34%;
   width: 100%;
   height: 100%;
@@ -6882,18 +6966,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-34 .percentage-chart {
+.progress-report-page .chart-content .percentage-34 .percentage-chart {
   height: 34%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-34 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-34 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-34:after {
+.progress-report-page .chart-content .percentage-plane-34:after {
   content: "";
   display: block;
   left: 50%;
@@ -6901,13 +6986,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-35 {
+.progress-report-page .chart-content .percentage-35 {
   height: 35%;
   width: 100%;
   height: 100%;
@@ -6919,18 +7003,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-35 .percentage-chart {
+.progress-report-page .chart-content .percentage-35 .percentage-chart {
   height: 35%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-35 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-35 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-35:after {
+.progress-report-page .chart-content .percentage-plane-35:after {
   content: "";
   display: block;
   left: 50%;
@@ -6938,13 +7023,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-36 {
+.progress-report-page .chart-content .percentage-36 {
   height: 36%;
   width: 100%;
   height: 100%;
@@ -6956,18 +7040,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-36 .percentage-chart {
+.progress-report-page .chart-content .percentage-36 .percentage-chart {
   height: 36%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-36 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-36 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-36:after {
+.progress-report-page .chart-content .percentage-plane-36:after {
   content: "";
   display: block;
   left: 50%;
@@ -6975,13 +7060,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-37 {
+.progress-report-page .chart-content .percentage-37 {
   height: 37%;
   width: 100%;
   height: 100%;
@@ -6993,18 +7077,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-37 .percentage-chart {
+.progress-report-page .chart-content .percentage-37 .percentage-chart {
   height: 37%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-37 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-37 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-37:after {
+.progress-report-page .chart-content .percentage-plane-37:after {
   content: "";
   display: block;
   left: 50%;
@@ -7012,13 +7097,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-38 {
+.progress-report-page .chart-content .percentage-38 {
   height: 38%;
   width: 100%;
   height: 100%;
@@ -7030,18 +7114,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-38 .percentage-chart {
+.progress-report-page .chart-content .percentage-38 .percentage-chart {
   height: 38%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-38 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-38 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-38:after {
+.progress-report-page .chart-content .percentage-plane-38:after {
   content: "";
   display: block;
   left: 50%;
@@ -7049,13 +7134,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-39 {
+.progress-report-page .chart-content .percentage-39 {
   height: 39%;
   width: 100%;
   height: 100%;
@@ -7067,18 +7151,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-39 .percentage-chart {
+.progress-report-page .chart-content .percentage-39 .percentage-chart {
   height: 39%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-39 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-39 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-39:after {
+.progress-report-page .chart-content .percentage-plane-39:after {
   content: "";
   display: block;
   left: 50%;
@@ -7086,13 +7171,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-40 {
+.progress-report-page .chart-content .percentage-40 {
   height: 40%;
   width: 100%;
   height: 100%;
@@ -7104,18 +7188,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-40 .percentage-chart {
+.progress-report-page .chart-content .percentage-40 .percentage-chart {
   height: 40%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-40 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-40 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-40:after {
+.progress-report-page .chart-content .percentage-plane-40:after {
   content: "";
   display: block;
   left: 50%;
@@ -7123,13 +7208,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-41 {
+.progress-report-page .chart-content .percentage-41 {
   height: 41%;
   width: 100%;
   height: 100%;
@@ -7141,18 +7225,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-41 .percentage-chart {
+.progress-report-page .chart-content .percentage-41 .percentage-chart {
   height: 41%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-41 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-41 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-41:after {
+.progress-report-page .chart-content .percentage-plane-41:after {
   content: "";
   display: block;
   left: 50%;
@@ -7160,13 +7245,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-42 {
+.progress-report-page .chart-content .percentage-42 {
   height: 42%;
   width: 100%;
   height: 100%;
@@ -7178,18 +7262,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-42 .percentage-chart {
+.progress-report-page .chart-content .percentage-42 .percentage-chart {
   height: 42%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-42 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-42 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-42:after {
+.progress-report-page .chart-content .percentage-plane-42:after {
   content: "";
   display: block;
   left: 50%;
@@ -7197,13 +7282,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-43 {
+.progress-report-page .chart-content .percentage-43 {
   height: 43%;
   width: 100%;
   height: 100%;
@@ -7215,18 +7299,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-43 .percentage-chart {
+.progress-report-page .chart-content .percentage-43 .percentage-chart {
   height: 43%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-43 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-43 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-43:after {
+.progress-report-page .chart-content .percentage-plane-43:after {
   content: "";
   display: block;
   left: 50%;
@@ -7234,13 +7319,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-44 {
+.progress-report-page .chart-content .percentage-44 {
   height: 44%;
   width: 100%;
   height: 100%;
@@ -7252,18 +7336,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-44 .percentage-chart {
+.progress-report-page .chart-content .percentage-44 .percentage-chart {
   height: 44%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-44 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-44 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-44:after {
+.progress-report-page .chart-content .percentage-plane-44:after {
   content: "";
   display: block;
   left: 50%;
@@ -7271,13 +7356,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-45 {
+.progress-report-page .chart-content .percentage-45 {
   height: 45%;
   width: 100%;
   height: 100%;
@@ -7289,18 +7373,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-45 .percentage-chart {
+.progress-report-page .chart-content .percentage-45 .percentage-chart {
   height: 45%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-45 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-45 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-45:after {
+.progress-report-page .chart-content .percentage-plane-45:after {
   content: "";
   display: block;
   left: 50%;
@@ -7308,13 +7393,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-46 {
+.progress-report-page .chart-content .percentage-46 {
   height: 46%;
   width: 100%;
   height: 100%;
@@ -7326,18 +7410,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-46 .percentage-chart {
+.progress-report-page .chart-content .percentage-46 .percentage-chart {
   height: 46%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-46 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-46 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-46:after {
+.progress-report-page .chart-content .percentage-plane-46:after {
   content: "";
   display: block;
   left: 50%;
@@ -7345,13 +7430,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-47 {
+.progress-report-page .chart-content .percentage-47 {
   height: 47%;
   width: 100%;
   height: 100%;
@@ -7363,18 +7447,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-47 .percentage-chart {
+.progress-report-page .chart-content .percentage-47 .percentage-chart {
   height: 47%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-47 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-47 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-47:after {
+.progress-report-page .chart-content .percentage-plane-47:after {
   content: "";
   display: block;
   left: 50%;
@@ -7382,13 +7467,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-48 {
+.progress-report-page .chart-content .percentage-48 {
   height: 48%;
   width: 100%;
   height: 100%;
@@ -7400,18 +7484,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-48 .percentage-chart {
+.progress-report-page .chart-content .percentage-48 .percentage-chart {
   height: 48%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-48 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-48 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-48:after {
+.progress-report-page .chart-content .percentage-plane-48:after {
   content: "";
   display: block;
   left: 50%;
@@ -7419,13 +7504,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-49 {
+.progress-report-page .chart-content .percentage-49 {
   height: 49%;
   width: 100%;
   height: 100%;
@@ -7437,18 +7521,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-49 .percentage-chart {
+.progress-report-page .chart-content .percentage-49 .percentage-chart {
   height: 49%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-49 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-49 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-49:after {
+.progress-report-page .chart-content .percentage-plane-49:after {
   content: "";
   display: block;
   left: 50%;
@@ -7456,13 +7541,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-50 {
+.progress-report-page .chart-content .percentage-50 {
   height: 50%;
   width: 100%;
   height: 100%;
@@ -7474,18 +7558,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-50 .percentage-chart {
+.progress-report-page .chart-content .percentage-50 .percentage-chart {
   height: 50%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-50 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-50 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-50:after {
+.progress-report-page .chart-content .percentage-plane-50:after {
   content: "";
   display: block;
   left: 50%;
@@ -7493,13 +7578,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-51 {
+.progress-report-page .chart-content .percentage-51 {
   height: 51%;
   width: 100%;
   height: 100%;
@@ -7511,18 +7595,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-51 .percentage-chart {
+.progress-report-page .chart-content .percentage-51 .percentage-chart {
   height: 51%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-51 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-51 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-51:after {
+.progress-report-page .chart-content .percentage-plane-51:after {
   content: "";
   display: block;
   left: 50%;
@@ -7530,13 +7615,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-52 {
+.progress-report-page .chart-content .percentage-52 {
   height: 52%;
   width: 100%;
   height: 100%;
@@ -7548,18 +7632,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-52 .percentage-chart {
+.progress-report-page .chart-content .percentage-52 .percentage-chart {
   height: 52%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-52 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-52 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-52:after {
+.progress-report-page .chart-content .percentage-plane-52:after {
   content: "";
   display: block;
   left: 50%;
@@ -7567,13 +7652,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-53 {
+.progress-report-page .chart-content .percentage-53 {
   height: 53%;
   width: 100%;
   height: 100%;
@@ -7585,18 +7669,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-53 .percentage-chart {
+.progress-report-page .chart-content .percentage-53 .percentage-chart {
   height: 53%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-53 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-53 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-53:after {
+.progress-report-page .chart-content .percentage-plane-53:after {
   content: "";
   display: block;
   left: 50%;
@@ -7604,13 +7689,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-54 {
+.progress-report-page .chart-content .percentage-54 {
   height: 54%;
   width: 100%;
   height: 100%;
@@ -7622,18 +7706,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-54 .percentage-chart {
+.progress-report-page .chart-content .percentage-54 .percentage-chart {
   height: 54%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-54 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-54 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-54:after {
+.progress-report-page .chart-content .percentage-plane-54:after {
   content: "";
   display: block;
   left: 50%;
@@ -7641,13 +7726,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-55 {
+.progress-report-page .chart-content .percentage-55 {
   height: 55%;
   width: 100%;
   height: 100%;
@@ -7659,18 +7743,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-55 .percentage-chart {
+.progress-report-page .chart-content .percentage-55 .percentage-chart {
   height: 55%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-55 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-55 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-55:after {
+.progress-report-page .chart-content .percentage-plane-55:after {
   content: "";
   display: block;
   left: 50%;
@@ -7678,13 +7763,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-56 {
+.progress-report-page .chart-content .percentage-56 {
   height: 56%;
   width: 100%;
   height: 100%;
@@ -7696,18 +7780,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-56 .percentage-chart {
+.progress-report-page .chart-content .percentage-56 .percentage-chart {
   height: 56%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-56 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-56 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-56:after {
+.progress-report-page .chart-content .percentage-plane-56:after {
   content: "";
   display: block;
   left: 50%;
@@ -7715,13 +7800,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-57 {
+.progress-report-page .chart-content .percentage-57 {
   height: 57%;
   width: 100%;
   height: 100%;
@@ -7733,18 +7817,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-57 .percentage-chart {
+.progress-report-page .chart-content .percentage-57 .percentage-chart {
   height: 57%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-57 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-57 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-57:after {
+.progress-report-page .chart-content .percentage-plane-57:after {
   content: "";
   display: block;
   left: 50%;
@@ -7752,13 +7837,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-58 {
+.progress-report-page .chart-content .percentage-58 {
   height: 58%;
   width: 100%;
   height: 100%;
@@ -7770,18 +7854,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-58 .percentage-chart {
+.progress-report-page .chart-content .percentage-58 .percentage-chart {
   height: 58%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-58 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-58 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-58:after {
+.progress-report-page .chart-content .percentage-plane-58:after {
   content: "";
   display: block;
   left: 50%;
@@ -7789,13 +7874,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-59 {
+.progress-report-page .chart-content .percentage-59 {
   height: 59%;
   width: 100%;
   height: 100%;
@@ -7807,18 +7891,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-59 .percentage-chart {
+.progress-report-page .chart-content .percentage-59 .percentage-chart {
   height: 59%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-59 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-59 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-59:after {
+.progress-report-page .chart-content .percentage-plane-59:after {
   content: "";
   display: block;
   left: 50%;
@@ -7826,13 +7911,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-60 {
+.progress-report-page .chart-content .percentage-60 {
   height: 60%;
   width: 100%;
   height: 100%;
@@ -7844,18 +7928,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-60 .percentage-chart {
+.progress-report-page .chart-content .percentage-60 .percentage-chart {
   height: 60%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-60 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-60 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-60:after {
+.progress-report-page .chart-content .percentage-plane-60:after {
   content: "";
   display: block;
   left: 50%;
@@ -7863,13 +7948,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-61 {
+.progress-report-page .chart-content .percentage-61 {
   height: 61%;
   width: 100%;
   height: 100%;
@@ -7881,18 +7965,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-61 .percentage-chart {
+.progress-report-page .chart-content .percentage-61 .percentage-chart {
   height: 61%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-61 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-61 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-61:after {
+.progress-report-page .chart-content .percentage-plane-61:after {
   content: "";
   display: block;
   left: 50%;
@@ -7900,13 +7985,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-62 {
+.progress-report-page .chart-content .percentage-62 {
   height: 62%;
   width: 100%;
   height: 100%;
@@ -7918,18 +8002,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-62 .percentage-chart {
+.progress-report-page .chart-content .percentage-62 .percentage-chart {
   height: 62%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-62 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-62 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-62:after {
+.progress-report-page .chart-content .percentage-plane-62:after {
   content: "";
   display: block;
   left: 50%;
@@ -7937,13 +8022,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-63 {
+.progress-report-page .chart-content .percentage-63 {
   height: 63%;
   width: 100%;
   height: 100%;
@@ -7955,18 +8039,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-63 .percentage-chart {
+.progress-report-page .chart-content .percentage-63 .percentage-chart {
   height: 63%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-63 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-63 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-63:after {
+.progress-report-page .chart-content .percentage-plane-63:after {
   content: "";
   display: block;
   left: 50%;
@@ -7974,13 +8059,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-64 {
+.progress-report-page .chart-content .percentage-64 {
   height: 64%;
   width: 100%;
   height: 100%;
@@ -7992,18 +8076,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-64 .percentage-chart {
+.progress-report-page .chart-content .percentage-64 .percentage-chart {
   height: 64%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-64 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-64 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-64:after {
+.progress-report-page .chart-content .percentage-plane-64:after {
   content: "";
   display: block;
   left: 50%;
@@ -8011,13 +8096,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-65 {
+.progress-report-page .chart-content .percentage-65 {
   height: 65%;
   width: 100%;
   height: 100%;
@@ -8029,18 +8113,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-65 .percentage-chart {
+.progress-report-page .chart-content .percentage-65 .percentage-chart {
   height: 65%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-65 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-65 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-65:after {
+.progress-report-page .chart-content .percentage-plane-65:after {
   content: "";
   display: block;
   left: 50%;
@@ -8048,13 +8133,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-66 {
+.progress-report-page .chart-content .percentage-66 {
   height: 66%;
   width: 100%;
   height: 100%;
@@ -8066,18 +8150,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-66 .percentage-chart {
+.progress-report-page .chart-content .percentage-66 .percentage-chart {
   height: 66%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-66 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-66 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-66:after {
+.progress-report-page .chart-content .percentage-plane-66:after {
   content: "";
   display: block;
   left: 50%;
@@ -8085,13 +8170,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-67 {
+.progress-report-page .chart-content .percentage-67 {
   height: 67%;
   width: 100%;
   height: 100%;
@@ -8103,18 +8187,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-67 .percentage-chart {
+.progress-report-page .chart-content .percentage-67 .percentage-chart {
   height: 67%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-67 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-67 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-67:after {
+.progress-report-page .chart-content .percentage-plane-67:after {
   content: "";
   display: block;
   left: 50%;
@@ -8122,13 +8207,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-68 {
+.progress-report-page .chart-content .percentage-68 {
   height: 68%;
   width: 100%;
   height: 100%;
@@ -8140,18 +8224,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-68 .percentage-chart {
+.progress-report-page .chart-content .percentage-68 .percentage-chart {
   height: 68%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-68 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-68 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-68:after {
+.progress-report-page .chart-content .percentage-plane-68:after {
   content: "";
   display: block;
   left: 50%;
@@ -8159,13 +8244,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-69 {
+.progress-report-page .chart-content .percentage-69 {
   height: 69%;
   width: 100%;
   height: 100%;
@@ -8177,18 +8261,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-69 .percentage-chart {
+.progress-report-page .chart-content .percentage-69 .percentage-chart {
   height: 69%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-69 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-69 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-69:after {
+.progress-report-page .chart-content .percentage-plane-69:after {
   content: "";
   display: block;
   left: 50%;
@@ -8196,13 +8281,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-70 {
+.progress-report-page .chart-content .percentage-70 {
   height: 70%;
   width: 100%;
   height: 100%;
@@ -8214,18 +8298,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-70 .percentage-chart {
+.progress-report-page .chart-content .percentage-70 .percentage-chart {
   height: 70%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-70 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-70 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-70:after {
+.progress-report-page .chart-content .percentage-plane-70:after {
   content: "";
   display: block;
   left: 50%;
@@ -8233,13 +8318,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-71 {
+.progress-report-page .chart-content .percentage-71 {
   height: 71%;
   width: 100%;
   height: 100%;
@@ -8251,18 +8335,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-71 .percentage-chart {
+.progress-report-page .chart-content .percentage-71 .percentage-chart {
   height: 71%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-71 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-71 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-71:after {
+.progress-report-page .chart-content .percentage-plane-71:after {
   content: "";
   display: block;
   left: 50%;
@@ -8270,13 +8355,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-72 {
+.progress-report-page .chart-content .percentage-72 {
   height: 72%;
   width: 100%;
   height: 100%;
@@ -8288,18 +8372,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-72 .percentage-chart {
+.progress-report-page .chart-content .percentage-72 .percentage-chart {
   height: 72%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-72 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-72 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-72:after {
+.progress-report-page .chart-content .percentage-plane-72:after {
   content: "";
   display: block;
   left: 50%;
@@ -8307,13 +8392,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-73 {
+.progress-report-page .chart-content .percentage-73 {
   height: 73%;
   width: 100%;
   height: 100%;
@@ -8325,18 +8409,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-73 .percentage-chart {
+.progress-report-page .chart-content .percentage-73 .percentage-chart {
   height: 73%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-73 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-73 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-73:after {
+.progress-report-page .chart-content .percentage-plane-73:after {
   content: "";
   display: block;
   left: 50%;
@@ -8344,13 +8429,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-74 {
+.progress-report-page .chart-content .percentage-74 {
   height: 74%;
   width: 100%;
   height: 100%;
@@ -8362,18 +8446,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-74 .percentage-chart {
+.progress-report-page .chart-content .percentage-74 .percentage-chart {
   height: 74%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-74 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-74 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-74:after {
+.progress-report-page .chart-content .percentage-plane-74:after {
   content: "";
   display: block;
   left: 50%;
@@ -8381,13 +8466,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-75 {
+.progress-report-page .chart-content .percentage-75 {
   height: 75%;
   width: 100%;
   height: 100%;
@@ -8399,18 +8483,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-75 .percentage-chart {
+.progress-report-page .chart-content .percentage-75 .percentage-chart {
   height: 75%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-75 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-75 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-75:after {
+.progress-report-page .chart-content .percentage-plane-75:after {
   content: "";
   display: block;
   left: 50%;
@@ -8418,13 +8503,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-76 {
+.progress-report-page .chart-content .percentage-76 {
   height: 76%;
   width: 100%;
   height: 100%;
@@ -8436,18 +8520,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-76 .percentage-chart {
+.progress-report-page .chart-content .percentage-76 .percentage-chart {
   height: 76%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-76 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-76 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-76:after {
+.progress-report-page .chart-content .percentage-plane-76:after {
   content: "";
   display: block;
   left: 50%;
@@ -8455,13 +8540,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-77 {
+.progress-report-page .chart-content .percentage-77 {
   height: 77%;
   width: 100%;
   height: 100%;
@@ -8473,18 +8557,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-77 .percentage-chart {
+.progress-report-page .chart-content .percentage-77 .percentage-chart {
   height: 77%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-77 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-77 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-77:after {
+.progress-report-page .chart-content .percentage-plane-77:after {
   content: "";
   display: block;
   left: 50%;
@@ -8492,13 +8577,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-78 {
+.progress-report-page .chart-content .percentage-78 {
   height: 78%;
   width: 100%;
   height: 100%;
@@ -8510,18 +8594,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-78 .percentage-chart {
+.progress-report-page .chart-content .percentage-78 .percentage-chart {
   height: 78%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-78 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-78 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-78:after {
+.progress-report-page .chart-content .percentage-plane-78:after {
   content: "";
   display: block;
   left: 50%;
@@ -8529,13 +8614,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-79 {
+.progress-report-page .chart-content .percentage-79 {
   height: 79%;
   width: 100%;
   height: 100%;
@@ -8547,18 +8631,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-79 .percentage-chart {
+.progress-report-page .chart-content .percentage-79 .percentage-chart {
   height: 79%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-79 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-79 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-79:after {
+.progress-report-page .chart-content .percentage-plane-79:after {
   content: "";
   display: block;
   left: 50%;
@@ -8566,13 +8651,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-80 {
+.progress-report-page .chart-content .percentage-80 {
   height: 80%;
   width: 100%;
   height: 100%;
@@ -8584,18 +8668,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-80 .percentage-chart {
+.progress-report-page .chart-content .percentage-80 .percentage-chart {
   height: 80%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-80 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-80 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-80:after {
+.progress-report-page .chart-content .percentage-plane-80:after {
   content: "";
   display: block;
   left: 50%;
@@ -8603,13 +8688,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-81 {
+.progress-report-page .chart-content .percentage-81 {
   height: 81%;
   width: 100%;
   height: 100%;
@@ -8621,18 +8705,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-81 .percentage-chart {
+.progress-report-page .chart-content .percentage-81 .percentage-chart {
   height: 81%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-81 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-81 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-81:after {
+.progress-report-page .chart-content .percentage-plane-81:after {
   content: "";
   display: block;
   left: 50%;
@@ -8640,13 +8725,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-82 {
+.progress-report-page .chart-content .percentage-82 {
   height: 82%;
   width: 100%;
   height: 100%;
@@ -8658,18 +8742,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-82 .percentage-chart {
+.progress-report-page .chart-content .percentage-82 .percentage-chart {
   height: 82%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-82 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-82 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-82:after {
+.progress-report-page .chart-content .percentage-plane-82:after {
   content: "";
   display: block;
   left: 50%;
@@ -8677,13 +8762,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-83 {
+.progress-report-page .chart-content .percentage-83 {
   height: 83%;
   width: 100%;
   height: 100%;
@@ -8695,18 +8779,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-83 .percentage-chart {
+.progress-report-page .chart-content .percentage-83 .percentage-chart {
   height: 83%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-83 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-83 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-83:after {
+.progress-report-page .chart-content .percentage-plane-83:after {
   content: "";
   display: block;
   left: 50%;
@@ -8714,13 +8799,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-84 {
+.progress-report-page .chart-content .percentage-84 {
   height: 84%;
   width: 100%;
   height: 100%;
@@ -8732,18 +8816,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-84 .percentage-chart {
+.progress-report-page .chart-content .percentage-84 .percentage-chart {
   height: 84%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-84 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-84 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-84:after {
+.progress-report-page .chart-content .percentage-plane-84:after {
   content: "";
   display: block;
   left: 50%;
@@ -8751,13 +8836,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-85 {
+.progress-report-page .chart-content .percentage-85 {
   height: 85%;
   width: 100%;
   height: 100%;
@@ -8769,18 +8853,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-85 .percentage-chart {
+.progress-report-page .chart-content .percentage-85 .percentage-chart {
   height: 85%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-85 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-85 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-85:after {
+.progress-report-page .chart-content .percentage-plane-85:after {
   content: "";
   display: block;
   left: 50%;
@@ -8788,13 +8873,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-86 {
+.progress-report-page .chart-content .percentage-86 {
   height: 86%;
   width: 100%;
   height: 100%;
@@ -8806,18 +8890,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-86 .percentage-chart {
+.progress-report-page .chart-content .percentage-86 .percentage-chart {
   height: 86%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-86 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-86 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-86:after {
+.progress-report-page .chart-content .percentage-plane-86:after {
   content: "";
   display: block;
   left: 50%;
@@ -8825,13 +8910,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-87 {
+.progress-report-page .chart-content .percentage-87 {
   height: 87%;
   width: 100%;
   height: 100%;
@@ -8843,18 +8927,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-87 .percentage-chart {
+.progress-report-page .chart-content .percentage-87 .percentage-chart {
   height: 87%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-87 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-87 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-87:after {
+.progress-report-page .chart-content .percentage-plane-87:after {
   content: "";
   display: block;
   left: 50%;
@@ -8862,13 +8947,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-88 {
+.progress-report-page .chart-content .percentage-88 {
   height: 88%;
   width: 100%;
   height: 100%;
@@ -8880,18 +8964,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-88 .percentage-chart {
+.progress-report-page .chart-content .percentage-88 .percentage-chart {
   height: 88%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-88 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-88 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-88:after {
+.progress-report-page .chart-content .percentage-plane-88:after {
   content: "";
   display: block;
   left: 50%;
@@ -8899,13 +8984,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-89 {
+.progress-report-page .chart-content .percentage-89 {
   height: 89%;
   width: 100%;
   height: 100%;
@@ -8917,18 +9001,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-89 .percentage-chart {
+.progress-report-page .chart-content .percentage-89 .percentage-chart {
   height: 89%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-89 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-89 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-89:after {
+.progress-report-page .chart-content .percentage-plane-89:after {
   content: "";
   display: block;
   left: 50%;
@@ -8936,13 +9021,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-90 {
+.progress-report-page .chart-content .percentage-90 {
   height: 90%;
   width: 100%;
   height: 100%;
@@ -8954,18 +9038,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-90 .percentage-chart {
+.progress-report-page .chart-content .percentage-90 .percentage-chart {
   height: 90%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-90 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-90 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-90:after {
+.progress-report-page .chart-content .percentage-plane-90:after {
   content: "";
   display: block;
   left: 50%;
@@ -8973,13 +9058,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-91 {
+.progress-report-page .chart-content .percentage-91 {
   height: 91%;
   width: 100%;
   height: 100%;
@@ -8991,18 +9075,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-91 .percentage-chart {
+.progress-report-page .chart-content .percentage-91 .percentage-chart {
   height: 91%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-91 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-91 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-91:after {
+.progress-report-page .chart-content .percentage-plane-91:after {
   content: "";
   display: block;
   left: 50%;
@@ -9010,13 +9095,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-92 {
+.progress-report-page .chart-content .percentage-92 {
   height: 92%;
   width: 100%;
   height: 100%;
@@ -9028,18 +9112,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-92 .percentage-chart {
+.progress-report-page .chart-content .percentage-92 .percentage-chart {
   height: 92%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-92 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-92 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-92:after {
+.progress-report-page .chart-content .percentage-plane-92:after {
   content: "";
   display: block;
   left: 50%;
@@ -9047,13 +9132,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-93 {
+.progress-report-page .chart-content .percentage-93 {
   height: 93%;
   width: 100%;
   height: 100%;
@@ -9065,18 +9149,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-93 .percentage-chart {
+.progress-report-page .chart-content .percentage-93 .percentage-chart {
   height: 93%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-93 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-93 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-93:after {
+.progress-report-page .chart-content .percentage-plane-93:after {
   content: "";
   display: block;
   left: 50%;
@@ -9084,13 +9169,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-94 {
+.progress-report-page .chart-content .percentage-94 {
   height: 94%;
   width: 100%;
   height: 100%;
@@ -9102,18 +9186,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-94 .percentage-chart {
+.progress-report-page .chart-content .percentage-94 .percentage-chart {
   height: 94%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-94 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-94 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-94:after {
+.progress-report-page .chart-content .percentage-plane-94:after {
   content: "";
   display: block;
   left: 50%;
@@ -9121,13 +9206,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-95 {
+.progress-report-page .chart-content .percentage-95 {
   height: 95%;
   width: 100%;
   height: 100%;
@@ -9139,18 +9223,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-95 .percentage-chart {
+.progress-report-page .chart-content .percentage-95 .percentage-chart {
   height: 95%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-95 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-95 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-95:after {
+.progress-report-page .chart-content .percentage-plane-95:after {
   content: "";
   display: block;
   left: 50%;
@@ -9158,13 +9243,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-96 {
+.progress-report-page .chart-content .percentage-96 {
   height: 96%;
   width: 100%;
   height: 100%;
@@ -9176,18 +9260,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-96 .percentage-chart {
+.progress-report-page .chart-content .percentage-96 .percentage-chart {
   height: 96%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-96 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-96 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-96:after {
+.progress-report-page .chart-content .percentage-plane-96:after {
   content: "";
   display: block;
   left: 50%;
@@ -9195,13 +9280,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-97 {
+.progress-report-page .chart-content .percentage-97 {
   height: 97%;
   width: 100%;
   height: 100%;
@@ -9213,18 +9297,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-97 .percentage-chart {
+.progress-report-page .chart-content .percentage-97 .percentage-chart {
   height: 97%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-97 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-97 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-97:after {
+.progress-report-page .chart-content .percentage-plane-97:after {
   content: "";
   display: block;
   left: 50%;
@@ -9232,13 +9317,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-98 {
+.progress-report-page .chart-content .percentage-98 {
   height: 98%;
   width: 100%;
   height: 100%;
@@ -9250,18 +9334,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-98 .percentage-chart {
+.progress-report-page .chart-content .percentage-98 .percentage-chart {
   height: 98%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-98 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-98 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-98:after {
+.progress-report-page .chart-content .percentage-plane-98:after {
   content: "";
   display: block;
   left: 50%;
@@ -9269,13 +9354,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-99 {
+.progress-report-page .chart-content .percentage-99 {
   height: 99%;
   width: 100%;
   height: 100%;
@@ -9287,18 +9371,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-99 .percentage-chart {
+.progress-report-page .chart-content .percentage-99 .percentage-chart {
   height: 99%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-99 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-99 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-99:after {
+.progress-report-page .chart-content .percentage-plane-99:after {
   content: "";
   display: block;
   left: 50%;
@@ -9306,13 +9391,12 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .percentage-100 {
+.progress-report-page .chart-content .percentage-100 {
   height: 100%;
   width: 100%;
   height: 100%;
@@ -9324,18 +9408,19 @@ dialog.quiz-report-dialog .dialog-footer button {
           align-items: flex-end;
 }
 
-.progress-report-page .chart-container .percentage-100 .percentage-chart {
+.progress-report-page .chart-content .percentage-100 .percentage-chart {
   height: 100%;
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: var(--clr-brandOKShad);
+  border-bottom: 0;
 }
 
-.progress-report-page .chart-container .percentage-100 .percentage-chart:focus ~ .text {
+.progress-report-page .chart-content .percentage-100 .percentage-chart:focus ~ .text {
   color: var(--clr-brandOKShad);
 }
 
-.progress-report-page .chart-container .percentage-plane-100:after {
+.progress-report-page .chart-content .percentage-plane-100:after {
   content: "";
   display: block;
   left: 50%;
@@ -9343,13 +9428,18 @@ dialog.quiz-report-dialog .dialog-footer button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  width: calc(100% - 4px);
   height: 3px;
   background-color: var(--clr-brandError);
   border-radius: 8px;
 }
 
-.progress-report-page .chart-container .y-axe {
+@media (min-width: 768px) {
+  .progress-report-page .chart-content {
+    height: 480px;
+  }
+}
+
+.progress-report-page .y-axe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9364,9 +9454,11 @@ dialog.quiz-report-dialog .dialog-footer button {
   width: 100%;
   z-index: 30;
   pointer-events: none;
+  max-height: 300px;
+  border-bottom: 1px solid var(--clr-light-80);
 }
 
-.progress-report-page .chart-container .y-axe-item {
+.progress-report-page .y-axe .y-axe-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -9374,7 +9466,7 @@ dialog.quiz-report-dialog .dialog-footer button {
   position: relative;
 }
 
-.progress-report-page .chart-container .y-axe-item:after {
+.progress-report-page .y-axe .y-axe-item:after {
   content: "";
   display: block;
   border-top: 1px dashed var(--clr-light-80);
@@ -9384,37 +9476,107 @@ dialog.quiz-report-dialog .dialog-footer button {
   width: 100%;
 }
 
-.progress-report-page .chart-container .y-axe-name {
-  position: absolute;
-  top: -40px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  left: -45px;
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--clr-gray-50);
-}
-
-.progress-report-page .chart-container .y-axe-item-value {
+.progress-report-page .y-axe .y-axe-value-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   position: absolute;
   top: 0;
-  left: -20px;
+  left: -36px;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
-.progress-report-page .chart-container .x-axe-name {
+.progress-report-page .y-axe .y-axe-value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.progress-report-page .y-axe .y-axe-text {
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: end;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.progress-report-page .y-axe .y-axe-name {
   position: absolute;
-  top: 100%;
-  right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  top: -24px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  left: -36px;
   font-size: 14px;
   line-height: 20px;
   color: var(--clr-gray-50);
-  padding: 24px 0;
+}
+
+@media (min-width: 480px) {
+  .progress-report-page .y-axe .y-axe-value-wrapper {
+    left: -44px;
+  }
+  .progress-report-page .y-axe .y-axe-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .progress-report-page .y-axe .y-axe-name {
+    top: -40px;
+    left: -45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .progress-report-page .y-axe {
+    max-height: 400px;
+  }
+  .progress-report-page .y-axe .y-axe-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.progress-report-page .chart-content {
+  overflow-x: auto;
+}
+
+.progress-report-page .scroll-container {
+  position: relative;
+}
+
+.progress-report-page .charts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 300px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .progress-report-page .charts {
+    max-height: 400px;
+  }
+}
+
+.progress-report-page .tab-days .percentage {
+  min-width: 40px;
 }
 
 .progress-report-page .tab-days .percentage-block {
-  padding: 0 5px;
+  padding: 0 2px;
+}
+
+.progress-report-page .tab-days .percentage-block:after {
+  width: calc(100% - 1px);
 }
 
 .progress-report-page .tab-days .text {
@@ -9423,10 +9585,20 @@ dialog.quiz-report-dialog .dialog-footer button {
           transform: translateX(-50%);
 }
 
+@media (min-width: 768px) {
+  .progress-report-page .tab-days .percentage-block {
+    padding: 0 5px;
+  }
+  .progress-report-page .tab-days .percentage-block:after {
+    width: calc(100% - 4px);
+  }
+}
+
 .progress-report-page .tab-weeks .percentage-block {
   padding: 0 2px;
   -ms-flex-preferred-size: 14.28%;
       flex-basis: 14.28%;
+  min-width: 40px;
 }
 
 .progress-report-page .tab-weeks .percentage-block:after {
@@ -9435,6 +9607,16 @@ dialog.quiz-report-dialog .dialog-footer button {
 
 .progress-report-page .tab-weeks .percentage-block .percentage-chart:focus ~ .text {
   color: var(--clr-text);
+}
+
+@media (min-width: 768px) {
+  .progress-report-page .tab-weeks .percentage-block {
+    min-width: 20px;
+  }
+}
+
+.progress-report-page .tab-year .percentage {
+  min-width: 40px;
 }
 
 .progress-report-page .tab-year .percentage-block {
@@ -9451,12 +9633,77 @@ dialog.quiz-report-dialog .dialog-footer button {
           transform: translateX(-50%);
 }
 
+.progress-report-page .tab-all-time .goals-container {
+  margin-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .progress-report-page .tab-all-time .goals-container {
+    margin-top: 90px;
+  }
+}
+
+.progress-report-page .tab-all-time .x-axe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.progress-report-page .tab-all-time .x-axe .x-axe-item {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-left: 1px dashed var(--clr-light-80);
+}
+
+.progress-report-page .tab-all-time .x-axe .x-axe-month {
+  position: absolute;
+  bottom: -50px;
+}
+
+.progress-report-page .tab-all-time .chart-dot-goal,
+.progress-report-page .tab-all-time .chart-dot-completed {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  background-color: white;
+}
+
+.progress-report-page .tab-all-time .chart-dot-goal {
+  border: 3px solid red;
+  z-index: 111;
+}
+
+.progress-report-page .tab-all-time .chart-dot-completed {
+  border: 3px solid green;
+  z-index: 101;
+}
+
+.progress-report-page .tab-all-time .selected-period {
+  background-color: var(--clr-background);
+}
+
+.progress-report-page .tab-all-time .active-month {
+  color: green;
+}
+
 .progress-report-page .dropdownMenu {
   width: 238px;
   padding: 20px 16px;
   top: 20px;
   right: -18px;
-  z-index: 40;
+  z-index: 150;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: var(--size-M);

@@ -310,9 +310,198 @@ $(function () {
   // Tabs init
   $("#tabs").tabs();
 
+  //
+  //
+  //
+  //  Line chart
+
+  // Value in percents
+
+  const $lineChartContainer = $(".tab-all-time .chart-content .charts");
+  const $initContainer = $(".chart-content .charts");
+
+  const data = [
+    {
+      goal: 100,
+      completed: 80,
+      section: 10,
+      quiz: 20,
+      books: 10,
+      points: 10,
+    },
+    {
+      goal: 120,
+      completed: 80,
+      section: 10,
+      quiz: 20,
+      books: 10,
+      points: 10,
+    },
+    {
+      goal: 80,
+      completed: 90,
+      section: 10,
+      quiz: 20,
+      books: 10,
+      points: 10,
+    },
+  ];
+
+  // Get max height for tabs
+  function getMaxHeightForTabs() {
+    let tabMaxHeight = 0;
+
+    $initContainer.each(function () {
+      const height = $(this).height();
+
+      if (height > tabMaxHeight) {
+        tabMaxHeight = height;
+      }
+    });
+
+    return tabMaxHeight;
+  }
+
+  function createCoordinates(data) {
+    const monthWidth = 70;
+    const heightContainer = getMaxHeightForTabs();
+
+    return data.map(function (item, i) {
+      const heightXY = ((100 - item) / 100) * heightContainer;
+      const widthXY = i * monthWidth;
+
+      return [widthXY, heightXY];
+    });
+  }
+
+  function newcreateCoordinates(data) {
+    const monthWidth = 70;
+    const heightContainer = getMaxHeightForTabs();
+    const maxHeight = 200
+
+    return data.map(function (item, i) {
+      const goalPercent = (item.goal / 200)*100;
+      const completedPercent = (item.completed / 200)*100;
+      const goalHeightXY = ((100 - goalPercent) / 100) * heightContainer;
+      const completedHeightXY = ((100 - completedPercent) / 100) * heightContainer;
+      const widthXY = i * monthWidth;
+
+      return {goal: [widthXY, goalHeightXY], completed: [widthXY, completedHeightXY] };
+    });
+  }
+
+  function addPointOnChart([x, y], type, index) {
+    $(
+      `<a href='\#' class='chart-dot chart-dot-${type}'  data-dot-pos=${index}></a>`
+    )
+      .css({
+        position: "absolute",
+        top: y + "px",
+        left: x + "px",
+      })
+      .appendTo($lineChartContainer);
+  }
+
+  function drawLineCharts(data) {
+    // % of height
+    const monthGoal = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
+    const monthCompleted = [45, 50, 20, 40, 25, 60, 40, 70, 35, 24, 34, 42];
+
+    const monthGoalXY = createCoordinates(monthGoal);
+    const monthCompletedXY = createCoordinates(monthCompleted);
+
+    const newData = newcreateCoordinates(data);
+    console.log(newcreateCoordinates(data))
+
+    let prevItem1 = null;
+    let prevItem2 = null;
+
+    for (let i = 0; i < newData.length; i++) {
+      if (i === 0) {
+        prevItem1 = newData[i].goal;
+        prevItem2 = newData[i].completed;
+
+        addPointOnChart(newData[i].goal, "goal", i);
+        addPointOnChart(newData[i].completed, "completed", i);
+      } else {
+        $lineChartContainer.line(
+          prevItem1[0],
+          prevItem1[1],
+          newData[i].goal[0],
+          newData[i].goal[1],
+          {
+            color: "red",
+            stroke: 3,
+            zindex: 110,
+          }
+        );
+
+        $lineChartContainer.line(
+          prevItem2[0],
+          prevItem2[1],
+          newData[i].completed[0],
+          newData[i].completed[1],
+          {
+            color: "green",
+            stroke: 3,
+            zindex: 100,
+          }
+        );
+
+        addPointOnChart(newData[i].goal, "goal", i);
+        addPointOnChart(newData[i].completed, "completed", i);
+
+        prevItem1 = newData[i].goal;
+        prevItem2 = newData[i].completed;
+      }
+    }
+
+    // for (let i = 0; i < monthGoalXY.length; i++) {
+    //   if (i === 0) {
+    //     prevItem1 = monthGoalXY[i];
+    //     prevItem2 = monthCompletedXY[i];
+
+    //     addPointOnChart(monthGoalXY[i], "goal", i);
+    //     addPointOnChart(monthCompletedXY[i], "completed", i);
+    //   } else {
+    //     $lineChartContainer.line(
+    //       prevItem1[0],
+    //       prevItem1[1],
+    //       monthGoalXY[i][0],
+    //       monthGoalXY[i][1],
+    //       {
+    //         color: "red",
+    //         stroke: 3,
+    //         zindex: 110,
+    //       }
+    //     );
+
+    //     $lineChartContainer.line(
+    //       prevItem2[0],
+    //       prevItem2[1],
+    //       monthCompletedXY[i][0],
+    //       monthCompletedXY[i][1],
+    //       {
+    //         color: "green",
+    //         stroke: 3,
+    //         zindex: 100,
+    //       }
+    //     );
+
+    //     addPointOnChart(monthGoalXY[i], "goal", i);
+    //     addPointOnChart(monthCompletedXY[i], "completed", i);
+
+    //     prevItem1 = monthGoalXY[i];
+    //     prevItem2 = monthCompletedXY[i];
+    //   }
+    // }
+  }
+
+  drawLineCharts(data);
+
   // Progress page day modal
   const $menu = $("#menu");
-  const $progressItems = $(".percentage-chart");
+  const $progressItems = $(".percentage-chart, .chart-dot");
   let $currentProgressItem = null;
 
   function setPopupCoordinates() {
@@ -338,13 +527,48 @@ $(function () {
         }
       }
 
+      if (data.dotPos) {
+        let topXY = { x: 0, y: 10000 };
+
+        $(`[data-dot-pos=${data.dotPos}]`).each(function () {
+          const coordinates = $(this).position();
+
+          if (coordinates.top < topXY.y) {
+            topXY.y = coordinates.top;
+          }
+          topXY.x = coordinates.left;
+        });
+
+        $(".selected-period").remove();
+
+        const heightContainer = getMaxHeightForTabs();
+
+        $lineChartContainer.line(
+          topXY.x + 5,
+          topXY.y,
+          topXY.x + 5,
+          heightContainer,
+          {
+            color: "black",
+            stroke: 2,
+            zindex: 90,
+            style: "dashed",
+            class: "selected-period",
+          }
+        );
+
+        $(`[data-month-pos]`).removeClass("active-month");
+        $(`[data-month-pos=${data.dotPos}]`).addClass("active-month");
+      }
+
       setPopupCoordinates();
 
       $menu.removeClass("active").addClass("active");
     })
     .blur(function (e) {
-      console.log("Blur");
       $menu.removeClass("active");
+      $(".selected-period").remove();
+      $(`[data-month-pos]`).removeClass("active-month");
       $currentProgressItem = null;
     });
 
@@ -361,46 +585,4 @@ $(function () {
       setPopupCoordinates();
     }, 250);
   });
-
-  //  Line chart
-
-  // Value in percents
-  const data = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
-  const $chartContainer = $(".tab-all-time .chart-container");
-  const $initContainer = $(".chart-container");
-
-  function createCoordinates(data) {
-    const heightContainer = $initContainer.height();
-    const widthContainer = $initContainer.width();
-    // const monthWidth = widthContainer / 11;
-    const monthWidth = 100;
-
-    return data.map(function (item, i) {
-      const heightXY = (item / 100) * heightContainer;
-      const widthXY = i * monthWidth;
-
-      return [widthXY, heightXY];
-    });
-  }
-
-  console.log(createCoordinates(data));
-
-  const monthGoal = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
-  const monthCompleted = [45, 50, 20, 40, 25, 60, 40, 70, 35, 24, 34, 42];
-
-  let prevItem = null;
-
-  createCoordinates(monthGoal).forEach(function (item, i) {
-    if (i === 0) {
-      prevItem = item;
-    } else {
-      $chartContainer.line(prevItem[0], prevItem[1], item[0], item[1], {
-        color: "red",
-        stroke: 3,
-      });
-      prevItem = item;
-    }
-  });
-
-
 });

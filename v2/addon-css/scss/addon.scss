@@ -3174,15 +3174,6 @@ dialog.quiz-report-dialog {
     padding-right: var(--size-L);
   }
 
-  article {
-    max-width: 868px;
-    margin-bottom: 80px;
-
-    @media (min-width: 768px) {
-      margin-bottom: calc(120px + 64px);
-    }
-  }
-
   @media (max-width: 1024px) {
     .backButton.back2dashboardButton {
       display: inline-flex;
@@ -3194,8 +3185,18 @@ dialog.quiz-report-dialog {
     }
   }
 
+  article {
+    max-width: 868px;
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+      margin-bottom: calc(120px + 64px);
+    }
+  }
+
   h2 {
-    padding: 40px 0;
+    padding: 40px 0 0;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 30px;
     line-height: 40px;
@@ -3208,6 +3209,7 @@ dialog.quiz-report-dialog {
     @media (min-width: 480px) {
       font-size: 40px;
       line-height: 50px;
+      margin-bottom: 40px;
     }
 
     @media (min-width: 768px) {
@@ -3231,9 +3233,11 @@ dialog.quiz-report-dialog {
 
       .tab-btn {
         display: block;
-        padding: 8px 20px;
+        padding: 8px 10px;
         border: none;
         color: var(--clr-text);
+        font-size: 16px;
+        line-height: 24px;
 
         &:focus,
         &:hover {
@@ -3241,21 +3245,29 @@ dialog.quiz-report-dialog {
         }
       }
     }
+
+    @media (min-width: 480px) {
+      li .tab-btn {
+        font-size: 18px;
+        line-height: 30px;
+        padding: 8px 20px;
+      }
+    }
   }
 
   .tab-item {
-    padding: 20px 40px 0;
-
-    @media (min-width: 1024px) {
-      padding: 20px 0 0;
-    }
+    display: flex;
+    flex-direction: column;
   }
 
   .progress-period {
     display: flex;
     justify-content: center;
-    margin-bottom: 28px;
-    // color: var(--clr-brandBrick);
+    margin-bottom: 16px;
+    margin-top: 16px;
+
+    // This is for last tab
+    height: 30px;
 
     .prev-month,
     .next-month {
@@ -3264,7 +3276,6 @@ dialog.quiz-report-dialog {
       box-shadow: unset;
       filter: unset;
       padding: 0;
-      // color: var(--clr-brandBrick);
 
       &:active {
         box-shadow: unset;
@@ -3293,9 +3304,10 @@ dialog.quiz-report-dialog {
       min-width: 170px;
       display: flex;
       justify-content: center;
+      align-items: center;
       font-weight: 600;
-      font-size: 18px;
-      line-height: 29px;
+      font-size: 16px;
+      line-height: 24px;
     }
 
     .period-name {
@@ -3303,6 +3315,9 @@ dialog.quiz-report-dialog {
     }
 
     @media (min-width: 480px) {
+      margin-bottom: 28px;
+      margin-top: 20px;
+
       .month-container {
         font-size: 20px;
       }
@@ -3327,38 +3342,82 @@ dialog.quiz-report-dialog {
 
   .goals-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 35px;
 
-    .goal-item {
-      font-size: 18px;
-      line-height: 30px;
+    .goal-item-title,
+    .goal-item-value {
+      font-size: 16px;
+      line-height: 24px;
     }
 
-    .goal-item + .goal-item {
-      margin-left: 20px;
+    .goal-item-title {
+      display: none;
+    }
+
+    .goal-item-value {
+      padding: 0 24px;
     }
 
     .goal-item {
+      display: flex;
+
       &:first-of-type {
-        span {
+        .goal-item-value {
           color: var(--clr-brandError);
         }
       }
 
       &:last-of-type {
-        span {
+        .goal-item-value {
           color: var(--clr-brandOKDark);
         }
       }
     }
+
+    @media (min-width: 480px) {
+      margin-bottom: 35px;
+
+      .goal-item-title {
+        display: inline;
+        padding-right: 4px;
+      }
+
+      .goal-item-value {
+        padding: 0;
+      }
+
+      .goal-item + .goal-item {
+        margin-left: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+      .goal-item-title,
+      .goal-item-value {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
   }
 
-  .chart-container {
-    height: 400px;
+  .chart-wrapper {
+    padding: 20px 0 0 30px;
+
+    @media (min-width: 480px) {
+      padding: 20px 0 0 40px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 20px 0 0;
+    }
+  }
+
+  .chart-content {
+    height: 380px;
     display: flex;
     position: relative;
-    border-bottom: 1px solid var(--clr-light-80);
     padding-right: 23px;
 
     .percentage {
@@ -3404,6 +3463,7 @@ dialog.quiz-report-dialog {
           width: 100%;
           border-radius: 8px 8px 0 0;
           background-color: var(--clr-brandOKShad);
+          border-bottom: 0;
 
           &:focus ~ .text {
             color: var(--clr-brandOKShad);
@@ -3419,24 +3479,30 @@ dialog.quiz-report-dialog {
         bottom: $value;
         transform: translateX(-50%);
         position: absolute;
-        width: calc(100% - 4px);
+        // width: calc(100% - 4px);
         height: 3px;
         background-color: var(--clr-brandError);
         border-radius: 8px;
       }
     }
 
-    .y-axe {
-      display: flex;
-      flex-direction: column-reverse;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 30;
-      pointer-events: none;
+    @media (min-width: 768px) {
+      height: 480px;
     }
+  }
+
+  .y-axe {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    pointer-events: none;
+    max-height: 300px;
+    border-bottom: 1px solid var(--clr-light-80);
 
     .y-axe-item {
       flex: 1 0 auto;
@@ -3453,43 +3519,130 @@ dialog.quiz-report-dialog {
         width: 100%;
       }
     }
+    .y-axe-value-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      position: absolute;
+      top: 0;
+      left: -36px;
+      height: 100%;
+      flex: 1 0 auto;
+    }
+
+    .y-axe-value {
+      flex: 1 0 auto;
+    }
+
+    .y-axe-text {
+      display: block;
+      transform: translateY(-50%);
+      text-align: end;
+      font-size: 14px;
+      line-height: 20px;
+    }
 
     .y-axe-name {
       position: absolute;
-      top: -40px;
+      top: -24px;
       transform: translateY(-100%);
-      left: -45px;
+      left: -36px;
       font-size: 14px;
       line-height: 20px;
       color: var(--clr-gray-50);
     }
 
-    .y-axe-item-value {
-      position: absolute;
-      top: 0;
-      left: -20px;
+    @media (min-width: 480px) {
+      .y-axe-value-wrapper {
+        left: -44px;
+      }
+
+      .y-axe-text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .y-axe-name {
+        top: -40px;
+        left: -45px;
+      }
     }
 
-    .x-axe-name {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      transform: translateX(100%);
-      font-size: 14px;
-      line-height: 20px;
-      color: var(--clr-gray-50);
-      padding: 24px 0;
+    @media (min-width: 768px) {
+      max-height: 400px;
+
+      .y-axe-text {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  // .y-axe-item-value {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -40px;
+  //   transform: translateY(-50%);
+  // }
+
+  // .x-axe-name {
+  //   position: absolute;
+  //   top: 100%;
+  //   right: 0;
+  //   transform: translateX(100%);
+  //   font-size: 14px;
+  //   line-height: 20px;
+  //   color: var(--clr-gray-50);
+  //   padding: 24px 0;
+  // }
+
+  .chart-content {
+    @extend #customScroll--brown;
+    overflow-x: auto;
+  }
+
+  .scroll-container {
+    position: relative;
+  }
+
+  .charts {
+    display: flex;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // border-bottom: 1px solid var(--clr-light-80);
+
+    @media (min-width: 768px) {
+      max-height: 400px;
     }
   }
 
   .tab-days {
+    .percentage {
+      min-width: 40px;
+    }
+
     .percentage-block {
-      padding: 0 5px;
+      padding: 0 2px;
+
+      &:after {
+        width: calc(100% - 1px);
+      }
     }
 
     .text {
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    @media (min-width: 768px) {
+      .percentage-block {
+        padding: 0 5px;
+
+        &:after {
+          width: calc(100% - 4px);
+        }
+      }
     }
   }
 
@@ -3497,6 +3650,7 @@ dialog.quiz-report-dialog {
     .percentage-block {
       padding: 0 2px;
       flex-basis: 14.28%;
+      min-width: 40px;
 
       &:after {
         width: calc(100% - 1px);
@@ -3506,9 +3660,18 @@ dialog.quiz-report-dialog {
         color: var(--clr-text);
       }
     }
+
+    @media (min-width: 768px) {
+      .percentage-block {
+        min-width: 20px;
+      }
+    }
   }
 
   .tab-year {
+    .percentage {
+      min-width: 40px;
+    }
     .percentage-block {
       padding: 0 2px;
 
@@ -3523,13 +3686,97 @@ dialog.quiz-report-dialog {
     }
   }
 
+  .tab-all-time {
+    .chart-content {
+      // height: 470px;
+      // border-bottom: 0;
+    }
+
+    // .charts {
+    //   max-height: 400px;
+    //   height: 100%;
+    //   width: 100%;
+    //   position: relative;
+    // }
+
+    .goals-container {
+      margin-top: 24px;
+
+      @media (min-width: 480px) {
+        margin-top: 90px;
+      }
+    }
+
+    // .y-axe {
+    //   max-height: 400px;
+    // }
+
+    .x-axe {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      height: 100%;
+      // border-bottom: 1px solid var(--clr-light-80);
+
+      .x-axe-item {
+        width: 70px;
+        display: flex;
+        align-items: flex-end;
+        border-left: 1px dashed var(--clr-light-80);
+      }
+
+      .x-axe-month {
+        position: absolute;
+        bottom: -50px;
+      }
+    }
+
+    // .scroll-container {
+    //   position: relative;
+    // }
+
+    // .chart-content {
+    //   @extend #customScroll--brown;
+    //   overflow-x: auto;
+    // }
+
+    .chart-dot-goal,
+    .chart-dot-completed {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      transform: translate(-50%, -40%);
+      background-color: white;
+    }
+
+    .chart-dot-goal {
+      border: 3px solid red;
+      z-index: 111;
+    }
+
+    .chart-dot-completed {
+      border: 3px solid green;
+      z-index: 101;
+    }
+
+    .selected-period {
+      background-color: var(--clr-background);
+    }
+
+    .active-month {
+      color:green
+    }
+  }
+
   // Dropdown
   .dropdownMenu {
     width: 238px;
     padding: 20px 16px;
     top: 20px;
     right: -18px;
-    z-index: 40;
+    z-index: 150;
     transform: translateX(-50%);
     font-size: var(--size-M);
     position: absolute;
