@@ -319,11 +319,33 @@ $(function () {
 
   const $lineChartContainer = $(".tab-all-time .chart-content .charts");
   const $initContainer = $(".chart-content .charts");
+  const $reportModalContainer = $(".progress-report-page .modal");
+  const $menu = $("#menu");
+  const $progressItems = $(".percentage-chart");
+  const $scrolledContainers = $(".chart-content ");
+  // Max value for line chart grid
+  const maxHeight = 200;
 
   const data = [
     {
-      goal: 100,
+      goal: 150,
       completed: 80,
+      section: 10,
+      quiz: 20,
+      books: 10,
+      points: 10,
+    },
+    {
+      goal: 170,
+      completed: 80,
+      section: 10,
+      quiz: 20,
+      books: 10,
+      points: 10,
+    },
+    {
+      goal: 160,
+      completed: 90,
       section: 10,
       quiz: 20,
       books: 10,
@@ -331,14 +353,14 @@ $(function () {
     },
     {
       goal: 120,
-      completed: 80,
+      completed: 90,
       section: 10,
       quiz: 20,
       books: 10,
       points: 10,
     },
     {
-      goal: 80,
+      goal: 60,
       completed: 90,
       section: 10,
       quiz: 20,
@@ -347,7 +369,12 @@ $(function () {
     },
   ];
 
-  // Get max height for tabs
+  // Prevent focusout when click on popup
+  $menu.on("mousedown", function (event) {
+    event.preventDefault();
+  });
+
+  // Get max height tabs for drawing line chart
   function getMaxHeightForTabs() {
     let tabMaxHeight = 0;
 
@@ -362,34 +389,27 @@ $(function () {
     return tabMaxHeight;
   }
 
+  // Convert hours to percents
   function createCoordinates(data) {
     const monthWidth = 70;
     const heightContainer = getMaxHeightForTabs();
 
     return data.map(function (item, i) {
-      const heightXY = ((100 - item) / 100) * heightContainer;
-      const widthXY = i * monthWidth;
-
-      return [widthXY, heightXY];
-    });
-  }
-
-  function newcreateCoordinates(data) {
-    const monthWidth = 70;
-    const heightContainer = getMaxHeightForTabs();
-    const maxHeight = 200
-
-    return data.map(function (item, i) {
-      const goalPercent = (item.goal / 200)*100;
-      const completedPercent = (item.completed / 200)*100;
+      const goalPercent = (item.goal / maxHeight) * 100;
+      const completedPercent = (item.completed / maxHeight) * 100;
       const goalHeightXY = ((100 - goalPercent) / 100) * heightContainer;
-      const completedHeightXY = ((100 - completedPercent) / 100) * heightContainer;
+      const completedHeightXY =
+        ((100 - completedPercent) / 100) * heightContainer;
       const widthXY = i * monthWidth;
 
-      return {goal: [widthXY, goalHeightXY], completed: [widthXY, completedHeightXY] };
+      return {
+        goal: [widthXY, goalHeightXY],
+        completed: [widthXY, completedHeightXY],
+      };
     });
   }
 
+  // Add points for line chart
   function addPointOnChart([x, y], type, index) {
     $(
       `<a href='\#' class='chart-dot chart-dot-${type}'  data-dot-pos=${index}></a>`
@@ -402,35 +422,28 @@ $(function () {
       .appendTo($lineChartContainer);
   }
 
+  // Draw line chart
   function drawLineCharts(data) {
-    // % of height
-    const monthGoal = [50, 47, 12, 50, 30, 50, 40, 70, 50, 20, 36, 12];
-    const monthCompleted = [45, 50, 20, 40, 25, 60, 40, 70, 35, 24, 34, 42];
-
-    const monthGoalXY = createCoordinates(monthGoal);
-    const monthCompletedXY = createCoordinates(monthCompleted);
-
-    const newData = newcreateCoordinates(data);
-    console.log(newcreateCoordinates(data))
+    const chartData = createCoordinates(data);
 
     let prevItem1 = null;
     let prevItem2 = null;
 
-    for (let i = 0; i < newData.length; i++) {
+    for (let i = 0; i < chartData.length; i++) {
       if (i === 0) {
-        prevItem1 = newData[i].goal;
-        prevItem2 = newData[i].completed;
+        prevItem1 = chartData[i].goal;
+        prevItem2 = chartData[i].completed;
 
-        addPointOnChart(newData[i].goal, "goal", i);
-        addPointOnChart(newData[i].completed, "completed", i);
+        addPointOnChart(chartData[i].goal, "goal", i);
+        addPointOnChart(chartData[i].completed, "completed", i);
       } else {
         $lineChartContainer.line(
           prevItem1[0],
           prevItem1[1],
-          newData[i].goal[0],
-          newData[i].goal[1],
+          chartData[i].goal[0],
+          chartData[i].goal[1],
           {
-            color: "red",
+            color: "#D12335",
             stroke: 3,
             zindex: 110,
           }
@@ -439,150 +452,129 @@ $(function () {
         $lineChartContainer.line(
           prevItem2[0],
           prevItem2[1],
-          newData[i].completed[0],
-          newData[i].completed[1],
+          chartData[i].completed[0],
+          chartData[i].completed[1],
           {
-            color: "green",
+            color: "#1a944d",
             stroke: 3,
             zindex: 100,
           }
         );
 
-        addPointOnChart(newData[i].goal, "goal", i);
-        addPointOnChart(newData[i].completed, "completed", i);
+        addPointOnChart(chartData[i].goal, "goal", i);
+        addPointOnChart(chartData[i].completed, "completed", i);
 
-        prevItem1 = newData[i].goal;
-        prevItem2 = newData[i].completed;
+        prevItem1 = chartData[i].goal;
+        prevItem2 = chartData[i].completed;
       }
     }
 
-    // for (let i = 0; i < monthGoalXY.length; i++) {
-    //   if (i === 0) {
-    //     prevItem1 = monthGoalXY[i];
-    //     prevItem2 = monthCompletedXY[i];
-
-    //     addPointOnChart(monthGoalXY[i], "goal", i);
-    //     addPointOnChart(monthCompletedXY[i], "completed", i);
-    //   } else {
-    //     $lineChartContainer.line(
-    //       prevItem1[0],
-    //       prevItem1[1],
-    //       monthGoalXY[i][0],
-    //       monthGoalXY[i][1],
-    //       {
-    //         color: "red",
-    //         stroke: 3,
-    //         zindex: 110,
-    //       }
-    //     );
-
-    //     $lineChartContainer.line(
-    //       prevItem2[0],
-    //       prevItem2[1],
-    //       monthCompletedXY[i][0],
-    //       monthCompletedXY[i][1],
-    //       {
-    //         color: "green",
-    //         stroke: 3,
-    //         zindex: 100,
-    //       }
-    //     );
-
-    //     addPointOnChart(monthGoalXY[i], "goal", i);
-    //     addPointOnChart(monthCompletedXY[i], "completed", i);
-
-    //     prevItem1 = monthGoalXY[i];
-    //     prevItem2 = monthCompletedXY[i];
-    //   }
-    // }
+    $(".chart-dot").click(modalHandler).blur(blurHandler);
   }
 
-  drawLineCharts(data);
-
-  // Progress page day modal
-  const $menu = $("#menu");
-  const $progressItems = $(".percentage-chart, .chart-dot");
+  //  Set coordinates for popup menu(modal)
   let $currentProgressItem = null;
-
   function setPopupCoordinates() {
-    if ($currentProgressItem) {
+    const viewPortWidth = $(window).width();
+
+    if (viewPortWidth > 768 && $currentProgressItem) {
       const offset = $currentProgressItem.offset();
       const halfWidth = $currentProgressItem.width() / 2;
 
       $menu.css({ top: offset.top + 20, left: offset.left + halfWidth });
+    } else {
+      $menu.css({ top: "", left: "" });
     }
   }
 
-  $progressItems
-    .click(function (e) {
-      e.preventDefault();
+  function modalHandler(e) {
+    e.preventDefault();
 
-      $currentProgressItem = $(this);
+    $currentProgressItem = $(this);
 
-      const data = $(this).data();
+    const data = $(this).data();
 
-      for (let key in data) {
-        if (data.hasOwnProperty(key)) {
-          $(`#${key}`).text(data[key]);
+    for (let key in data) {
+      if (data.hasOwnProperty(key)) {
+        $(`#${key}`).text(data[key]);
+      }
+    }
+
+    if (data.dotPos) {
+      let topXY = { x: 0, y: 10000 };
+
+      $(`[data-dot-pos=${data.dotPos}]`).each(function () {
+        const coordinates = $(this).position();
+
+        if (coordinates.top < topXY.y) {
+          topXY.y = coordinates.top;
         }
-      }
+        topXY.x = coordinates.left;
+      });
 
-      if (data.dotPos) {
-        let topXY = { x: 0, y: 10000 };
-
-        $(`[data-dot-pos=${data.dotPos}]`).each(function () {
-          const coordinates = $(this).position();
-
-          if (coordinates.top < topXY.y) {
-            topXY.y = coordinates.top;
-          }
-          topXY.x = coordinates.left;
-        });
-
-        $(".selected-period").remove();
-
-        const heightContainer = getMaxHeightForTabs();
-
-        $lineChartContainer.line(
-          topXY.x + 5,
-          topXY.y,
-          topXY.x + 5,
-          heightContainer,
-          {
-            color: "black",
-            stroke: 2,
-            zindex: 90,
-            style: "dashed",
-            class: "selected-period",
-          }
-        );
-
-        $(`[data-month-pos]`).removeClass("active-month");
-        $(`[data-month-pos=${data.dotPos}]`).addClass("active-month");
-      }
-
-      setPopupCoordinates();
-
-      $menu.removeClass("active").addClass("active");
-    })
-    .blur(function (e) {
-      $menu.removeClass("active");
       $(".selected-period").remove();
+
+      const heightContainer = getMaxHeightForTabs();
+
+      $lineChartContainer.line(
+        topXY.x + 5,
+        topXY.y,
+        topXY.x + 5,
+        heightContainer,
+        {
+          color: "#29200F",
+          stroke: 2,
+          zindex: 90,
+          style: "dashed",
+          class: "selected-period",
+        }
+      );
+
       $(`[data-month-pos]`).removeClass("active-month");
-      $currentProgressItem = null;
-    });
+      $(`[data-month-pos=${data.dotPos}]`).addClass("active-month");
+    }
 
-  // Prevent focusout when click on popup
-  $menu.on("mousedown", function (event) {
-    event.preventDefault();
-  });
+    setPopupCoordinates();
 
+    $menu.addClass("active");
+    $reportModalContainer.css("display", "flex");
+  }
+
+  function blurHandler() {
+    $menu.removeClass("active");
+    $reportModalContainer.css("display", "none");
+    $(".selected-period").remove();
+    $(`[data-month-pos]`).removeClass("active-month");
+    $currentProgressItem = null;
+    console.log("blur");
+  }
+
+  function scrollHandler() {
+    $("*:focus").blur();
+  }
+
+  $progressItems.click(modalHandler).blur(blurHandler);
+
+  $scrolledContainers.scroll(scrollHandler);
+
+  drawLineCharts(data);
+
+  // Deleting old line chart on window resize
+  function deleteChart() {
+    $(".chart-dot").off("blur").off("click");
+    $(".line, .chart-dot").remove();
+  }
+
+  // +Throttle resize function
   let resizeTimer;
-
   $(window).on("resize", function (e) {
     clearTimeout(resizeTimer);
+
     resizeTimer = setTimeout(function () {
       setPopupCoordinates();
+      deleteChart();
+      drawLineCharts(data);
     }, 250);
   });
+  // -Throttle resize function
 });
