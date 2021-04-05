@@ -3392,7 +3392,6 @@ dialog.quiz-report-dialog {
     }
 
     @media (min-width: 768px) {
-    
       .goal-item-title,
       .goal-item-value {
         font-size: 18px;
@@ -3601,8 +3600,6 @@ dialog.quiz-report-dialog {
         bottom: -50px;
       }
     }
-
-  
   }
 
   .chart-content {
@@ -3733,9 +3730,9 @@ dialog.quiz-report-dialog {
       transform: translate(-50%, -40%);
       background-color: white;
 
-      &:focus{
+      &:focus {
         height: 12px;
-      width: 12px;
+        width: 12px;
       }
     }
 
@@ -3754,7 +3751,7 @@ dialog.quiz-report-dialog {
     }
 
     .active-month {
-      color:  var(--clr-brandOKDark);
+      color: var(--clr-brandOKDark);
     }
 
     .chart-content {
@@ -3886,6 +3883,37 @@ dialog.quiz-report-dialog {
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+
+  .bookLesson-pagination {
+    bottom: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 40px;
+
+    .simpleButton:not(.asLink).ghostButton.sizeM {
+      height: 1.6em;
+      line-height: 1.6em;
+      width: 2.75em;
+
+      &:before {
+        line-height: calc(1.6em - 4px);
+      }
+    }
+
+    @media (min-width: 1400px) {
+      margin: 0;
+      
+      .simpleButton:not(.asLink).ghostButton.sizeM {
+        height: 2em;
+        line-height: 2em;
+        width: 3em;
+  
+        &:before {
+          line-height: calc(2em - 4px);
+        }
+      }
     }
   }
 }
