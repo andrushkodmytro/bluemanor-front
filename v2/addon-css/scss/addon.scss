@@ -3342,17 +3342,14 @@ dialog.quiz-report-dialog {
 
   .goals-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 35px;
 
     .goal-item-title,
     .goal-item-value {
       font-size: 16px;
       line-height: 24px;
-    }
-
-    .goal-item-title {
-      display: none;
     }
 
     .goal-item-value {
@@ -3377,6 +3374,8 @@ dialog.quiz-report-dialog {
 
     @media (min-width: 480px) {
       margin-bottom: 35px;
+      flex-direction: row;
+      justify-content: flex-end;
 
       .goal-item-title {
         display: inline;
@@ -3393,7 +3392,7 @@ dialog.quiz-report-dialog {
     }
 
     @media (min-width: 768px) {
-      justify-content: flex-end;
+    
       .goal-item-title,
       .goal-item-value {
         font-size: 18px;
@@ -3445,6 +3444,10 @@ dialog.quiz-report-dialog {
 
       .percentage-chart {
         width: 100%;
+
+        &:focus {
+          background-color: var(--clr-brandOKDark);
+        }
       }
     }
 
@@ -3729,6 +3732,11 @@ dialog.quiz-report-dialog {
       border-radius: 50%;
       transform: translate(-50%, -40%);
       background-color: white;
+
+      &:focus{
+        height: 12px;
+      width: 12px;
+      }
     }
 
     .chart-dot-goal {
@@ -3762,7 +3770,7 @@ dialog.quiz-report-dialog {
 
   // Dropdown
   .dropdownMenu {
-    width: 238px;
+    width: 260px;
     padding: 20px 16px;
     position: fixed;
     top: 50%;
@@ -3799,6 +3807,7 @@ dialog.quiz-report-dialog {
     .menu-row-item {
       flex: 1 0 auto;
       margin-top: 12px;
+      width: 50%;
     }
 
     .menu-row-item-title {
@@ -3858,10 +3867,6 @@ dialog.quiz-report-dialog {
 
 // *:focus {
 //   outline: 2px solid red !important;
-// }
-
-// #use {
-//   fill:url(/v2/img/welcome.jpg)
 // }
 
 // +Picture book

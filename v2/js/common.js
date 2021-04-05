@@ -323,45 +323,45 @@ $(function () {
   const $menu = $("#menu");
   const $progressItems = $(".percentage-chart");
   const $scrolledContainers = $(".chart-content ");
-  // Max value for line chart grid
-  const maxHeight = 200;
+  // Max value in min for line chart grid
+  const maxHeight = 2000;
 
   const data = [
     {
-      goal: 150,
-      completed: 80,
+      goal: 1500,
+      completed: 800,
       section: 10,
       quiz: 20,
       books: 10,
       points: 10,
     },
     {
-      goal: 170,
-      completed: 80,
+      goal: 1700,
+      completed: 800,
       section: 10,
       quiz: 20,
       books: 10,
       points: 10,
     },
     {
-      goal: 160,
-      completed: 90,
+      goal: 1600,
+      completed: 900,
       section: 10,
       quiz: 20,
       books: 10,
       points: 10,
     },
     {
-      goal: 120,
-      completed: 90,
+      goal: 1200,
+      completed: 900,
       section: 10,
       quiz: 20,
       books: 10,
       points: 10,
     },
     {
-      goal: 60,
-      completed: 90,
+      goal: 600,
+      completed: 900,
       section: 10,
       quiz: 20,
       books: 10,
@@ -403,16 +403,40 @@ $(function () {
       const widthXY = i * monthWidth;
 
       return {
-        goal: [widthXY, goalHeightXY],
-        completed: [widthXY, completedHeightXY],
+        goal: [widthXY, goalHeightXY, { ...item }],
+        completed: [widthXY, completedHeightXY, { ...item }],
       };
     });
   }
 
+  function convertMinToHoursStr(total) {
+   
+    let hours = Math.floor(total / 60);
+    let minutes = total % 60;
+    let res = null;
+
+    if (hours && minutes) {
+      res = `${hours}h ${minutes}min`;
+    } else if (hours) {
+      res = `${hours}h`;
+    } else if (minutes) {
+      res = `${minutes}min`;
+    } else {
+      res = `0 min`;
+    }
+
+    return res
+  }
+
   // Add points for line chart
-  function addPointOnChart([x, y], type, index) {
+  function addPointOnChart([x, y, rest], type, index) {
+    const goalTime = convertMinToHoursStr(rest.goal);
+    const completedTime = convertMinToHoursStr(rest.completed);
+   
     $(
-      `<a href='\#' class='chart-dot chart-dot-${type}'  data-dot-pos=${index}></a>`
+      `<a href='\#' class='chart-dot chart-dot-${type}'  data-dot-pos=${index}  data-goal='${goalTime}'
+      data-completed='${completedTime}' data-section='${rest.section}' data-quiz='${rest.quiz}' data-books='${rest.books}'
+      data-points='${rest.points}'></a>`
     )
       .css({
         position: "absolute",
@@ -425,6 +449,7 @@ $(function () {
   // Draw line chart
   function drawLineCharts(data) {
     const chartData = createCoordinates(data);
+    console.log(chartData);
 
     let prevItem1 = null;
     let prevItem2 = null;
@@ -492,6 +517,7 @@ $(function () {
 
     $currentProgressItem = $(this);
 
+    console.log( $currentProgressItem)
     const data = $(this).data();
 
     for (let key in data) {
@@ -546,7 +572,6 @@ $(function () {
     $(".selected-period").remove();
     $(`[data-month-pos]`).removeClass("active-month");
     $currentProgressItem = null;
-    console.log("blur");
   }
 
   function scrollHandler() {
