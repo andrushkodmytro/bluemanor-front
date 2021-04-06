@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/v2/css/style.css">
+  <link rel="stylesheet" href="/games/memory-color-game-over/assets/style/memory-color.css">
+  <link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+  <script src="/games/memory-color/assets/drag-drop-polyfill.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class='result-item-block'>
+        <div class="correct-item hasIcon--check">0</div>
+        <div class="incorrect-item hasIcon--close">0</div>
+
+      </div>
+
+      <!-- Timer -->
+      <!-- <div class="timer heading-4"> <span>8</span></div> -->
+
+      <!-- Timer icon -->
+      <div class="timer heading-4"> <span class='timer-clock'></span></div>
+
+      <div class="lives">
+        <span class='heart-empty'></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="game-finish-wrapper">
+      <h2 class='game-finish-title'>Congratulations!</h2>
+      <p class='game-finish-text'>You won this game!</p>
+      <div class="btn-container">
+        <a href="\#" class="button simpleButton ghostButton dashboard-link">Go to Dashboard</a>
+        <a href="\#" class="button play-again-link" title="Play again "><span>Play again</span></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="/games/memory-color/iframe/index.js"></script>
+</body>
+
+</html>
