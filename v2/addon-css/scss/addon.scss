@@ -3266,6 +3266,75 @@ dialog.quiz-report-dialog {
       margin-top: auto;
     }
   }
+
+  .game-finish-wrapper {
+    width: 100%;
+
+    .game-finish-title {
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 48px;
+      margin: 80px 0 20px;
+      text-align: center;
+    }
+
+    .game-finish-text {
+      margin-bottom: 44px;
+      text-align: center;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .dashboard-link,
+      .play-again-link {
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .play-again-link {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    @media (min-width: 360px) {
+      .game-finish-title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    @media (min-width: 480px) {
+      .game-finish-title {
+        font-size: 60px;
+        line-height: 80px;
+      }
+
+      .btn-container {
+        flex-direction: row;
+        justify-content: center;
+
+        .dashboard-link,
+        .play-again-link {
+          width: 50%;
+        }
+
+        .play-again-link {
+          margin: 0 0 0 20px;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .game-finish-title {
+        font-size: 72px;
+        line-height: 87px;
+      }
+    }
+  }
 }
 
 // -Game general
