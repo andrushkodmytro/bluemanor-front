@@ -251,86 +251,35 @@ $(function () {
       .attr("open", true);
   });
 
-  $(".day").click(function (e) {
-    $(".day").removeClass("active");
-    $('.schedule-page .modal').css('display', 'flex')
-    $(this).toggleClass("active");
-  });
-
-
-  const date = new Date;
-  let month = date.getMonth();
-  let currentMonth = date.toLocaleString('default', { month: 'long' });
-  const currentYear= date.getFullYear();
-  
-
-
-  $('.month-name').text(currentMonth);
-  $('.year').text(currentYear);
-
-  $('.prev-month').click(function(){
-   const dateNew = new Date();
-   month -= 1;
-   dateNew.setMonth(month);
-
-   let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
-   $('.month-name').text(newCurrentMonth);
-  })
-
-  $('.next-month').click(function(){
-    const dateNew = new Date();
-    month += 1;
-    dateNew.setMonth(month);
- console.log(month)
-    let newCurrentMonth = dateNew.toLocaleString('default', { month: 'long' });
-    $('.month-name').text(newCurrentMonth);
-   })
-
-
-
-  
-   $('div[role="button"]').on('keydown', function(e) {
-    const keyD = e.key !== undefined ? e.key : e.keyCode;
-    // e.key && e.keycode have mixed support - keycode is deprecated but support is greater than e.key
-    // I tested within IE11, Firefox, Chrome, Edge (latest) & all had good support for e.key
-  
-      if ( (keyD === 'Enter' || keyD === 13) || (['Spacebar', ' '].indexOf(keyD) >= 0 || keyD === 32)) {
-      // In IE11 and lower, e.key will equal "Spacebar" instead of ' '
-  
-      // Default behavior is prevented to prevent the page to scroll when "space" is pressed
-      e.preventDefault();
-      this.click();
-    }
-  });
-
-
+ 
 
   // game
 
   // Info modal
-  const $infoModal2 =  $('#game-info-modal');
+  const $infoModal2 = $("#game-info-modal");
 
-  $('#info-btn').click(()=>{
-    $infoModal2.css('display', 'flex').find('dialog').attr( "open", true)
+  $("#info-btn").click(() => {
+    $infoModal2.css("display", "flex").find("dialog").attr("open", true);
   });
-    
 
-  $infoModal2.find('.closeButton').click(()=>{
-    $infoModal2.css('display', 'none').find('dialog').attr( "open", false)
-  })
+  $infoModal2.find(".closeButton").click(() => {
+    $infoModal2.css("display", "none").find("dialog").attr("open", false);
+  });
 
   //Score modal
-  const $scoreModal2 = $('#game-score-modal');
+  const $scoreModal2 = $("#game-score-modal");
 
-  $('#high-scores-btn').click(() => {
-    $scoreModal2.css('display', 'flex').find('dialog').attr('open', true);
+  $("#high-scores-btn").click(() => {
+    $scoreModal2.css("display", "flex").find("dialog").attr("open", true);
   });
 
-  $scoreModal2.find('.closeButton').click(() => {
-    $scoreModal2.css('display', 'none').find('dialog').attr('open', false);
+  $scoreModal2.find(".closeButton").click(() => {
+    $scoreModal2.css("display", "none").find("dialog").attr("open", false);
   });
 
-  // Tabs init
-  $('#tabs').tabs();
-   
+  const $tabs = $("#tabs");
+  if ($tabs.length) {
+    $tabs.tabs();
+  }
+ 
 });
