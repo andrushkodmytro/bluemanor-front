@@ -1346,12 +1346,16 @@ main.main-with-player.forDashboard {
     }
 
     .notification-content {
+      display: block;
+      border-bottom: unset;
       position: relative;
       padding: 16px;
       transition: background-color 0.15s ease-out 0s;
+      border-radius: 10px;
 
-      &:hover{
-        background-color: darken(#f8f5e8,2%); 
+      &:hover,
+      &:focus {
+        background-color: lighten(#efdec6, 6%);
         cursor: pointer;
       }
 
@@ -1362,6 +1366,7 @@ main.main-with-player.forDashboard {
 
     .notification-title {
       font-family: var(--font-gothic);
+      color: var(--clr-text);
       font-weight: 600;
       font-size: 18px;
       line-height: 30px;
@@ -1381,6 +1386,7 @@ main.main-with-player.forDashboard {
 
     .notification-text-container {
       display: flex;
+      color: var(--clr-text);
 
       p {
         font-size: 18px;
@@ -1478,7 +1484,8 @@ main.main-with-player.forDashboard {
       background-color: #dcf9e8;
       border-radius: 10px;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: darken(#dcf9e8, 3%);
       }
     }
@@ -1836,8 +1843,8 @@ main.main-with-player.forDashboard {
 // + Note list
 
 .node-dropdown-menu.dropdownMenu {
-  @media(max-width:359.9px){
-    width: calc(var(--size-XS) * 18)
+  @media (max-width: 359.9px) {
+    width: calc(var(--size-XS) * 18);
   }
 }
 
@@ -1896,8 +1903,6 @@ main.main-with-player.forDashboard {
       line-height: 58px;
     }
   }
-
- 
 
   .note-container {
     margin-bottom: 40px;
@@ -2118,7 +2123,6 @@ main.main-with-player.forDashboard {
     }
 
     @media (min-width: 480px) {
-     
     }
 
     @media (min-width: 768px) {
@@ -4206,10 +4210,6 @@ dialog.quiz-report-dialog {
 
 // - Progress Report
 
-// *:focus {
-//   outline: 2px solid red !important;
-// }
-
 // +Picture book
 .picture-book-page {
   .doublePage-content {
@@ -4262,3 +4262,7 @@ dialog.quiz-report-dialog {
   }
 }
 // -Picture book
+
+*:focus {
+  outline: 2px solid red !important;
+}
