@@ -25,6 +25,7 @@
 	<title><?php echo $title ?><?php echo $sitename ?></title>
 	<link rel="stylesheet" href="/v2/css/style.css">
 	<link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body <?php 
 
@@ -92,7 +93,7 @@
 				<li class="dropdownMenuWrapper">
 					<a href="?c" class="simpleButton ghostButton sizeM hasIcon--file-text withoutText active"
 						title="Notes"><span>Notes</span></a>
-					<ul class="dropdownMenu">
+					<ul class="dropdownMenu node-dropdown-menu">
 						<li class=""><a href="?add" class="hasIcon--plus-circle">Add new note</a></li>
 						<li class=""><a href="?notes" class="hasIcon--file disabled-menu-item">All notes</a></li>
 					</ul>
