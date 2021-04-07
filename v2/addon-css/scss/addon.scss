@@ -1919,6 +1919,15 @@ main.main-with-player.forDashboard {
     .note-content {
       position: relative;
       padding: 16px;
+      display: block;
+      border-bottom: unset;
+      border-radius: 10px;
+
+      &:hover,
+      &:focus {
+        background-color: lighten(#efdec6, 6%);
+        cursor: pointer;
+      }
 
       @media (min-width: 480px) {
         padding: 20px;
@@ -1931,6 +1940,7 @@ main.main-with-player.forDashboard {
       line-height: 24px;
       margin-bottom: 12px;
       padding-right: 70px;
+      color: var(--clr-text);
 
       @media (min-width: 480px) {
         font-size: 18px;
@@ -1940,6 +1950,7 @@ main.main-with-player.forDashboard {
 
     .note-text-container {
       display: flex;
+      color: var(--clr-text);
 
       p {
         font-size: 18px;
