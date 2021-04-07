@@ -20,6 +20,16 @@ $clr-light-95: #f4f3f3;
   -webkit-tap-highlight-color: transparent;
 }
 
+.hasIcon--bold::before {
+  content: "\e936"; //icon stop
+}
+.hasIcon--italic::before {
+  content: "\e937"; //icon trash-2
+}
+.hasIcon--underline::before {
+  content: "\e938"; //icon user profile
+}
+
 .hint-pronunciation-stop {
   &::after {
     content: "\e935" !important;
@@ -1338,6 +1348,12 @@ main.main-with-player.forDashboard {
     .notification-content {
       position: relative;
       padding: 16px;
+      transition: background-color 0.15s ease-out 0s;
+
+      &:hover{
+        background-color: darken(#f8f5e8,2%); 
+        cursor: pointer;
+      }
 
       @media (min-width: 480px) {
         padding: 20px;
@@ -1461,6 +1477,10 @@ main.main-with-player.forDashboard {
     .notification-content {
       background-color: #dcf9e8;
       border-radius: 10px;
+
+      &:hover {
+        background-color: darken(#dcf9e8, 3%);
+      }
     }
 
     .notification-title {
@@ -1814,6 +1834,13 @@ main.main-with-player.forDashboard {
 // - Notification page
 
 // + Note list
+
+.node-dropdown-menu.dropdownMenu {
+  @media(max-width:359.9px){
+    width: calc(var(--size-XS) * 18)
+  }
+}
+
 .note-list-page {
   padding-left: var(--size-S);
   padding-right: var(--size-S);
@@ -1869,6 +1896,8 @@ main.main-with-player.forDashboard {
       line-height: 58px;
     }
   }
+
+ 
 
   .note-container {
     margin-bottom: 40px;
@@ -2039,35 +2068,170 @@ main.main-with-player.forDashboard {
   .add-note-dialog {
     @extend #customScroll--gray;
 
-    @media (min-width: 360px) {
-      height: auto;
-    }
-
     &[open="open"] {
       display: flex;
       flex-direction: column;
     }
 
     .dialog-content {
-      @media (max-width: 480px) {
-        p {
-          font-size: 18px;
-        }
+      overflow: auto;
+      padding: 0 20px;
+      text-align: start;
+      flex-direction: column;
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .dialog-footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .save-btn {
+        width: 100%;
+        margin: 0 0 20px;
       }
 
-      overflow: auto;
+      .cancel-btn {
+        width: 100%;
+      }
+    }
 
-      padding: 0 24px;
-      text-align: start;
+    @media (min-width: 360px) {
+      height: auto;
 
-      @media (min-width: 768px) {
+      .dialog-footer {
+        display: block;
+        text-align: end;
+        flex-direction: unset;
+
+        .save-btn {
+          margin-left: 20px;
+          max-width: 150px;
+        }
+
+        .cancel-btn {
+          width: auto;
+        }
+      }
+    }
+
+    @media (min-width: 480px) {
+     
+    }
+
+    @media (min-width: 768px) {
+      .dialog-content {
         padding: 0 60px;
       }
     }
 
-    .dialog-footer {
-      text-align: end;
-      margin-top: auto;
+    @media (min-width: 1024px) {
+      .dialog-footer {
+        .save-btn {
+          max-width: 240px;
+        }
+      }
+    }
+  }
+
+  .dialog-content {
+    .ql-toolbar {
+      border: none;
+      padding-bottom: 4px;
+      padding-left: 0;
+      position: relative;
+
+      &:before {
+        content: "Type the note:";
+        display: block;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        font-family: var(--font-gothic);
+        font-size: 18px;
+        line-height: 30px;
+        color: var(--clr-text);
+        // transform: translateY(-50%);
+      }
+
+      .ql-formats {
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          box-shadow: none;
+          filter: none;
+          border-radius: 4px;
+          transition: none;
+          height: 36px;
+          width: 36px;
+          color: var(--clr-brandBeigeDark);
+
+          & + button {
+            margin-left: 4px;
+          }
+
+          &:active,
+          &:hover {
+            transform: none;
+            background-color: unset;
+          }
+
+          // .ql-stroke,
+          // .ql-fill {
+          //   stroke: var(--clr-brandBeige);
+          // }
+
+          &:before {
+            content: none;
+          }
+
+          &.ql-active {
+            background-color: var(--clr-brandBeige);
+            color: var(--clr-text);
+
+            // .ql-stroke,
+            // .ql-fill {
+            //   stroke: var(--clr-text);
+            // }
+          }
+        }
+      }
+    }
+
+    .editor-container {
+      display: flex;
+      flex-direction: column;
+      height: 256px;
+      border: 2px solid var(--clr-brandBeige) !important;
+      border-radius: 8px;
+      flex-grow: 1;
+
+      .ql-editor {
+        font-size: 24px;
+        line-height: 32px;
+        color: var(--clr-text);
+
+        strong {
+          font-weight: 600;
+        }
+
+        em {
+          font-style: italic;
+        }
+
+        //  Code for Firefox
+        ::-moz-selection {
+          background: var(--clr-brandBeige);
+        }
+
+        ::selection {
+          background: var(--clr-brandBeige);
+        }
+      }
     }
   }
 }
