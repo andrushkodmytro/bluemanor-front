@@ -2258,6 +2258,108 @@ main.main-with-player.forDashboard {
 
 // - Note list
 
+// + Note page
+.note-page {
+  padding-left: var(--size-S);
+  padding-right: var(--size-S);
+
+  @media (min-width: 360px) {
+    padding-left: var(--size-M);
+    padding-right: var(--size-M);
+  }
+
+  @media (min-width: 768px) {
+    padding-left: var(--size-L);
+    padding-right: var(--size-L);
+  }
+
+  article {
+    max-width: 690px;
+    margin-bottom: 80px;
+
+    .notification-page-top {
+      h2.heading-2.notification-page-heading {
+        padding: 0 !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .backButton.back2dashboardButton {
+      display: inline-flex;
+      margin-top: 40px;
+
+      &.simpleButton {
+        position: static;
+      }
+    }
+  }
+
+  .notification-page-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 40px 0 0;
+
+    .notification-page-heading {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 4px;
+    }
+
+    .notification-page-date {
+      font-weight: 600;
+
+      font-size: 16px;
+      line-height: 24px;
+      color: #cfa970;
+    }
+
+    @media (min-width: 480px) {
+      .notification-page-heading {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      .notification-page-date {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      // align-items: center;
+
+      .notification-page-heading {
+        margin: 0;
+      }
+    }
+  }
+
+  .notification-page-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+
+    strong {
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+// - Note page
+
 // + Quiz report
 dialog.quiz-report-dialog {
   @extend #customScroll--gray;
@@ -4274,6 +4376,6 @@ dialog.quiz-report-dialog {
 }
 // -Picture book
 
-*:focus {
-  outline: 2px solid red !important;
-}
+// *:focus {
+//   outline: 2px solid red !important;
+// }
