@@ -1,0 +1,154 @@
+<main class="note-list-page">
+	<a href="/student-dahsboard/"
+		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
+
+	<article>
+		<section>
+			<h2 class='heading-2'>
+				All notes
+			</h2>
+
+			<ul class="note-container">
+				<li class="note-item">
+					<a href='#' class="note-content ">
+						<div class="note-date">
+							12:00 AM, Sep 30, 2020
+						</div>
+						<div class="note-text-container">
+							<p>
+								Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+								will
+								receive email notification 3 days before your Free Trial ends.Your 30 Day Free Trial begins as soon as
+								you
+								register for an account and activate your reader(s). You will
+								receive email notification 3 days before your Free Trial ends.Your 30 Day Free Trial begins as soon as
+								you
+								register for an account and activate your reader(s). You will
+								receive email notification 3 days before your Free Trial ends.
+							</p>
+						</div>
+						<button title="Edit"
+							class="simpleButton ghostButton sizeS hasIcon--edit withoutText withoutBorder edit-btn">
+						</button>
+						<button title="Delete"
+							class="simpleButton ghostButton sizeS hasIcon--trash-2 withoutText withoutBorder delete-btn">
+						</button>
+						<div class="restore-content">
+							<p>This note was deleted.</p>
+							<button title="Undo"
+								class="simpleButton ghostButton hasIcon--rotate-ccw  sizeM wAuto undo-btn"><span>Undo</span></button>
+						</div>
+					</a>
+				</li>
+
+				<li class="note-item restore-block">
+					<a href='#' class="note-content ">
+						<div class="note-date">
+							12:00 AM, Sep 30, 2020
+						</div>
+						<div class="note-text-container">
+							<p>
+								Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+								will
+								receive email notification 3 days before your Free Trial ends.
+							</p>
+						</div>
+						<button title="Edit"
+							class="simpleButton ghostButton sizeS hasIcon--edit withoutText withoutBorder edit-btn">
+						</button>
+						<button title="Delete"
+							class="simpleButton ghostButton sizeS hasIcon--trash-2 withoutText withoutBorder delete-btn">
+						</button>
+						<div class="restore-content">
+							<p>This note was deleted.</p>
+							<button title="Undo"
+								class="simpleButton ghostButton hasIcon--rotate-ccw sizeM wAuto undo-btn"><span>Undo</span></button>
+						</div>
+					</a>
+				</li>
+
+				<li class="note-item">
+					<a href='#' class="note-content">
+						<div class="note-date">
+							12:00 AM, Sep 30, 2020
+						</div>
+						<div class="note-text-container ">
+							<p>Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+								will
+								receive email notification 3 days before your Free Trial ends. Your 30 Day Free Trial begins as soon as
+								you register for an account and activate your reader(s). You will
+								receive email notification 3 days before your Free Trial ends.</p>
+						</div>
+
+						<div class="restore-content">
+							<p>This note was deleted.</p>
+							<button title="Undo"
+								class="simpleButton ghostButton hasIcon--rotate-ccw  sizeM wAuto undo-btn"><span>Undo</span></button>
+						</div>
+						<button title="Edit"
+							class="simpleButton ghostButton sizeS hasIcon--edit withoutText withoutBorder edit-btn">
+						</button>
+						<button title="Delete"
+							class="simpleButton ghostButton sizeS hasIcon--trash-2 withoutText withoutBorder delete-btn">
+						</button>
+					</a>
+				</li>
+
+				<li class="note-item">
+					<a href='#' class="note-content">
+						<div class="note-date">
+							12:00 AM, Sep 30, 2020
+						</div>
+						<div class="note-text-container ">
+							<p>Your 30 Day Free Trial begins as soon as you register for an account and activate your reader(s). You
+								will
+								receive email notification 3 days before your Free Trial ends. Your 30 Day Free Trial begins as soon as
+								you register for an account and activate your reader(s). You will
+								receive email notification 3 days before your Free Trial ends.</p>
+						</div>
+						<div class="restore-content">
+							<p>This note was deleted.</p>
+							<button title="Undo"
+								class="simpleButton ghostButton hasIcon--rotate-ccw  sizeM wAuto undo-btn"><span>Undo</span></button>
+						</div>
+						<button title="Edit"
+							class="simpleButton ghostButton sizeS hasIcon--edit withoutText withoutBorder edit-btn">
+						</button>
+
+						<button title="Delete"
+							class="simpleButton ghostButton sizeS hasIcon--trash-2 withoutText withoutBorder delete-btn">
+						</button>
+					</a>
+				</li>
+			</ul>
+			<div class="btn-container">
+				<a href='#' id='view-more' class="button simpleButton ghostButton ">View more
+				</a>
+			</div>
+
+
+			<!-- Add new none modal -->
+			<div class="modal" id='add-note-modal' style='display: none'>
+				<dialog class="modalContent add-note-dialog" aria-modal="true" role="dialog">
+
+					<div class="dialog-header">
+						<h3>New note</h3>
+					</div>
+					<div class="dialog-content">
+						<div id="editor-container" class='editor-container'>
+						</div>
+					</div>
+					<div class="buttons dialog-footer">
+						<button type="reset" class="simpleButton ghostButton cancel-btn">Cancel</button>
+						<button type="submit" class='save-btn'>Save</button>
+					</div>
+					<button class="closeButton" aria-label="Close modal dialogue"><span>×</span></button>
+				</dialog>
+			</div>
+		</section>
+	</article>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="/v2/js/note.js"></script>

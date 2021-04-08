@@ -184,16 +184,16 @@ $(function () {
     $(this).css("display", "none");
   });
 
-  // Info modal
-  const $infoModal = $("#add-note-modal");
+  // // Info modal
+  // const $infoModal = $("#add-note-modal");
 
-  $(".edit-btn").click(() => {
-    $infoModal.css("display", "flex").find("dialog").attr("open", true);
-  });
+  // $(".edit-btn").click(() => {
+  //   $infoModal.css("display", "flex").find("dialog").attr("open", true);
+  // });
 
-  $infoModal.find(".closeButton").click(() => {
-    $infoModal.css("display", "none").find("dialog").attr("open", false);
-  });
+  // $infoModal.find(".closeButton").click(() => {
+  //   $infoModal.css("display", "none").find("dialog").attr("open", false);
+  // });
 
   // 	ClassicEditor
   // 	.create( document.querySelector( '#editor' ), {
