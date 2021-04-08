@@ -110,6 +110,10 @@ dialog.modalContent {
     background: transparent !important;
   }
 }
+
+input + label:before {
+  background: transparent !important;
+}
 // -Global
 
 // +Chapter-book
