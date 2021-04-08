@@ -1,7 +1,7 @@
-@import "../../../../../v2/css/scss/_variables";
-@import "../../../../../v2/css/scss/_extend";
-@import "../../../../../v2/css/scss/_fonts";
-@import "../../../../../v2/addon-css/scss/typography.scss";
+@import "../../../../../www/v2/css/scss/_variables";
+@import "../../../../../www/v2/css/scss/_extend";
+@import "../../../../../www/v2/css/scss/_fonts";
+@import "../../../../../www/v2/addon-css/scss/typography.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
@@ -23,8 +23,7 @@
     padding-right: 0;
   }
 
-
-  @media(min-width:1024px){
+  @media (min-width: 1024px) {
     padding-bottom: 120px;
   }
 
@@ -440,36 +439,60 @@
       display: block;
     }
 
-    span[data-color="yellow"] svg g rect {
-      fill: var(--clr-brandGoldLite);
+    span[data-color="yellow"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-brandGoldLite);
+      }
     }
 
-    span[data-color="orange"] svg g rect {
-      fill: var(--clr-brandBrick);
+    span[data-color="orange"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-brandBrick);
+      }
     }
 
-    span[data-color="red"] svg g rect {
-      fill: var(--clr-brandErrorShad);
+    span[data-color="red"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-brandErrorShad);
+      }
     }
 
-    span[data-color="pink"] svg g rect {
-      fill: #e02981;
+    span[data-color="pink"] svg g {
+      rect,
+      path:first-of-type {
+        fill: #e02981;
+      }
     }
 
-    span[data-color="green"] svg g rect {
-      fill: var(--clr-brandOKShad);
+    span[data-color="green"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-brandOKShad);
+      }
     }
 
-    span[data-color="turquoise"] svg g rect {
-      fill: #00bdb2;
+    span[data-color="turquoise"] svg g {
+      rect,
+      path:first-of-type {
+        fill: #00bdb2;
+      }
     }
 
-    span[data-color="blue"] svg g rect {
-      fill: var(--clr-hover);
+    span[data-color="blue"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-hover);
+      }
     }
 
-    span[data-color="violet"] svg g rect {
-      fill: var(--clr-visited);
+    span[data-color="violet"] svg g {
+      rect,
+      path:first-of-type {
+        fill: var(--clr-visited);
+      }
     }
 
     svg {

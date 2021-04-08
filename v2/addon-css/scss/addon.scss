@@ -2,7 +2,7 @@
 @import "../../css/scss/_extend";
 @import "../../css/scss/_fonts";
 @import "../../css/scss/_owl.carousel.scss";
-@import "./typography.scss";
+@import "./_typography.scss";
 // TODO: replace @import with direct links to font files
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
@@ -90,6 +90,25 @@ dialog.modalContent#BookTableOfContents .bookContent dt span {
 
 dialog.modalContent {
   height: 98%;
+}
+
+.showPassword {
+  background: transparent !important;
+  
+  &:hover, &:focus {
+    background: transparent !important;
+  }
+
+  &:active {
+    background: transparent !important;
+    transform: unset !important;
+    box-shadow: unset !important;
+    filter: unset !important;
+  }
+
+  &::before{
+    background: transparent !important;
+  }
 }
 // -Global
 
