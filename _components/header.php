@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo $title ?><?php echo $sitename ?></title>
 	<link rel="stylesheet" href="/v2/css/style.css">
-	<link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+	<link rel="stylesheet" href="/v2/addon-css/addon.css">
 </head>
 <body <?php 
 

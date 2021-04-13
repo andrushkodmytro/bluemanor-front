@@ -17,7 +17,7 @@
 	<title><?php echo $title ?><?php echo $sitename ?></title>
 	<!-- <link rel="stylesheet" href="/v2/css/style.<?php echo $CSS_ver ?>.css"> -->
 	<link rel="stylesheet" href="/v2/css/style.css">
-	<link rel="stylesheet" href="/v2/addon-css/scss/addon.css">
+	<link rel="stylesheet" href="/v2/addon-css/addon.css">
 </head>
 <body <?php if ($modal != '') { echo 'class="'.$modal.'"'; }
 	if ($URI == "/landing/") {
