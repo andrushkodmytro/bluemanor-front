@@ -1,0 +1,338 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/v2/css/style.css">
+	<link rel="stylesheet" href="/games/memory-location/assets/style/memory-location.css">
+	<link rel="stylesheet" href="/v2/addon-css/addon.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	</script>
+</head>
+
+<main class="game-page">
+	<a href="/student-dahsboard/"
+		class="simpleButton ghostButton backButton back2dashboardButton hasIcon--chevron-left">Back</a>
+
+	<div class='modal-btn-container '>
+		<button id='high-scores-btn' class="simpleButton ghostButton hasIcon--award  sizeM wAuto"><span> High
+				scores</span></button>
+		<button id='info-btn' class="simpleButton ghostButton hasIcon--alert-circle sizeM wAuto"> <span>Info</span>
+		</button>
+	</div>
+
+	<article>
+		<section>
+			<div class="studentProgress game-progress">
+				<div class='progress-top'>
+					<div class='body-24'> <span class="progressText--width22">4</span>/10</div>
+					<h2 class='heading-4'>Memory location</h2>
+					<div class='body-24'>10:25</div>
+				</div>
+				<ins class="progressBar"><span class="progressBar--width22" style="max-width:60%"></span></ins>
+			</div>
+
+	
+
+			<div class="modal" id='game-info-modal' style='display: none'>
+				<dialog class="modalContent game-welcome-modal" aria-modal="true" role="dialog">
+
+					<div class="dialog-header">
+						<h3>Welcome to Memory Colors!</h3>
+					</div>
+
+					<div class="dialog-content">
+						<p class='heading-4'>When you're ready, hit Start to see the colors that make up the circle. Look at these
+							and memorize them
+							until the timer reaches zero. </p>
+						<p class='heading-4'>Then, drag and drop the correct color from beside the circle into each section. When
+							you're ready to
+							check, hit Submit.
+							After you get three rounds right, you'll move up a level!
+							If you make a mistake in your circle, you will lose a life. After you lose three lives, the game ends.</p>
+					</div>
+
+					<div class="buttons dialog-footer">
+						<button type="reset" class="simpleButton ghostButton">Cancel</button>
+						<button type="submit">Play game</button>
+					</div>
+					<button class="closeButton" aria-label="Close modal dialogue"><span>×</span></button>
+				</dialog>
+			</div>
+
+			<div class="modal" style='display: none' id='game-score-modal'>
+				<dialog class="modalContent game-scores-dialog" aria-modal="true" role="dialog">
+
+					<div class="dialog-header">
+						<h3 class='heading-3'>High scores</h3>
+					</div>
+
+					<div class="dialog-content">
+						<div id="tabs" class='tabs-container'>
+							<ul class='tabs-links'>
+								<li><a href="#tabs-1">My scores</a></li>
+								<li><a href="#tabs-2">Global scores</a></li>
+							</ul>
+
+							<div id="tabs-1" class='table-container'>
+								<table>
+									<thead>
+										<tr>
+											<th>
+												Place
+											</th>
+											<th>
+												Name
+											</th>
+											<th>
+												Time
+											</th>
+											<th>
+												Score
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												12345678
+											</td>
+											<td>
+												AudreyAudreyAudreyAudrey AudreyAudrey Audr eyA udr eyAudreyAudrey
+											</td>
+											<td>
+												21:25
+											</td>
+											<td>
+												123456
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+							<div id="tabs-2">
+								<table>
+									<thead>
+										<tr>
+											<th>
+												Place
+											</th>
+											<th>
+												Name
+											</th>
+											<th>
+												Time
+											</th>
+											<th>
+												Score
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												25
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="buttons dialog-footer">
+						<button>Okay</button>
+					</div>
+					<button class="closeButton" aria-label="Close modal dialogue"><span>×</span></button>
+			</div>
+			</dialog>
+			</div>
+		</section>
+	</article>
+</main>
+
+
+<iframe src="/games/memory-location-game-over/iframe/content.html" width="100%" height="800px" align="center">
+	Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+
+<script src="/v2/js/common.js"></script>
