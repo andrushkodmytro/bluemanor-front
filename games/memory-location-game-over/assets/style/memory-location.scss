@@ -31,6 +31,12 @@
     margin-bottom: 20px;
   }
 
+  .game-header,
+  .game {
+    flex: 1 0 auto;
+  }
+
+
   .game-header {
     display: flex;
     flex-wrap: wrap;
