@@ -7,7 +7,6 @@
 .game-container {
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
   align-items: center;
   max-width: 690px;
   width: 100%;
@@ -30,11 +29,6 @@
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-  }
-
-  .game-header,
-  .game {
-    flex: 1 0 auto;
   }
 
   .game-header {

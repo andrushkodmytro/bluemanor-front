@@ -20,6 +20,16 @@ $clr-light-95: #f4f3f3;
   -webkit-tap-highlight-color: transparent;
 }
 
+html{
+  height: auto;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+}
+
+
 .hasIcon--bold::before {
   content: "\e936"; //icon stop
 }
@@ -3294,6 +3304,7 @@ dialog.quiz-report-dialog {
     display: flex;
     justify-content: space-between;
     margin-bottom: 4px;
+    position: relative;
 
     .progress-size{
       color: var(--clr-gray-50);
@@ -3314,8 +3325,13 @@ dialog.quiz-report-dialog {
       }
     }
 
+    h2 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     & div:last-of-type{
-      min-width: 70px;
       text-align: end;
     }
 
