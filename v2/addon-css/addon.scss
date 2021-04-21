@@ -3334,7 +3334,8 @@ dialog.quiz-report-dialog {
     }
 
     & div:last-of-type{
-      text-align: end;
+      min-width: 78px;
+      text-align: center;
     }
 
     @media (max-width: 479px) {
@@ -3351,7 +3352,7 @@ dialog.quiz-report-dialog {
 
       & div:last-of-type{
         min-width: 60px;
-        text-align: end;
+        text-align: center;
       }
     }
   }
