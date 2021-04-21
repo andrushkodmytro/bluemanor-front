@@ -92,10 +92,8 @@ dialog.modalContent#BookTableOfContents .bookContent dt span {
 
 // Fix vh height in mobile
 .modal {
-  max-height: 100vh;
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 dialog.modalContent {
@@ -124,6 +122,10 @@ dialog.modalContent {
 input + label:before {
   background: transparent !important;
 }
+
+ button {
+   filter: unset !important;
+ }
 // -Global
 
 // +Chapter-book
