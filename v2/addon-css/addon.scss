@@ -20,7 +20,7 @@ $clr-light-95: #f4f3f3;
   -webkit-tap-highlight-color: transparent;
 }
 
-html{
+html {
   height: auto;
 }
 
@@ -28,7 +28,6 @@ body {
   height: auto;
   min-height: 100vh;
 }
-
 
 .hasIcon--bold::before {
   content: "\e936"; //icon stop
@@ -102,8 +101,9 @@ dialog.modalContent {
 
 .showPassword {
   background: transparent !important;
-  
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     background: transparent !important;
   }
 
@@ -114,7 +114,7 @@ dialog.modalContent {
     filter: unset !important;
   }
 
-  &::before{
+  &::before {
     background: transparent !important;
   }
 }
@@ -123,9 +123,26 @@ input + label:before {
   background: transparent !important;
 }
 
- button {
-   filter: unset !important;
- }
+button:not(.asLink),
+a.button {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+
+  &:not(:disabled) {
+    &:active {
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  @media (max-width: 1023px) {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+
+    &:not(:disabled) {
+      &:active {
+        filter: drop-shadow(0 3px 7.5px rgba(0, 0, 0, 0.25));
+      }
+    }
+  }
+}
 // -Global
 
 // +Chapter-book
@@ -375,8 +392,6 @@ input + label:before {
 
 // -Chapter-book
 
-
-
 // Quiz general
 .quiz-page {
   padding-left: var(--size-S);
@@ -467,7 +482,7 @@ input + label:before {
       }
     }
   }
-  
+
   .quiz-progress + .quiz-header {
     &.heading-2 {
       padding-left: 20px;
@@ -3308,7 +3323,7 @@ dialog.quiz-report-dialog {
     margin-bottom: 4px;
     position: relative;
 
-    .progress-size{
+    .progress-size {
       color: var(--clr-gray-50);
     }
 
@@ -3333,7 +3348,7 @@ dialog.quiz-report-dialog {
       transform: translateX(-50%);
     }
 
-    & div:last-of-type{
+    & div:last-of-type {
       min-width: 78px;
       text-align: center;
     }
@@ -3350,7 +3365,7 @@ dialog.quiz-report-dialog {
         line-height: 24px;
       }
 
-      & div:last-of-type{
+      & div:last-of-type {
         min-width: 60px;
         text-align: center;
       }
@@ -3453,6 +3468,25 @@ dialog.quiz-report-dialog {
       text-align: end;
       margin-top: auto;
     }
+
+    @media (max-width: 1023.9px) and (orientation: landscape) {
+      height: 98%;
+
+      .dialog-header {
+        h3 {
+          font-size: 28px;
+          padding: 16px 64px 14px;
+        }
+      }
+
+      .dialog-footer {
+        padding: 16px 20px;
+
+        button {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   .game-scores-dialog {
@@ -3507,6 +3541,7 @@ dialog.quiz-report-dialog {
     .table-container {
       position: relative;
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -3570,6 +3605,7 @@ dialog.quiz-report-dialog {
         tr:nth-of-type(even) {
           background-color: #f8f8f8;
         }
+
         td {
           padding: 12px;
           text-align: end;
@@ -3603,6 +3639,45 @@ dialog.quiz-report-dialog {
     .dialog-footer {
       text-align: end;
       margin-top: auto;
+    }
+
+    @media (max-width: 1023.9px) and (orientation: landscape) {
+      // background-color: red;
+      .dialog-header {
+        h3 {
+          font-size: 28px;
+          padding: 16px 64px 14px;
+        }
+      }
+
+      .dialog-content {
+        .tabs-links li a {
+          padding-top: 4px;
+          padding-bottom: 4px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        table {
+          thead th {
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+
+          tbody td {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .dialog-footer {
+        padding: 16px 20px;
+
+        button {
+          font-size: 16px;
+        }
+      }
     }
   }
 
