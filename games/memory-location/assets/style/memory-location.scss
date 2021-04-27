@@ -382,6 +382,10 @@ body {
           border-color: var(--clr-brandErrorShad);
         }
       }
+
+      .answer.wrong:before{
+        background-color: var(--clr-brandBrickPale);
+      }
     }
   }
   //-Style for all cells

@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
 
-html{
+html {
   height: auto;
 }
 
@@ -12,7 +12,6 @@ body {
   height: auto;
   min-height: 100vh;
 }
-
 
 .game-container {
   max-width: 690px;
@@ -473,10 +472,11 @@ body {
 
 .colors {
   flex-grow: 1;
-  margin-top: 40px;
+  margin-top: 24px;
+  max-width: 200px;
 
   @media (min-width: 768px) {
-    max-width: 172px;
+    max-width: 136px;
     margin-top: 0;
     margin-left: auto;
   }
@@ -493,9 +493,21 @@ body {
     margin: 0 auto;
     max-width: 220px;
 
+    &.two-line-items {
+      max-width: 150px;
+    }
+
     @media (min-width: 480px) {
       max-width: unset;
       margin: -12px;
+    }
+
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+
+      &.two-line-items {
+        max-width: 140px;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -507,8 +519,17 @@ body {
     padding: 12px;
     transition: transform 0.15s ease-in 0s;
 
-    @media (min-width: 1024px) {
+    svg {
+      width: 20px;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
       padding: 6px;
+
+      svg {
+        width: unset;
+      }
     }
 
     & > span {
