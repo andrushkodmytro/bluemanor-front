@@ -134,13 +134,7 @@ a.button {
   }
 
   @media (max-width: 1023px) {
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-
-    &:not(:disabled) {
-      &:active {
-        filter: drop-shadow(0 3px 7.5px rgba(0, 0, 0, 0.25));
-      }
-    }
+    filter: unset !important;
   }
 }
 // -Global
@@ -3501,6 +3495,7 @@ dialog.quiz-report-dialog {
     .dialog-content {
       flex-grow: 1;
       overflow: hidden;
+      height: 100%;
     }
 
     .tabs-container {
@@ -3511,6 +3506,7 @@ dialog.quiz-report-dialog {
 
     .tabs-links {
       display: flex;
+      flex-shrink: 0;
       justify-content: center;
       border-bottom: 1px solid var(--clr-brandBeigeDark);
 
@@ -3542,6 +3538,7 @@ dialog.quiz-report-dialog {
       position: relative;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
+      flex-grow: 1;
     }
 
     table {
