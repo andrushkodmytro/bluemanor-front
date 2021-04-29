@@ -13,6 +13,13 @@ body {
   min-height: 100vh;
 }
 
+button:not(.asLink),
+a.button {
+  @media (max-width: 1023px) {
+    filter: unset !important;
+  }
+}
+
 .game-container {
   max-width: 690px;
   width: 100%;
