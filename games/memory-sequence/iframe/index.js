@@ -41,4 +41,36 @@ $(function () {
       const dataValue = $(this).data("choice");
     });
   };
+
+  // Scroll functionality
+  const $scrollContainer = $(".variant");
+
+  $(".scroll-next").click(function (e) {
+    e.preventDefault();
+
+    const scrollPos = $scrollContainer.scrollLeft();
+    const elemWidth = $('.variant-item-container').outerWidth()
+ 
+    console.log(elemWidth)
+    $scrollContainer.animate(
+      {
+        scrollLeft: scrollPos + elemWidth,
+      },
+      "slow"
+    );
+  });
+
+  $(".scroll-prev").click(function (e) {
+    e.preventDefault();
+
+    const scrollPos = $scrollContainer.scrollLeft();
+    const elemWidth = $('.variant-item-container').outerWidth()
+
+    $scrollContainer.animate(
+      {
+        scrollLeft: scrollPos - elemWidth,
+      },
+      "slow"
+    );
+  });
 });

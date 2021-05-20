@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap");
 
-html{
+html {
   height: auto;
 }
 
@@ -336,10 +336,11 @@ a.button {
   flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
-  padding: 20px 12px;
+  padding: 20px 0;
   background-color: var(--clr-white);
   border-radius: 16px;
   align-items: center;
+  user-select: none;
 
   .slots {
     width: 100%;
@@ -351,8 +352,7 @@ a.button {
       margin: -6px auto -6px;
       max-width: 650px;
       margin-bottom: 14px;
-      // padding-left: 10px;
-      // padding-right: 10px;
+      padding: 0 8px;
 
       .slot-item-container {
         padding: 6px;
@@ -403,7 +403,7 @@ a.button {
           width: 0;
           height: 0;
           position: absolute;
-          bottom: -21px;
+          bottom: -20px;
           left: 50%;
           transform: translateX(-50%);
         }
@@ -417,7 +417,7 @@ a.button {
           width: 0;
           height: 0;
           position: absolute;
-          bottom: -24px;
+          bottom: -23px;
           left: 50%;
           transform: translateX(-50%);
         }
@@ -465,8 +465,27 @@ a.button {
         background-image: url(../img/diamond.svg);
       }
 
+      [data-choice="trapeze"] span:before {
+        background-image: url(../img/trapeze.svg);
+      }
+
+      [data-choice="rhombus"] span:before {
+        background-image: url(../img/rhombus.svg);
+      }
+      [data-choice="cross"] span:before {
+        background-image: url(../img/cross.svg);
+      }
+
+      [data-choice="ring"] span:before {
+        background-image: url(../img/ring.svg);
+      }
+      [data-choice="crescent"] span:before {
+        background-image: url(../img/crescent.svg);
+      }
+
       @media (min-width: 768px) {
         flex-wrap: unset;
+        padding: 0;
 
         .slot-item.active {
           &:before,
@@ -477,19 +496,76 @@ a.button {
       }
     }
 
+    .variant-container {
+      display: flex;
+    }
+
+    .scroll-btn-container {
+      display: flex;
+      align-items: center;
+
+      &.disabled-btn {
+        opacity: 0.4;
+        cursor: not-allowed;
+
+        a {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .scroll-btn {
+      padding: 7px;
+      margin: 0 4px;
+      border: none;
+      text-decoration: none;
+      transition: none;
+      border-radius: 4px;
+      height: 100%;
+
+      &:before {
+        color: var(--clr-text);
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
     .variant {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
       border-radius: 16px;
-      // padding: 10px;
+      overflow-x: auto;
 
-      @media (min-width: 480px) {
-        // padding: 14px 20px;
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
       }
 
       .variant-item-container {
-        padding: 6px;
+        padding: 4px;
+        flex: 1 0 auto;
+        max-width: 100px;
+        min-width: 50px;
+
+        @media (min-width: 480px) {
+          width: 14.28%;
+        }
+
+        @media (min-width: 768px) {
+          width: 90px;
+        }
+
+        @media (max-width: 479.9px) {
+          width: 25%;
+        }
       }
 
       .variant-item {
@@ -503,15 +579,15 @@ a.button {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
 
           padding: 8px;
 
           .img-container {
-            width: 100%;
-
             img {
               width: 100%;
               height: auto;
+              display: block;
             }
           }
         }
@@ -524,16 +600,7 @@ a.button {
         }
       }
 
-      @media (min-width: 480px) {
-        .variant-item-container {
-          max-width: 64px;
-        }
-      }
-
       @media (min-width: 768px) {
-        .variant-item-container {
-          min-width: 92px;
-        }
         .variant-item > div {
           justify-content: flex-end;
 
@@ -551,28 +618,18 @@ a.button {
     }
   }
 
-  .slots-4 {
+  [data-level="0"] {
     .slot-item-container {
       width: 25%;
+      max-width: 140px;
 
       @media (max-width: 479.9px) {
         width: 25%;
       }
     }
-
-    .variant-item-container {
-      width: 25%;
-      max-width: 92px;
-
-      @media (max-width: 479.9px) {
-        width: 20%;
-        max-width: 70px;
-        min-width: 50px;
-      }
-    }
   }
 
-  .slots-5 {
+  [data-level="1"] {
     .slot-item-container {
       width: 20%;
 
@@ -580,20 +637,9 @@ a.button {
         width: 33.333%;
       }
     }
-
-    .variant-item-container {
-      width: 20%;
-      max-width: 92px;
-
-      @media (max-width: 479.9px) {
-        width: 20%;
-        max-width: 70px;
-        min-width: 50px;
-      }
-    }
   }
 
-  .slots-6 {
+  [data-level="2"] {
     .slots-list {
       max-width: 666px;
     }
@@ -605,20 +651,10 @@ a.button {
         width: 33.333%;
       }
     }
-
-    .variant-item-container {
-      width: 16.666%;
-      max-width: 92px;
-
-      @media (max-width: 479.9px) {
-        width: 25%;
-        max-width: 86px;
-        min-width: 50px;
-      }
-    }
   }
 
-  .slots-7 {
+  [data-level="3"],
+  [data-level="4"] {
     .slots-list {
       max-width: 666px;
     }
@@ -628,17 +664,6 @@ a.button {
 
       @media (max-width: 479.9px) {
         width: 25%;
-      }
-    }
-
-    .variant-item-container {
-      width: 14.285%;
-      max-width: 92px;
-
-      @media (max-width: 479.9px) {
-        width: 25%;
-        max-width: 86px;
-        min-width: 50px;
       }
     }
   }
@@ -651,8 +676,9 @@ a.button {
   }
 
   &.memoize-state {
-    .variant {
+    .variant-container {
       visibility: hidden;
+      pointer-events: none;
     }
   }
 
@@ -661,9 +687,12 @@ a.button {
       content: "?";
     }
 
+    .slot-item:not(.active) {
+      cursor: pointer;
+    }
+
     .variant {
-      border: 2px solid #debd8d;
-      box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15), 0 0 0 2px #debd8d;
 
       .variant-item:hover {
         cursor: pointer;
