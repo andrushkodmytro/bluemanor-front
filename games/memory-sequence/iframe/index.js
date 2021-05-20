@@ -49,9 +49,9 @@ $(function () {
     e.preventDefault();
 
     const scrollPos = $scrollContainer.scrollLeft();
-    const elemWidth = $('.variant-item-container').outerWidth()
- 
-    console.log(elemWidth)
+    const elemWidth = $(".variant-item-container").outerWidth();
+
+    console.log(elemWidth);
     $scrollContainer.animate(
       {
         scrollLeft: scrollPos + elemWidth,
@@ -64,7 +64,7 @@ $(function () {
     e.preventDefault();
 
     const scrollPos = $scrollContainer.scrollLeft();
-    const elemWidth = $('.variant-item-container').outerWidth()
+    const elemWidth = $(".variant-item-container").outerWidth();
 
     $scrollContainer.animate(
       {
