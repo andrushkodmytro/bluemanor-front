@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/v2/css/style.css">
+  <link rel="stylesheet" href="/games/memory-color/assets/style/memory-color.css">
+  <link rel="stylesheet" href="/v2/addon-css/addon.css">
+  <script src="/games/memory-color/assets/drag-drop-polyfill.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class='result-item-block'>
+        <div class="correct-item hasIcon--check">0</div>
+        <div class="incorrect-item hasIcon--close">0</div>
+
+      </div>
+
+      <!-- Timer -->
+      <!-- <div class="timer heading-4"> <span>8</span></div> -->
+
+      <!-- Timer icon -->
+      <div class="timer heading-4"> <span class='timer-clock'></span></div>
+
+      <div class="lives">
+        <span class='heart-empty'></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="game">
+      <h3 class="body-18">Let’s start the game!</h3>
+
+
+      <div class="circle" id='slots'>
+        <svg width="301" height="301" viewBox="0 0 301 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M299.463 164.042C296.604 194.98 284.353 223.196 265.587 245.812C261.998 250.137 255.503 250.199 251.529 246.224L223.1 217.796C219.309 214.005 219.235 207.929 222.428 203.622C231.024 192.027 236.9 178.293 239.111 163.365C239.897 158.059 244.245 153.812 249.609 153.812H289.811C295.43 153.812 299.98 158.447 299.463 164.042Z"
+            fill="#D12335" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M265.589 54.3096C284.354 76.9257 296.606 105.142 299.464 136.079C299.981 141.674 295.432 146.31 289.813 146.31H249.608C244.246 146.31 239.898 142.064 239.111 136.76C236.897 121.835 231.022 108.095 222.429 96.5003C219.237 92.1926 219.311 86.117 223.102 82.3256L251.531 53.8974C255.505 49.9234 262 49.9845 265.589 54.3096Z"
+            fill="#00BDB2" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M164.043 0.658346C194.981 3.51715 223.197 15.7685 245.813 34.5344C250.138 38.1231 250.199 44.6185 246.225 48.5926L217.797 77.0207C214.006 80.8121 207.93 80.8864 203.622 77.694C192.027 69.1011 178.287 63.226 163.362 61.0121C158.058 60.2252 153.812 55.8771 153.812 50.5147V10.3099C153.812 4.691 158.448 0.14134 164.043 0.658346Z"
+            fill="#F17C10" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M54.3097 34.5337C76.9257 15.7682 105.142 3.51712 136.079 0.658348C141.674 0.141341 146.31 4.69101 146.31 10.3099V50.5135C146.31 55.8764 142.063 60.2247 136.758 61.0104C121.829 63.2214 108.096 69.0927 96.5005 77.6901C92.1928 80.8841 86.116 80.8105 82.3241 77.0185L53.8974 48.5919C49.9234 44.6178 49.9845 38.1224 54.3097 34.5337Z"
+            fill="#49306B" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M0.657368 136.08C3.51617 105.141 15.7676 76.9253 34.5336 54.309C38.1223 49.984 44.6177 49.9229 48.5917 53.8969L77.0183 82.3235C80.8103 86.1155 80.884 92.1922 77.6876 96.4982C69.0793 108.095 63.2036 121.811 61.0002 136.749C60.2171 142.058 55.8676 146.31 50.5011 146.31H10.3089C4.69002 146.31 0.140363 141.675 0.657368 136.08Z"
+            fill="#007DD7" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M50.5081 153.812H10.3089C4.69003 153.812 0.140363 158.447 0.657368 164.042C3.51617 194.98 15.7675 223.197 34.5334 245.813C38.1222 250.138 44.6176 250.199 48.5916 246.225L77.0197 217.797C80.8111 214.005 80.8855 207.93 77.6915 203.623C69.0915 192.027 63.2151 178.299 61.0067 163.368C60.2218 158.061 55.8728 153.812 50.5081 153.812Z"
+            fill="#1B9D51" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M136.079 299.463C105.142 296.605 76.9257 284.353 54.3096 265.588C49.9845 261.999 49.9234 255.504 53.8974 251.53L82.3256 223.101C86.117 219.31 92.1925 219.236 96.4992 222.43C108.095 231.029 121.823 236.906 136.754 239.114C142.061 239.899 146.31 244.248 146.31 249.613V289.812C146.31 295.431 141.674 299.98 136.079 299.463Z"
+            fill="#E02981" stroke="#DEBD8D" stroke-width="2"/>
+          <path
+            d="M245.813 265.587C223.197 284.353 194.981 296.604 164.043 299.463C158.448 299.98 153.812 295.431 153.812 289.812V249.612C153.812 244.248 158.061 239.899 163.368 239.114C178.299 236.905 192.027 231.029 203.623 222.429C207.93 219.235 214.006 219.31 217.797 223.101L246.225 251.529C250.199 255.503 250.138 261.999 245.813 265.587Z"
+            fill="#FFC533" stroke="#DEBD8D" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div id='options' class="colors">
+        <div class='drag-item-container'>
+          <div class='drag-item'>
+            <span draggable="true" data-color='yellow'>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='orange'>
+            </span>
+          </div>
+
+
+
+          <div class="drag-item">
+            <span draggable="true" data-color='pink'>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='green'>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='turquoise'>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='blue'>
+            </span>
+          </div>
+
+          <div class="drag-item">
+            <span draggable="true" data-color='violet'>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-check">
+      Start
+    </button>
+  </div>
+
+  <script src="/games/memory-color/iframe/index.js"></script>
+</body>
+
+</html>

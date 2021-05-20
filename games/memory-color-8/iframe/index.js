@@ -32,7 +32,7 @@ $(function () {
         );
         const svg = $(ev.currentTarget).find("svg")[0];
 
-        // ev.originalEvent.dataTransfer.setDragImage(svg, 12, 100);
+        ev.originalEvent.dataTransfer.setDragImage(svg, 12, 100);
         draggedElement = this;
 
         $(ev.currentTarget).addClass("draggedElem");
