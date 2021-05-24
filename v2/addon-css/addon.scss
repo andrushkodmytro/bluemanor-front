@@ -29,15 +29,6 @@ body {
   min-height: 100vh;
 }
 
-.hasIcon--bold::before {
-  content: "\e936"; //icon stop
-}
-.hasIcon--italic::before {
-  content: "\e937"; //icon trash-2
-}
-.hasIcon--underline::before {
-  content: "\e938"; //icon user profile
-}
 
 .hint-pronunciation-stop {
   &::after {

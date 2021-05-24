@@ -1,7 +1,7 @@
-@import '_variables';
-@import '_extend';
-@import '_fonts';
-@import '_owl.carousel.scss';
+@import 'scss/_variables';
+@import 'scss/_extend';
+@import 'scss/_fonts';
+@import 'scss/_owl.carousel.scss';
 // TODO: replace @import with direct links to font files
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
@@ -1520,6 +1520,26 @@ header {
 	content: '\e90b'; //icon user profile
 }
 
+.hasIcon--bold::before {
+  content: "\e936"; //icon stop
+}
+
+.hasIcon--italic::before {
+  content: "\e937"; //icon trash-2
+}
+
+.hasIcon--underline::before {
+  content: "\e938"; //icon user profile
+}
+
+.hasIcon--quiz::before {
+  content: "\e939"; //icon book open library
+}
+
+.hasIcon--cup::before {
+  content: "\e93a"; //icon book open library
+}
+
 .noMargin {
 	margin: 0!important;
 }
@@ -2623,12 +2643,67 @@ dialog.modalContent {
 				font-size: var(--size-L);
 			}
 		}
+
+		.book-content-with-action-btn {
+			dt + dd .simpleButton {
+				width: 116px;
+				flex-direction: row-reverse;
+			}
+		
+			position: relative;
+		
+			.dropdownMenuWrapper {
+				z-index: initial;
+			}
+
+			.book-icon-success:before {
+				color: var(--clr-brandOK);
+			}
+
+			.dropdownMenu {
+				max-width: 194px;
+				z-index: 1;
+				top: 12px;
+				right: unset;
+		
+				&:before {
+					content: none;
+				}
+		
+				a {
+					text-align: start;
+				}
+
+				@media (min-width: 1024px) {
+					right: 0;
+				}
+			}
+
+			@media(min-width: 768px){
+				dt + dd .simpleButton {
+					width: 150px;
+					flex-direction: row-reverse;
+				}
+			}
+
+			@media(max-width: 767.9px){
+				dt + dd .simpleButton {
+					font-size: 16px;
+					height: 2.5em;
+
+					&:before {
+						font-size: 18px;
+						padding-left: 8px;
+					}
+				}
+			}
+		}
 	}
 }
 /// -modal
 .counter {
 	background: var(--clr-brandOKShad);
-	color: var(--clr-white);
+	// color: var(--clr-white);
 	font-size: var(--size-XS);
 	position: absolute;
 	top: var(--size-XS);
