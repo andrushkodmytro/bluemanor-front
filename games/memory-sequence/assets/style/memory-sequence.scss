@@ -627,6 +627,12 @@ a.button {
         width: 25%;
       }
     }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 24px;
+      }
+    }
   }
 
   [data-level="1"] {
@@ -640,6 +646,12 @@ a.button {
       }
       .slot-item-container {
         width: 33.333%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 24px;
       }
     }
   }
@@ -660,6 +672,12 @@ a.button {
 
       .slot-item-container {
         width: 33.333%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 22px;
       }
     }
   }
