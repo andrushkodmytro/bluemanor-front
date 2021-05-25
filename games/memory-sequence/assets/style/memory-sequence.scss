@@ -627,14 +627,31 @@ a.button {
         width: 25%;
       }
     }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 24px;
+      }
+    }
   }
 
   [data-level="1"] {
     .slot-item-container {
       width: 20%;
+    }
 
-      @media (max-width: 479.9px) {
+    @media (max-width: 479.9px) {
+      .slots-list {
+        max-width: 270px;
+      }
+      .slot-item-container {
         width: 33.333%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 24px;
       }
     }
   }
@@ -646,9 +663,21 @@ a.button {
 
     .slot-item-container {
       width: 16.666%;
+    }
 
-      @media (max-width: 479.9px) {
+    @media (max-width: 479.9px) {
+      .slots-list {
+        max-width: 270px;
+      }
+
+      .slot-item-container {
         width: 33.333%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .slot-item:not(.active) > span:before {
+        font-size: 22px;
       }
     }
   }
