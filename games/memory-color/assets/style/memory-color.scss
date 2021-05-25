@@ -541,10 +541,6 @@ a.button {
     border-radius: 16px;
     max-width: 440px;
 
-    &.two-line-items {
-      max-width: 150px;
-    }
-
     @media (min-width: 480px) {
       padding: 16px;
     }
@@ -553,10 +549,6 @@ a.button {
       justify-content: flex-end;
       max-width: unset;
       border-radius: 16px 0 0 16px;
-
-      &.two-line-items {
-        max-width: 140px;
-      }
     }
   }
 
