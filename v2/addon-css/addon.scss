@@ -29,7 +29,6 @@ body {
   min-height: 100vh;
 }
 
-
 .hint-pronunciation-stop {
   &::after {
     content: "\e935" !important;
@@ -2421,9 +2420,39 @@ dialog.quiz-report-dialog {
     flex-direction: column;
   }
 
+  .tabs-links {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--clr-brandBeigeDark);
+
+    li {
+      padding-right: 4px;
+      padding-left: 4px;
+
+      a {
+        display: block;
+        padding: 7px 40px;
+        text-decoration: none;
+        color: var(--clr-text);
+        border: none;
+
+        &:hover {
+          background-color: var(--clr-brandBeigeLite);
+          border-radius: 6px 6px 0 0;
+        }
+      }
+    }
+
+    .ui-tabs-active a {
+      background-color: var(--clr-brandBeige);
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
   .table-container {
     position: relative;
     overflow: auto;
+    flex-grow: 1;
   }
 
   table {
