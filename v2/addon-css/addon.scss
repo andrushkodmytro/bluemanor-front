@@ -598,8 +598,8 @@ a.button {
       height: 98vh;
 
       @media (min-width: 768px) {
-        max-width: 335px;
-        max-height: 335px;
+        max-width: 336px;
+        max-height: 330px;
       }
 
       .dialog-container {
@@ -614,8 +614,8 @@ a.button {
 
       &.full-black-board {
         @media (min-width: 768px) {
-          max-width: 600px;
-          max-height: 600px;
+          max-width: 602px;
+          max-height: 518px;
         }
 
         .hasIcon--minimize {
@@ -673,7 +673,7 @@ a.button {
     .dialog-body {
       flex-grow: 1;
       border-top: 2px solid var(--clr-brandBlue);
-      cursor: url("../../img/pencil.png") 0 60, none;
+      cursor: url("../img/pencil.png") 0 60, none;
     }
 
     .dialog-footer {
