@@ -275,10 +275,10 @@ $(function () {
     $scoreModal2.css("display", "none").find("dialog").attr("open", false);
   });
 
-  const $tabs = $("#tabs");
-  if ($tabs.length) {
-    $tabs.tabs();
-  }
+  // const $tabs = $("#tabs");
+  // if ($tabs.length) {
+  //   $tabs.tabs();
+  // }
 
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
   let vh = window.innerHeight * 0.01;

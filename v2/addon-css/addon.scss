@@ -29,7 +29,6 @@ body {
   min-height: 100vh;
 }
 
-
 .hint-pronunciation-stop {
   &::after {
     content: "\e935" !important;
@@ -585,7 +584,7 @@ a.button {
     z-index: 10;
 
     @media (min-width: 768px) {
-      right: 20px;
+      right: 50px;
       top: 40px;
       transform: unset;
     }
@@ -599,8 +598,8 @@ a.button {
       height: 98vh;
 
       @media (min-width: 768px) {
-        max-width: 335px;
-        max-height: 335px;
+        max-width: 336px;
+        max-height: 330px;
       }
 
       .dialog-container {
@@ -615,8 +614,8 @@ a.button {
 
       &.full-black-board {
         @media (min-width: 768px) {
-          max-width: 600px;
-          max-height: 600px;
+          max-width: 602px;
+          max-height: 518px;
         }
 
         .hasIcon--minimize {
@@ -674,7 +673,7 @@ a.button {
     .dialog-body {
       flex-grow: 1;
       border-top: 2px solid var(--clr-brandBlue);
-      cursor: url("../../img/pencil.png") 0 60, none;
+      cursor: url("../img/pencil.png") 0 60, none;
     }
 
     .dialog-footer {
@@ -2421,9 +2420,39 @@ dialog.quiz-report-dialog {
     flex-direction: column;
   }
 
+  .tabs-links {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--clr-brandBeigeDark);
+
+    li {
+      padding-right: 4px;
+      padding-left: 4px;
+
+      a {
+        display: block;
+        padding: 7px 40px;
+        text-decoration: none;
+        color: var(--clr-text);
+        border: none;
+
+        &:hover {
+          background-color: var(--clr-brandBeigeLite);
+          border-radius: 6px 6px 0 0;
+        }
+      }
+    }
+
+    .ui-tabs-active a {
+      background-color: var(--clr-brandBeige);
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
   .table-container {
     position: relative;
     overflow: auto;
+    flex-grow: 1;
   }
 
   table {
