@@ -370,6 +370,7 @@ a.button {
 
 // Quiz general
 .quiz-page {
+  display: block;
   padding-left: var(--size-S);
   padding-right: var(--size-S);
   padding-top: 12px;
@@ -765,12 +766,6 @@ a.button {
     &.pause {
       &:after {
         content: "\e935";
-        // width: 32px;
-        // height: 32px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // font-size: 24px;
       }
     }
   }
@@ -4041,6 +4036,7 @@ dialog.quiz-report-dialog {
     }
 
     .percentage-block {
+
       width: 100%;
       position: relative;
 
