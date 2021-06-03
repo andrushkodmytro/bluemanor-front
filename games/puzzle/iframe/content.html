@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/v2/css/style.css">
+  <link rel="stylesheet" href="/games/puzzle/assets/style/puzzle.css">
+  <link rel="stylesheet" href="/v2/addon-css/addon.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/v2/js/image-puzzle.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class='result-item-block'>
+        <div class="correct-item hasIcon--check">0</div>
+        <div class="incorrect-item hasIcon--close">0</div>
+
+      </div>
+
+      <!-- Timer -->
+      <!-- <div class="timer heading-4"> <span>8</span></div> -->
+
+      <!-- Timer icon -->
+      <div class="timer heading-4"> <span class='timer-clock'></span></div>
+
+      <div class="lives">
+        <span class='heart-empty'></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="game">
+      <h3 class="body-18">Let’s start the game!</h3>
+
+      <div class="category-container">
+        <a class="category-item" href="#">Arts</a>
+        <a class="category-item" href="#"> History</a>
+        <a class="category-item" href="#">Geography</a>
+        <a class="category-item" href="#"> Novels</a>
+        <a class="category-item" href="#">Science</a>
+        <a class="category-item" href="#"> Bible</a>
+      </div>
+
+      <div  class="play-panel" id="playPanel"">
+          <div class="puzzle-preview-container" id="preview-image" style="display:none;">
+            <img class="puzzle-preview-img" id="actualImage" />
+          </div>
+
+          <ul id="puzzle-container" class="sortable" style="display:none;"></ul>
+      </div>
+
+      <div id="gameOver" style="display:none;">
+        <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+          <h2 style="text-align:center">Game over !!</h2>
+          Congratulations!! <br /> You got the picture ready.
+          <br />
+          Time: <span class="stepCount">0</span> gear.
+          <br />
+          Time spent: <span class="timeCount">0</span> seconds<br />
+          <div>
+            <button type="button" onclick="window.location.reload(true);">Play more</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="btn-check">
+      Start
+    </button>
+  </div>
+
+  <script src="/games/puzzle/iframe/index.js"></script>
+</body>
+
+</html>
