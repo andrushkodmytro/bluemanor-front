@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?szbdap');
+  src:  url('fonts/icomoon.eot?szbdap#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?szbdap') format('truetype'),
+    url('fonts/icomoon.woff?szbdap') format('woff'),
+    url('fonts/icomoon.svg?szbdap#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Checkbox-On:before {
+  content: "\e900";
+}
+.icon-Disable:before {
+  content: "\e901";
+}
+.icon-Edit:before {
+  content: "\e902";
+}
+.icon-Edit-2:before {
+  content: "\e903";
+}
+.icon-Eye:before {
+  content: "\e904";
+}
+.icon-Eye-off:before {
+  content: "\e905";
+}
+.icon-Log-in:before {
+  content: "\e906";
+}
+.icon-Log-out:before {
+  content: "\e907";
+}
+.icon-Mail:before {
+  content: "\e908";
+}
+.icon-Settings:before {
+  content: "\e909";
+}
+.icon-Shopping-cart:before {
+  content: "\e90a";
+}
+.icon-User:before {
+  content: "\e90b";
+}
+.icon-Check-circle:before {
+  content: "\e90c";
+}
+.icon-Close:before {
+  content: "\e90d";
+}
+.icon-Credit-card:before {
+  content: "\e90e";
+}
+.icon-Book-restrict:before {
+  content: "\e90f";
+}
+.icon-Book-open:before {
+  content: "\e910";
+}
+.icon-Alert-circle:before {
+  content: "\e911";
+}
+.icon-uniE912:before {
+  content: "\e912";
+}
+.icon-uniE913:before {
+  content: "\e913";
+}
+.icon-uniE914:before {
+  content: "\e914";
+}
+.icon-uniE915:before {
+  content: "\e915";
+}
+.icon-Menu:before {
+  content: "\e916";
+}
+.icon-Lock:before {
+  content: "\e917";
+}
+.icon-History:before {
+  content: "\e918";
+}
+.icon-Clock:before {
+  content: "\e919";
+}
+.icon-file-text:before {
+  content: "\e91a";
+}
+.icon-plus-circle:before {
+  content: "\e91b";
+}
+.icon-file:before {
+  content: "\e91c";
+}
+.icon-enable:before {
+  content: "\e91d";
+}
+.icon-chevron-down:before {
+  content: "\e91e";
+}
+.icon-chevron-right:before {
+  content: "\e91f";
+}
+.icon-chevron-left:before {
+  content: "\e920";
+}
+.icon-chevron-up:before {
+  content: "\e921";
+}
+.icon-check:before {
+  content: "\e922";
+}
+.icon-help-circle:before {
+  content: "\e923";
+}
+.icon-list:before {
+  content: "\e924";
+}
+.icon-play:before {
+  content: "\e925";
+}
+.icon-antenna:before {
+  content: "\e926";
+}
+.icon-pendent:before {
+  content: "\e927";
+}
+.icon-minimize:before {
+  content: "\e928";
+}
+.icon-maximize:before {
+  content: "\e929";
+}
+.icon-pause-filled:before {
+  content: "\e92a";
+}
+.icon-fast-back-filled:before {
+  content: "\e92b";
+}
+.icon-fast-forward-filled:before {
+  content: "\e92c";
+}
+.icon-play-filled:before {
+  content: "\e92d";
+}
+.icon-volume-2:before {
+  content: "\e92e";
+}
+.icon-skip-back-filled:before {
+  content: "\e92f";
+}
+.icon-skip-forward-filled:before {
+  content: "\e930";
+}
+.icon-award:before {
+  content: "\e931";
+}
+.icon-trash-2:before {
+  content: "\e932";
+}
+.icon-rotate-ccw:before {
+  content: "\e933";
+}
+.icon-refresh-cw:before {
+  content: "\e934";
+}
+.icon-Stop:before {
+  content: "\e935";
+}
+.icon-Bold:before {
+  content: "\e936";
+}
+.icon-Italic:before {
+  content: "\e937";
+}
+.icon-Underline:before {
+  content: "\e938";
+}
+.icon-Quiz:before {
+  content: "\e939";
+  color: #8e8b87;
+}
+.icon-Quiz-Master:before {
+  content: "\e93a";
+  color: #8e8b87;
+}
+.icon-coin .path1:before {
+  content: "\e93b";
+  color: rgb(255, 223, 64);
+}
+.icon-coin .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(255, 190, 64);
+}
+.icon-coin .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(245, 154, 30);
+}
+.icon-coin .path4:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(241, 124, 16);
+}
+.icon-coin .path5:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(255, 197, 51);
+}
+.icon-coin .path6:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(245, 175, 0);
+}
+.icon-coin .path7:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(245, 154, 30);
+}
+.icon-coin .path8:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(241, 124, 16);
+}

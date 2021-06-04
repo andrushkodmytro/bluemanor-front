@@ -966,10 +966,24 @@ a.button {
 
       &:last-of-type {
         margin-bottom: 40px;
+        display: flex;
       }
 
       span {
         color: var(--clr-hover);
+      }
+
+      .coin-icon {
+        color: var(--clr-text);
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+
+        &:before {
+          height: 24px;
+          width: 24px;
+          margin-right: 4px;
+        }
       }
     }
 
@@ -4036,7 +4050,6 @@ dialog.quiz-report-dialog {
     }
 
     .percentage-block {
-
       width: 100%;
       position: relative;
 
@@ -4517,3 +4530,236 @@ dialog.quiz-report-dialog {
 // *:focus {
 //   outline: 2px solid red !important;
 // }
+
+.coin-icon {
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(/v2/img/coin.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 0;
+  }
+}
+
+.coins-menu {
+  display: flex;
+  padding: 16px 20px;
+
+  .coin-icon:before {
+    height: 80px;
+    width: 80px;
+  }
+
+  .coins-menu-content {
+    padding-left: 16px;
+    
+
+    h4 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 30px;
+      color: var(--clr-text);
+      border-bottom: none;
+    }
+  }
+}
+
+.game-scores-dialog {
+  @extend #customScroll--gray;
+  max-height: 630px;
+
+  &[open="open"] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dialog-content {
+    flex-grow: 1;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .tabs-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-grow: 1;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    thead {
+      th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        padding: 12px;
+        text-transform: uppercase;
+        font-family: var(--font-gothic);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        color: var(--clr-gray-50);
+      }
+
+      th:nth-of-type(1) {
+        width: 120px;
+        text-align: end;
+        padding-left: 20px;
+      }
+
+      th:nth-of-type(2) {
+        width: 500px;
+        min-width: 250px;
+        text-align: start;
+      }
+
+      // th:nth-of-type(3) {
+      //   width: 120px;
+      //   text-align: end;
+      // }
+
+      th:nth-of-type(3) {
+        width: 100px;
+        text-align: end;
+        padding-right: 12px;
+      }
+
+      .coin-icon-title{
+        display: flex;
+        align-items: center;
+
+        &:before {
+          height: 20px;
+          width: 20px;
+          margin-right: 4px;
+        }
+
+      }
+
+     
+
+      @media (min-width: 768px) {
+        th {
+          padding: 12px 20px;
+        }
+
+        th:nth-of-type(1) {
+          padding-left: 60px;
+        }
+
+        th:nth-of-type(4) {
+          padding-right: 20px;
+        }
+      }
+    }
+
+    tbody {
+      tr:nth-of-type(even) {
+        background-color: #f8f8f8;
+      }
+
+      td {
+        padding: 12px;
+        text-align: end;
+        font-family: var(--font-gothic);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        color: var(--clr-text);
+        overflow-wrap: break-word;
+      }
+
+      td:nth-of-type(2) {
+        text-align: start;
+        max-width: 500px;
+      }
+
+      td:nth-of-type(3) {
+        color: var(--clr-text);
+        font-weight: 600;
+      }
+
+      tr.current-user-row {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        background-color: var(--clr-brandBeigeLite);
+      }
+
+      @media (min-width: 768px) {
+        td {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  .dialog-footer {
+    text-align: end;
+    margin-top: auto;
+  }
+
+  @media (max-width: 1023.9px) and (orientation: landscape) {
+    // background-color: red;
+    .dialog-header {
+      h3 {
+        font-size: 28px;
+        padding: 16px 64px 14px;
+      }
+    }
+
+    .dialog-content {
+      .tabs-links li a {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      table {
+        thead th {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+
+        tbody td {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .dialog-footer {
+      padding: 16px 20px;
+
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+}

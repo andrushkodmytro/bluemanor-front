@@ -87,6 +87,31 @@
 				<ul>
 				<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--clock wAuto hasHalveIndents"
 						title="Dashboard"><strong>30:00</strong></a></li>
+				
+				
+					<li class="dropdownMenuWrapper">
+						<a href="?a" class="coin-icon" id="coins-header"	title="Coins">65</a>
+
+						<ul class="dropdownMenu coin-menu-container">
+						<div class="coins-menu">
+							<div class="coin-icon ">	</div>
+							<div class="coins-menu-content">
+								<h4>Coins</h4>
+								<p>
+									Earn coins by reading books and passing quizzes!
+								</p>
+								<a href="?c" class="sizeM hasIcon--chevron-right"
+								id="to-leaderboard-modal"
+									title="Leaderboard">Go to Leaderboard</a>
+							</div>
+						</div>
+						
+							
+						</ul>
+					</li>
+
+
+
 				<li><a href="?a" class="simpleButton ghostButton sizeM hasIcon--grid withoutText"
 						title="Dashboard"><span>Dashboard</span></a></li>
 				<li class="dropdownMenuWrapper">
@@ -244,3 +269,191 @@
 				</ul> -->
 			</nav>
 	</header>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/v2/js/pointSystem.js"></script>
+
+
+	<div class="modal" style="display:none" id='point-leaderboard-modal'>
+				<dialog class="modalContent game-scores-dialog" aria-modal="true" role="dialog">
+
+					<div class="dialog-header">
+						<h3 class='heading-3'>Leaderboard</h3>
+					</div>
+
+					<div class="dialog-content">
+						<div id="tabs" class='tabs-container'>
+							<div id="tabs-1" class='table-container'>
+								<table>
+									<thead>
+										<tr>
+											<th>
+											&#8470;
+											</th>
+											<th>
+												Name
+											</th>
+											<th>
+												<span class="coin-icon coin-icon-title">Coins</span>
+												
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												AudreyAudreyAudreyAudrey AudreyAudrey Audr eyA udr eyAudreyAudrey
+											</td>
+											<td>
+												123456
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr class="current-user-row">
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr >
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+										<tr>
+											<td>
+												1
+											</td>
+											<td>
+												Audrey
+											</td>
+											</td>
+											<td>
+												90
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<div class="buttons dialog-footer">
+						<button>Okay</button>
+					</div>
+					<button class="closeButton" aria-label="Close modal dialogue"><span>×</span></button>
+				</dialog>
+			</div>

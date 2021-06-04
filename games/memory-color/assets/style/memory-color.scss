@@ -274,7 +274,21 @@ a.button {
 
     .game-finish-text {
       margin-bottom: 44px;
+      display: flex;
+      justify-content: center;
       text-align: center;
+
+      .coin-icon {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+
+        &:before {
+          height: 24px;
+          width: 24px;
+          margin-right: 4px;
+        }
+      }
     }
 
     .btn-container {

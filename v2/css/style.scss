@@ -1284,6 +1284,21 @@ header {
 		a {
 			display: block;
 		}
+
+		.coin-icon {
+			display: flex;
+			border-bottom: none;
+			font-weight: 600;
+
+			&:hover {
+				color: var(--clr-text);
+			}
+
+			&:before {
+				margin-right: 8px;
+
+			}
+		}
 	}
 	&.hasDashboardMenu { 
 		nav {
@@ -1914,6 +1929,17 @@ nav.tabsAsSelectoOnSmallScreens {
 		right: -18px;
 		padding-top: 12px;
 		padding-bottom: 12px;
+
+		&.coin-menu-container  {
+			width: 295px;
+
+			.coin-icon{
+				&:before{
+					margin-right: 0;
+				}
+			}
+		}
+
 		@media (min-width: 360px) {
 			right: -14px;				
 		}
@@ -2502,6 +2528,24 @@ dialog.modalContent {
 				max-width: 275px;
 			}
 		}
+
+		.student-progress-with-coins{
+			.book-coins-header {
+				padding-left: 20px;
+				font-size: 24px;
+				line-height: 34px;
+				
+
+				&:before {
+					height: 24px;
+					width: 24px;
+					margin-right: 4px;
+					position: relative;
+					top: 4px;
+				}
+			}
+		}
+
 		.bookContent,
 		.tvContent {
 			padding: 0 1em 0 20px;
@@ -2672,6 +2716,18 @@ dialog.modalContent {
 		
 				a {
 					text-align: start;
+					display: flex;
+
+					.coin-icon {
+						margin-left: auto;
+						min-width: 30px;
+
+						&:before {
+							height: 12px;
+							width: 12px;
+							margin-right: 4px;
+						}
+					}
 				}
 
 				@media (min-width: 1024px) {
@@ -6150,9 +6206,9 @@ a.addStudent {
 					}
 				}
 				ins {
-					width: calc(100% - 3.25em);
+					width: auto;
 					span {
-						height: var(--size-XXS);
+						height: 100%;
 						line-height: var(--size-XXS);
 						&:not(.progressBar--width) {
 							min-width: var(--size-XXS);
@@ -6160,6 +6216,40 @@ a.addStudent {
 					}
 				}
 			}
+
+			.progress-row {
+				display: flex;
+				align-items: center;
+
+				.progressBar {
+					height: 5px;
+					flex-grow: 1;
+					margin-right: 4px;
+					align-self: flex-end;
+				}
+
+				 strong  {
+					width: auto;
+				}
+			}
+
+			.book-progress {
+				flex-grow: 1;
+				display: flex;
+				padding-right: 24px;
+			}
+
+			.book-progress-coin {
+				display: flex;
+				align-items: center;
+
+				&:before {
+					width: 12px;
+					height: 12px;
+					margin-right: 4px;
+				}
+			}
+
 			ins.tooltip--inCurriculum {
 				display: block;
 				position: absolute;
